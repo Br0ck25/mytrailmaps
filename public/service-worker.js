@@ -1,4 +1,3 @@
-// public/service-worker.js
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open("gps-cache").then((cache) =>
