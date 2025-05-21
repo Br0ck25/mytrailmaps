@@ -1,0 +1,9 @@
+name = "trailmaps-api"
+type = "javascript"
+account_id = "YOUR_CF_ACCOUNT_ID"
+workers_dev = true
+main = "worker.js"
+
+kv_namespaces = [
+  { binding = "TRACKS_KV", id = "YOUR_NAMESPACE_ID" }
+]
