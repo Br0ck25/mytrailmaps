@@ -33,7 +33,7 @@ document.getElementById("export-btn").addEventListener("click", () => {
   a.href = url;
   a.download = "track.geojson";
   a.click();
-});
+}); 
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
