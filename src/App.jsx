@@ -38,26 +38,25 @@ function MapReady({ setLeafletMap, mapRef }) {
             .then((gpxText) => {
               const gpxLayer = new L.GPX(gpxText, {
   async: true,
-  parseElements: ["track"], // ✅ Only load track lines, not waypoints or routes
   marker_options: {
     startIconUrl: null,
     endIconUrl: null,
     shadowUrl: null,
   },
   waypoint_options: {
-    createMarker: () => null, // ✅ Prevent all auto-added waypoints
+    createMarker: () => {}, // ✅ This is the correct way to disable rendering
   },
+  parseElements: ["track"],
 });
 
+gpxLayer.bindPopup = () => {};
 
-gpxLayer.bindPopup = () => {}; // disables GPX popups (optional)
+gpxLayer.on("loaded", (e) => {
+  map.fitBounds(e.target.getBounds());
+});
 
+gpxLayer.addTo(map);
 
-              gpxLayer.on("loaded", (e) => {
-                map.fitBounds(e.target.getBounds());
-              });
-
-              gpxLayer.addTo(map); // ✅ FIXED
             });
         });
       });
