@@ -25,10 +25,10 @@
   </div>
 </div>
 
-<div id="overlay-panel" class="hidden">
-  <div class="overlay-header">
+<div id="overlay-panel" class="sidepanel hidden">
+  <div class="panel-header">
     <h3>Map Overlays</h3>
-    <button id="close-overlay">✖</button>
+    <button class="close-btn" data-close="overlay-panel">✖</button>
   </div>
   <ul class="overlay-list">
     <li><label><input type="checkbox" checked> Waypoints</label></li>
@@ -38,6 +38,25 @@
     <li><label><input type="checkbox"> Public Tracks</label></li>
     <li><label><input type="checkbox" checked> Saved Trails</label></li>
   </ul>
+</div>
+
+<div id="import-panel" class="sidepanel hidden">
+  <div class="panel-header">
+    <h3>Import Data</h3>
+    <button class="close-btn" data-close="import-panel">✖</button>
+  </div>
+  <div class="import-body">
+    <div class="import-icon">📤</div>
+    <div class="import-formats">.GPX, .KML, .KMZ, .FIT, .GEOJSON</div>
+    <button class="import-select">Select Files</button>
+    <p class="import-tip">Tips to prepare your datafiles</p>
+    <hr />
+    <div class="import-protip">
+      <strong>PRO TIP:</strong><br>
+      There's no need to click on the 📍 icon in the menu, just drag and drop files onto the map at any time.
+      <br><a href="#" class="dismiss-link">Dismiss</a>
+    </div>
+  </div>
 </div>
 
 <div id="map"></div>
