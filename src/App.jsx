@@ -36,48 +36,42 @@ function MapReady({ setLeafletMap, mapRef }) {
           fetch(url)
             .then((res) => res.text())
             .then((gpxText) => {
-              const gpxLayer = new L.GPX(gpxText, {
-  async: true,
-  marker_options: {
-  startIconUrl: null,
-  endIconUrl: null,
-  shadowUrl: null,
-  wptIcons: [], // Redundant safeguard
-  startIcon: false, // ✅ turn off start marker completely
-  endIcon: false,   // ✅ turn off end marker completely
-},
+  // ⛔ Strip out all <wpt> tags
+  const gpxWithoutWaypoints = gpxText.replace(/<wpt[\s\S]*?<\/wpt>/g, "");
 
-  waypoint_options: {
-    createMarker: () => {}, // ✅ This is the correct way to disable rendering
-  },
-  parseElements: ["track"],
-});
+  const gpxLayer = new L.GPX(gpxWithoutWaypoints, {
+    async: true,
+    parseElements: ["track"],
+    marker_options: {
+      startIconUrl: null,
+      endIconUrl: null,
+      shadowUrl: null,
+      startIcon: false,
+      endIcon: false,
+    },
+    waypoint_options: {
+      createMarker: () => {},
+    },
+  });
 
-gpxLayer.bindPopup = () => {};
+  gpxLayer.bindPopup = () => {};
 
-gpxLayer.on("addline", (e) => {
-  // ✅ Remove start and end markers
-  if (Array.isArray(e.line._markers)) {
-    for (const marker of e.line._markers) {
-      if (marker && marker.remove) {
-        marker.remove(); // Remove from map
+  gpxLayer.on("addline", (e) => {
+    if (Array.isArray(e.line._markers)) {
+      for (const marker of e.line._markers) {
+        if (marker?.remove) marker.remove();
       }
+      e.line._markers.length = 0;
     }
+  });
 
-    // Optional: clear the marker array to prevent future issues
-    e.line._markers.length = 0;
-  }
+  gpxLayer.on("loaded", (e) => {
+    map.fitBounds(e.target.getBounds());
+  });
+
+  gpxLayer.addTo(map);
 });
 
-
-gpxLayer.on("loaded", (e) => {
-  map.fitBounds(e.target.getBounds());
-});
-
-gpxLayer.addTo(map);
-
-
-            });
         });
       });
   }, [map, setLeafletMap]);
