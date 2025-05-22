@@ -36,7 +36,6 @@ function MapReady({ setLeafletMap, mapRef }) {
           fetch(url)
             .then((res) => res.text())
             .then((gpxText) => {
-  // ⛔ Strip out all <wpt> tags
   const gpxWithoutWaypoints = gpxText.replace(/<wpt[\s\S]*?<\/wpt>/g, "");
 
   const gpxLayer = new L.GPX(gpxWithoutWaypoints, {
@@ -54,16 +53,11 @@ function MapReady({ setLeafletMap, mapRef }) {
     },
   });
 
-  gpxLayer.bindPopup = () => {};
-
-  gpxLayer.on("addline", (e) => {
-    if (Array.isArray(e.line._markers)) {
-      for (const marker of e.line._markers) {
-        if (marker?.remove) marker.remove();
-      }
-      e.line._markers.length = 0;
-    }
-  });
+  // 🚫 Force-disable start/end marker logic entirely
+  gpxLayer._setStartEndIcons = function () {
+    this._startIcon = null;
+    this._endIcon = null;
+  };
 
   gpxLayer.on("loaded", (e) => {
     map.fitBounds(e.target.getBounds());
@@ -71,6 +65,7 @@ function MapReady({ setLeafletMap, mapRef }) {
 
   gpxLayer.addTo(map);
 });
+
 
         });
       });
