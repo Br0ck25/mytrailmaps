@@ -67,6 +67,7 @@ gpxLayer.on("loaded", (e) => {
 
 gpxLayer.addTo(map);
 
+});
 
 
         });
