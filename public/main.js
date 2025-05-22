@@ -1,7 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   const panels = {
-    "btn-overlays": "overlay-panel",
-    "btn-import": "import-panel"
+    "btn-saved": "saved-panel"
   };
 
   Object.entries(panels).forEach(([btnId, panelId]) => {
