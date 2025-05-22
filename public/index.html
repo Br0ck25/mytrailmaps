@@ -12,42 +12,33 @@
   <div class="sidebar-header">
     <h2>📍 MyTrailMaps</h2>
   </div>
-  <hr />
-
-  <div class="sidebar-section">
+  <div class="sidebar-group">
     <h3>Map</h3>
-    <ul>
-      <li><button id="btn-overlays">Overlays</button></li>
-      <li><button id="btn-saved">Saved Items</button></li>
-    </ul>
+    <button id="btn-overlays">Overlays</button>
+    <button id="btn-saved">Saved Items</button>
   </div>
-
-  <div class="sidebar-section">
+  <div class="sidebar-group">
     <h3>Create</h3>
-    <ul>
-      <li><button id="btn-waypoint">Waypoint</button></li>
-      <li><button id="btn-route">Route</button></li>
-      <li><button id="btn-import">Import Data</button></li>
-    </ul>
+    <button id="btn-waypoint">Waypoint</button>
+    <button id="btn-route">Route</button>
+    <button id="btn-import">Import Data</button>
   </div>
 </div>
-<!-- Overlay Side Panel -->
-<div id="overlay-panel" class="overlay-panel hidden">
+
+<div id="overlay-panel" class="hidden">
   <div class="overlay-header">
-    <button id="close-overlay">✖</button>
     <h3>Map Overlays</h3>
+    <button id="close-overlay">✖</button>
   </div>
   <ul class="overlay-list">
     <li><label><input type="checkbox" checked> Waypoints</label></li>
     <li><label><input type="checkbox" checked> Waypoint Labels</label></li>
     <li><label><input type="checkbox" checked> Routes</label></li>
     <li><label><input type="checkbox" checked> Tracks</label></li>
-    <li><label><input type="checkbox" checked> Areas</label></li>
     <li><label><input type="checkbox"> Public Tracks</label></li>
     <li><label><input type="checkbox" checked> Saved Trails</label></li>
   </ul>
 </div>
-
 
 <div id="map"></div>
 
