@@ -1,4 +1,4 @@
-import { gpx } from "https://cdn.jsdelivr.net/npm/togeojson@0.16.0/+esm";
+
 document.getElementById("gpx-upload").addEventListener("change", async (event) => {
   const file = event.target.files[0];
   if (!file) return;
@@ -6,7 +6,8 @@ document.getElementById("gpx-upload").addEventListener("change", async (event) =
   const text = await file.text();
   const parser = new DOMParser();
   const xml = parser.parseFromString(text, "application/xml");
-  const geojson = gpx(xml);
+  const geojson = toGeoJSON.gpx(xml);
+
 
   if (window.loadedTrackLayer) {
     map.removeLayer(window.loadedTrackLayer);
