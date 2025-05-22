@@ -3,26 +3,6 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import CustomGPX from "./CustomGPX";
-
-
-// 🚫 Patch internal marker behavior
-L.GPX.prototype._setStartEndIcons = function () {}; // disables legacy start/end icon logic
-
-// 🚫 Disable _initTrack entirely
-L.GPX.prototype._initTrack = function (track, options) {
-  const line = L.polyline(track, options.polyline_options);
-  this.addLayer(line);
-  return { line }; // 🚫 don't include .startMarker or .endMarker
-};
-
-// 🚫 Clean out _addSegment if used
-L.GPX.prototype._addSegment = function (line, name) {
-  const polyline = L.polyline(line, this.options.polyline_options);
-  this.addLayer(polyline);
-  return polyline;
-};
-
-
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
