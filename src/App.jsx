@@ -37,15 +37,19 @@ function MapReady({ setLeafletMap, mapRef }) {
             .then((res) => res.text())
             .then((gpxText) => {
               const gpxLayer = new L.GPX(gpxText, {
-                async: true,
-                marker_options: {
-                  startIconUrl: null,
-                  endIconUrl: null,
-                  shadowUrl: null,
-                },
-                parseElements: ["track"],
-                // ✅ Let GPX file define color
-              });
+  async: true,
+  parseElements: ["track"], // Only load tracks, not routes or waypoints
+  marker_options: {
+    startIconUrl: null,
+    endIconUrl: null,
+    shadowUrl: null,
+  },
+  // 👇 explicitly disable default marker rendering
+  waypoint_options: {
+    markerIcons: null,
+  },
+});
+
 
               gpxLayer._addWaypoints = () => {};
               gpxLayer.bindPopup = () => {};
