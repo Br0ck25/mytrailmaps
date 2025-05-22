@@ -181,3 +181,7 @@ function updateImportedTrackList() {
     panel.appendChild(item);
   });
 }
+const toggleBtn = document.getElementById("toggle-sidebar");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("sidebar-collapsed");
+});
