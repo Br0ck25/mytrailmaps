@@ -24,46 +24,45 @@ function MapReady({ setLeafletMap, mapRef }) {
     setLeafletMap(map);
 
     const apiBase = import.meta.env.PROD
-  ? 'https://mytrailmapsworker.jamesbrock25.workers.dev/api'
-  : '/api';
+      ? 'https://mytrailmapsworker.jamesbrock25.workers.dev/api'
+      : '/api';
 
-fetch(`${apiBase}/admin-gpx-list`)
-  .then((res) => res.json())
-  .then((tracks) => {
-    tracks.forEach((track) => {
-      const url = `${apiBase}/admin-gpx/${track.slug}`;
+    fetch(`${apiBase}/admin-gpx-list`)
+      .then((res) => res.json())
+      .then((tracks) => {
+        tracks.forEach((track) => {
+          const url = `${apiBase}/admin-gpx/${track.slug}`;
 
-      fetch(url)
-        .then((res) => res.text())
-        .then((gpxText) => {
-          const gpxLayer = new L.GPX(gpxText, {
-  async: true,
-  marker_options: {
-    startIconUrl: null,
-    endIconUrl: null,
-    shadowUrl: null,
-  },
-  parseElements: ["track"],
-  // 🟢 Don't specify color — let GPX file decide
-});
+          fetch(url)
+            .then((res) => res.text())
+            .then((gpxText) => {
+              const gpxLayer = new L.GPX(gpxText, {
+                async: true,
+                marker_options: {
+                  startIconUrl: null,
+                  endIconUrl: null,
+                  shadowUrl: null,
+                },
+                parseElements: ["track"],
+                // ✅ Let GPX file define color
+              });
 
+              gpxLayer._addWaypoints = () => {};
+              gpxLayer.bindPopup = () => {};
 
-          gpxLayer._addWaypoints = () => {};
-          gpxLayer.bindPopup = () => {};
+              gpxLayer.on("loaded", (e) => {
+                map.fitBounds(e.target.getBounds());
+              });
 
-          gpxLayer.on("loaded", (e) => {
-  map.fitBounds(e.target.getBounds());
-});
-
-
-          gpxLayer.addTo(leafletMap);
+              gpxLayer.addTo(map); // ✅ FIXED
+            });
         });
-    });
-  });
+      });
   }, [map, setLeafletMap]);
 
   return null;
 }
+
 
 function App() {
   const [leafletMap, setLeafletMap] = useState(null);
