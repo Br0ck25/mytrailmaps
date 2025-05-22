@@ -38,17 +38,17 @@ function MapReady({ setLeafletMap, mapRef }) {
             .then((gpxText) => {
               const gpxLayer = new L.GPX(gpxText, {
   async: true,
-  parseElements: ["track"], // Only load tracks, not routes or waypoints
+  parseElements: ["track"],
   marker_options: {
     startIconUrl: null,
     endIconUrl: null,
     shadowUrl: null,
   },
-  // 👇 explicitly disable default marker rendering
   waypoint_options: {
-    markerIcons: null,
+    createMarker: () => null, // ✅ fully disable waypoints
   },
 });
+
 
 
               gpxLayer._addWaypoints = () => {};
