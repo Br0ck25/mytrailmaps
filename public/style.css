@@ -47,4 +47,7 @@ html, body, #map {
 #controls input[type="file"] {
   font-size: 14px;
 }
+#clear-track-btn {
+  font-size: 14px;
+}
 
