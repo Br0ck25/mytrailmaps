@@ -27,66 +27,38 @@ function MapReady({ setLeafletMap, mapRef }) {
   ? 'https://mytrailmapsworker.jamesbrock25.workers.dev/api'
   : '/api';
 
-    fetch(`${apiBase}/admin-gpx-list`)
-      .then((res) => res.json())
-      .then((tracks) => {
-        tracks.forEach((track) => {
-          const url = `${apiBase}/admin-gpx/${track.slug}`;
+fetch(`${apiBase}/admin-gpx-list`)
+  .then((res) => res.json())
+  .then((tracks) => {
+    tracks.forEach((track) => {
+      const url = `${apiBase}/admin-gpx/${track.slug}`;
 
-          fetch(url)
-            .then((res) => res.text())
-            .then((gpxText) => {
-              const gpxLayer = new L.GPX(gpxText, {
-                async: true,
-                marker_options: {
-                  startIconUrl: null,
-                  endIconUrl: null,
-                  shadowUrl: null,
-                },
-                polyline_options: {
-                  color: "#3388ff",
-                  weight: 3,
-                },
-                parseElements: ["track"],
-              });
+      fetch(url)
+        .then((res) => res.text())
+        .then((gpxText) => {
+          const gpxLayer = new L.GPX(gpxText, {
+  async: true,
+  marker_options: {
+    startIconUrl: null,
+    endIconUrl: null,
+    shadowUrl: null,
+  },
+  parseElements: ["track"],
+  // 🟢 Don't specify color — let GPX file decide
+});
 
-              gpxLayer._addWaypoints = () => {};
-              gpxLayer.bindPopup = () => {};
 
-              gpxLayer.on("loaded", (e) => {
-                map.fitBounds(e.target.getBounds());
+          gpxLayer._addWaypoints = () => {};
+          gpxLayer.bindPopup = () => {};
 
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(gpxText, "application/xml");
-                const namespace = "http://www.topografix.com/GPX/1/1";
-                const waypointEls = [
-                  ...xml.getElementsByTagNameNS(namespace, "wpt"),
-                ];
+          gpxLayer.on("loaded", (e) => {
+            leafletMap.fitBounds(e.target.getBounds());
+          });
 
-                waypointEls.forEach((wpt) => {
-                  const lat = parseFloat(wpt.getAttribute("lat"));
-                  const lon = parseFloat(wpt.getAttribute("lon"));
-                  const name =
-                    wpt.getElementsByTagNameNS(namespace, "name")[0]
-                      ?.textContent || "Unnamed";
-                  const desc =
-                    wpt.getElementsByTagNameNS(namespace, "desc")[0]
-                      ?.textContent || "";
-
-                  L.marker([lat, lon])
-                    .addTo(map)
-                    .bindPopup(`<strong>${name}</strong><br>${desc}`);
-                });
-              });
-
-              gpxLayer.on("error", (err) => {
-                console.error("❌ Error loading GPX:", track.slug, err);
-              });
-
-              gpxLayer.addTo(map);
-            });
+          gpxLayer.addTo(leafletMap);
         });
-      });
+    });
+  });
   }, [map, setLeafletMap]);
 
   return null;
