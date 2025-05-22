@@ -24,8 +24,8 @@ function MapReady({ setLeafletMap, mapRef }) {
     setLeafletMap(map);
 
     const apiBase = import.meta.env.PROD
-      ? "https://mytrailmapsworker.jamesbrock25.workers.dev"
-      : "/api";
+  ? 'https://mytrailmapsworker.jamesbrock25.workers.dev/api'
+  : '/api';=
 
     fetch(`${apiBase}/admin-gpx-list`)
       .then((res) => res.json())
