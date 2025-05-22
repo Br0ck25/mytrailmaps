@@ -1,3 +1,24 @@
+import { gpx } from "https://cdn.jsdelivr.net/npm/togeojson@0.16.0/+esm";
+document.getElementById("gpx-upload").addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const text = await file.text();
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(text, "application/xml");
+  const geojson = gpx(xml);
+
+  if (window.loadedTrackLayer) {
+    map.removeLayer(window.loadedTrackLayer);
+  }
+
+  window.loadedTrackLayer = L.geoJSON(geojson, {
+    style: { color: "purple", weight: 3 }
+  }).addTo(map);
+  map.fitBounds(window.loadedTrackLayer.getBounds());
+});
+
+
 import * as L from "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js";
 
 
@@ -85,3 +106,24 @@ document.getElementById("load-btn").addEventListener("click", async () => {
   if (!id) return alert("Enter a Track ID");
   await loadTrack(id); // You can update this to draw it on the map
 });
+function exportGPX() {
+  const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="MyTrailMaps" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk><name>My Trail</name><trkseg>`;
+  
+  const gpxPoints = trail.map(([lat, lng]) =>
+    `<trkpt lat="${lat}" lon="${lng}"></trkpt>`
+  ).join("\n");
+
+  const gpxFooter = `</trkseg></trk></gpx>`;
+
+  const gpx = `${gpxHeader}\n${gpxPoints}\n${gpxFooter}`;
+  const blob = new Blob([gpx], { type: "application/gpx+xml" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "track.gpx";
+  a.click();
+}
+document.getElementById("gpx-export-btn").addEventListener("click", exportGPX);
