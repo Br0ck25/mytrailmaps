@@ -56,11 +56,19 @@ function MapReady({ setLeafletMap, mapRef }) {
 gpxLayer.bindPopup = () => {};
 
 gpxLayer.on("addline", (e) => {
-  // ✅ Force-remove any default start/end markers
-  if (e.line._markers) {
-    e.line._markers.forEach((m) => m.remove());
+  // ✅ Remove start and end markers
+  if (Array.isArray(e.line._markers)) {
+    for (const marker of e.line._markers) {
+      if (marker && marker.remove) {
+        marker.remove(); // Remove from map
+      }
+    }
+
+    // Optional: clear the marker array to prevent future issues
+    e.line._markers.length = 0;
   }
 });
+
 
 gpxLayer.on("loaded", (e) => {
   map.fitBounds(e.target.getBounds());
