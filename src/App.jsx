@@ -4,13 +4,25 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "leaflet-gpx";
 
+import "leaflet-gpx";
+
 // 🚫 Patch internal marker behavior
-L.GPX.prototype._setStartEndIcons = function () {};
+L.GPX.prototype._setStartEndIcons = function () {}; // disables legacy start/end icon logic
+
+// 🚫 Disable _initTrack entirely
+L.GPX.prototype._initTrack = function (track, options) {
+  const line = L.polyline(track, options.polyline_options);
+  this.addLayer(line);
+  return { line }; // 🚫 don't include .startMarker or .endMarker
+};
+
+// 🚫 Clean out _addSegment if used
 L.GPX.prototype._addSegment = function (line, name) {
   const polyline = L.polyline(line, this.options.polyline_options);
   this.addLayer(polyline);
   return polyline;
 };
+
 
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
