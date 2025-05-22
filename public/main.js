@@ -14,4 +14,12 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-import").addEventListener("click", () => {
     alert("Import dialog coming soon");
   });
+  document.getElementById("btn-overlays").addEventListener("click", () => {
+  document.getElementById("overlay-panel").classList.remove("hidden");
+});
+
+document.getElementById("close-overlay").addEventListener("click", () => {
+  document.getElementById("overlay-panel").classList.add("hidden");
+});
+
 });
