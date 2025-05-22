@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import "leaflet-gpx";
+import CustomGPX from "./CustomGPX";
+
 
 // 🚫 Patch internal marker behavior
 L.GPX.prototype._setStartEndIcons = function () {}; // disables legacy start/end icon logic
@@ -57,20 +58,13 @@ function MapReady({ setLeafletMap, mapRef }) {
             .then((gpxText) => {
   const gpxWithoutWaypoints = gpxText.replace(/<wpt[\s\S]*?<\/wpt>/g, "");
 
-  const gpxLayer = new L.GPX(gpxWithoutWaypoints, {
-  async: true,
-  parseElements: ["track"],
-  marker_options: {
-    startIconUrl: null,
-    endIconUrl: null,
-    shadowUrl: null,
-    startIcon: false,
-    endIcon: false,
-  },
-  waypoint_options: {
-    createMarker: () => {},
+const gpxLayer = new CustomGPX(gpxText, {
+  polyline_options: {
+    color: "#3388ff",
+    weight: 3,
   },
 });
+
 
 gpxLayer.bindPopup = () => {};
 
