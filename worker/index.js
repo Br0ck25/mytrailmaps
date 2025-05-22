@@ -14,6 +14,7 @@ export default {
     if (req.method === "GET" && url.pathname.startsWith("/load/")) {
       const id = url.pathname.split("/").pop();
       const data = await env.TRACKS_KV.get(id);
+      if (!data) return new Response("Not found", { status: 404 });
       return new Response(data, {
         headers: { "Content-Type": "application/json" },
       });
