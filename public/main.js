@@ -1,38 +1,10 @@
 
-const gpxInput = document.getElementById("gpx-upload");
-if (gpxInput) {
-  gpxInput.addEventListener("change", async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const text = await file.text();
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(text, "application/xml");
-    const geojson = toGeoJSON.gpx(xml);
-
-    if (window.loadedTrackLayer) {
-      map.removeLayer(window.loadedTrackLayer);
-    }
-
-    window.loadedTrackLayer = L.geoJSON(geojson, {
-      style: { color: "purple", weight: 3 }
-    }).addTo(map);
-    map.fitBounds(window.loadedTrackLayer.getBounds());
-  });
-}
-
-
-
 import * as L from "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js";
 
-
 const map = L.map("map", {
-  zoomControl: false, // turn off default position
+  zoomControl: false,
 }).fitWorld();
-
-// Re-add zoom control to bottom right
 L.control.zoom({ position: "bottomright" }).addTo(map);
-
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 const trail = [];
@@ -51,25 +23,10 @@ navigator.geolocation.watchPosition(
   { enableHighAccuracy: true }
 );
 
-document.getElementById("export-btn").addEventListener("click", () => {
-  const geojson = {
-    type: "FeatureCollection",
-    features: trail.map(([lat, lng]) => ({
-      type: "Feature",
-      geometry: { type: "Point", coordinates: [lng, lat] },
-    })),
-  };
-  const blob = new Blob([JSON.stringify(geojson)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "track.geojson";
-  a.click();
-}); 
-
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
 }
+
 const saveTrack = async (geojson) => {
   const res = await fetch("https://mytrailmapsworker.jamesbrock25.workers.dev/save", {
     method: "POST",
@@ -94,22 +51,6 @@ const loadTrack = async (id) => {
   map.fitBounds(window.loadedTrackLayer.getBounds());
 };
 
-document.getElementById("save-btn").addEventListener("click", () => {
-  const geojson = {
-    type: "FeatureCollection",
-    features: trail.map(([lat, lng]) => ({
-      type: "Feature",
-      geometry: { type: "Point", coordinates: [lng, lat] },
-    })),
-  };
-  saveTrack(geojson);
-});
-
-document.getElementById("load-btn").addEventListener("click", async () => {
-  const id = document.getElementById("load-id").value.trim();
-  if (!id) return alert("Enter a Track ID");
-  await loadTrack(id); // You can update this to draw it on the map
-});
 function exportGPX() {
   const gpxHeader = `<?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1" creator="MyTrailMaps" xmlns="http://www.topografix.com/GPX/1/1">
@@ -130,4 +71,76 @@ function exportGPX() {
   a.download = "track.gpx";
   a.click();
 }
-document.getElementById("gpx-export-btn").addEventListener("click", exportGPX);
+
+window.addEventListener("DOMContentLoaded", () => {
+  const saveBtn = document.getElementById("save-btn");
+  const loadBtn = document.getElementById("load-btn");
+  const exportBtn = document.getElementById("export-btn");
+  const gpxExportBtn = document.getElementById("gpx-export-btn");
+  const gpxInput = document.getElementById("gpx-upload");
+  const loadIdInput = document.getElementById("load-id");
+
+  if (saveBtn) {
+    saveBtn.addEventListener("click", () => {
+      const geojson = {
+        type: "FeatureCollection",
+        features: trail.map(([lat, lng]) => ({
+          type: "Feature",
+          geometry: { type: "Point", coordinates: [lng, lat] },
+        })),
+      };
+      saveTrack(geojson);
+    });
+  }
+
+  if (loadBtn) {
+    loadBtn.addEventListener("click", async () => {
+      const id = loadIdInput?.value.trim();
+      if (!id) return alert("Enter a Track ID");
+      await loadTrack(id);
+    });
+  }
+
+  if (exportBtn) {
+    exportBtn.addEventListener("click", () => {
+      const geojson = {
+        type: "FeatureCollection",
+        features: trail.map(([lat, lng]) => ({
+          type: "Feature",
+          geometry: { type: "Point", coordinates: [lng, lat] },
+        })),
+      };
+      const blob = new Blob([JSON.stringify(geojson)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "track.geojson";
+      a.click();
+    });
+  }
+
+  if (gpxExportBtn) {
+    gpxExportBtn.addEventListener("click", exportGPX);
+  }
+
+  if (gpxInput) {
+    gpxInput.addEventListener("change", async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const text = await file.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, "application/xml");
+      const geojson = toGeoJSON.gpx(xml);
+
+      if (window.loadedTrackLayer) {
+        map.removeLayer(window.loadedTrackLayer);
+      }
+
+      window.loadedTrackLayer = L.geoJSON(geojson, {
+        style: { color: "purple", weight: 3 }
+      }).addTo(map);
+      map.fitBounds(window.loadedTrackLayer.getBounds());
+    });
+  }
+});
