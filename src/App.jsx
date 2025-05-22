@@ -52,8 +52,9 @@ fetch(`${apiBase}/admin-gpx-list`)
           gpxLayer.bindPopup = () => {};
 
           gpxLayer.on("loaded", (e) => {
-            leafletMap.fitBounds(e.target.getBounds());
-          });
+  map.fitBounds(e.target.getBounds());
+});
+
 
           gpxLayer.addTo(leafletMap);
         });
