@@ -14,6 +14,28 @@
 
   <!-- Export -->
   <button id="gpx-export-btn">Export GPX</button>
+<div id="sidebar">
+  <div class="sidebar-header">
+    <h2>📍 MyTrailMaps</h2>
+    <button id="toggle-sidebar">⇤</button>
+  </div>
+  <hr />
+  <div class="sidebar-group">
+    <h3>Tracks</h3>
+    <input type="file" id="gpx-upload" accept=".gpx" />
+    <button id="gpx-export-btn">Export GPX</button>
+    <button id="clear-track-btn">Clear Track</button>
+  </div>
+  <hr />
+  <div class="sidebar-group">
+    <h3>Saved Tracks</h3>
+    <input id="load-id" placeholder="Track ID" />
+    <button id="load-btn">Load</button>
+    <button id="delete-track-btn">Delete</button>
+  </div>
+  <hr />
+  <div id="imported-tracks-panel"></div>
+</div>
 
   <!-- Map -->
   <div id="map"></div>
