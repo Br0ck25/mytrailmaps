@@ -25,38 +25,23 @@
   </div>
 </div>
 
-<div id="overlay-panel" class="sidepanel hidden">
+<div id="saved-panel" class="sidepanel hidden">
   <div class="panel-header">
-    <h3>Map Overlays</h3>
-    <button class="close-btn" data-close="overlay-panel">✖</button>
+    <h3>Saved Items</h3>
+    <button class="close-btn" data-close="saved-panel">✖</button>
   </div>
-  <ul class="overlay-list">
-    <li><label><input type="checkbox" checked> Waypoints</label></li>
-    <li><label><input type="checkbox" checked> Waypoint Labels</label></li>
-    <li><label><input type="checkbox" checked> Routes</label></li>
-    <li><label><input type="checkbox" checked> Tracks</label></li>
-    <li><label><input type="checkbox"> Public Tracks</label></li>
-    <li><label><input type="checkbox" checked> Saved Trails</label></li>
+  <div class="saved-toolbar">
+    <span>191 items</span>
+    <button>Newest</button>
+    <button>Filter</button>
+  </div>
+  <button class="create-item">+ Create new item</button>
+  <ul class="saved-list">
+    <li><img src="https://img.icons8.com/ios-filled/24/fa314a/marker.png"/><div><strong>Untitled Waypoint</strong><br><small>Waypoint • 5/21/2025</small></div></li>
+    <li><img src="https://img.icons8.com/ios-filled/24/fa314a/marker.png"/><div><strong>New river General Market</strong><br><small>Waypoint • 11/25/2024</small></div></li>
+    <li><img src="https://img.icons8.com/ios-filled/24/fa314a/marker.png"/><div><strong>Smokey Market</strong><br><small>Waypoint • 11/25/2024</small></div></li>
+    <li><img src="https://img.icons8.com/ios-filled/24/fa314a/marker.png"/><div><strong>The Swamp</strong><br><small>Waypoint • 11/25/2024</small></div></li>
   </ul>
-</div>
-
-<div id="import-panel" class="sidepanel hidden">
-  <div class="panel-header">
-    <h3>Import Data</h3>
-    <button class="close-btn" data-close="import-panel">✖</button>
-  </div>
-  <div class="import-body">
-    <div class="import-icon">📤</div>
-    <div class="import-formats">.GPX, .KML, .KMZ, .FIT, .GEOJSON</div>
-    <button class="import-select">Select Files</button>
-    <p class="import-tip">Tips to prepare your datafiles</p>
-    <hr />
-    <div class="import-protip">
-      <strong>PRO TIP:</strong><br>
-      There's no need to click on the 📍 icon in the menu, just drag and drop files onto the map at any time.
-      <br><a href="#" class="dismiss-link">Dismiss</a>
-    </div>
-  </div>
 </div>
 
 <div id="map"></div>
