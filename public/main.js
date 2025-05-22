@@ -1,23 +1,26 @@
 
-document.getElementById("gpx-upload").addEventListener("change", async (event) => {
-  const file = event.target.files[0];
-  if (!file) return;
+const gpxInput = document.getElementById("gpx-upload");
+if (gpxInput) {
+  gpxInput.addEventListener("change", async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
 
-  const text = await file.text();
-  const parser = new DOMParser();
-  const xml = parser.parseFromString(text, "application/xml");
-  const geojson = toGeoJSON.gpx(xml);
+    const text = await file.text();
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, "application/xml");
+    const geojson = toGeoJSON.gpx(xml);
 
+    if (window.loadedTrackLayer) {
+      map.removeLayer(window.loadedTrackLayer);
+    }
 
-  if (window.loadedTrackLayer) {
-    map.removeLayer(window.loadedTrackLayer);
-  }
+    window.loadedTrackLayer = L.geoJSON(geojson, {
+      style: { color: "purple", weight: 3 }
+    }).addTo(map);
+    map.fitBounds(window.loadedTrackLayer.getBounds());
+  });
+}
 
-  window.loadedTrackLayer = L.geoJSON(geojson, {
-    style: { color: "purple", weight: 3 }
-  }).addTo(map);
-  map.fitBounds(window.loadedTrackLayer.getBounds());
-});
 
 
 import * as L from "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js";
