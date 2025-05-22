@@ -67,3 +67,37 @@ html, body {
   right: 0;
   bottom: 0;
 }
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  z-index: 1002;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay-panel.hidden {
+  transform: translateX(100%);
+}
+
+.overlay-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.overlay-list li {
+  margin-bottom: 12px;
+}
