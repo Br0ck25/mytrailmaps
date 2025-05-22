@@ -20,100 +20,81 @@ L.Icon.Default.mergeOptions({
 function MapReady({ setLeafletMap, mapRef }) {
   const map = useMap();
 
-  useEffect(() => {
-    console.log("🌍 useMap found map instance");
-    setLeafletMap(map);
-    mapRef.current = map;
-  }, [map]);
+useEffect(() => {
+  if (!leafletMap) {
+    console.log("⏳ Waiting for map...");
+    return;
+  }
 
-  return null;
-}
+  console.log("🗺️ Map is ready:", leafletMap);
 
-export default function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activePanel, setActivePanel] = useState("map");
-  const mapRef = useRef(null);
-  const [leafletMap, setLeafletMap] = useState(null);
+  const apiBase = import.meta.env.PROD
+    ? 'https://mytrailmapsworker.jamesbrock25.workers.dev'
+    : '/api';
 
-  useEffect(() => {
-    if (!leafletMap) {
-      console.log("⏳ Waiting for map...");
-      return;
-    }
+  fetch(`${apiBase}/admin-gpx-list`)
+    .then((res) => res.json())
+    .then((tracks) => {
+      console.log("🎯 Tracks:", tracks);
 
-    console.log("🗺️ Map is ready:", leafletMap);
+      tracks.forEach((track) => {
+        const url = `${apiBase}/admin-gpx/${track.slug}`;
+        console.log("🟡 Loading GPX:", url);
 
-    fetch("/api/admin-gpx-list")
-      .then((res) => res.json())
-      .then((tracks) => {
-        console.log("🎯 Tracks:", tracks);
+        fetch(url)
+          .then((res) => res.text())
+          .then((gpxText) => {
+            const gpxLayer = new L.GPX(gpxText, {
+              async: true,
+              marker_options: {
+                startIconUrl: null,
+                endIconUrl: null,
+                shadowUrl: null,
+              },
+              polyline_options: {
+                color: "#3388ff",
+                weight: 3,
+              },
+              parseElements: ["track"],
+            });
 
-        tracks.forEach((track) => {
-          const url = `/api/admin-gpx/${track.slug}`;
-          console.log("🟡 Loading GPX:", url);
+            gpxLayer._addWaypoints = () => {};
+            gpxLayer.bindPopup = () => {};
 
-          fetch(url)
-            .then((res) => res.text())
-.then((gpxText) => {
-  // ✅ Create the GPX layer with ONLY the track, no markers
-  const gpxLayer = new L.GPX(gpxText, {
-  async: true,
-  marker_options: {
-    startIconUrl: null,
-    endIconUrl: null,
-    shadowUrl: null,
-  },
-  polyline_options: {
-    color: "#3388ff",
-    weight: 3,
-  },
-  parseElements: ["track"], // ✅ ensures only <trk> is parsed
-});
+            gpxLayer.on("loaded", (e) => {
+              leafletMap.fitBounds(e.target.getBounds());
+              console.log("✅ GPX Loaded:", track.slug);
 
-// ✅ Block auto-waypoints AND auto-popup
-gpxLayer._addWaypoints = () => {};
-gpxLayer.bindPopup = () => {}; // 🧨 Prevents auto-popup crash on click
+              const parser = new DOMParser();
+              const xml = parser.parseFromString(gpxText, "application/xml");
+              const namespace = "http://www.topografix.com/GPX/1/1";
+              const waypointEls = [...xml.getElementsByTagNameNS(namespace, "wpt")];
 
+              waypointEls.forEach((wpt) => {
+                const lat = parseFloat(wpt.getAttribute("lat"));
+                const lon = parseFloat(wpt.getAttribute("lon"));
+                const name = wpt.getElementsByTagNameNS(namespace, "name")[0]?.textContent || "Unnamed";
+                const desc = wpt.getElementsByTagNameNS(namespace, "desc")[0]?.textContent || "";
 
-  // 🚫 Stop leaflet-gpx from auto-adding waypoints
-  gpxLayer._addWaypoints = () => {};
+                console.log("📍 Waypoint:", { name, lat, lon });
 
-  gpxLayer.on("loaded", (e) => {
-    leafletMap.fitBounds(e.target.getBounds());
-    console.log("✅ GPX Loaded:", track.slug);
+                L.marker([lat, lon])
+                  .addTo(leafletMap)
+                  .bindPopup(`<strong>${name}</strong><br>${desc}`);
+              });
+            });
 
-    // ✅ Manually parse named waypoints only
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(gpxText, "application/xml");
-    const namespace = "http://www.topografix.com/GPX/1/1";
-    const waypointEls = [...xml.getElementsByTagNameNS(namespace, "wpt")];
+            gpxLayer.on("error", (err) => {
+              console.error("❌ Error loading GPX:", track.slug, err);
+            });
 
-    waypointEls.forEach((wpt) => {
-      const lat = parseFloat(wpt.getAttribute("lat"));
-      const lon = parseFloat(wpt.getAttribute("lon"));
-      const name = wpt.getElementsByTagNameNS(namespace, "name")[0]?.textContent || "Unnamed";
-      const desc = wpt.getElementsByTagNameNS(namespace, "desc")[0]?.textContent || "";
-
-      console.log("📍 Waypoint:", { name, lat, lon });
-      L.marker([lat, lon])
-        .addTo(leafletMap)
-        .bindPopup(`<strong>${name}</strong><br>${desc}`);
-    });
-  });
-
-  gpxLayer.on("error", (err) => {
-    console.error("❌ Error loading GPX:", track.slug, err);
-  });
-
-  // ✅ Finally add the track layer
-  gpxLayer.addTo(leafletMap);
-console.log("✅ Track layer added, no auto-markers expected");
-
-});
-
-        });
+            gpxLayer.addTo(leafletMap);
+            console.log("✅ Track layer added, no auto-markers expected");
+          });
       });
-  }, [leafletMap]);
+    });
+}, [leafletMap]);
+
 
   return (
     <div className="flex h-screen overflow-hidden">
