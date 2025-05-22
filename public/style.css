@@ -44,3 +44,7 @@ html, body, #map {
   min-width: 140px;
 }
 
+#controls input[type="file"] {
+  font-size: 14px;
+}
+
