@@ -1,7 +1,13 @@
 import * as L from "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js";
 
 
-const map = L.map("map").fitWorld();
+const map = L.map("map", {
+  zoomControl: false, // turn off default position
+}).fitWorld();
+
+// Re-add zoom control to bottom right
+L.control.zoom({ position: "bottomright" }).addTo(map);
+
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 const trail = [];
