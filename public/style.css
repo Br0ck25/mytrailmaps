@@ -51,3 +51,16 @@ html, body, #map {
   font-size: 14px;
 }
 
+#imported-tracks-panel {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: white;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  z-index: 1000;
+  font-size: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+}
