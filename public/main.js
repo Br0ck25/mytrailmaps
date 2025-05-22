@@ -57,16 +57,18 @@ const saveTrack = async (geojson) => {
 const loadTrack = async (id) => {
   const res = await fetch(`https://mytrailmapsworker.jamesbrock25.workers.dev/load/${id}`);
   const geojson = await res.json();
-  cif (window.loadedTrackLayer) {
-  map.removeLayer(window.loadedTrackLayer);
-}
-window.loadedTrackLayer = L.geoJSON(geojson, {
-  style: { color: "green", weight: 4 }
-}).addTo(map);
-map.fitBounds(window.loadedTrackLayer.getBounds());
 
-  // Optional: Display it on map (we can add this too)
+  if (window.loadedTrackLayer) {
+    map.removeLayer(window.loadedTrackLayer);
+  }
+
+  window.loadedTrackLayer = L.geoJSON(geojson, {
+    style: { color: "green", weight: 4 }
+  }).addTo(map);
+
+  map.fitBounds(window.loadedTrackLayer.getBounds());
 };
+
 document.getElementById("save-btn").addEventListener("click", () => {
   const geojson = {
     type: "FeatureCollection",
