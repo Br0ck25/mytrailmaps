@@ -3,6 +3,15 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "leaflet-gpx";
+
+// 🚫 Patch internal marker behavior
+L.GPX.prototype._setStartEndIcons = function () {};
+L.GPX.prototype._addSegment = function (line, name) {
+  const polyline = L.polyline(line, this.options.polyline_options);
+  this.addLayer(polyline);
+  return polyline;
+};
+
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
