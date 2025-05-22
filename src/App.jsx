@@ -55,11 +55,19 @@ function MapReady({ setLeafletMap, mapRef }) {
 
 gpxLayer.bindPopup = () => {};
 
+gpxLayer.on("addline", (e) => {
+  // ✅ Force-remove any default start/end markers
+  if (e.line._markers) {
+    e.line._markers.forEach((m) => m.remove());
+  }
+});
+
 gpxLayer.on("loaded", (e) => {
   map.fitBounds(e.target.getBounds());
 });
 
 gpxLayer.addTo(map);
+
 
             });
         });
