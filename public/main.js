@@ -1,29 +1,20 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const overlayPanel = document.getElementById("overlay-panel");
-  const openOverlay = document.getElementById("btn-overlays");
-  const closeOverlay = document.getElementById("close-overlay");
+  const panels = {
+    "btn-overlays": "overlay-panel",
+    "btn-import": "import-panel"
+  };
 
-  openOverlay?.addEventListener("click", () => {
-    overlayPanel.classList.remove("hidden");
+  Object.entries(panels).forEach(([btnId, panelId]) => {
+    document.getElementById(btnId)?.addEventListener("click", () => {
+      Object.values(panels).forEach(id => document.getElementById(id)?.classList.add("hidden"));
+      document.getElementById(panelId)?.classList.remove("hidden");
+    });
   });
 
-  closeOverlay?.addEventListener("click", () => {
-    overlayPanel.classList.add("hidden");
-  });
-
-  document.getElementById("btn-saved")?.addEventListener("click", () => {
-    alert("Saved Items Clicked");
-  });
-
-  document.getElementById("btn-waypoint")?.addEventListener("click", () => {
-    alert("Create Waypoint");
-  });
-
-  document.getElementById("btn-route")?.addEventListener("click", () => {
-    alert("Create Route");
-  });
-
-  document.getElementById("btn-import")?.addEventListener("click", () => {
-    alert("Import Data");
+  document.querySelectorAll(".close-btn").forEach(btn => {
+    const targetId = btn.getAttribute("data-close");
+    btn.addEventListener("click", () => {
+      document.getElementById(targetId)?.classList.add("hidden");
+    });
   });
 });
