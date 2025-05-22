@@ -1,0 +1,40 @@
+html, body, #map {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#export-btn, #save-btn, #load-id, #load-btn {
+  font-size: 14px;
+}
+
+#export-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#controls {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 1000;
+  background: white;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+
+#controls input {
+  padding: 6px;
+  font-size: 14px;
+}
