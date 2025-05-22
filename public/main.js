@@ -75,11 +75,9 @@ function exportGPX() {
 
 window.addEventListener("DOMContentLoaded", () => {
   const saveBtn = document.getElementById("save-btn");
-  const loadBtn = document.getElementById("load-btn");
   const exportBtn = document.getElementById("export-btn");
   const gpxExportBtn = document.getElementById("gpx-export-btn");
   const gpxInput = document.getElementById("gpx-upload");
-  const loadIdInput = document.getElementById("load-id");
 
   if (saveBtn) {
     saveBtn.addEventListener("click", () => {
