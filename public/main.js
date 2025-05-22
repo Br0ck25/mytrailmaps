@@ -144,3 +144,13 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+const clearTrackBtn = document.getElementById("clear-track-btn");
+
+if (clearTrackBtn) {
+  clearTrackBtn.addEventListener("click", () => {
+    if (window.loadedTrackLayer) {
+      map.removeLayer(window.loadedTrackLayer);
+      window.loadedTrackLayer = null;
+    }
+  });
+}
