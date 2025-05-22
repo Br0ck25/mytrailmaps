@@ -39,10 +39,14 @@ function MapReady({ setLeafletMap, mapRef }) {
               const gpxLayer = new L.GPX(gpxText, {
   async: true,
   marker_options: {
-    startIconUrl: null,
-    endIconUrl: null,
-    shadowUrl: null,
-  },
+  startIconUrl: null,
+  endIconUrl: null,
+  shadowUrl: null,
+  wptIcons: [], // Redundant safeguard
+  startIcon: false, // ✅ turn off start marker completely
+  endIcon: false,   // ✅ turn off end marker completely
+},
+
   waypoint_options: {
     createMarker: () => {}, // ✅ This is the correct way to disable rendering
   },
