@@ -4,8 +4,6 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "leaflet-gpx";
 
-import "leaflet-gpx";
-
 // 🚫 Patch internal marker behavior
 L.GPX.prototype._setStartEndIcons = function () {}; // disables legacy start/end icon logic
 
