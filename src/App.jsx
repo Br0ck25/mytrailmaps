@@ -39,32 +39,34 @@ function MapReady({ setLeafletMap, mapRef }) {
   const gpxWithoutWaypoints = gpxText.replace(/<wpt[\s\S]*?<\/wpt>/g, "");
 
   const gpxLayer = new L.GPX(gpxWithoutWaypoints, {
-    async: true,
-    parseElements: ["track"],
-    marker_options: {
-      startIconUrl: null,
-      endIconUrl: null,
-      shadowUrl: null,
-      startIcon: false,
-      endIcon: false,
-    },
-    waypoint_options: {
-      createMarker: () => {},
-    },
-  });
-
-  // 🚫 Force-disable start/end marker logic entirely
-  gpxLayer._setStartEndIcons = function () {
-    this._startIcon = null;
-    this._endIcon = null;
-  };
-
-  gpxLayer.on("loaded", (e) => {
-    map.fitBounds(e.target.getBounds());
-  });
-
-  gpxLayer.addTo(map);
+  async: true,
+  parseElements: ["track"],
+  marker_options: {
+    startIconUrl: null,
+    endIconUrl: null,
+    shadowUrl: null,
+    startIcon: false,
+    endIcon: false,
+  },
+  waypoint_options: {
+    createMarker: () => {},
+  },
 });
+
+gpxLayer.bindPopup = () => {};
+
+gpxLayer.on("loaded", (e) => {
+  map.fitBounds(e.target.getBounds());
+
+  // ✅ Remove start/end markers forcibly
+  if (e.target._info && Array.isArray(e.target._info._markers)) {
+    e.target._info._markers.forEach(marker => marker.remove());
+    e.target._info._markers = [];
+  }
+});
+
+gpxLayer.addTo(map);
+
 
 
         });
