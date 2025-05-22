@@ -8,26 +8,46 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     html, body, #map { margin: 0; padding: 0; height: 100%; }
-    #export-btn {
+    #export-btn, #save-btn, #load-id, #load-btn {
       position: absolute;
-      top: 10px; left: 10px;
       z-index: 1000;
-      padding: 8px 12px;
       background: white;
       border: 1px solid #ccc;
       border-radius: 5px;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    #export-btn { top: 10px; left: 10px; }
+    #controls {
+      top: 50px;
+      left: 10px;
+      display: flex;
+      gap: 5px;
+      position: absolute;
+      z-index: 1000;
+      background: white;
+      padding: 6px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
+
+  <!-- Export -->
   <button id="export-btn">Export GeoJSON</button>
+
+  <!-- Map -->
   <div id="map"></div>
+
+  <!-- Save/Load Controls -->
+  <div id="controls">
+    <button id="save-btn">Save Track</button>
+    <input id="load-id" placeholder="Track ID" />
+    <button id="load-btn">Load Track</button>
+  </div>
+
+  <!-- Load JS at the very end -->
   <script src="/main.js" type="module"></script>
-  <div style="position: absolute; top: 50px; left: 10px; z-index: 1000; background: white; padding: 6px; border: 1px solid #ccc;">
-  <button id="save-btn">Save Track</button>
-  <input id="load-id" placeholder="Track ID" />
-  <button id="load-btn">Load Track</button>
-</div>
 
 </body>
 </html>
