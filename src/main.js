@@ -38,9 +38,8 @@ document.getElementById("export-btn").addEventListener("click", () => {
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
 }
-// 🔗 Replace YOUR_SUBDOMAIN with your actual worker subdomain
 const saveTrack = async (geojson) => {
-  const res = await fetch("https://mytrailmapsworker.YOUR_SUBDOMAIN.workers.dev/save", {
+  const res = await fetch("https://mytrailmapsworker.jamesbrock25.workers.dev/save", {
     method: "POST",
     body: JSON.stringify(geojson),
   });
@@ -49,9 +48,25 @@ const saveTrack = async (geojson) => {
 };
 
 const loadTrack = async (id) => {
-  const res = await fetch(`https://mytrailmapsworker.YOUR_SUBDOMAIN.workers.dev/load/${id}`);
+  const res = await fetch(`https://mytrailmapsworker.jamesbrock25.workers.dev/load/${id}`);
   const geojson = await res.json();
   console.log("Loaded track:", geojson);
   // Optional: Display it on map (we can add this too)
 };
+document.getElementById("save-btn").addEventListener("click", () => {
+  const geojson = {
+    type: "FeatureCollection",
+    features: trail.map(([lat, lng]) => ({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [lng, lat] },
+    })),
+  };
+  saveTrack(geojson);
+});
+
+document.getElementById("load-btn").addEventListener("click", async () => {
+  const id = document.getElementById("load-id").value.trim();
+  if (!id) return alert("Enter a Track ID");
+  await loadTrack(id); // You can update this to draw it on the map
+});
 
