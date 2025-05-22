@@ -1,4 +1,3 @@
-
 import * as L from "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js";
 
 const map = L.map("map", {
@@ -7,8 +6,10 @@ const map = L.map("map", {
 L.control.zoom({ position: "bottomright" }).addTo(map);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
+
 const trail = [];
 let polyline = null;
+const importedTracks = []; // will hold { name, layer }
 
 navigator.geolocation.watchPosition(
   (pos) => {
@@ -124,24 +125,25 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   if (gpxInput) {
-    gpxInput.addEventListener("change", async (event) => {
-      const file = event.target.files[0];
-      if (!file) return;
+gpxInput.addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
 
-      const text = await file.text();
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, "application/xml");
-      const geojson = toGeoJSON.gpx(xml);
+  const text = await file.text();
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(text, "application/xml");
+  const geojson = toGeoJSON.gpx(xml);
 
-      if (window.loadedTrackLayer) {
-        map.removeLayer(window.loadedTrackLayer);
-      }
+  const name = file.name;
 
-      window.loadedTrackLayer = L.geoJSON(geojson, {
-        style: { color: "purple", weight: 3 }
-      }).addTo(map);
-      map.fitBounds(window.loadedTrackLayer.getBounds());
-    });
+  const layer = L.geoJSON(geojson, {
+    style: { color: "purple", weight: 3 }
+  }).addTo(map);
+  map.fitBounds(layer.getBounds());
+
+  importedTracks.push({ name, layer });       // ✅ track it
+  updateImportedTrackList();                  // ✅ show it
+});
   }
 });
 const clearTrackBtn = document.getElementById("clear-track-btn");
@@ -152,5 +154,30 @@ if (clearTrackBtn) {
       map.removeLayer(window.loadedTrackLayer);
       window.loadedTrackLayer = null;
     }
+  });
+}
+function updateImportedTrackList() {
+  const panel = document.getElementById("imported-tracks-panel");
+  panel.innerHTML = "";
+
+  importedTracks.forEach((track, index) => {
+    const item = document.createElement("div");
+    item.style.marginBottom = "4px";
+
+    const label = document.createElement("span");
+    label.textContent = track.name;
+
+    const btn = document.createElement("button");
+    btn.textContent = "🗑️";
+    btn.style.marginLeft = "8px";
+    btn.onclick = () => {
+      map.removeLayer(track.layer);
+      importedTracks.splice(index, 1);
+      updateImportedTrackList();
+    };
+
+    item.appendChild(label);
+    item.appendChild(btn);
+    panel.appendChild(item);
   });
 }
