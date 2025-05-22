@@ -2,39 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Trail Maps GPS</title>
+  <title>MyTrailMaps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="/style.css" />
-<script src="https://cdn.jsdelivr.net/npm/togeojson@0.16.0/togeojson.min.js"></script>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Export -->
-  <button id="gpx-export-btn">Export GPX</button>
 <div id="sidebar">
   <div class="sidebar-header">
     <h2>📍 MyTrailMaps</h2>
-    <button id="toggle-sidebar">⇤</button>
-  </div>
-  <hr />
-  <div class="sidebar-group">
-    <h3>Tracks</h3>
-    <input type="file" id="gpx-upload" accept=".gpx" />
-    <button id="gpx-export-btn">Export GPX</button>
-    <button id="clear-track-btn">Clear Track</button>
   </div>
   <hr />
 
-  <!-- Map -->
-  <div id="map"></div>
+  <div class="sidebar-section">
+    <h3>Map</h3>
+    <ul>
+      <li><button id="btn-overlays">Overlays</button></li>
+      <li><button id="btn-saved">Saved Items</button></li>
+    </ul>
+  </div>
 
-  <div id="imported-tracks-panel"></div>
+  <div class="sidebar-section">
+    <h3>Create</h3>
+    <ul>
+      <li><button id="btn-waypoint">Waypoint</button></li>
+      <li><button id="btn-route">Route</button></li>
+      <li><button id="btn-import">Import Data</button></li>
+    </ul>
+  </div>
+</div>
 
-  <!-- Load JS at the very end -->
-  <script src="/main.js" type="module"></script>
+<div id="map"></div>
 
+<script src="main.js" type="module"></script>
 </body>
 </html>
