@@ -38,3 +38,20 @@ document.getElementById("export-btn").addEventListener("click", () => {
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
 }
+// 🔗 Replace YOUR_SUBDOMAIN with your actual worker subdomain
+const saveTrack = async (geojson) => {
+  const res = await fetch("https://mytrailmapsworker.YOUR_SUBDOMAIN.workers.dev/save", {
+    method: "POST",
+    body: JSON.stringify(geojson),
+  });
+  const { id } = await res.json();
+  alert("Track saved! ID: " + id);
+};
+
+const loadTrack = async (id) => {
+  const res = await fetch(`https://mytrailmapsworker.YOUR_SUBDOMAIN.workers.dev/load/${id}`);
+  const geojson = await res.json();
+  console.log("Loaded track:", geojson);
+  // Optional: Display it on map (we can add this too)
+};
+
