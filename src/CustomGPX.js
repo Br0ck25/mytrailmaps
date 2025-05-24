@@ -98,22 +98,31 @@ if (extensions) {
   }
 
   _mapDisplayColor(displayColorName) {
-    const map = {
-      "DarkRed": "#8B0000",
-      "DarkGreen": "#006400",
-      "DarkBlue": "#00008B",
-      "Purple": "#800080",
-      "DarkCyan": "#008B8B",
-      "Magenta": "#FF00FF",
-      "Gray": "#808080",
-      "Black": "#000000",
-      "LightGray": "#D3D3D3",
-      "DarkYellow": "#B8860B",
-      "Yellow": "#FFFF00",
-      "Red": "#FF0000",
-      "Green": "#00FF00",
-      "Blue": "#0000FF",
-    };
-    return map[displayColorName] || "#3388ff";
+  const hex = displayColorName.trim();
+
+  // ✅ If it's already a hex code, return as-is (ensure # prefix)
+  if (/^[0-9a-f]{6}$/i.test(hex)) {
+    return `#${hex}`;
   }
+
+  // ✅ Named fallback map
+  const map = {
+    "DarkRed": "#8B0000",
+    "DarkGreen": "#006400",
+    "DarkBlue": "#00008B",
+    "Purple": "#800080",
+    "DarkCyan": "#008B8B",
+    "Magenta": "#FF00FF",
+    "Gray": "#808080",
+    "Black": "#000000",
+    "LightGray": "#D3D3D3",
+    "DarkYellow": "#B8860B",
+    "Yellow": "#FFFF00",
+    "Red": "#FF0000",
+    "Green": "#00FF00",
+    "Blue": "#0000FF",
+  };
+
+  return map[hex] || "#3388ff";
+}
 }
