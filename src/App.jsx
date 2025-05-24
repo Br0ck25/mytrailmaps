@@ -54,7 +54,8 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, gpxLayersRe
             });
         });
       });
-  }, [map, setLeafletMap, showNames, showWaypoints, gpxLayersRef]);
+  }, [map, setLeafletMap]); // ✅ REMOVE showNames/showWaypoints
+
 
   return null;
 }
