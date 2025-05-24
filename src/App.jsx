@@ -129,7 +129,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-screen-sm mx-auto h-full overflow-hidden flex flex-col">
+    <div className="relative w-full h-full overflow-hidden flex flex-col">
       <div className="flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow">
         <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
       </div>
