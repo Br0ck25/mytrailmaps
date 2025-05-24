@@ -28,22 +28,32 @@ function MapReady({ setLeafletMap, mapRef }) {
       : '/api';
 
     fetch(`${apiBase}/admin-gpx-list`)
-      .then((res) => res.json())
-      .then((tracks) => {
-        tracks.forEach((track) => {
-          const url = `${apiBase}/admin-gpx/${track.slug}`;
+  .then((res) => res.json())
+  .then((tracks) => {
+    tracks.forEach((track) => {
+      const url = `${apiBase}/admin-gpx/${track.slug}`;
 
-          fetch(url)
-            .then((res) => res.text())
-            .then((gpxText) => {
-  const gpxWithoutWaypoints = gpxText.replace(/<wpt[\s\S]*?<\/wpt>/g, "");
+      fetch(url)
+        .then((res) => res.text())
+        .then((gpxText) => {
+          const gpxLayer = new CustomGPX(gpxText, {
+            polyline_options: {
+              color: "#3388ff", // fallback
+              weight: 3,
+            },
+          });
 
-const gpxLayer = new CustomGPX(gpxText, {
-  polyline_options: {
-    color: "#3388ff",
-    weight: 3,
-  },
-});
+          gpxLayer.on("loaded", (e) => {
+            map.fitBounds(e.bounds);
+          });
+
+          gpxLayer.addTo(map);
+          });
+      });
+    });
+}, [map, setLeafletMap]);
+
+
 
 
 gpxLayer.bindPopup = () => {};
