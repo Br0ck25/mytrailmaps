@@ -8,11 +8,13 @@ export default class CustomGPX extends L.FeatureGroup {
     this._options = {
       polyline_options: { color: "#3388ff", weight: 3 },
       marker_options: {},
-      showTrackNames: true, // 🆕 allow toggle
-      showWaypoints: true,  // 🆕 allow toggle
+      showTrackNames: true,
+      showWaypoints: true,
       ...options,
     };
 
+    this._trackLabels = [];
+    this._waypointMarkers = [];
     this._parse();
   }
 
@@ -23,7 +25,6 @@ export default class CustomGPX extends L.FeatureGroup {
     const gpx = parser.parseFromString(this._gpxText, "application/xml");
     const allElements = gpx.querySelectorAll("*");
 
-    // ✅ Tracks
     const trks = [...allElements].filter(el => el.tagName.endsWith("trk"));
     let totalSegments = 0;
 
@@ -67,6 +68,7 @@ export default class CustomGPX extends L.FeatureGroup {
               })
                 .setContent(trkName)
                 .setLatLng(mid);
+              this._trackLabels.push(label);
               this.addLayer(label);
             }
           }
@@ -78,7 +80,6 @@ export default class CustomGPX extends L.FeatureGroup {
       console.warn("⚠️ No track segments found in GPX");
     }
 
-    // ✅ Named waypoints
     if (this._options.showWaypoints) {
       const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
       waypoints.forEach((wpt) => {
@@ -92,11 +93,11 @@ export default class CustomGPX extends L.FeatureGroup {
 
         const marker = L.marker([lat, lon], this._options.marker_options)
           .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
+        this._waypointMarkers.push(marker);
         marker.addTo(this);
       });
     }
 
-    // ✅ Fit bounds
     const allLines = this.getLayers().filter((l) => l instanceof L.Polyline);
     if (allLines.length > 0) {
       const bounds = L.latLngBounds([]);
@@ -105,11 +106,29 @@ export default class CustomGPX extends L.FeatureGroup {
     }
   }
 
+  setShowTrackNames(visible) {
+    this._trackLabels.forEach(label => {
+      if (visible) {
+        this.addLayer(label);
+      } else {
+        this.removeLayer(label);
+      }
+    });
+  }
+
+  setShowWaypoints(visible) {
+    this._waypointMarkers.forEach(marker => {
+      if (visible) {
+        this.addLayer(marker);
+      } else {
+        this.removeLayer(marker);
+      }
+    });
+  }
+
   _mapDisplayColor(displayColorName) {
     const hex = displayColorName.trim();
-
     if (/^[0-9a-f]{6}$/i.test(hex)) return `#${hex}`;
-
     const map = {
       "DarkRed": "#8B0000",
       "DarkGreen": "#006400",
@@ -126,7 +145,6 @@ export default class CustomGPX extends L.FeatureGroup {
       "Green": "#00FF00",
       "Blue": "#0000FF",
     };
-
     return map[hex] || "#3388ff";
   }
 }
