@@ -57,21 +57,22 @@ export default class CustomGPX extends L.FeatureGroup {
             color,
           }).addTo(this);
 
-          if (this._options.showTrackNames) {
-            const trkName = [...trk.children].find(c => c.tagName.endsWith("name"))?.textContent?.trim();
-            if (trkName) {
-              const mid = pts[Math.floor(pts.length / 2)];
-              const label = L.tooltip({
-                permanent: true,
-                direction: "center",
-                className: "gpx-track-label",
-              })
-                .setContent(trkName)
-                .setLatLng(mid);
-              this._trackLabels.push(label);
-              this.addLayer(label);
-            }
-          }
+          const trkName = [...trk.children].find(c => c.tagName.endsWith("name"))?.textContent?.trim();
+if (trkName) {
+  const mid = pts[Math.floor(pts.length / 2)];
+  const label = L.tooltip({
+    permanent: true,
+    direction: "center",
+    className: "gpx-track-label",
+  })
+    .setContent(trkName)
+    .setLatLng(mid);
+  this._trackLabels.push(label);
+  if (this._options.showTrackNames) {
+    this.addLayer(label);
+  }
+}
+
         }
       });
     });
@@ -92,9 +93,12 @@ export default class CustomGPX extends L.FeatureGroup {
         const desc = descEl?.textContent?.trim() || "";
 
         const marker = L.marker([lat, lon], this._options.marker_options)
-          .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
-        this._waypointMarkers.push(marker);
-        marker.addTo(this);
+  .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
+this._waypointMarkers.push(marker);
+if (this._options.showWaypoints) {
+  marker.addTo(this);
+}
+
       });
     }
 
