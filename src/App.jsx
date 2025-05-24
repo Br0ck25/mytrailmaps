@@ -21,7 +21,7 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, gpxLayersRe
     if (!map) return;
 
     setLeafletMap(map);
-    gpxLayersRef.current = []; // Clear previous layers if reloaded
+    gpxLayersRef.current = [];
 
     const apiBase = import.meta.env.PROD
       ? "https://mytrailmapsworker.jamesbrock25.workers.dev/api"
@@ -50,41 +50,50 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, gpxLayersRe
               });
 
               gpxLayer.addTo(map);
-              gpxLayersRef.current.push(gpxLayer); // ✅ Store reference
+              gpxLayersRef.current.push(gpxLayer);
             });
         });
       });
-  }, [map, setLeafletMap]); // ✅ REMOVE showNames/showWaypoints
-
+  }, [map, setLeafletMap]);
 
   return null;
+}
+
+function SidePanel({ title, children, onClose }) {
+  return (
+    <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-lg z-50 transition-transform transform translate-x-0">
+      <div className="flex items-center justify-between p-4 border-b">
+        <h2 className="text-lg font-semibold">{title}</h2>
+        <button onClick={onClose} className="text-gray-600 text-2xl leading-none">×</button>
+      </div>
+      <div className="p-4 space-y-4 overflow-y-auto h-[calc(100%-60px)]">{children}</div>
+    </div>
+  );
 }
 
 function App() {
   const [leafletMap, setLeafletMap] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activePanel, setActivePanel] = useState("map");
+  const [openPanel, setOpenPanel] = useState(null);
   const [showNames, setShowNames] = useState(true);
   const [showWaypoints, setShowWaypoints] = useState(true);
   const mapRef = useRef();
-  const gpxLayersRef = useRef([]); // ✅ Store CustomGPX layers
+  const gpxLayersRef = useRef([]);
 
-  // ✅ Dynamic toggling of labels and waypoints
-useEffect(() => {
-  gpxLayersRef.current.forEach((layer) => {
-    layer.setShowTrackNames(showNames);
-  });
-}, [showNames]);
+  useEffect(() => {
+    gpxLayersRef.current.forEach((layer) => {
+      layer.setShowTrackNames(showNames);
+    });
+  }, [showNames]);
 
-useEffect(() => {
-  gpxLayersRef.current.forEach((layer) => {
-    layer.setShowWaypoints(showWaypoints);
-  });
-}, [showWaypoints]);
+  useEffect(() => {
+    gpxLayersRef.current.forEach((layer) => {
+      layer.setShowWaypoints(showWaypoints);
+    });
+  }, [showWaypoints]);
 
   return (
     <div className="flex h-screen overflow-hidden">
-      {/* Sidebar */}
       <div
         className={`bg-gray-100 w-64 p-4 space-y-4 border-r border-gray-300 transition-all duration-300 ease-in-out ${
           menuOpen ? "block" : "hidden md:block"
@@ -92,128 +101,77 @@ useEffect(() => {
       >
         <h1 className="text-2xl font-bold text-green-700">MyTrailMaps</h1>
         <nav className="space-y-2">
-          <button onClick={() => setActivePanel("map")} className="block w-full text-left hover:underline">
+          <button onClick={() => setOpenPanel(openPanel === "map" ? null : "map")} className="block w-full text-left hover:underline">
             Map View
           </button>
-          <button onClick={() => setActivePanel("tracks")} className="block w-full text-left hover:underline">
+          <button onClick={() => setOpenPanel(openPanel === "tracks" ? null : "tracks")} className="block w-full text-left hover:underline">
             My Tracks
           </button>
-          <button onClick={() => setActivePanel("upload")} className="block w-full text-left hover:underline">
+          <button onClick={() => setOpenPanel(openPanel === "upload" ? null : "upload")} className="block w-full text-left hover:underline">
             Upload Track
           </button>
-          <button onClick={() => setActivePanel("account")} className="block w-full text-left hover:underline">
-            My Account
-          </button>
-          <button
-            onClick={() => setActivePanel("subscription")}
-            className="block w-full text-left hover:underline text-green-600"
-          >
-            Subscription
-          </button>
-          <button className="block w-full text-left text-red-500 hover:underline">Sign Out</button>
         </nav>
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 flex flex-col">
         <div className="flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow">
-          <h2 className="text-xl font-semibold capitalize">{activePanel}</h2>
+          <h2 className="text-xl font-semibold capitalize">Map</h2>
           <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
             ☰
           </button>
         </div>
 
         <div className="flex-1 overflow-auto">
-          {activePanel === "map" && (
-            <>
-              <p className="text-xs text-red-500 px-4">Panel: {activePanel}</p>
-
-              <div className="flex gap-4 px-4 pb-2 text-sm">
-                <label className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showNames}
-                    onChange={() => setShowNames(!showNames)}
-                  />
-                  Show Track Names
-                </label>
-                <label className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showWaypoints}
-                    onChange={() => setShowWaypoints(!showWaypoints)}
-                  />
-                  Show Waypoints
-                </label>
-              </div>
-
-              <MapContainer
-                center={[37.8, -96]}
-                zoom={4}
-                style={{ height: "100vh", width: "100%" }}
-                whenCreated={(map) => setLeafletMap(map)}
-              >
-                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <MapReady
-                  setLeafletMap={setLeafletMap}
-                  mapRef={mapRef}
-                  showNames={showNames}
-                  showWaypoints={showWaypoints}
-                  gpxLayersRef={gpxLayersRef} // ✅ Pass down
-                />
-              </MapContainer>
-              <p className="text-green-600 text-sm px-4">✅ Map attempted to render</p>
-            </>
-          )}
-
-          {activePanel === "tracks" && (
-            <div className="p-4 space-y-4">
-              <h3 className="text-2xl font-semibold mb-2">📁 My Tracks</h3>
-              {/* Hardcoded tracks for now */}
-              <div className="bg-white shadow rounded-xl p-4">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h4 className="font-bold text-lg">Rush Offroad</h4>
-                    <p className="text-sm text-gray-500">Uploaded: May 22, 2025</p>
-                  </div>
-                  <div className="space-x-2">
-                    <button className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm">
-                      Download
-                    </button>
-                    <button className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 text-sm">
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white shadow rounded-xl p-4">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h4 className="font-bold text-lg">Wildcat Park Loop</h4>
-                    <p className="text-sm text-gray-500">Uploaded: May 20, 2025</p>
-                  </div>
-                  <div className="space-x-2">
-                    <button className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm">
-                      Download
-                    </button>
-                    <button className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 text-sm">
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-400 text-sm italic">
-                Next: Load these from Cloudflare KV
-              </p>
-            </div>
-          )}
-
-          {activePanel === "upload" && <div className="p-4">📤 Upload a Track: Coming Soon</div>}
-          {activePanel === "account" && <div className="p-4">👤 My Account: Coming Soon</div>}
-          {activePanel === "subscription" && <div className="p-4">💳 Subscription Details: Coming Soon</div>}
+          <MapContainer
+            center={[37.8, -96]}
+            zoom={4}
+            style={{ height: "100vh", width: "100%" }}
+            whenCreated={(map) => setLeafletMap(map)}
+          >
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <MapReady
+              setLeafletMap={setLeafletMap}
+              mapRef={mapRef}
+              showNames={showNames}
+              showWaypoints={showWaypoints}
+              gpxLayersRef={gpxLayersRef}
+            />
+          </MapContainer>
         </div>
       </div>
+
+      {openPanel === "map" && (
+        <SidePanel title="Map Overlays" onClose={() => setOpenPanel(null)}>
+          <label className="flex items-center justify-between">
+            <span>Waypoints</span>
+            <input
+              type="checkbox"
+              checked={showWaypoints}
+              onChange={() => setShowWaypoints(!showWaypoints)}
+            />
+          </label>
+          <label className="flex items-center justify-between">
+            <span>Track Names</span>
+            <input
+              type="checkbox"
+              checked={showNames}
+              onChange={() => setShowNames(!showNames)}
+            />
+          </label>
+        </SidePanel>
+      )}
+
+      {openPanel === "tracks" && (
+        <SidePanel title="My Tracks" onClose={() => setOpenPanel(null)}>
+          <p className="text-sm text-gray-600">Here you can view, download, or delete your tracks.</p>
+        </SidePanel>
+      )}
+
+      {openPanel === "upload" && (
+        <SidePanel title="Upload Track" onClose={() => setOpenPanel(null)}>
+          <p className="text-sm text-gray-600">Track upload UI coming soon...</p>
+        </SidePanel>
+      )}
     </div>
   );
 }
