@@ -69,7 +69,12 @@ export default class CustomGPX extends L.FeatureGroup {
 
       // ✅ Attach the track name as a popup
       if (trackName) {
-        polyline.bindPopup(`<strong>${trackName}</strong>`);
+        polyline.bindTooltip(trackName, {
+  permanent: true,
+  direction: "center",
+  className: "track-label",
+});
+
       }
 
       polyline.addTo(this);
