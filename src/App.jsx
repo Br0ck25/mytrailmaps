@@ -8,24 +8,24 @@ import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 delete L.Icon.Default.prototype._getIconUrl;
-
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: markerIcon2x,
   iconUrl: markerIcon,
   shadowUrl: markerShadow,
 });
 
-function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints }) {
+function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, gpxLayersRef }) {
   const map = useMap();
 
   useEffect(() => {
     if (!map) return;
 
     setLeafletMap(map);
+    gpxLayersRef.current = []; // Clear previous layers if reloaded
 
     const apiBase = import.meta.env.PROD
-      ? 'https://mytrailmapsworker.jamesbrock25.workers.dev/api'
-      : '/api';
+      ? "https://mytrailmapsworker.jamesbrock25.workers.dev/api"
+      : "/api";
 
     fetch(`${apiBase}/admin-gpx-list`)
       .then((res) => res.json())
@@ -37,25 +37,24 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints }) {
             .then((res) => res.text())
             .then((gpxText) => {
               const gpxLayer = new CustomGPX(gpxText, {
-  polyline_options: {
-    color: "#3388ff",
-    weight: 3,
-  },
-  showTrackNames: showNames,   // ✅ FIXED
-  showWaypoints: showWaypoints,
-});
-
+                polyline_options: {
+                  color: "#3388ff",
+                  weight: 3,
+                },
+                showTrackNames: showNames,
+                showWaypoints: showWaypoints,
+              });
 
               gpxLayer.on("loaded", (e) => {
                 map.fitBounds(e.bounds);
               });
 
-              console.log("🧪 Adding GPX layer to map for:", track.slug);
               gpxLayer.addTo(map);
+              gpxLayersRef.current.push(gpxLayer); // ✅ Store reference
             });
         });
       });
-  }, [map, setLeafletMap, showNames, showWaypoints]);
+  }, [map, setLeafletMap, showNames, showWaypoints, gpxLayersRef]);
 
   return null;
 }
@@ -67,6 +66,20 @@ function App() {
   const [showNames, setShowNames] = useState(true);
   const [showWaypoints, setShowWaypoints] = useState(true);
   const mapRef = useRef();
+  const gpxLayersRef = useRef([]); // ✅ Store CustomGPX layers
+
+  // ✅ Dynamic toggling of labels and waypoints
+  useEffect(() => {
+    gpxLayersRef.current.forEach((layer) => {
+      layer.setShowTrackNames(showNames);
+    });
+  }, [showNames]);
+
+  useEffect(() => {
+    gpxLayersRef.current.forEach((layer) => {
+      layer.setShowWaypoints(showWaypoints);
+    });
+  }, [showWaypoints]);
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -78,28 +91,16 @@ function App() {
       >
         <h1 className="text-2xl font-bold text-green-700">MyTrailMaps</h1>
         <nav className="space-y-2">
-          <button
-            onClick={() => setActivePanel("map")}
-            className="block w-full text-left hover:underline"
-          >
+          <button onClick={() => setActivePanel("map")} className="block w-full text-left hover:underline">
             Map View
           </button>
-          <button
-            onClick={() => setActivePanel("tracks")}
-            className="block w-full text-left hover:underline"
-          >
+          <button onClick={() => setActivePanel("tracks")} className="block w-full text-left hover:underline">
             My Tracks
           </button>
-          <button
-            onClick={() => setActivePanel("upload")}
-            className="block w-full text-left hover:underline"
-          >
+          <button onClick={() => setActivePanel("upload")} className="block w-full text-left hover:underline">
             Upload Track
           </button>
-          <button
-            onClick={() => setActivePanel("account")}
-            className="block w-full text-left hover:underline"
-          >
+          <button onClick={() => setActivePanel("account")} className="block w-full text-left hover:underline">
             My Account
           </button>
           <button
@@ -108,9 +109,7 @@ function App() {
           >
             Subscription
           </button>
-          <button className="block w-full text-left text-red-500 hover:underline">
-            Sign Out
-          </button>
+          <button className="block w-full text-left text-red-500 hover:underline">Sign Out</button>
         </nav>
       </div>
 
@@ -159,24 +158,22 @@ function App() {
                   mapRef={mapRef}
                   showNames={showNames}
                   showWaypoints={showWaypoints}
+                  gpxLayersRef={gpxLayersRef} // ✅ Pass down
                 />
               </MapContainer>
-              <p className="text-green-600 text-sm px-4">
-                ✅ Map attempted to render
-              </p>
+              <p className="text-green-600 text-sm px-4">✅ Map attempted to render</p>
             </>
           )}
 
           {activePanel === "tracks" && (
             <div className="p-4 space-y-4">
               <h3 className="text-2xl font-semibold mb-2">📁 My Tracks</h3>
+              {/* Hardcoded tracks for now */}
               <div className="bg-white shadow rounded-xl p-4">
                 <div className="flex justify-between items-center">
                   <div>
                     <h4 className="font-bold text-lg">Rush Offroad</h4>
-                    <p className="text-sm text-gray-500">
-                      Uploaded: May 22, 2025
-                    </p>
+                    <p className="text-sm text-gray-500">Uploaded: May 22, 2025</p>
                   </div>
                   <div className="space-x-2">
                     <button className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm">
@@ -193,9 +190,7 @@ function App() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h4 className="font-bold text-lg">Wildcat Park Loop</h4>
-                    <p className="text-sm text-gray-500">
-                      Uploaded: May 20, 2025
-                    </p>
+                    <p className="text-sm text-gray-500">Uploaded: May 20, 2025</p>
                   </div>
                   <div className="space-x-2">
                     <button className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm">
@@ -213,15 +208,9 @@ function App() {
             </div>
           )}
 
-          {activePanel === "upload" && (
-            <div className="p-4">📤 Upload a Track: Coming Soon</div>
-          )}
-          {activePanel === "account" && (
-            <div className="p-4">👤 My Account: Coming Soon</div>
-          )}
-          {activePanel === "subscription" && (
-            <div className="p-4">💳 Subscription Details: Coming Soon</div>
-          )}
+          {activePanel === "upload" && <div className="p-4">📤 Upload a Track: Coming Soon</div>}
+          {activePanel === "account" && <div className="p-4">👤 My Account: Coming Soon</div>}
+          {activePanel === "subscription" && <div className="p-4">💳 Subscription Details: Coming Soon</div>}
         </div>
       </div>
     </div>
