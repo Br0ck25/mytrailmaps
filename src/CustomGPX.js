@@ -14,7 +14,25 @@ export default class CustomGPX extends L.FeatureGroup {
     this._parse();
   }
 
-  _parse() {
+    _parse() {
+  console.log("✅ CustomGPX _parse called");
+
+  // Test marker
+  L.marker([37.123, -83.456])
+    .addTo(this)
+    .bindPopup("Test Marker");
+  console.log("📍 Marker added");
+
+  // Test line
+  const polyline = L.polyline([
+    [37.123, -83.456],
+    [37.124, -83.457],
+  ], {
+    color: "#FF0000",
+    weight: 3,
+  }).addTo(this);
+  console.log("🟥 Test line added");
+
     const parser = new DOMParser();
     const gpx = parser.parseFromString(this._gpxText, "application/xml");
 

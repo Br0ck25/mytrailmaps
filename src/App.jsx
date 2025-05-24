@@ -46,7 +46,7 @@ function MapReady({ setLeafletMap, mapRef }) {
               gpxLayer.on("loaded", (e) => {
                 map.fitBounds(e.bounds);
               });
-
+console.log("🧪 Adding GPX layer to map for:", track.slug);
               gpxLayer.addTo(map);
             });
         });
