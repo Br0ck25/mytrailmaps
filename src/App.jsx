@@ -80,6 +80,54 @@ function App() {
     });
   }, [showWaypoints]);
 
+  const refreshGPXTracks = async () => {
+    if (!leafletMap) return;
+
+    const apiBase = import.meta.env.PROD
+      ? 'https://mytrailmapsworker.jamesbrock25.workers.dev/api'
+      : '/api';
+
+    gpxLayersRef.current.forEach((layer) => leafletMap.removeLayer(layer));
+    gpxLayersRef.current = [];
+
+    try {
+      const res = await fetch(`${apiBase}/admin-gpx-list`);
+      const tracks = await res.json();
+
+      for (const track of tracks) {
+        const gpxRes = await fetch(`${apiBase}/admin-gpx/${track.slug}`);
+        const gpxText = await gpxRes.text();
+
+        const gpxLayer = new CustomGPX(gpxText, {
+          polyline_options: { color: '#3388ff', weight: 3 },
+          showTrackNames: showNames,
+          showWaypoints: showWaypoints,
+        });
+
+        gpxLayer.on('loaded', (e) => {
+          leafletMap.fitBounds(e.bounds);
+        });
+
+        gpxLayer.addTo(leafletMap);
+        gpxLayersRef.current.push(gpxLayer);
+      }
+
+      console.log('🔄 GPX tracks refreshed after reconnect.');
+    } catch (err) {
+      console.error('❌ Error refreshing GPX tracks:', err);
+    }
+  };
+
+  useEffect(() => {
+    const onReconnect = () => {
+      console.log("🔄 Reconnected — refreshing GPX list and map.");
+      refreshGPXTracks();
+    };
+
+    window.addEventListener("online", onReconnect);
+    return () => window.removeEventListener("online", onReconnect);
+  }, []);
+
   return (
     <div className="relative h-screen w-screen overflow-hidden">
       <div className="flex-1 flex flex-col h-full">
@@ -120,7 +168,7 @@ function App() {
         </div>
 
         <div className="flex justify-around items-center border-t border-gray-300 bg-white h-14">
-          <button onClick={() => setActiveTab("map")} className="flex flex-col items-center text-xs">
+          <button onClick={() => setActiveTab("map"))} className="flex flex-col items-center text-xs">
             <FaMapMarkedAlt className="text-lg" />
             <span>Map</span>
           </button>
