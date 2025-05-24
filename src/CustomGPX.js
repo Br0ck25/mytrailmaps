@@ -15,55 +15,41 @@ export default class CustomGPX extends L.FeatureGroup {
   }
 
   _parse() {
-    console.log("✅ CustomGPX _parse called");
+    console.log("✅ CustomGPX _parse called (namespace-stripped)");
 
-    const GPX_NS = "http://www.topografix.com/GPX/1/1";
-    const GPX_STYLE_NS = "http://www.topografix.com/GPX/gpx_style/0/2";
+    // 🔧 Strip namespaces from XML so we can use simple tag selectors
+    const cleanXML = this._gpxText
+      .replace(/xmlns(:\w+)?="[^"]*"/g, "")  // remove xmlns declarations
+      .replace(/(<\/?)(\w+):/g, "$1");       // remove namespace prefixes
 
     const parser = new DOMParser();
-    const gpx = parser.parseFromString(this._gpxText, "application/xml");
+    const gpx = parser.parseFromString(cleanXML, "application/xml");
 
-    // ✅ Tracks and segments
-    const trks = [...gpx.getElementsByTagNameNS(GPX_NS, "trk")];
-    let totalSegments = 0;
+    // ✅ Tracks
+    const trksegs = [...gpx.getElementsByTagName("trkseg")];
+    trksegs.forEach((trkseg) => {
+      const pts = [...trkseg.getElementsByTagName("trkpt")].map((pt) => [
+        parseFloat(pt.getAttribute("lat")),
+        parseFloat(pt.getAttribute("lon")),
+      ]);
 
-    trks.forEach((trk) => {
-      const colorEl =
-        trk.getElementsByTagNameNS(GPX_STYLE_NS, "color")[0] ||
-        trk.getElementsByTagName("color")[0]; // fallback if gpx_style is missing
-      const color = colorEl?.textContent?.trim() || this._options.polyline_options.color;
-
-      const trksegs = [...trk.getElementsByTagNameNS(GPX_NS, "trkseg")];
-      trksegs.forEach((trkseg) => {
-        const pts = [...trkseg.getElementsByTagNameNS(GPX_NS, "trkpt")].map((pt) => [
-          parseFloat(pt.getAttribute("lat")),
-          parseFloat(pt.getAttribute("lon")),
-        ]);
-
-        if (pts.length) {
-          totalSegments++;
-          const polyline = L.polyline(pts, {
-            ...this._options.polyline_options,
-            color,
-          });
-          polyline.addTo(this);
-        }
-      });
+      if (pts.length) {
+        const polyline = L.polyline(pts, {
+          ...this._options.polyline_options,
+        });
+        polyline.addTo(this);
+      }
     });
 
-    if (totalSegments === 0) {
-      console.warn("⚠️ No track segments found in GPX");
-    }
-
-    // ✅ Named waypoints only
-    const waypoints = [...gpx.getElementsByTagNameNS(GPX_NS, "wpt")];
+    // ✅ Named waypoints
+    const waypoints = [...gpx.getElementsByTagName("wpt")];
     waypoints.forEach((wpt) => {
-      const name = wpt.getElementsByTagNameNS(GPX_NS, "name")[0]?.textContent?.trim();
+      const name = wpt.getElementsByTagName("name")[0]?.textContent?.trim();
       if (!name) return;
 
       const lat = parseFloat(wpt.getAttribute("lat"));
       const lon = parseFloat(wpt.getAttribute("lon"));
-      const desc = wpt.getElementsByTagNameNS(GPX_NS, "desc")[0]?.textContent?.trim() || "";
+      const desc = wpt.getElementsByTagName("desc")[0]?.textContent?.trim() || "";
 
       const marker = L.marker([lat, lon], this._options.marker_options)
         .bindPopup(`<strong>${name}</strong><br>${desc}`);
