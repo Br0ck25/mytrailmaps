@@ -69,26 +69,38 @@ export default defineConfig({
           },
           {
             // ✅ Cache GPX files
-            urlPattern: /\/admin-gpx\/.*\.gpx$/,
+            urlPattern: /\\/admin-gpx\\/.*\\.gpx$/,
             handler: 'CacheFirst',
             options: {
               cacheName: 'gpx-cache',
               expiration: {
                 maxEntries: 100,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+                maxAgeSeconds: 30 * 24 * 60 * 60,
               },
             },
           },
           {
             // ✅ Cache GPX list API
-            urlPattern: /\/admin-gpx-list$/,
+            urlPattern: /\\/admin-gpx-list$/,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'api-cache',
               networkTimeoutSeconds: 3,
               expiration: {
                 maxEntries: 20,
-                maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
+                maxAgeSeconds: 7 * 24 * 60 * 60,
+              },
+            },
+          },
+          {
+            // ✅ Cache OpenStreetMap tiles
+            urlPattern: /^https:\\/\\/.*tile\\.openstreetmap\\.org\\//,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'osm-tiles',
+              expiration: {
+                maxEntries: 1000,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
               },
             },
           },
