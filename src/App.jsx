@@ -37,13 +37,14 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints }) {
             .then((res) => res.text())
             .then((gpxText) => {
               const gpxLayer = new CustomGPX(gpxText, {
-                polyline_options: {
-                  color: "#3388ff", // fallback
-                  weight: 3,
-                },
-                showNames,
-                showWaypoints,
-              });
+  polyline_options: {
+    color: "#3388ff",
+    weight: 3,
+  },
+  showTrackNames: showNames,   // ✅ FIXED
+  showWaypoints: showWaypoints,
+});
+
 
               gpxLayer.on("loaded", (e) => {
                 map.fitBounds(e.bounds);
