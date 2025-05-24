@@ -27,46 +27,56 @@ export default class CustomGPX extends L.FeatureGroup {
     let totalSegments = 0;
 
     trks.forEach((trk) => {
-      // Get <DisplayColor> from <extensions>
-      let color = this._options.polyline_options.color;
+  // Extract <name> for the track
+  const nameEl = [...trk.children].find(el => el.tagName.endsWith("name"));
+  const trackName = nameEl?.textContent?.trim() || "";
 
-      const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
-if (extensions) {
-  const allExtensionChildren = [...extensions.getElementsByTagName("*")];
-  const colorTag = allExtensionChildren.find(el =>
-    el.tagName.toLowerCase().endsWith("displaycolor") ||
-    el.tagName.toLowerCase().endsWith("color")
-  );
-  if (colorTag && colorTag.textContent.trim()) {
-    const displayColor = colorTag.textContent.trim();
-    color = this._mapDisplayColor(displayColor);
-    console.log("🎨 Track color extracted (fallback):", displayColor, "→", color);
+  // Get <DisplayColor> from <extensions>
+  let color = this._options.polyline_options.color;
+
+  const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
+  if (extensions) {
+    const allExtensionChildren = [...extensions.getElementsByTagName("*")];
+    const colorTag = allExtensionChildren.find(el =>
+      el.tagName.toLowerCase().endsWith("displaycolor") ||
+      el.tagName.toLowerCase().endsWith("color")
+    );
+    if (colorTag && colorTag.textContent.trim()) {
+      const displayColor = colorTag.textContent.trim();
+      color = this._mapDisplayColor(displayColor);
+      console.log("🎨 Track color extracted (fallback):", displayColor, "→", color);
+    } else {
+      console.log("🎨 Still no <DisplayColor> tag found in extensions");
+    }
   } else {
-    console.log("🎨 Still no <DisplayColor> tag found in extensions");
+    console.log("📭 No <extensions> found at all");
   }
-} else {
-  console.log("📭 No <extensions> found at all");
-}
 
+  const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
+  trksegs.forEach((trkseg) => {
+    const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
+    const pts = trkpts.map((pt) => [
+      parseFloat(pt.getAttribute("lat")),
+      parseFloat(pt.getAttribute("lon")),
+    ]);
 
-      const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
-      trksegs.forEach((trkseg) => {
-        const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
-        const pts = trkpts.map((pt) => [
-          parseFloat(pt.getAttribute("lat")),
-          parseFloat(pt.getAttribute("lon")),
-        ]);
-
-        if (pts.length) {
-          totalSegments++;
-          const polyline = L.polyline(pts, {
-            ...this._options.polyline_options,
-            color,
-          });
-          polyline.addTo(this);
-        }
+    if (pts.length) {
+      totalSegments++;
+      const polyline = L.polyline(pts, {
+        ...this._options.polyline_options,
+        color,
       });
-    });
+
+      // ✅ Attach the track name as a popup
+      if (trackName) {
+        polyline.bindPopup(`<strong>${trackName}</strong>`);
+      }
+
+      polyline.addTo(this);
+    }
+  });
+});
+
 
     if (totalSegments === 0) {
       console.warn("⚠️ No track segments found in GPX");
