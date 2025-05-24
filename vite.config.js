@@ -23,20 +23,20 @@ export default defineConfig({
           {
             src: 'pwa-192x192.png',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           },
           {
             src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
-          },
-        ],
+            purpose: 'any maskable'
+          }
+        ]
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
@@ -68,19 +68,19 @@ export default defineConfig({
             },
           },
           {
-            // Cache GPX files
+            // ✅ Cache GPX files
             urlPattern: /\/admin-gpx\/.*\.gpx$/,
             handler: 'CacheFirst',
             options: {
               cacheName: 'gpx-cache',
               expiration: {
                 maxEntries: 100,
-                maxAgeSeconds: 30 * 24 * 60 * 60,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
               },
             },
           },
           {
-            // Cache GPX list API
+            // ✅ Cache GPX list API
             urlPattern: /\/admin-gpx-list$/,
             handler: 'NetworkFirst',
             options: {
@@ -88,19 +88,7 @@ export default defineConfig({
               networkTimeoutSeconds: 3,
               expiration: {
                 maxEntries: 20,
-                maxAgeSeconds: 7 * 24 * 60 * 60,
-              },
-            },
-          },
-          {
-            // Cache OpenStreetMap tiles
-            urlPattern: /^https:\/\/.*tile\.openstreetmap\.org\//,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'osm-tiles',
-              expiration: {
-                maxEntries: 1000,
-                maxAgeSeconds: 60 * 60 * 24 * 30,
+                maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
               },
             },
           },

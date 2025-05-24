@@ -110,8 +110,8 @@ function App() {
 
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
-      <div className="flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow">
-        <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
+      <div className={`flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow ${activeTab === 'map' ? 'hidden' : ''}`}>
+  <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
       </div>
 
       <div className="flex-1 relative overflow-hidden">
