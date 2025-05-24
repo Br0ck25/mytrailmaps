@@ -32,12 +32,12 @@ export default class CustomGPX extends L.FeatureGroup {
 
       const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
       if (extensions) {
-        const colorTag = [...extensions.children].find(c =>
-          c.tagName.endsWith("DisplayColor") || c.tagName.endsWith("color")
-        );
-        if (colorTag && colorTag.textContent.trim()) {
-          color = this._mapDisplayColor(colorTag.textContent.trim());
-          console.log("🎨 Track color extracted:", colorTag.textContent.trim(), "→", color);
+        const colorTag = extensions.getElementsByTagNameNS("*", "DisplayColor")[0];
+if (colorTag && colorTag.textContent.trim()) {
+  const displayColor = colorTag.textContent.trim();
+  color = this._mapDisplayColor(displayColor);
+  console.log("🎨 Track color extracted via NS:", displayColor, "→", color);
+
         } else {
           console.log("🎨 No color tag in <extensions>");
         }
