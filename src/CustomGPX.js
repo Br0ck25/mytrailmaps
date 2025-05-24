@@ -31,19 +31,23 @@ export default class CustomGPX extends L.FeatureGroup {
       let color = this._options.polyline_options.color;
 
       const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
-      if (extensions) {
-        const colorTag = extensions.getElementsByTagNameNS("*", "DisplayColor")[0];
-if (colorTag && colorTag.textContent.trim()) {
-  const displayColor = colorTag.textContent.trim();
-  color = this._mapDisplayColor(displayColor);
-  console.log("🎨 Track color extracted via NS:", displayColor, "→", color);
+if (extensions) {
+  const allExtensionChildren = [...extensions.getElementsByTagName("*")];
+  const colorTag = allExtensionChildren.find(el =>
+    el.tagName.toLowerCase().endsWith("displaycolor") ||
+    el.tagName.toLowerCase().endsWith("color")
+  );
+  if (colorTag && colorTag.textContent.trim()) {
+    const displayColor = colorTag.textContent.trim();
+    color = this._mapDisplayColor(displayColor);
+    console.log("🎨 Track color extracted (fallback):", displayColor, "→", color);
+  } else {
+    console.log("🎨 Still no <DisplayColor> tag found in extensions");
+  }
+} else {
+  console.log("📭 No <extensions> found at all");
+}
 
-        } else {
-          console.log("🎨 No color tag in <extensions>");
-        }
-      } else {
-        console.log("📭 No <extensions> found");
-      }
 
       const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
       trksegs.forEach((trkseg) => {
