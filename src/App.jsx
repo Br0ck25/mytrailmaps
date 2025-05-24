@@ -135,23 +135,23 @@ function App() {
       </div>
 
       <div className="flex-1 relative">
-        {activeTab === "map" && (
-          <MapContainer
-            center={[37.8, -96]}
-            zoom={4}
-            style={{ flex: 1 }}
-            whenCreated={(map) => setLeafletMap(map)}
-          >
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <MapReady
-              setLeafletMap={setLeafletMap}
-              mapRef={mapRef}
-              showNames={showNames}
-              showWaypoints={showWaypoints}
-              gpxLayersRef={gpxLayersRef}
-            />
-          </MapContainer>
-        )}
+  {activeTab === "map" && (
+    <MapContainer
+      center={[37.8, -96]}
+      zoom={4}
+      className="h-full w-full"
+      whenCreated={(map) => setLeafletMap(map)}
+    >
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <MapReady
+        setLeafletMap={setLeafletMap}
+        mapRef={mapRef}
+        showNames={showNames}
+        showWaypoints={showWaypoints}
+        gpxLayersRef={gpxLayersRef}
+      />
+    </MapContainer>
+  )}
 
         {activeTab === "trip" && (
           <div className="p-4">Trip info will go here.</div>
