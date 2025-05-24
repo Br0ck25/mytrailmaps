@@ -20,27 +20,33 @@ export default class CustomGPX extends L.FeatureGroup {
     const parser = new DOMParser();
     const gpx = parser.parseFromString(this._gpxText, "application/xml");
 
-    const trks = Array.from(gpx.getElementsByTagName("trk"));
-    trks.forEach((trk) => {
-      let color = this._options.polyline_options.color;
+    const allElements = gpx.querySelectorAll("*");
 
-      // Try to find a <color> in any extensions block
-      const extensions = trk.getElementsByTagName("extensions")[0];
+    // ✅ Tracks (ignore namespace)
+    const trks = [...allElements].filter(el => el.tagName.endsWith("trk"));
+    let totalSegments = 0;
+
+    trks.forEach((trk) => {
+      // Get <color> from <extensions>
+      let color = this._options.polyline_options.color;
+      const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
       if (extensions) {
-        const colorEl = extensions.querySelector("color");
-        if (colorEl && colorEl.textContent.trim()) {
-          color = colorEl.textContent.trim();
+        const colorTag = [...extensions.children].find(c => c.tagName.endsWith("color"));
+        if (colorTag && colorTag.textContent.trim()) {
+          color = colorTag.textContent.trim();
         }
       }
 
-      const trksegs = Array.from(trk.getElementsByTagName("trkseg"));
+      const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
       trksegs.forEach((trkseg) => {
-        const pts = Array.from(trkseg.getElementsByTagName("trkpt")).map((pt) => [
+        const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
+        const pts = trkpts.map((pt) => [
           parseFloat(pt.getAttribute("lat")),
           parseFloat(pt.getAttribute("lon")),
         ]);
 
         if (pts.length) {
+          totalSegments++;
           const polyline = L.polyline(pts, {
             ...this._options.polyline_options,
             color,
@@ -50,15 +56,19 @@ export default class CustomGPX extends L.FeatureGroup {
       });
     });
 
-    // ✅ Named waypoints only
-    const waypoints = Array.from(gpx.getElementsByTagName("wpt"));
+    if (totalSegments === 0) {
+      console.warn("⚠️ No track segments found in GPX");
+    }
+
+    // ✅ Named waypoints
+    const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
     waypoints.forEach((wpt) => {
-      const nameEl = wpt.getElementsByTagName("name")[0];
+      const nameEl = [...wpt.children].find(c => c.tagName.endsWith("name"));
       if (!nameEl || !nameEl.textContent.trim()) return;
 
       const lat = parseFloat(wpt.getAttribute("lat"));
       const lon = parseFloat(wpt.getAttribute("lon"));
-      const descEl = wpt.getElementsByTagName("desc")[0];
+      const descEl = [...wpt.children].find(c => c.tagName.endsWith("desc"));
       const desc = descEl?.textContent?.trim() || "";
 
       const marker = L.marker([lat, lon], this._options.marker_options)
@@ -72,8 +82,6 @@ export default class CustomGPX extends L.FeatureGroup {
       const bounds = L.latLngBounds([]);
       allLines.forEach((line) => bounds.extend(line.getBounds()));
       this.fire("loaded", { bounds });
-    } else {
-      console.warn("⚠️ No track segments rendered.");
     }
   }
 }
