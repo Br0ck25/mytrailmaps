@@ -61,7 +61,7 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, gpxLayersRe
 
 function SidePanel({ title, children, onClose }) {
   return (
-    <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-lg z-50 transition-transform transform translate-x-0">
+    <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-lg z-[1000]">
       <div className="flex items-center justify-between p-4 border-b">
         <h2 className="text-lg font-semibold">{title}</h2>
         <button onClick={onClose} className="text-gray-600 text-2xl leading-none">×</button>
@@ -70,6 +70,7 @@ function SidePanel({ title, children, onClose }) {
     </div>
   );
 }
+
 
 function App() {
   const [leafletMap, setLeafletMap] = useState(null);
