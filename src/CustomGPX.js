@@ -22,23 +22,30 @@ export default class CustomGPX extends L.FeatureGroup {
 
     const allElements = gpx.querySelectorAll("*");
 
-    // ✅ Tracks
-    const trksegs = [...allElements].filter(el => el.tagName.endsWith("trkseg"));
-    console.log(`🛰️ Found ${trksegs.length} track segments`);
+    // ✅ Tracks with per-track color support
+    const trks = [...allElements].filter(el => el.tagName.endsWith("trk"));
+    trks.forEach((trk) => {
+      // Try to find color inside extensions
+      const colorEl = trk.querySelector("extensions > color, extensions color");
+      const color = colorEl?.textContent?.trim() || this._options.polyline_options.color;
 
-    trksegs.forEach((trkseg) => {
-      const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
-      const pts = trkpts.map((pt) => [
-        parseFloat(pt.getAttribute("lat")),
-        parseFloat(pt.getAttribute("lon")),
-      ]);
+      const trksegs = [...trk.querySelectorAll("*")].filter(el => el.tagName.endsWith("trkseg"));
+      trksegs.forEach((trkseg) => {
+        const pts = [...trkseg.children]
+          .filter(el => el.tagName.endsWith("trkpt"))
+          .map((pt) => [
+            parseFloat(pt.getAttribute("lat")),
+            parseFloat(pt.getAttribute("lon")),
+          ]);
 
-      if (pts.length) {
-        const polyline = L.polyline(pts, {
-          ...this._options.polyline_options,
-        });
-        polyline.addTo(this);
-      }
+        if (pts.length) {
+          const polyline = L.polyline(pts, {
+            ...this._options.polyline_options,
+            color,
+          });
+          polyline.addTo(this);
+        }
+      });
     });
 
     // ✅ Named waypoints
