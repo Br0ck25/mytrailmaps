@@ -168,7 +168,7 @@ function App() {
         </div>
 
         <div className="flex justify-around items-center border-t border-gray-300 bg-white h-14">
-          <button onClick={() => setActiveTab("map"))} className="flex flex-col items-center text-xs">
+          <button onClick={() => setActiveTab("map")} className="flex flex-col items-center text-xs">
             <FaMapMarkedAlt className="text-lg" />
             <span>Map</span>
           </button>
