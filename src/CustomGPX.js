@@ -30,12 +30,18 @@ export default class CustomGPX extends L.FeatureGroup {
       // Get <color> from <extensions>
       let color = this._options.polyline_options.color;
       const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
-      if (extensions) {
-        const colorTag = [...extensions.children].find(c => c.tagName.endsWith("color"));
-        if (colorTag && colorTag.textContent.trim()) {
-          color = colorTag.textContent.trim();
-        }
-      }
+if (extensions) {
+  const colorTag = [...extensions.children].find(c => c.tagName.endsWith("color"));
+  if (colorTag && colorTag.textContent.trim()) {
+    color = colorTag.textContent.trim();
+    console.log("🎨 Found track color:", color);
+  } else {
+    console.log("🎨 No <color> tag in <extensions> for this track");
+  }
+} else {
+  console.log("📭 No <extensions> found in track");
+}
+
 
       const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
       trksegs.forEach((trkseg) => {
