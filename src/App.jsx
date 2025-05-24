@@ -66,6 +66,7 @@ function App() {
   const [activeTab, setActiveTab] = useState("map");
   const [showNames, setShowNames] = useState(true);
   const [showWaypoints, setShowWaypoints] = useState(true);
+  const [showWaypointLabels, setShowWaypointLabels] = useState(true);
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
   const mapRef = useRef();
@@ -156,7 +157,6 @@ function App() {
           </MapContainer>
         )}
 
-        {/* Floating Map Overlay Button */}
         <button
           onClick={() => {
             setShowOverlaysPanel(true);
@@ -167,7 +167,6 @@ function App() {
           <FiLayers className="text-xl" />
         </button>
 
-        {/* Bottom Sheet */}
         {showOverlaysPanel && (
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
             <div className="flex items-center justify-between p-4 border-b">
@@ -201,7 +200,7 @@ function App() {
                 </label>
                 <label className="flex justify-between items-center">
                   <span>Waypoint Labels</span>
-                  <input type="checkbox" checked={showNames} onChange={() => setShowNames(!showNames)} className="toggle" />
+                  <input type="checkbox" checked={showWaypointLabels} onChange={() => setShowWaypointLabels(!showWaypointLabels)} className="toggle" />
                 </label>
                 <label className="flex justify-between items-center">
                   <span>Public Tracks</span>
