@@ -1,40 +1,77 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
+import slugify from "slugify";
+import { DOMParser } from "xmldom";
+import fetch from "node-fetch";
+import crypto from "crypto";
 import dotenv from "dotenv";
-import fetch from "node-fetch"; // install this
-
 dotenv.config();
 
-const accountId = process.env.CF_ACCOUNT_ID;
-const namespaceId = process.env.TRACKS_KV_ID;
-const apiToken = process.env.CF_API_TOKEN;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const GPX_DIR = path.join(__dirname, "gpx-files");
 
-const gpxDir = path.join(process.cwd(), "gpx-files");
+const ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
+const KV_ID = process.env.TRACKS_KV_ID;
+const API_TOKEN = process.env.CF_API_TOKEN;
 
-const upload = async () => {
-  const files = fs.readdirSync(gpxDir).filter(f => f.endsWith(".gpx"));
+function extractMetadata(gpxText) {
+  const doc = new DOMParser().parseFromString(gpxText, "text/xml");
+  const trk = doc.getElementsByTagName("trk")[0];
+  const name = trk?.getElementsByTagName("name")[0]?.textContent?.trim() || "Unnamed";
+  const slug = slugify(name, { lower: true, strict: true });
+  const color = Array.from(trk?.getElementsByTagName("extensions") || [])
+    .flatMap((ext) => Array.from(ext.getElementsByTagName("DisplayColor")))
+    .map((n) => n.textContent?.trim())?.[0] || null;
+  return { name, slug, color };
+}
+
+function hashTrackPoints(gpxText) {
+  const doc = new DOMParser().parseFromString(gpxText, "text/xml");
+  const trkpts = Array.from(doc.getElementsByTagName("trkpt"))
+    .map((pt) => `${pt.getAttribute("lat")},${pt.getAttribute("lon")}`)
+    .join(";");
+  return crypto.createHash("sha256").update(trkpts).digest("hex");
+}
+
+async function uploadToKV(key, value, isBinary = false) {
+  const url = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/storage/kv/namespaces/${KV_ID}/values/${encodeURIComponent(key)}`;
+  const res = await fetch(url, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${API_TOKEN}`,
+      "Content-Type": isBinary ? "application/gpx+xml" : "application/json",
+    },
+    body: value,
+  });
+  return res.ok;
+}
+
+async function uploadAll() {
+  const seenHashes = new Set();
+  const files = fs.readdirSync(GPX_DIR).filter(f => f.endsWith(".gpx"));
 
   for (const file of files) {
-    const slug = path.basename(file, ".gpx");
-    const key = `gpx:admin:${slug}.gpx`;
-    const data = fs.readFileSync(path.join(gpxDir, file));
+    const gpxText = fs.readFileSync(path.join(GPX_DIR, file), "utf8");
+    const { name, slug, color } = extractMetadata(gpxText);
+    const hash = hashTrackPoints(gpxText);
 
-    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${472fe4d7673807cf0d44847c19f31e57}/storage/kv/namespaces/${b65d1ca3fddf46f585584b70b3c4582f}/values/${encodeURIComponent(key)}`, {
-      method: "PUT",
-      headers: {
-        "Authorization": `Bearer ${apiToken}`,
-        "Content-Type": "application/gpx+xml"
-      },
-      body: data
-    });
+    if (seenHashes.has(hash)) {
+      console.log("⚠️ Duplicate track skipped:", file);
+      continue;
+    }
+    seenHashes.add(hash);
 
-    const result = await response.json();
-    if (result.success) {
-      console.log(`✅ Uploaded: ${key}`);
+    console.log(`⬆️ Uploading ${file} → slug: ${slug}`);
+    const gpxOk = await uploadToKV(`gpx:admin:${slug}.gpx`, gpxText, true);
+    const metaOk = await uploadToKV(`meta:admin:${slug}`, JSON.stringify({ name, slug, color, hash }));
+
+    if (gpxOk && metaOk) {
+      console.log(`✅ Uploaded ${file} as ${slug}`);
     } else {
-      console.error(`❌ Failed to upload ${key}`, result.errors);
+      console.error(`❌ Failed to upload ${file}`);
     }
   }
-};
+}
 
-upload();
+uploadAll().catch((err) => console.error("❌ Unexpected error:", err));

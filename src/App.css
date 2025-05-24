@@ -50,3 +50,10 @@
   border: 1px solid #ccc;
   pointer-events: none;
 }
+.gpx-track-label {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px 2px white;
+}
