@@ -10,11 +10,13 @@ export default class CustomGPX extends L.FeatureGroup {
       marker_options: {},
       showTrackNames: true,
       showWaypoints: true,
+      showWaypointLabels: true,
       ...options,
     };
 
     this._trackLabels = [];
     this._waypointMarkers = [];
+    this._waypointLabels = [];
     this._parse();
   }
 
@@ -73,23 +75,36 @@ export default class CustomGPX extends L.FeatureGroup {
       });
     });
 
-    if (this._options.showWaypoints) {
-      const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
-      waypoints.forEach((wpt) => {
-        const nameEl = [...wpt.children].find(c => c.tagName.endsWith("name"));
-        if (!nameEl || !nameEl.textContent.trim()) return;
+    const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
+    waypoints.forEach((wpt) => {
+      const nameEl = [...wpt.children].find(c => c.tagName.endsWith("name"));
+      if (!nameEl || !nameEl.textContent.trim()) return;
 
-        const lat = parseFloat(wpt.getAttribute("lat"));
-        const lon = parseFloat(wpt.getAttribute("lon"));
-        const descEl = [...wpt.children].find(c => c.tagName.endsWith("desc"));
-        const desc = descEl?.textContent?.trim() || "";
+      const lat = parseFloat(wpt.getAttribute("lat"));
+      const lon = parseFloat(wpt.getAttribute("lon"));
+      const descEl = [...wpt.children].find(c => c.tagName.endsWith("desc"));
+      const desc = descEl?.textContent?.trim() || "";
 
-        const marker = L.marker([lat, lon], this._options.marker_options)
-          .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
-        this._waypointMarkers.push(marker);
+      const marker = L.marker([lat, lon], this._options.marker_options)
+        .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
+      this._waypointMarkers.push(marker);
+      if (this._options.showWaypoints) {
         marker.addTo(this);
-      });
-    }
+      }
+
+      const label = L.tooltip({
+        permanent: true,
+        direction: "top",
+        className: "gpx-waypoint-label",
+        offset: [0, -15],
+      })
+        .setContent(nameEl.textContent.trim())
+        .setLatLng([lat, lon]);
+      this._waypointLabels.push(label);
+      if (this._options.showWaypointLabels) {
+        this.addLayer(label);
+      }
+    });
 
     const allLines = this.getLayers().filter((l) => l instanceof L.Polyline);
     if (allLines.length > 0) {
@@ -115,6 +130,16 @@ export default class CustomGPX extends L.FeatureGroup {
         this.addLayer(marker);
       } else {
         this.removeLayer(marker);
+      }
+    });
+  }
+
+  setShowWaypointLabels(visible) {
+    this._waypointLabels.forEach(label => {
+      if (visible) {
+        this.addLayer(label);
+      } else {
+        this.removeLayer(label);
       }
     });
   }
