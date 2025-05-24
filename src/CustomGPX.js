@@ -17,24 +17,18 @@ export default class CustomGPX extends L.FeatureGroup {
   _parse() {
     console.log("✅ CustomGPX _parse called");
 
-    // 🔧 Remove all XML namespace declarations and prefixes
-    const cleanXML = this._gpxText
-      .replace(/<\?xml[^>]+\?>/, "")                        // Remove XML declaration
-      .replace(/xmlns(:\w+)?="[^"]*"/g, "")                 // Remove xmlns attributes
-      .replace(/(<\/?)[a-zA-Z0-9]+:/g, "$1");               // Remove gpx: and gpxx: prefixes
-
     const parser = new DOMParser();
-    const gpx = parser.parseFromString(cleanXML, "application/xml");
+    const gpx = parser.parseFromString(this._gpxText, "application/xml");
 
-    if (!gpx || gpx.getElementsByTagName("trkseg").length === 0) {
-      console.warn("❌ No track segments found — GPX may not be parsed correctly");
-      return;
-    }
+    const allElements = gpx.querySelectorAll("*");
 
-    // ✅ Tracks from <trkseg> + <trkpt>
-    const trksegs = [...gpx.getElementsByTagName("trkseg")];
+    // ✅ Tracks
+    const trksegs = [...allElements].filter(el => el.tagName.endsWith("trkseg"));
+    console.log(`🛰️ Found ${trksegs.length} track segments`);
+
     trksegs.forEach((trkseg) => {
-      const pts = [...trkseg.getElementsByTagName("trkpt")].map((pt) => [
+      const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
+      const pts = trkpts.map((pt) => [
         parseFloat(pt.getAttribute("lat")),
         parseFloat(pt.getAttribute("lon")),
       ]);
@@ -47,22 +41,23 @@ export default class CustomGPX extends L.FeatureGroup {
       }
     });
 
-    // ✅ Named <wpt> markers only
-    const waypoints = [...gpx.getElementsByTagName("wpt")];
+    // ✅ Named waypoints
+    const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
     waypoints.forEach((wpt) => {
-      const name = wpt.getElementsByTagName("name")[0]?.textContent?.trim();
-      if (!name) return;
+      const nameEl = [...wpt.children].find(c => c.tagName.endsWith("name"));
+      if (!nameEl || !nameEl.textContent.trim()) return;
 
       const lat = parseFloat(wpt.getAttribute("lat"));
       const lon = parseFloat(wpt.getAttribute("lon"));
-      const desc = wpt.getElementsByTagName("desc")[0]?.textContent?.trim() || "";
+      const descEl = [...wpt.children].find(c => c.tagName.endsWith("desc"));
+      const desc = descEl?.textContent?.trim() || "";
 
       const marker = L.marker([lat, lon], this._options.marker_options)
-        .bindPopup(`<strong>${name}</strong><br>${desc}`);
+        .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
       marker.addTo(this);
     });
 
-    // ✅ Fit bounds to all track lines
+    // ✅ Fit bounds
     const allLines = this.getLayers().filter((l) => l instanceof L.Polyline);
     if (allLines.length > 0) {
       const bounds = L.latLngBounds([]);
