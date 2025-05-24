@@ -55,7 +55,7 @@ export default defineConfig({
               cacheName: 'image-cache',
               expiration: {
                 maxEntries: 50,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+                maxAgeSeconds: 30 * 24 * 60 * 60,
               },
             },
           },
@@ -67,8 +67,33 @@ export default defineConfig({
               cacheName: 'static-resources',
             },
           },
+          {
+            // ✅ Cache GPX files
+            urlPattern: /\/admin-gpx\/.*\.gpx$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'gpx-cache',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+              },
+            },
+          },
+          {
+            // ✅ Cache GPX list API
+            urlPattern: /\/admin-gpx-list$/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'api-cache',
+              networkTimeoutSeconds: 3,
+              expiration: {
+                maxEntries: 20,
+                maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
+              },
+            },
+          },
         ],
-        navigateFallback: '/index.html', // ✅ Offline fallback
+        navigateFallback: '/index.html',
       },
     }),
   ],
