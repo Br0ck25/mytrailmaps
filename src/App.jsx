@@ -129,62 +129,60 @@ function App() {
   }, []);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
-      <div className="flex-1 flex flex-col h-full">
-        <div className="flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow">
-          <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
-        </div>
+    <div className="relative w-full max-w-screen-sm mx-auto h-screen overflow-hidden flex flex-col">
+      <div className="flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow">
+        <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
+      </div>
 
-        <div className="flex-1 overflow-hidden">
-          {activeTab === "map" && (
-            <MapContainer
-              center={[37.8, -96]}
-              zoom={4}
-              style={{ height: "100%", width: "100%" }}
-              whenCreated={(map) => setLeafletMap(map)}
-            >
-              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-              <MapReady
-                setLeafletMap={setLeafletMap}
-                mapRef={mapRef}
-                showNames={showNames}
-                showWaypoints={showWaypoints}
-                gpxLayersRef={gpxLayersRef}
-              />
-            </MapContainer>
-          )}
+      <div className="flex-1 relative">
+        {activeTab === "map" && (
+          <MapContainer
+            center={[37.8, -96]}
+            zoom={4}
+            style={{ flex: 1 }}
+            whenCreated={(map) => setLeafletMap(map)}
+          >
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <MapReady
+              setLeafletMap={setLeafletMap}
+              mapRef={mapRef}
+              showNames={showNames}
+              showWaypoints={showWaypoints}
+              gpxLayersRef={gpxLayersRef}
+            />
+          </MapContainer>
+        )}
 
-          {activeTab === "trip" && (
-            <div className="p-4">Trip info will go here.</div>
-          )}
+        {activeTab === "trip" && (
+          <div className="p-4">Trip info will go here.</div>
+        )}
 
-          {activeTab === "tracks" && (
-            <div className="p-4">My Tracks will be listed here.</div>
-          )}
+        {activeTab === "tracks" && (
+          <div className="p-4">My Tracks will be listed here.</div>
+        )}
 
-          {activeTab === "settings" && (
-            <div className="p-4">Settings options will go here.</div>
-          )}
-        </div>
+        {activeTab === "settings" && (
+          <div className="p-4">Settings options will go here.</div>
+        )}
+      </div>
 
-        <div className="flex justify-around items-center border-t border-gray-300 bg-white h-14">
-          <button onClick={() => setActiveTab("map")} className="flex flex-col items-center text-xs">
-            <FaMapMarkedAlt className="text-lg" />
-            <span>Map</span>
-          </button>
-          <button onClick={() => setActiveTab("trip")} className="flex flex-col items-center text-xs">
-            <FaRoute className="text-lg" />
-            <span>Trip</span>
-          </button>
-          <button onClick={() => setActiveTab("tracks")} className="flex flex-col items-center text-xs">
-            <FaMap className="text-lg" />
-            <span>My Tracks</span>
-          </button>
-          <button onClick={() => setActiveTab("settings")} className="flex flex-col items-center text-xs">
-            <FaCog className="text-lg" />
-            <span>Settings</span>
-          </button>
-        </div>
+      <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center border-t border-gray-300 bg-white h-14">
+        <button onClick={() => setActiveTab("map")} className="flex flex-col items-center text-xs">
+          <FaMapMarkedAlt className="text-lg" />
+          <span>Map</span>
+        </button>
+        <button onClick={() => setActiveTab("trip")} className="flex flex-col items-center text-xs">
+          <FaRoute className="text-lg" />
+          <span>Trip</span>
+        </button>
+        <button onClick={() => setActiveTab("tracks")} className="flex flex-col items-center text-xs">
+          <FaMap className="text-lg" />
+          <span>My Tracks</span>
+        </button>
+        <button onClick={() => setActiveTab("settings")} className="flex flex-col items-center text-xs">
+          <FaCog className="text-lg" />
+          <span>Settings</span>
+        </button>
       </div>
     </div>
   );
