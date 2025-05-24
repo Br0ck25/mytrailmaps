@@ -7,6 +7,7 @@ import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog } from "react-icons/fa";
+import { FiLayers } from "react-icons/fi";
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -65,6 +66,8 @@ function App() {
   const [activeTab, setActiveTab] = useState("map");
   const [showNames, setShowNames] = useState(true);
   const [showWaypoints, setShowWaypoints] = useState(true);
+  const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
+  const [overlayPage, setOverlayPage] = useState("main");
   const mapRef = useRef();
   const gpxLayersRef = useRef([]);
 
@@ -153,20 +156,64 @@ function App() {
           </MapContainer>
         )}
 
-        {activeTab === "trip" && (
-          <div className="p-4">Trip info will go here.</div>
-        )}
+        {/* Floating Map Overlay Button */}
+        <button
+          onClick={() => {
+            setShowOverlaysPanel(true);
+            setOverlayPage("main");
+          }}
+          className="absolute z-50 bottom-20 left-4 p-3 bg-green-600 text-white rounded-full shadow-lg"
+        >
+          <FiLayers className="text-xl" />
+        </button>
 
-        {activeTab === "tracks" && (
-          <div className="p-4">My Tracks will be listed here.</div>
-        )}
+        {/* Bottom Sheet */}
+        {showOverlaysPanel && (
+          <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
+            <div className="flex items-center justify-between p-4 border-b">
+              {overlayPage !== "main" && (
+                <button onClick={() => setOverlayPage("main")} className="text-green-700">←</button>
+              )}
+              <h3 className="text-lg font-semibold">{overlayPage === "main" ? "Maps" : "Map Overlays"}</h3>
+              <button onClick={() => setShowOverlaysPanel(false)} className="text-gray-600 text-2xl">×</button>
+            </div>
 
-        {activeTab === "settings" && (
-          <div className="p-4">Settings options will go here.</div>
+            {overlayPage === "main" && (
+              <div className="p-4 space-y-4">
+                <button onClick={() => setOverlayPage("overlays")} className="w-full p-3 bg-gray-100 rounded-lg font-semibold text-left text-green-700">Map Overlays</button>
+                <button className="w-full p-3 bg-gray-100 rounded-lg font-semibold text-left text-green-700">Save Offline Maps</button>
+              </div>
+            )}
+
+            {overlayPage === "overlays" && (
+              <div className="p-4 space-y-3">
+                <label className="flex justify-between items-center">
+                  <span>Tracks</span>
+                  <input type="checkbox" checked={true} readOnly className="toggle" />
+                </label>
+                <label className="flex justify-between items-center">
+                  <span>Track Names</span>
+                  <input type="checkbox" checked={showNames} onChange={() => setShowNames(!showNames)} className="toggle" />
+                </label>
+                <label className="flex justify-between items-center">
+                  <span>Waypoints</span>
+                  <input type="checkbox" checked={showWaypoints} onChange={() => setShowWaypoints(!showWaypoints)} className="toggle" />
+                </label>
+                <label className="flex justify-between items-center">
+                  <span>Waypoint Labels</span>
+                  <input type="checkbox" checked={showNames} onChange={() => setShowNames(!showNames)} className="toggle" />
+                </label>
+                <label className="flex justify-between items-center">
+                  <span>Public Tracks</span>
+                  <input type="checkbox" checked={true} readOnly className="toggle" />
+                </label>
+              </div>
+            )}
+          </div>
         )}
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center border-t border-gray-300 bg-white h-14">
+      <div className="fixed bottom-0 left-0 right-0 z-40 flex justify-around items-center border-t border-gray-300 bg-white h-14">
         <button onClick={() => setActiveTab("map")} className="flex flex-col items-center text-xs">
           <FaMapMarkedAlt className="text-lg" />
           <span>Map</span>
