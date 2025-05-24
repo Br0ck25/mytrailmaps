@@ -37,24 +37,45 @@ export default class CustomGPX extends L.FeatureGroup {
     const gpx = parser.parseFromString(this._gpxText, "application/xml");
 
     // ✅ Render tracks with embedded color if available
-    const trks = [...gpx.getElementsByTagName("trk")];
-    trks.forEach((trk) => {
-      const colorEl = trk.querySelector("extensions color");
-      const color = colorEl?.textContent?.trim() || this._options.polyline_options.color;
+let parsedAny = false;
 
-      const trksegs = [...trk.getElementsByTagName("trkseg")];
-      trksegs.forEach((trkseg) => {
-        const pts = [...trkseg.getElementsByTagName("trkpt")].map((pt) => [
-          parseFloat(pt.getAttribute("lat")),
-          parseFloat(pt.getAttribute("lon")),
-        ]);
+// Try parsing <trk><trkseg>
+const trks = [...gpx.getElementsByTagName("trk")];
+trks.forEach((trk) => {
+  const colorEl = trk.querySelector("extensions color");
+  const color = colorEl?.textContent?.trim() || this._options.polyline_options.color;
 
-        if (pts.length) {
-          const polyline = L.polyline(pts, { ...this._options.polyline_options, color });
-          polyline.addTo(this);
-        }
-      });
-    });
+  const trksegs = [...trk.getElementsByTagName("trkseg")];
+  trksegs.forEach((trkseg) => {
+    const pts = [...trkseg.getElementsByTagName("trkpt")].map((pt) => [
+      parseFloat(pt.getAttribute("lat")),
+      parseFloat(pt.getAttribute("lon")),
+    ]);
+    if (pts.length) {
+      parsedAny = true;
+      L.polyline(pts, { ...this._options.polyline_options, color }).addTo(this);
+    }
+  });
+});
+
+// Fallback: parse all <trkseg> globally if <trk> failed
+if (!parsedAny) {
+  console.log("⚠️ No <trk> found, using global <trkseg>");
+  const trksegs = [...gpx.getElementsByTagName("trkseg")];
+  trksegs.forEach((trkseg) => {
+    const pts = [...trkseg.getElementsByTagName("trkpt")].map((pt) => [
+      parseFloat(pt.getAttribute("lat")),
+      parseFloat(pt.getAttribute("lon")),
+    ]);
+    if (pts.length) {
+      L.polyline(pts, {
+        ...this._options.polyline_options,
+        color: this._options.polyline_options.color, // fallback
+      }).addTo(this);
+    }
+  });
+}
+
 
     // ✅ Render only <wpt> with <name>
     const waypoints = [...gpx.getElementsByTagName("wpt")];
