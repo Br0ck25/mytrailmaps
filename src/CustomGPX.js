@@ -27,21 +27,23 @@ export default class CustomGPX extends L.FeatureGroup {
     let totalSegments = 0;
 
     trks.forEach((trk) => {
-      // Get <color> from <extensions>
+      // Get <DisplayColor> from <extensions>
       let color = this._options.polyline_options.color;
-      const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
-if (extensions) {
-  const colorTag = [...extensions.children].find(c => c.tagName.endsWith("color"));
-  if (colorTag && colorTag.textContent.trim()) {
-    color = colorTag.textContent.trim();
-    console.log("🎨 Found track color:", color);
-  } else {
-    console.log("🎨 No <color> tag in <extensions> for this track");
-  }
-} else {
-  console.log("📭 No <extensions> found in track");
-}
 
+      const extensions = [...trk.children].find(c => c.tagName.endsWith("extensions"));
+      if (extensions) {
+        const colorTag = [...extensions.children].find(c =>
+          c.tagName.endsWith("DisplayColor") || c.tagName.endsWith("color")
+        );
+        if (colorTag && colorTag.textContent.trim()) {
+          color = this._mapDisplayColor(colorTag.textContent.trim());
+          console.log("🎨 Track color extracted:", colorTag.textContent.trim(), "→", color);
+        } else {
+          console.log("🎨 No color tag in <extensions>");
+        }
+      } else {
+        console.log("📭 No <extensions> found");
+      }
 
       const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
       trksegs.forEach((trkseg) => {
@@ -89,5 +91,25 @@ if (extensions) {
       allLines.forEach((line) => bounds.extend(line.getBounds()));
       this.fire("loaded", { bounds });
     }
+  }
+
+  _mapDisplayColor(displayColorName) {
+    const map = {
+      "DarkRed": "#8B0000",
+      "DarkGreen": "#006400",
+      "DarkBlue": "#00008B",
+      "Purple": "#800080",
+      "DarkCyan": "#008B8B",
+      "Magenta": "#FF00FF",
+      "Gray": "#808080",
+      "Black": "#000000",
+      "LightGray": "#D3D3D3",
+      "DarkYellow": "#B8860B",
+      "Yellow": "#FFFF00",
+      "Red": "#FF0000",
+      "Green": "#00FF00",
+      "Blue": "#0000FF",
+    };
+    return map[displayColorName] || "#3388ff";
   }
 }
