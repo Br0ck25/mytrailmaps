@@ -69,17 +69,17 @@ function App() {
   const gpxLayersRef = useRef([]); // ✅ Store CustomGPX layers
 
   // ✅ Dynamic toggling of labels and waypoints
-  useEffect(() => {
-    gpxLayersRef.current.forEach((layer) => {
-      layer.setShowTrackNames(showNames);
-    });
-  }, [showNames]);
+useEffect(() => {
+  gpxLayersRef.current.forEach((layer) => {
+    layer.setShowTrackNames(showNames);
+  });
+}, [showNames]);
 
-  useEffect(() => {
-    gpxLayersRef.current.forEach((layer) => {
-      layer.setShowWaypoints(showWaypoints);
-    });
-  }, [showWaypoints]);
+useEffect(() => {
+  gpxLayersRef.current.forEach((layer) => {
+    layer.setShowWaypoints(showWaypoints);
+  });
+}, [showWaypoints]);
 
   return (
     <div className="flex h-screen overflow-hidden">

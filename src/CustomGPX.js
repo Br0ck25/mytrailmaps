@@ -19,8 +19,6 @@ export default class CustomGPX extends L.FeatureGroup {
   }
 
   _parse() {
-    console.log("✅ CustomGPX _parse called");
-
     const parser = new DOMParser();
     const gpx = parser.parseFromString(this._gpxText, "application/xml");
     const allElements = gpx.querySelectorAll("*");
@@ -38,7 +36,6 @@ export default class CustomGPX extends L.FeatureGroup {
         );
         if (colorTag && colorTag.textContent.trim()) {
           color = this._mapDisplayColor(colorTag.textContent.trim());
-          console.log("🎨 Track color extracted (fallback):", colorTag.textContent.trim(), "→", color);
         }
       }
 
@@ -58,28 +55,23 @@ export default class CustomGPX extends L.FeatureGroup {
           }).addTo(this);
 
           const trkName = [...trk.children].find(c => c.tagName.endsWith("name"))?.textContent?.trim();
-if (trkName) {
-  const mid = pts[Math.floor(pts.length / 2)];
-  const label = L.tooltip({
-    permanent: true,
-    direction: "center",
-    className: "gpx-track-label",
-  })
-    .setContent(trkName)
-    .setLatLng(mid);
-  this._trackLabels.push(label);
-  if (this._options.showTrackNames) {
-    this.addLayer(label);
-  }
-}
-
+          if (trkName) {
+            const mid = pts[Math.floor(pts.length / 2)];
+            const label = L.tooltip({
+              permanent: true,
+              direction: "center",
+              className: "gpx-track-label",
+            })
+              .setContent(trkName)
+              .setLatLng(mid);
+            this._trackLabels.push(label);
+            if (this._options.showTrackNames) {
+              this.addLayer(label);
+            }
+          }
         }
       });
     });
-
-    if (totalSegments === 0) {
-      console.warn("⚠️ No track segments found in GPX");
-    }
 
     if (this._options.showWaypoints) {
       const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
@@ -93,12 +85,9 @@ if (trkName) {
         const desc = descEl?.textContent?.trim() || "";
 
         const marker = L.marker([lat, lon], this._options.marker_options)
-  .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
-this._waypointMarkers.push(marker);
-if (this._options.showWaypoints) {
-  marker.addTo(this);
-}
-
+          .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
+        this._waypointMarkers.push(marker);
+        marker.addTo(this);
       });
     }
 
