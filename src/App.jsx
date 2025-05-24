@@ -134,23 +134,24 @@ function App() {
         <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
       </div>
 
-      <div className="flex-1 relative pb-14"> {/* ← add bottom padding same as bar height */}
-  <MapContainer
-    center={[37.8, -96]}
-    zoom={4}
-    className="absolute inset-0"
-    whenCreated={(map) => setLeafletMap(map)}
-  >
-    <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-    <MapReady
-      setLeafletMap={setLeafletMap}
-      mapRef={mapRef}
-      showNames={showNames}
-      showWaypoints={showWaypoints}
-      gpxLayersRef={gpxLayersRef}
-    />
-  </MapContainer>
-  )
+      <div className="flex-1 relative overflow-hidden">
+        {activeTab === "map" && (
+          <MapContainer
+            center={[37.8, -96]}
+            zoom={4}
+            className="absolute inset-0 z-0"
+            whenCreated={(map) => setLeafletMap(map)}
+          >
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <MapReady
+              setLeafletMap={setLeafletMap}
+              mapRef={mapRef}
+              showNames={showNames}
+              showWaypoints={showWaypoints}
+              gpxLayersRef={gpxLayersRef}
+            />
+          </MapContainer>
+        )}
 
         {activeTab === "trip" && (
           <div className="p-4">Trip info will go here.</div>
