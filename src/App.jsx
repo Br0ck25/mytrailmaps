@@ -129,7 +129,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-screen-sm mx-auto h-screen overflow-hidden flex flex-col">
+    <div className="relative w-full max-w-screen-sm mx-auto h-full overflow-hidden flex flex-col">
       <div className="flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow">
         <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
       </div>
@@ -139,7 +139,7 @@ function App() {
     <MapContainer
       center={[37.8, -96]}
       zoom={4}
-      className="h-full w-full"
+      className="absolute inset-0"
       whenCreated={(map) => setLeafletMap(map)}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
