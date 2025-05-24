@@ -11,9 +11,11 @@ export default class CustomGPX extends L.FeatureGroup {
       showTrackNames: true,
       showWaypoints: true,
       showWaypointLabels: true,
+      showTracks: true,
       ...options,
     };
 
+    this._trackPolylines = [];
     this._trackLabels = [];
     this._waypointMarkers = [];
     this._waypointLabels = [];
@@ -54,7 +56,11 @@ export default class CustomGPX extends L.FeatureGroup {
           const polyline = L.polyline(pts, {
             ...this._options.polyline_options,
             color,
-          }).addTo(this);
+          });
+          this._trackPolylines.push(polyline);
+          if (this._options.showTracks) {
+            polyline.addTo(this);
+          }
 
           const trkName = [...trk.children].find(c => c.tagName.endsWith("name"))?.textContent?.trim();
           if (trkName) {
@@ -112,6 +118,16 @@ export default class CustomGPX extends L.FeatureGroup {
       allLines.forEach((line) => bounds.extend(line.getBounds()));
       this.fire("loaded", { bounds });
     }
+  }
+
+  setShowTracks(visible) {
+    this._trackPolylines.forEach(polyline => {
+      if (visible) {
+        this.addLayer(polyline);
+      } else {
+        this.removeLayer(polyline);
+      }
+    });
   }
 
   setShowTrackNames(visible) {
