@@ -15,7 +15,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-function MapReady({ setLeafletMap, mapRef }) {
+function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints }) {
   const map = useMap();
 
   useEffect(() => {
@@ -41,17 +41,20 @@ function MapReady({ setLeafletMap, mapRef }) {
                   color: "#3388ff", // fallback
                   weight: 3,
                 },
+                showNames,
+                showWaypoints,
               });
 
               gpxLayer.on("loaded", (e) => {
                 map.fitBounds(e.bounds);
               });
-console.log("🧪 Adding GPX layer to map for:", track.slug);
+
+              console.log("🧪 Adding GPX layer to map for:", track.slug);
               gpxLayer.addTo(map);
             });
         });
       });
-  }, [map, setLeafletMap]);
+  }, [map, setLeafletMap, showNames, showWaypoints]);
 
   return null;
 }
@@ -60,6 +63,8 @@ function App() {
   const [leafletMap, setLeafletMap] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activePanel, setActivePanel] = useState("map");
+  const [showNames, setShowNames] = useState(true);
+  const [showWaypoints, setShowWaypoints] = useState(true);
   const mapRef = useRef();
 
   return (
@@ -121,6 +126,26 @@ function App() {
           {activePanel === "map" && (
             <>
               <p className="text-xs text-red-500 px-4">Panel: {activePanel}</p>
+
+              <div className="flex gap-4 px-4 pb-2 text-sm">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showNames}
+                    onChange={() => setShowNames(!showNames)}
+                  />
+                  Show Track Names
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showWaypoints}
+                    onChange={() => setShowWaypoints(!showWaypoints)}
+                  />
+                  Show Waypoints
+                </label>
+              </div>
+
               <MapContainer
                 center={[37.8, -96]}
                 zoom={4}
@@ -128,7 +153,12 @@ function App() {
                 whenCreated={(map) => setLeafletMap(map)}
               >
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <MapReady setLeafletMap={setLeafletMap} mapRef={mapRef} />
+                <MapReady
+                  setLeafletMap={setLeafletMap}
+                  mapRef={mapRef}
+                  showNames={showNames}
+                  showWaypoints={showWaypoints}
+                />
               </MapContainer>
               <p className="text-green-600 text-sm px-4">
                 ✅ Map attempted to render
