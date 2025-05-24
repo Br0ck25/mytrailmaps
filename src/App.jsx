@@ -16,7 +16,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, gpxLayersRef }) {
+function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypointLabels, gpxLayersRef }) {
   const map = useMap();
 
   useEffect(() => {
@@ -45,6 +45,7 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, gpxLayersRe
                 },
                 showTrackNames: showNames,
                 showWaypoints: showWaypoints,
+                showWaypointLabels: showWaypointLabels,
               });
 
               gpxLayer.on("loaded", (e) => {
@@ -84,6 +85,14 @@ function App() {
     });
   }, [showWaypoints]);
 
+  useEffect(() => {
+    gpxLayersRef.current.forEach((layer) => {
+      if (layer.setShowWaypointLabels) {
+        layer.setShowWaypointLabels(showWaypointLabels);
+      }
+    });
+  }, [showWaypointLabels]);
+
   const refreshGPXTracks = async () => {
     if (!leafletMap) return;
 
@@ -106,6 +115,7 @@ function App() {
           polyline_options: { color: '#3388ff', weight: 3 },
           showTrackNames: showNames,
           showWaypoints: showWaypoints,
+          showWaypointLabels: showWaypointLabels,
         });
 
         gpxLayer.on('loaded', (e) => {
@@ -152,6 +162,7 @@ function App() {
               mapRef={mapRef}
               showNames={showNames}
               showWaypoints={showWaypoints}
+              showWaypointLabels={showWaypointLabels}
               gpxLayersRef={gpxLayersRef}
             />
           </MapContainer>
