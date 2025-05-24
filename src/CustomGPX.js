@@ -14,85 +14,63 @@ export default class CustomGPX extends L.FeatureGroup {
     this._parse();
   }
 
-    _parse() {
-  console.log("✅ CustomGPX _parse called");
+  _parse() {
+    console.log("✅ CustomGPX _parse called");
 
-  // Test marker
-  L.marker([37.123, -83.456])
-    .addTo(this)
-    .bindPopup("Test Marker");
-  console.log("📍 Marker added");
-
-  // Test line
-  const polyline = L.polyline([
-    [37.123, -83.456],
-    [37.124, -83.457],
-  ], {
-    color: "#FF0000",
-    weight: 3,
-  }).addTo(this);
-  console.log("🟥 Test line added");
+    const GPX_NS = "http://www.topografix.com/GPX/1/1";
+    const GPX_STYLE_NS = "http://www.topografix.com/GPX/gpx_style/0/2";
 
     const parser = new DOMParser();
     const gpx = parser.parseFromString(this._gpxText, "application/xml");
 
-    // ✅ Render tracks with embedded color if available
-let parsedAny = false;
+    // ✅ Tracks and segments
+    const trks = [...gpx.getElementsByTagNameNS(GPX_NS, "trk")];
+    let totalSegments = 0;
 
-// Try parsing <trk><trkseg>
-const trks = [...gpx.getElementsByTagName("trk")];
-trks.forEach((trk) => {
-  const colorEl = trk.querySelector("extensions color");
-  const color = colorEl?.textContent?.trim() || this._options.polyline_options.color;
+    trks.forEach((trk) => {
+      const colorEl =
+        trk.getElementsByTagNameNS(GPX_STYLE_NS, "color")[0] ||
+        trk.getElementsByTagName("color")[0]; // fallback if gpx_style is missing
+      const color = colorEl?.textContent?.trim() || this._options.polyline_options.color;
 
-  const trksegs = [...trk.getElementsByTagName("trkseg")];
-  trksegs.forEach((trkseg) => {
-    const pts = [...trkseg.getElementsByTagName("trkpt")].map((pt) => [
-      parseFloat(pt.getAttribute("lat")),
-      parseFloat(pt.getAttribute("lon")),
-    ]);
-    if (pts.length) {
-      parsedAny = true;
-      L.polyline(pts, { ...this._options.polyline_options, color }).addTo(this);
+      const trksegs = [...trk.getElementsByTagNameNS(GPX_NS, "trkseg")];
+      trksegs.forEach((trkseg) => {
+        const pts = [...trkseg.getElementsByTagNameNS(GPX_NS, "trkpt")].map((pt) => [
+          parseFloat(pt.getAttribute("lat")),
+          parseFloat(pt.getAttribute("lon")),
+        ]);
+
+        if (pts.length) {
+          totalSegments++;
+          const polyline = L.polyline(pts, {
+            ...this._options.polyline_options,
+            color,
+          });
+          polyline.addTo(this);
+        }
+      });
+    });
+
+    if (totalSegments === 0) {
+      console.warn("⚠️ No track segments found in GPX");
     }
-  });
-});
 
-// Fallback: parse all <trkseg> globally if <trk> failed
-if (!parsedAny) {
-  console.log("⚠️ No <trk> found, using global <trkseg>");
-  const trksegs = [...gpx.getElementsByTagName("trkseg")];
-  trksegs.forEach((trkseg) => {
-    const pts = [...trkseg.getElementsByTagName("trkpt")].map((pt) => [
-      parseFloat(pt.getAttribute("lat")),
-      parseFloat(pt.getAttribute("lon")),
-    ]);
-    if (pts.length) {
-      L.polyline(pts, {
-        ...this._options.polyline_options,
-        color: this._options.polyline_options.color, // fallback
-      }).addTo(this);
-    }
-  });
-}
-
-
-    // ✅ Render only <wpt> with <name>
-    const waypoints = [...gpx.getElementsByTagName("wpt")];
+    // ✅ Named waypoints only
+    const waypoints = [...gpx.getElementsByTagNameNS(GPX_NS, "wpt")];
     waypoints.forEach((wpt) => {
-      const name = wpt.getElementsByTagName("name")[0]?.textContent?.trim();
+      const name = wpt.getElementsByTagNameNS(GPX_NS, "name")[0]?.textContent?.trim();
       if (!name) return;
 
       const lat = parseFloat(wpt.getAttribute("lat"));
       const lon = parseFloat(wpt.getAttribute("lon"));
-      const desc = wpt.getElementsByTagName("desc")[0]?.textContent?.trim() || "";
+      const desc = wpt.getElementsByTagNameNS(GPX_NS, "desc")[0]?.textContent?.trim() || "";
 
       const marker = L.marker([lat, lon], this._options.marker_options)
         .bindPopup(`<strong>${name}</strong><br>${desc}`);
       marker.addTo(this);
     });
 
-    // ✅ Fit bounds to all tracks
+    // ✅ Fit bounds
     const allLines = this.getLayers().filter((l) => l instanceof L.Polyline);
     if (allLines.length > 0) {
       const bounds = L.latLngBounds([]);
