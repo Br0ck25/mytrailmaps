@@ -16,7 +16,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypointLabels, gpxLayersRef }) {
+function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypointLabels, showTracks, gpxLayersRef }) {
   const map = useMap();
 
   useEffect(() => {
@@ -39,13 +39,11 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypoin
             .then((res) => res.text())
             .then((gpxText) => {
               const gpxLayer = new CustomGPX(gpxText, {
-                polyline_options: {
-                  color: "#3388ff",
-                  weight: 3,
-                },
+                polyline_options: { color: "#3388ff", weight: 3 },
                 showTrackNames: showNames,
                 showWaypoints: showWaypoints,
                 showWaypointLabels: showWaypointLabels,
+                showTracks: showTracks,
               });
 
               gpxLayer.on("loaded", (e) => {
@@ -65,6 +63,7 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypoin
 function App() {
   const [leafletMap, setLeafletMap] = useState(null);
   const [activeTab, setActiveTab] = useState("map");
+  const [showTracks, setShowTracks] = useState(true);
   const [showNames, setShowNames] = useState(true);
   const [showWaypoints, setShowWaypoints] = useState(true);
   const [showWaypointLabels, setShowWaypointLabels] = useState(true);
@@ -72,6 +71,14 @@ function App() {
   const [overlayPage, setOverlayPage] = useState("main");
   const mapRef = useRef();
   const gpxLayersRef = useRef([]);
+
+  useEffect(() => {
+    gpxLayersRef.current.forEach((layer) => {
+      if (layer.setShowTracks) {
+        layer.setShowTracks(showTracks);
+      }
+    });
+  }, [showTracks]);
 
   useEffect(() => {
     gpxLayersRef.current.forEach((layer) => {
@@ -92,55 +99,6 @@ function App() {
       }
     });
   }, [showWaypointLabels]);
-
-  const refreshGPXTracks = async () => {
-    if (!leafletMap) return;
-
-    const apiBase = import.meta.env.PROD
-      ? 'https://mytrailmapsworker.jamesbrock25.workers.dev/api'
-      : '/api';
-
-    gpxLayersRef.current.forEach((layer) => leafletMap.removeLayer(layer));
-    gpxLayersRef.current = [];
-
-    try {
-      const res = await fetch(`${apiBase}/admin-gpx-list`);
-      const tracks = await res.json();
-
-      for (const track of tracks) {
-        const gpxRes = await fetch(`${apiBase}/admin-gpx/${track.slug}`);
-        const gpxText = await gpxRes.text();
-
-        const gpxLayer = new CustomGPX(gpxText, {
-          polyline_options: { color: '#3388ff', weight: 3 },
-          showTrackNames: showNames,
-          showWaypoints: showWaypoints,
-          showWaypointLabels: showWaypointLabels,
-        });
-
-        gpxLayer.on('loaded', (e) => {
-          leafletMap.fitBounds(e.bounds);
-        });
-
-        gpxLayer.addTo(leafletMap);
-        gpxLayersRef.current.push(gpxLayer);
-      }
-
-      console.log('🔄 GPX tracks refreshed after reconnect.');
-    } catch (err) {
-      console.error('❌ Error refreshing GPX tracks:', err);
-    }
-  };
-
-  useEffect(() => {
-    const onReconnect = () => {
-      console.log("🔄 Reconnected — refreshing GPX list and map.");
-      refreshGPXTracks();
-    };
-
-    window.addEventListener("online", onReconnect);
-    return () => window.removeEventListener("online", onReconnect);
-  }, []);
 
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
@@ -163,6 +121,7 @@ function App() {
               showNames={showNames}
               showWaypoints={showWaypoints}
               showWaypointLabels={showWaypointLabels}
+              showTracks={showTracks}
               gpxLayersRef={gpxLayersRef}
             />
           </MapContainer>
@@ -199,19 +158,39 @@ function App() {
               <div className="p-4 space-y-3">
                 <label className="flex justify-between items-center">
                   <span>Tracks</span>
-                  <input type="checkbox" checked={true} readOnly className="toggle" />
+                  <input
+                    type="checkbox"
+                    checked={showTracks}
+                    onChange={() => setShowTracks(!showTracks)}
+                    className="toggle"
+                  />
                 </label>
                 <label className="flex justify-between items-center">
                   <span>Track Names</span>
-                  <input type="checkbox" checked={showNames} onChange={() => setShowNames(!showNames)} className="toggle" />
+                  <input
+                    type="checkbox"
+                    checked={showNames}
+                    onChange={() => setShowNames(!showNames)}
+                    className="toggle"
+                  />
                 </label>
                 <label className="flex justify-between items-center">
                   <span>Waypoints</span>
-                  <input type="checkbox" checked={showWaypoints} onChange={() => setShowWaypoints(!showWaypoints)} className="toggle" />
+                  <input
+                    type="checkbox"
+                    checked={showWaypoints}
+                    onChange={() => setShowWaypoints(!showWaypoints)}
+                    className="toggle"
+                  />
                 </label>
                 <label className="flex justify-between items-center">
                   <span>Waypoint Labels</span>
-                  <input type="checkbox" checked={showWaypointLabels} onChange={() => setShowWaypointLabels(!showWaypointLabels)} className="toggle" />
+                  <input
+                    type="checkbox"
+                    checked={showWaypointLabels}
+                    onChange={() => setShowWaypointLabels(!showWaypointLabels)}
+                    className="toggle"
+                  />
                 </label>
                 <label className="flex justify-between items-center">
                   <span>Public Tracks</span>
