@@ -18,9 +18,11 @@ export default class CustomGPX extends L.FeatureGroup {
     console.log("✅ CustomGPX _parse called (namespace-stripped)");
 
     // 🔧 Strip namespaces from XML so we can use simple tag selectors
-    const cleanXML = this._gpxText
-      .replace(/xmlns(:\w+)?="[^"]*"/g, "")  // remove xmlns declarations
-      .replace(/(<\/?)(\w+):/g, "$1");       // remove namespace prefixes
+const cleanXML = this._gpxText
+  .replace(/<\?xml[^>]+\?>/, "")                               // strip XML declaration
+  .replace(/xmlns(:\w+)?="[^"]*"/g, "")                        // remove all xmlns attributes
+  .replace(/(<\/?)[a-zA-Z0-9]+:/g, "$1");                      // remove namespace prefixes
+
 
     const parser = new DOMParser();
     const gpx = parser.parseFromString(cleanXML, "application/xml");
