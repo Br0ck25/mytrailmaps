@@ -28,58 +28,33 @@ function MapReady({ setLeafletMap, mapRef }) {
       : '/api';
 
     fetch(`${apiBase}/admin-gpx-list`)
-  .then((res) => res.json())
-  .then((tracks) => {
-    tracks.forEach((track) => {
-      const url = `${apiBase}/admin-gpx/${track.slug}`;
+      .then((res) => res.json())
+      .then((tracks) => {
+        tracks.forEach((track) => {
+          const url = `${apiBase}/admin-gpx/${track.slug}`;
 
-      fetch(url)
-        .then((res) => res.text())
-        .then((gpxText) => {
-          const gpxLayer = new CustomGPX(gpxText, {
-            polyline_options: {
-              color: "#3388ff", // fallback
-              weight: 3,
-            },
-          });
+          fetch(url)
+            .then((res) => res.text())
+            .then((gpxText) => {
+              const gpxLayer = new CustomGPX(gpxText, {
+                polyline_options: {
+                  color: "#3388ff", // fallback
+                  weight: 3,
+                },
+              });
 
-          gpxLayer.on("loaded", (e) => {
-            map.fitBounds(e.bounds);
-          });
+              gpxLayer.on("loaded", (e) => {
+                map.fitBounds(e.bounds);
+              });
 
-          gpxLayer.addTo(map);
-          });
-      });
-    });
-}, [map, setLeafletMap]);
-
-
-
-
-gpxLayer.bindPopup = () => {};
-
-gpxLayer.on("loaded", (e) => {
-  map.fitBounds(e.target.getBounds());
-
-  // ✅ Remove start/end markers forcibly
-  if (e.target._info && Array.isArray(e.target._info._markers)) {
-    e.target._info._markers.forEach(marker => marker.remove());
-    e.target._info._markers = [];
-  }
-});
-
-gpxLayer.addTo(map);
-
-});
-
-
+              gpxLayer.addTo(map);
+            });
         });
       });
   }, [map, setLeafletMap]);
 
   return null;
 }
-
 
 function App() {
   const [leafletMap, setLeafletMap] = useState(null);
