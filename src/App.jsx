@@ -1,143 +1,34 @@
-import { useState, useEffect, useRef } from "react";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
-import CustomGPX from "./CustomGPX";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import { useState } from "react";
+import MapView from "./MapView";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog } from "react-icons/fa";
 import { FiLayers } from "react-icons/fi";
 
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
-
-function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypointLabels, showTracks, gpxLayersRef }) {
-  const map = useMap();
-  const loadedSlugsRef = useRef(new Set());
-
-  useEffect(() => {
-    if (!map) return;
-
-    setLeafletMap(map);
-    gpxLayersRef.current = [];
-
-    const apiBase = import.meta.env.PROD
-      ? "https://mytrailmapsworker.jamesbrock25.workers.dev/api"
-      : "/api";
-
-    const fetchTracksInView = () => {
-      const bounds = map.getBounds();
-      const url = `${apiBase}/tracks-in-bounds?north=${bounds.getNorth()}&south=${bounds.getSouth()}&east=${bounds.getEast()}&west=${bounds.getWest()}`;
-
-      fetch(url)
-        .then(res => res.json())
-        .then(slugs => {
-          slugs.forEach(({ slug }) => {
-            if (loadedSlugsRef.current.has(slug)) return;
-
-            loadedSlugsRef.current.add(slug);
-            const gpxUrl = `${apiBase}/admin-gpx/${slug}`;
-            fetch(gpxUrl)
-              .then(res => res.text())
-              .then(gpxText => {
-                const gpxLayer = new CustomGPX(gpxText, {
-                  polyline_options: { color: "#3388ff", weight: 3 },
-                  showTrackNames: showNames,
-                  showWaypoints: showWaypoints,
-                  showWaypointLabels: showWaypointLabels,
-                  showTracks: showTracks,
-                });
-
-                gpxLayer.addTo(map);
-                gpxLayersRef.current.push(gpxLayer);
-              });
-          });
-        });
-    };
-
-    // Trigger fetch on move
-    map.on("moveend", fetchTracksInView);
-
-    // Initial fetch on mount
-    fetchTracksInView();
-
-  }, [map, setLeafletMap]);
-
-  return null;
-}
-
-
 function App() {
-  const [leafletMap, setLeafletMap] = useState(null);
   const [activeTab, setActiveTab] = useState("map");
-  const [showTracks, setShowTracks] = useState(() => {
-  return localStorage.getItem("showTracks") === "false" ? false : true;
-});
-  const [showNames, setShowNames] = useState(() => {
-  return localStorage.getItem("showNames") === "false" ? false : true;
-});
-  const [showWaypoints, setShowWaypoints] = useState(() => {
-  return localStorage.getItem("showWaypoints") === "false" ? false : true;
-});
-  const [showWaypointLabels, setShowWaypointLabels] = useState(() => {
-  return localStorage.getItem("showWaypointLabels") === "false" ? false : true;
-});
+  const [showTracks, setShowTracks] = useState(() => localStorage.getItem("showTracks") !== "false");
+  const [showNames, setShowNames] = useState(() => localStorage.getItem("showNames") !== "false");
+  const [showWaypoints, setShowWaypoints] = useState(() => localStorage.getItem("showWaypoints") !== "false");
+  const [showWaypointLabels, setShowWaypointLabels] = useState(() => localStorage.getItem("showWaypointLabels") !== "false");
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
-  const mapRef = useRef();
-  const gpxLayersRef = useRef([]);
-
-  useEffect(() => {
-    gpxLayersRef.current.forEach((layer) => {
-      if (layer.setShowTracks) {
-        layer.setShowTracks(showTracks);
-      }
-    });
-  }, [showTracks]);
-
-  useEffect(() => {
-    gpxLayersRef.current.forEach((layer) => {
-      layer.setShowTrackNames(showNames);
-    });
-  }, [showNames]);
-
-  useEffect(() => {
-    gpxLayersRef.current.forEach((layer) => {
-      layer.setShowWaypoints(showWaypoints);
-    });
-  }, [showWaypoints]);
-
-  useEffect(() => {
-    gpxLayersRef.current.forEach((layer) => {
-      if (layer.setShowWaypointLabels) {
-        layer.setShowWaypointLabels(showWaypointLabels);
-      }
-    });
-  }, [showWaypointLabels]);
 
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
       <div className={`flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow ${activeTab === 'map' ? 'hidden' : ''}`}>
-  <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
+        <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
       </div>
 
       <div className="flex-1 relative overflow-hidden">
         {activeTab === "map" && (
-  <div className="absolute inset-0 z-0">
-    <MapView
-      showNames={showNames}
-      showWaypoints={showWaypoints}
-      showWaypointLabels={showWaypointLabels}
-      showTracks={showTracks}
-    />
-  </div>
-)}
-
+          <div className="absolute inset-0 z-0">
+            <MapView
+              showNames={showNames}
+              showWaypoints={showWaypoints}
+              showWaypointLabels={showWaypointLabels}
+              showTracks={showTracks}
+            />
+          </div>
+        )}
 
         <button
           onClick={() => {
@@ -174,9 +65,9 @@ function App() {
                     type="checkbox"
                     checked={showTracks}
                     onChange={() => setShowTracks(prev => {
-                    localStorage.setItem("showTracks", !prev);
-                    return !prev;
-                  })}
+                      localStorage.setItem("showTracks", !prev);
+                      return !prev;
+                    })}
                     className="toggle"
                   />
                 </label>
@@ -186,9 +77,9 @@ function App() {
                     type="checkbox"
                     checked={showNames}
                     onChange={() => setShowNames(prev => {
-                    localStorage.setItem("showNames", !prev);
-                    return !prev;
-                  })}
+                      localStorage.setItem("showNames", !prev);
+                      return !prev;
+                    })}
                     className="toggle"
                   />
                 </label>
@@ -198,9 +89,9 @@ function App() {
                     type="checkbox"
                     checked={showWaypoints}
                     onChange={() => setShowWaypoints(prev => {
-                    localStorage.setItem("showWaypoints", !prev);
-                    return !prev;
-                  })}
+                      localStorage.setItem("showWaypoints", !prev);
+                      return !prev;
+                    })}
                     className="toggle"
                   />
                 </label>
@@ -210,9 +101,9 @@ function App() {
                     type="checkbox"
                     checked={showWaypointLabels}
                     onChange={() => setShowWaypointLabels(prev => {
-                    localStorage.setItem("showWaypointLabels", !prev);
-                    return !prev;
-                  })}
+                      localStorage.setItem("showWaypointLabels", !prev);
+                      return !prev;
+                    })}
                     className="toggle"
                   />
                 </label>
