@@ -89,18 +89,24 @@ export default class CustomGPX extends L.FeatureGroup {
       });
     });
 
-    if (allPts.length >= 2 && this._options.showTracks) {
-      const glLayer = glify.lines({
-        map: this._map,
-        data: allPts,
-        weight: this._options.polyline_options.weight || 3,
-        color: this._options.polyline_options.color,
-        opacity: 1,
-        click: e => console.log('Track clicked', e)
-      });
+    if (
+  Array.isArray(allPts) &&
+  allPts.length >= 2 &&
+  allPts.every(p => Array.isArray(p) && p.length === 2 && !p.includes(undefined) && !isNaN(p[0]) && !isNaN(p[1])) &&
+  this._options.showTracks
+) {
+  const glLayer = glify.lines({
+    map: this._map,
+    data: allPts,
+    weight: this._options.polyline_options.weight || 3,
+    color: this._options.polyline_options.color,
+    opacity: 1,
+    click: e => console.log('Track clicked', e)
+  });
 
-      this._trackPolylines.push(glLayer);
-    }
+  this._trackPolylines.push(glLayer);
+}
+
 
     const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
     waypoints.forEach((wpt) => {
