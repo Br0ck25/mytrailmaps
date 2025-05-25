@@ -3,6 +3,7 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { gpx as toGeoJSON } from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
+import simplify from "simplify-geojson";
 
 export default function MapView({
   showTracks,
@@ -14,6 +15,8 @@ export default function MapView({
   const mapRef = useRef(null);
   const sourcesLoaded = useRef(new Set());
   const currentMap = useRef(null);
+  const previousSlugs = useRef([]);
+  let lastCalled = 0;
 
   const updateLayerVisibility = () => {
     const map = currentMap.current;
@@ -77,42 +80,36 @@ export default function MapView({
     });
 
     currentMap.current = map;
-if (mapRef) mapRef.current = map;
+    map.addControl(new maplibregl.NavigationControl(), "top-right");
 
-// ✅ Add compass-only navigation control
-const navControl = new maplibregl.NavigationControl({
-  showZoom: false,
-  visualizePitch: true
-});
-map.addControl(navControl, "top-left"); // We'll move it manually with CSS
+    const geolocate = new maplibregl.GeolocateControl({
+      positionOptions: { enableHighAccuracy: true },
+      trackUserLocation: true,
+      showUserHeading: true,
+      showAccuracyCircle: false,
+    });
 
+    map.addControl(geolocate);
 
-// ✅ Geolocate button
-const geolocate = new maplibregl.GeolocateControl({
-  positionOptions: { enableHighAccuracy: true },
-  trackUserLocation: true,
-  showUserHeading: true,
-  showAccuracyCircle: false,
-});
-map.addControl(geolocate, "bottom-left"); // place next to compass
-
-map.on("load", () => {
-  if (onGeolocateControlReady) {
-    setTimeout(() => {
-      onGeolocateControlReady(() => geolocate.trigger());
-    }, 0);
-  }
-
-  fetchVisibleTracks();
-});
-
-
+    map.on("load", () => {
+      if (onGeolocateControlReady) {
+        setTimeout(() => {
+          onGeolocateControlReady(() => geolocate.trigger());
+        }, 0);
+      }
+      fetchVisibleTracks();
+    });
 
     map.on("moveend", () => {
+      const now = Date.now();
+      if (now - lastCalled < 1000) return;
+      lastCalled = now;
+
       const center = map.getCenter();
       localStorage.setItem("mapCenter", JSON.stringify([center.lng, center.lat]));
       localStorage.setItem("mapZoom", map.getZoom());
-      fetchVisibleTracks();
+
+      if (map.getZoom() > 9) fetchVisibleTracks();
     });
 
     const fetchVisibleTracks = () => {
@@ -126,6 +123,9 @@ map.on("load", () => {
       fetch(url)
         .then((res) => res.json())
         .then((slugs) => {
+          if (JSON.stringify(slugs) === JSON.stringify(previousSlugs.current)) return;
+          previousSlugs.current = slugs;
+
           slugs.forEach(({ slug }) => sourcesLoaded.current.delete(slug));
 
           map.getStyle().layers?.forEach(layer => {
@@ -146,122 +146,125 @@ map.on("load", () => {
             fetch(`${apiBase}/admin-gpx/${slug}`)
               .then((res) => res.text())
               .then((gpxText) => {
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(gpxText, "application/xml");
-                const trkElements = xml.getElementsByTagName("trk");
+                requestIdleCallback(() => {
+                  const parser = new DOMParser();
+                  const xml = parser.parseFromString(gpxText, "application/xml");
+                  const trkElements = xml.getElementsByTagName("trk");
 
-                Array.from(trkElements).forEach((trkEl, index) => {
-                  const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
-                  gpxDoc.documentElement.appendChild(trkEl.cloneNode(true));
-                  const geojson = toGeoJSON(gpxDoc);
+                  Array.from(trkElements).forEach((trkEl, index) => {
+                    const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
+                    gpxDoc.documentElement.appendChild(trkEl.cloneNode(true));
+                    let geojson = toGeoJSON(gpxDoc);
 
-                  geojson.features.forEach(f => {
-                    if (f.geometry.type === "LineString") {
-                      f.properties = { name: f.properties?.name };
-                    } else {
-                      delete f.properties;
+                    geojson.features = geojson.features.map(f => {
+                      if (f.geometry.type === "LineString") {
+                        f.properties = { name: f.properties?.name };
+                      } else {
+                        delete f.properties;
+                      }
+                      return f;
+                    });
+
+                    geojson = simplify(geojson, 0.0005);
+
+                    const trackColor = parseTrackColor(trkEl);
+                    const sourceId = `${slug}-trk-${index}`;
+
+                    if (!map.getSource(sourceId)) {
+                      map.addSource(sourceId, { type: "geojson", data: geojson });
+
+                      map.addLayer({
+                        id: `${sourceId}-line`,
+                        type: "line",
+                        source: sourceId,
+                        layout: {
+                          "line-join": "round",
+                          "line-cap": "round",
+                          visibility: "visible"
+                        },
+                        paint: {
+                          "line-color": trackColor,
+                          "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
+                          "line-opacity": showTracks ? 1 : 0
+                        }
+                      });
+
+                      const nameFeature = geojson.features.find(f => f.properties?.name && f.geometry?.type === "LineString");
+
+                      if (nameFeature) {
+                        map.addLayer({
+                          id: `${sourceId}-label`,
+                          type: "symbol",
+                          source: sourceId,
+                          layout: {
+                            "symbol-placement": "line",
+                            "text-field": nameFeature.properties.name,
+                            "text-font": ["Open Sans Bold"],
+                            "text-size": ["interpolate", ["linear"], ["zoom"], 8, 10, 14, 14],
+                            visibility: showNames ? "visible" : "none"
+                          },
+                          paint: {
+                            "text-color": "#333",
+                            "text-halo-color": "#fff",
+                            "text-halo-width": 2
+                          },
+                          filter: ["==", "$type", "LineString"],
+                          minzoom: 10
+                        });
+                      }
                     }
                   });
 
-                  const trackColor = parseTrackColor(trkEl);
-                  const sourceId = `${slug}-trk-${index}`;
+                  const allGeoJSON = simplify(toGeoJSON(xml), 0.0005);
+                  const waypointFeatures = allGeoJSON.features.filter(f => f.geometry?.type === "Point");
 
-                  if (!map.getSource(sourceId)) {
-                    map.addSource(sourceId, { type: "geojson", data: geojson });
+                  if (waypointFeatures.length > 0) {
+                    const waypointSourceId = `${slug}-waypoints`;
 
-                    map.addLayer({
-                      id: `${sourceId}-line`,
-                      type: "line",
-                      source: sourceId,
-                      layout: {
-                        "line-join": "round",
-                        "line-cap": "round",
-                        visibility: "visible"
-                      },
-                      paint: {
-                        "line-color": trackColor,
-                        "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
-                        "line-opacity": showTracks ? 1 : 0
-                      }
-                    });
+                    if (!map.getSource(waypointSourceId)) {
+                      map.addSource(waypointSourceId, {
+                        type: "geojson",
+                        data: {
+                          type: "FeatureCollection",
+                          features: waypointFeatures
+                        }
+                      });
 
-                    const nameFeature = geojson.features.find(f =>
-                      f.properties?.name && f.geometry?.type === "LineString"
-                    );
-
-                    if (nameFeature) {
                       map.addLayer({
-                        id: `${sourceId}-label`,
+                        id: `${waypointSourceId}-icons`,
+                        type: "circle",
+                        source: waypointSourceId,
+                        layout: { visibility: showWaypoints ? "visible" : "none" },
+                        paint: {
+                          "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
+                          "circle-color": "#ff6600",
+                          "circle-stroke-width": 1,
+                          "circle-stroke-color": "#fff"
+                        },
+                        minzoom: 9
+                      });
+
+                      map.addLayer({
+                        id: `${waypointSourceId}-labels`,
                         type: "symbol",
-                        source: sourceId,
+                        source: waypointSourceId,
                         layout: {
-                          "symbol-placement": "line",
-                          "text-field": nameFeature.properties.name,
-                          "text-font": ["Open Sans Bold"],
-                          "text-size": ["interpolate", ["linear"], ["zoom"], 8, 10, 14, 14],
-                          visibility: showNames ? "visible" : "none"
+                          "text-field": ["get", "name"],
+                          "text-font": ["Open Sans Regular"],
+                          "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+                          "text-offset": [0, 1.2],
+                          visibility: showWaypointLabels ? "visible" : "none"
                         },
                         paint: {
                           "text-color": "#333",
                           "text-halo-color": "#fff",
-                          "text-halo-width": 2
+                          "text-halo-width": 1.5
                         },
-                        filter: ["==", "$type", "LineString"],
-                        minzoom: 10
+                        minzoom: 12
                       });
                     }
                   }
                 });
-
-                const allGeoJSON = toGeoJSON(xml);
-                const waypointFeatures = allGeoJSON.features.filter(f => f.geometry?.type === "Point");
-
-                if (waypointFeatures.length > 0) {
-                  const waypointSourceId = `${slug}-waypoints`;
-
-                  if (!map.getSource(waypointSourceId)) {
-                    map.addSource(waypointSourceId, {
-                      type: "geojson",
-                      data: {
-                        type: "FeatureCollection",
-                        features: waypointFeatures
-                      }
-                    });
-
-                    map.addLayer({
-                      id: `${waypointSourceId}-icons`,
-                      type: "circle",
-                      source: waypointSourceId,
-                      layout: { visibility: showWaypoints ? "visible" : "none" },
-                      paint: {
-                        "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
-                        "circle-color": "#ff6600",
-                        "circle-stroke-width": 1,
-                        "circle-stroke-color": "#fff"
-                      },
-                      minzoom: 9
-                    });
-
-                    map.addLayer({
-                      id: `${waypointSourceId}-labels`,
-                      type: "symbol",
-                      source: waypointSourceId,
-                      layout: {
-                        "text-field": ["get", "name"],
-                        "text-font": ["Open Sans Regular"],
-                        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-                        "text-offset": [0, 1.2],
-                        visibility: showWaypointLabels ? "visible" : "none"
-                      },
-                      paint: {
-                        "text-color": "#333",
-                        "text-halo-color": "#fff",
-                        "text-halo-width": 1.5
-                      },
-                      minzoom: 12
-                    });
-                  }
-                }
               });
           });
         });
