@@ -101,7 +101,8 @@ if (trkElements.length) {
   if (extensions) {
     const colorElem = extensions.getElementsByTagName("color")[0];
     if (colorElem && colorElem.textContent) {
-      trackColor = colorElem.textContent.trim();
+      let rawColor = colorElem.textContent.trim();
+trackColor = rawColor.startsWith("#") ? rawColor : `#${rawColor}`;
     }
   }
 }
