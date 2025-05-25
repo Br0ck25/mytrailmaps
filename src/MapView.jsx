@@ -80,11 +80,12 @@ export default function MapView({
     map.addControl(new maplibregl.NavigationControl(), "top-right");
 
     const geolocate = new maplibregl.GeolocateControl({
-      positionOptions: { enableHighAccuracy: true },
-      trackUserLocation: true,
-      showUserHeading: true,
-      showAccuracyCircle: true
-    });
+  positionOptions: { enableHighAccuracy: true },
+  trackUserLocation: true,
+  showUserHeading: true,
+  showAccuracyCircle: false, // ❌ Hide it
+});
+
 
     map.addControl(geolocate);
 map.on("load", () => {
