@@ -19,6 +19,9 @@ export default class CustomGPX extends L.FeatureGroup {
     this._trackLabels = [];
     this._waypointMarkers = [];
     this._waypointLabels = [];
+
+    this._labelVisibleMap = new Map(); // 🆕 Add visibility map
+
     this._parse();
   }
 
@@ -72,10 +75,24 @@ export default class CustomGPX extends L.FeatureGroup {
             })
               .setContent(trkName)
               .setLatLng(mid);
+
             this._trackLabels.push(label);
+            this._labelVisibleMap.set(polyline, this._options.showTrackNames); // 🆕 Store initial state
+
             if (this._options.showTrackNames) {
               this.addLayer(label);
             }
+
+            // 🆕 Add click-to-toggle behavior
+            polyline.on("click", () => {
+              const visible = this._labelVisibleMap.get(polyline);
+              if (visible) {
+                this.removeLayer(label);
+              } else {
+                this.addLayer(label);
+              }
+              this._labelVisibleMap.set(polyline, !visible);
+            });
           }
         }
       });
@@ -137,6 +154,11 @@ export default class CustomGPX extends L.FeatureGroup {
       } else {
         this.removeLayer(label);
       }
+    });
+
+    // 🆕 Sync label visibility state
+    this._trackPolylines.forEach(polyline => {
+      this._labelVisibleMap.set(polyline, visible);
     });
   }
 
