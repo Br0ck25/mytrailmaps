@@ -36,10 +36,13 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
   // ✅ Add this block to debug tile loading
   map.on("sourcedata", (e) => {
-    if (e.sourceId === "tracks") {
-      console.log("🔍 Source loaded event:", e);
-    }
-  });
+  if (e.sourceId === "tracks" && e.tile && e.tile.rawData) {
+    console.log("🧩 Tile rawData:", e.tile.rawData);
+  } else {
+    console.log("📡 Source loaded event:", e);
+  }
+});
+
 
   map.addSource("tracks", {
     type: "vector",
