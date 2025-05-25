@@ -91,25 +91,41 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                   data: geojson,
                 });
 
-                map.addLayer({
-                  id: lineId,
-                  type: "line",
-                  source: sourceId,
-                  layout: {
-                    "line-join": "round",
-                    "line-cap": "round",
-                    visibility: showTracks ? "visible" : "none",
-                  },
-                  paint: {
-                    "line-color": "#3388ff",
-                    "line-width": [
-                      "interpolate", ["linear"], ["zoom"],
-                      5, 1,
-                      10, 2,
-                      15, 3
-                    ],
-                  },
-                });
+                // Default color fallback
+let trackColor = "#3388ff";
+
+// Try to get color from GPX <extensions>
+const trkElements = xml.getElementsByTagName("trk");
+if (trkElements.length) {
+  const extensions = trkElements[0].getElementsByTagName("extensions")[0];
+  if (extensions) {
+    const colorElem = extensions.getElementsByTagName("color")[0];
+    if (colorElem && colorElem.textContent) {
+      trackColor = colorElem.textContent.trim();
+    }
+  }
+}
+
+map.addLayer({
+  id: lineId,
+  type: "line",
+  source: sourceId,
+  layout: {
+    "line-join": "round",
+    "line-cap": "round",
+    visibility: showTracks ? "visible" : "none",
+  },
+  paint: {
+    "line-color": trackColor,
+    "line-width": [
+      "interpolate", ["linear"], ["zoom"],
+      5, 1,
+      10, 2,
+      15, 3
+    ],
+  },
+});
+
 
                 const nameFeature = geojson.features.find(f =>
                   f.properties?.name && f.geometry?.type === "LineString"
