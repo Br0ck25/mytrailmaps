@@ -40,7 +40,7 @@ export default function MapView({ showTracks }) {
               .then((gpxText) => {
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(gpxText, "application/xml");
-                const geojson = toGeoJSON.gpx(xml);
+                const geojson = toGeoJSON(xml); // ✅ fixed here
 
                 if (!geojson || !geojson.features.length) return;
 
@@ -66,7 +66,7 @@ export default function MapView({ showTracks }) {
                       "interpolate", ["linear"], ["zoom"],
                       5, 1,
                       10, 2,
-                      15, 3
+                      15, 3,
                     ],
                   },
                 });
@@ -87,7 +87,7 @@ export default function MapView({ showTracks }) {
                       "text-size": [
                         "interpolate", ["linear"], ["zoom"],
                         8, 10,
-                        14, 14
+                        14, 14,
                       ],
                     },
                     paint: {
@@ -124,7 +124,7 @@ export default function MapView({ showTracks }) {
                       "circle-radius": [
                         "interpolate", ["linear"], ["zoom"],
                         8, 4,
-                        14, 6
+                        14, 6,
                       ],
                       "circle-color": "#ff6600",
                       "circle-stroke-width": 1,
@@ -144,7 +144,7 @@ export default function MapView({ showTracks }) {
                       "text-size": [
                         "interpolate", ["linear"], ["zoom"],
                         10, 10,
-                        14, 14
+                        14, 14,
                       ],
                       "text-offset": [0, 1.2],
                     },
