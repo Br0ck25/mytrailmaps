@@ -44,14 +44,14 @@ function App() {
             setShowOverlaysPanel(true);
             setOverlayPage("main");
           }}
-          className="absolute z-50 bottom-20 left-4 p-3 bg-green-600 text-white rounded-full shadow-lg"
+          className="absolute z-50 bottom-20 left-4 p-3 bg-white-600 text-black rounded-full shadow-lg"
         >
           <FiLayers className="text-xl" />
         </button>
 
   <button
   onClick={() => triggerGeolocate?.()}
-  className="absolute z-50 bottom-32 left-4 p-3 bg-green-600 text-white rounded-full shadow-lg"
+  className="absolute z-50 bottom-32 left-4 p-3 bg-white-600 text-black rounded-full shadow-lg"
   aria-label="Locate Me"
 >
   <FiCrosshair className="text-xl" />
