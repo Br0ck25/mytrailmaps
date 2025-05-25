@@ -3,6 +3,7 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { gpx as toGeoJSON } from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
+import debounce from "lodash.debounce";
 
 export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels }) {
   const mapRef = useRef(null);
@@ -82,7 +83,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       localStorage.setItem("mapZoom", map.getZoom());
     });
 
-    const fetchVisibleTracks = () => {
+    const fetchVisibleTracks = debounce(() => {
       if (!map) return;
 
       const bounds = map.getBounds();
@@ -93,19 +94,19 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       const url = `${apiBase}/tracks-in-bounds?north=${bounds.getNorth()}&south=${bounds.getSouth()}&east=${bounds.getEast()}&west=${bounds.getWest()}`;
 
       fetch(url)
-        .then((res) => res.json())
+        .then(res => res.json())
         .then((slugs) => {
-          slugs.forEach(({ slug }) => {
-            sourcesLoaded.current.delete(slug);
-          });
+          const slugsSet = new Set(slugs.map(s => s.slug));
 
+          // Clean up old layers
           map.getStyle().layers?.forEach(layer => {
             const id = layer.id;
             if (id.startsWith("track-")) {
-              if (!slugs.find(s => id.includes(s.slug))) {
+              const baseId = id.replace(/-(line|label)$/, "");
+              if (!slugsSet.has(baseId.split("-")[1])) {
                 if (map.getLayer(id)) map.removeLayer(id);
-                const srcId = id.replace(/-(line|label)$/, "");
-                if (map.getSource(srcId)) map.removeSource(srcId);
+                if (map.getSource(baseId)) map.removeSource(baseId);
+                sourcesLoaded.current.delete(baseId.split("-")[1]);
               }
             }
           });
@@ -115,7 +116,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
             sourcesLoaded.current.add(slug);
 
             fetch(`${apiBase}/admin-gpx/${slug}`)
-              .then((res) => res.text())
+              .then(res => res.text())
               .then((gpxText) => {
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(gpxText, "application/xml");
@@ -128,7 +129,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                   const geojson = toGeoJSON(gpxDoc);
                   if (!geojson || !geojson.features.length) return;
 
-                  // Strip all properties except 'name' for label use
                   geojson.features.forEach(f => {
                     if (f.geometry.type === "LineString") {
                       f.properties = { name: f.properties?.name };
@@ -154,10 +154,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                       },
                       paint: {
                         "line-color": trackColor,
-                        "line-width": [
-                          "interpolate", ["linear"], ["zoom"],
-                          5, 1, 10, 2, 15, 3
-                        ],
+                        "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
                         "line-opacity": showTracks ? 1 : 0
                       }
                     });
@@ -190,6 +187,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                   }
                 });
 
+                // Waypoints (same as before)
                 const allGeoJSON = toGeoJSON(xml);
                 const waypointFeatures = allGeoJSON.features.filter(f => f.geometry?.type === "Point");
 
@@ -239,12 +237,15 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
               });
           });
         });
-    };
+    }, 250); // Debounced 250ms
 
     map.on("load", fetchVisibleTracks);
     map.on("moveend", fetchVisibleTracks);
 
-    return () => map.remove();
+    return () => {
+      map.remove();
+      fetchVisibleTracks.cancel();
+    };
   }, []);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
