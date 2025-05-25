@@ -7,7 +7,6 @@ import { DOMParser } from "@xmldom/xmldom";
 export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels }) {
   const mapRef = useRef(null);
   const sourcesLoaded = useRef(new Set());
-  const activeTrackIds = useRef(new Set());
   const currentMap = useRef(null);
 
   const updateLayerVisibility = () => {
@@ -83,17 +82,17 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       showUserHeading: true,
       showAccuracyCircle: true
     });
-
     map.addControl(geolocate, "bottom-left");
 
     map.on("load", () => {
+      fetchVisibleTracks();
+
       const ctrlContainer = document.querySelector(".maplibregl-ctrl-bottom-left");
       const geoBtn = document.querySelector(".maplibregl-ctrl-geolocate");
       if (ctrlContainer && geoBtn) {
         geoBtn.classList.add("custom-geolocate");
         ctrlContainer.prepend(geoBtn);
       }
-      fetchVisibleTracks();
     });
 
     map.on("moveend", () => {
@@ -114,26 +113,27 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       const url = `${apiBase}/tracks-in-bounds?north=${bounds.getNorth()}&south=${bounds.getSouth()}&east=${bounds.getEast()}&west=${bounds.getWest()}`;
 
       fetch(url)
-        .then(res => res.json())
+        .then((res) => res.json())
         .then((slugs) => {
-          const currentSlugs = new Set(slugs.map(s => s.slug));
+          slugs.forEach(({ slug }) => sourcesLoaded.current.delete(slug));
 
-          for (const id of activeTrackIds.current) {
-            const slug = id.split("-")[0];
-            if (!currentSlugs.has(slug)) {
-              if (map.getLayer(`${id}-line`)) map.removeLayer(`${id}-line`);
-              if (map.getLayer(`${id}-label`)) map.removeLayer(`${id}-label`);
-              if (map.getSource(id)) map.removeSource(id);
-              activeTrackIds.current.delete(id);
+          map.getStyle().layers?.forEach(layer => {
+            const id = layer.id;
+            if (id.startsWith("track-")) {
+              if (!slugs.find(s => id.includes(s.slug))) {
+                if (map.getLayer(id)) map.removeLayer(id);
+                const srcId = id.replace(/-(line|label)$/, "");
+                if (map.getSource(srcId)) map.removeSource(srcId);
+              }
             }
-          }
+          });
 
           slugs.forEach(({ slug }) => {
             if (sourcesLoaded.current.has(slug)) return;
             sourcesLoaded.current.add(slug);
 
             fetch(`${apiBase}/admin-gpx/${slug}`)
-              .then(res => res.text())
+              .then((res) => res.text())
               .then((gpxText) => {
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(gpxText, "application/xml");
@@ -142,8 +142,9 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 Array.from(trkElements).forEach((trkEl, index) => {
                   const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
                   gpxDoc.documentElement.appendChild(trkEl.cloneNode(true));
+
                   const geojson = toGeoJSON(gpxDoc);
-                  if (!geojson?.features?.length) return;
+                  if (!geojson || !geojson.features.length) return;
 
                   geojson.features.forEach(f => {
                     if (f.geometry.type === "LineString") {
@@ -158,7 +159,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
                   if (!map.getSource(sourceId)) {
                     map.addSource(sourceId, { type: "geojson", data: geojson });
-                    activeTrackIds.current.add(sourceId);
 
                     map.addLayer({
                       id: `${sourceId}-line`,
@@ -203,6 +203,53 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                     }
                   }
                 });
+
+                const allGeoJSON = toGeoJSON(xml);
+                const waypointFeatures = allGeoJSON.features.filter(f => f.geometry?.type === "Point");
+
+                if (waypointFeatures.length > 0) {
+                  const waypointSourceId = `${slug}-waypoints`;
+
+                  if (!map.getSource(waypointSourceId)) {
+                    map.addSource(waypointSourceId, {
+                      type: "geojson",
+                      data: { type: "FeatureCollection", features: waypointFeatures }
+                    });
+
+                    map.addLayer({
+                      id: `${waypointSourceId}-icons`,
+                      type: "circle",
+                      source: waypointSourceId,
+                      layout: { visibility: showWaypoints ? "visible" : "none" },
+                      paint: {
+                        "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
+                        "circle-color": "#ff6600",
+                        "circle-stroke-width": 1,
+                        "circle-stroke-color": "#fff"
+                      },
+                      minzoom: 9
+                    });
+
+                    map.addLayer({
+                      id: `${waypointSourceId}-labels`,
+                      type: "symbol",
+                      source: waypointSourceId,
+                      layout: {
+                        "text-field": ["get", "name"],
+                        "text-font": ["Open Sans Regular"],
+                        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+                        "text-offset": [0, 1.2],
+                        visibility: showWaypointLabels ? "visible" : "none"
+                      },
+                      paint: {
+                        "text-color": "#333",
+                        "text-halo-color": "#fff",
+                        "text-halo-width": 1.5
+                      },
+                      minzoom: 12
+                    });
+                  }
+                }
               });
           });
         });
