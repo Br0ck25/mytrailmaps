@@ -128,24 +128,16 @@ function App() {
 
       <div className="flex-1 relative overflow-hidden">
         {activeTab === "map" && (
-          <MapContainer
-            center={[37.8, -96]}
-            zoom={4}
-            className="absolute inset-0 z-0"
-            whenCreated={(map) => setLeafletMap(map)}
-          >
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <MapReady
-              setLeafletMap={setLeafletMap}
-              mapRef={mapRef}
-              showNames={showNames}
-              showWaypoints={showWaypoints}
-              showWaypointLabels={showWaypointLabels}
-              showTracks={showTracks}
-              gpxLayersRef={gpxLayersRef}
-            />
-          </MapContainer>
-        )}
+  <div className="absolute inset-0 z-0">
+    <MapView
+      showNames={showNames}
+      showWaypoints={showWaypoints}
+      showWaypointLabels={showWaypointLabels}
+      showTracks={showTracks}
+    />
+  </div>
+)}
+
 
         <button
           onClick={() => {
