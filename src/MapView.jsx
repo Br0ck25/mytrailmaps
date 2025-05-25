@@ -3,11 +3,11 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { gpx as toGeoJSON } from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
+import debounce from "lodash.debounce";
 
 export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels }) {
   const mapRef = useRef(null);
   const sourcesLoaded = useRef(new Set());
-  const activeTrackIds = useRef(new Set());
   const currentMap = useRef(null);
 
   const updateLayerVisibility = () => {
@@ -83,7 +83,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       localStorage.setItem("mapZoom", map.getZoom());
     });
 
-    const fetchVisibleTracks = () => {
+    const fetchVisibleTracks = debounce(() => {
       if (!map) return;
 
       const bounds = map.getBounds();
@@ -96,18 +96,20 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       fetch(url)
         .then(res => res.json())
         .then((slugs) => {
-          const currentSlugs = new Set(slugs.map(s => s.slug));
+          const slugsSet = new Set(slugs.map(s => s.slug));
 
-          // Remove old layers/sources
-          for (const id of activeTrackIds.current) {
-            const slug = id.split("-")[0];
-            if (!currentSlugs.has(slug)) {
-              if (map.getLayer(`${id}-line`)) map.removeLayer(`${id}-line`);
-              if (map.getLayer(`${id}-label`)) map.removeLayer(`${id}-label`);
-              if (map.getSource(id)) map.removeSource(id);
-              activeTrackIds.current.delete(id);
+          // Clean up old layers
+          map.getStyle().layers?.forEach(layer => {
+            const id = layer.id;
+            if (id.startsWith("track-")) {
+              const baseId = id.replace(/-(line|label)$/, "");
+              if (!slugsSet.has(baseId.split("-")[1])) {
+                if (map.getLayer(id)) map.removeLayer(id);
+                if (map.getSource(baseId)) map.removeSource(baseId);
+                sourcesLoaded.current.delete(baseId.split("-")[1]);
+              }
             }
-          }
+          });
 
           slugs.forEach(({ slug }) => {
             if (sourcesLoaded.current.has(slug)) return;
@@ -123,8 +125,9 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 Array.from(trkElements).forEach((trkEl, index) => {
                   const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
                   gpxDoc.documentElement.appendChild(trkEl.cloneNode(true));
+
                   const geojson = toGeoJSON(gpxDoc);
-                  if (!geojson?.features?.length) return;
+                  if (!geojson || !geojson.features.length) return;
 
                   geojson.features.forEach(f => {
                     if (f.geometry.type === "LineString") {
@@ -139,7 +142,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
                   if (!map.getSource(sourceId)) {
                     map.addSource(sourceId, { type: "geojson", data: geojson });
-                    activeTrackIds.current.add(sourceId);
 
                     map.addLayer({
                       id: `${sourceId}-line`,
@@ -184,15 +186,66 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                     }
                   }
                 });
+
+                // Waypoints (same as before)
+                const allGeoJSON = toGeoJSON(xml);
+                const waypointFeatures = allGeoJSON.features.filter(f => f.geometry?.type === "Point");
+
+                if (waypointFeatures.length > 0) {
+                  const waypointSourceId = `${slug}-waypoints`;
+
+                  if (!map.getSource(waypointSourceId)) {
+                    map.addSource(waypointSourceId, {
+                      type: "geojson",
+                      data: { type: "FeatureCollection", features: waypointFeatures }
+                    });
+
+                    map.addLayer({
+                      id: `${waypointSourceId}-icons`,
+                      type: "circle",
+                      source: waypointSourceId,
+                      layout: { visibility: showWaypoints ? "visible" : "none" },
+                      paint: {
+                        "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
+                        "circle-color": "#ff6600",
+                        "circle-stroke-width": 1,
+                        "circle-stroke-color": "#fff"
+                      },
+                      minzoom: 9
+                    });
+
+                    map.addLayer({
+                      id: `${waypointSourceId}-labels`,
+                      type: "symbol",
+                      source: waypointSourceId,
+                      layout: {
+                        "text-field": ["get", "name"],
+                        "text-font": ["Open Sans Regular"],
+                        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+                        "text-offset": [0, 1.2],
+                        visibility: showWaypointLabels ? "visible" : "none"
+                      },
+                      paint: {
+                        "text-color": "#333",
+                        "text-halo-color": "#fff",
+                        "text-halo-width": 1.5
+                      },
+                      minzoom: 12
+                    });
+                  }
+                }
               });
           });
         });
-    };
+    }, 250); // Debounced 250ms
 
     map.on("load", fetchVisibleTracks);
     map.on("moveend", fetchVisibleTracks);
 
-    return () => map.remove();
+    return () => {
+      map.remove();
+      fetchVisibleTracks.cancel();
+    };
   }, []);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
