@@ -33,8 +33,8 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
   const parseTrackColor = (trkEl) => {
     const fallback = "#3388ff";
     const extensions = Array.from(trkEl.childNodes)
-  .filter(n => n.nodeType === 1)
-  .find(c => c.tagName.toLowerCase().endsWith("extensions"));
+      .filter(n => n.nodeType === 1)
+      .find(c => c.tagName.toLowerCase().endsWith("extensions"));
 
     if (!extensions) return fallback;
 
@@ -108,9 +108,8 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
                 Array.from(trkElements).forEach((trkEl, index) => {
                   const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
-const gpxRoot = gpxDoc.documentElement;
-gpxRoot.appendChild(trkEl.cloneNode(true));
-
+                  const gpxRoot = gpxDoc.documentElement;
+                  gpxRoot.appendChild(trkEl.cloneNode(true));
 
                   const geojson = toGeoJSON(gpxDoc);
                   if (!geojson || !geojson.features.length) return;
@@ -173,6 +172,65 @@ gpxRoot.appendChild(trkEl.cloneNode(true));
                     });
                   }
                 });
+
+                // ✅ Always extract waypoints from full GPX
+                const allGeoJSON = toGeoJSON(xml);
+                const waypointFeatures = allGeoJSON.features.filter(f => f.geometry?.type === "Point");
+
+                if (waypointFeatures.length > 0) {
+                  const waypointSourceId = `${slug}-waypoints`;
+
+                  map.addSource(waypointSourceId, {
+                    type: "geojson",
+                    data: {
+                      type: "FeatureCollection",
+                      features: waypointFeatures,
+                    },
+                  });
+
+                  map.addLayer({
+                    id: `${waypointSourceId}-icons`,
+                    type: "circle",
+                    source: waypointSourceId,
+                    layout: {
+                      visibility: showWaypoints ? "visible" : "none",
+                    },
+                    paint: {
+                      "circle-radius": [
+                        "interpolate", ["linear"], ["zoom"],
+                        8, 4,
+                        14, 6
+                      ],
+                      "circle-color": "#ff6600",
+                      "circle-stroke-width": 1,
+                      "circle-stroke-color": "#fff",
+                    },
+                    minzoom: 9,
+                  });
+
+                  map.addLayer({
+                    id: `${waypointSourceId}-labels`,
+                    type: "symbol",
+                    source: waypointSourceId,
+                    layout: {
+                      "text-field": ["get", "name"],
+                      "text-font": ["Open Sans Regular"],
+                      "text-size": [
+                        "interpolate", ["linear"], ["zoom"],
+                        10, 10,
+                        14, 14
+                      ],
+                      "text-offset": [0, 1.2],
+                      visibility: showWaypointLabels ? "visible" : "none",
+                    },
+                    paint: {
+                      "text-color": "#333",
+                      "text-halo-color": "#fff",
+                      "text-halo-width": 1.5,
+                    },
+                    minzoom: 12,
+                  });
+                }
               });
           });
         });
