@@ -77,55 +77,87 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
               .then((gpxText) => {
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(gpxText, "application/xml");
-                const geojson = toGeoJSON(xml);
+                const trkElements = xml.getElementsByTagName("trk");
 
-                if (!geojson || !geojson.features.length) return;
+Array.from(trkElements).forEach((trkEl, index) => {
+  // Wrap individual <trk> in a <gpx> container to convert properly
+  const gpxDoc = document.implementation.createDocument("", "", null);
+  const gpxRoot = gpxDoc.createElement("gpx");
+  gpxDoc.appendChild(gpxRoot);
+  gpxRoot.appendChild(trkEl.cloneNode(true));
 
-                const sourceId = `track-${slug}`;
-                const labelId = `${sourceId}-label`;
-                const lineId = `${sourceId}-line`;
-                const waypointSourceId = `${sourceId}-waypoints`;
+  const trkGeoJSON = toGeoJSON(gpxDoc);
+  if (!trkGeoJSON || !trkGeoJSON.features.length) return;
 
-                map.addSource(sourceId, {
-                  type: "geojson",
-                  data: geojson,
-                });
-
-                // Default color fallback
-let trackColor = "#3388ff";
-
-// Try to get color from GPX <extensions>
-const trkElements = xml.getElementsByTagName("trk");
-if (trkElements.length) {
-  const extensions = trkElements[0].getElementsByTagName("extensions")[0];
+  // Extract color from <extensions><color>
+  let trackColor = "#3388ff";
+  const extensions = trkEl.getElementsByTagName("extensions")[0];
   if (extensions) {
     const colorElem = extensions.getElementsByTagName("color")[0];
     if (colorElem && colorElem.textContent) {
-      let rawColor = colorElem.textContent.trim();
-trackColor = rawColor.startsWith("#") ? rawColor : `#${rawColor}`;
+      let raw = colorElem.textContent.trim();
+      if (/^[0-9a-f]{6}$/i.test(raw)) raw = `#${raw}`;
+      if (/^#[0-9a-f]{6}$/i.test(raw)) trackColor = raw;
     }
   }
-}
 
-map.addLayer({
-  id: lineId,
-  type: "line",
-  source: sourceId,
-  layout: {
-    "line-join": "round",
-    "line-cap": "round",
-    visibility: showTracks ? "visible" : "none",
-  },
-  paint: {
-    "line-color": trackColor,
-    "line-width": [
-      "interpolate", ["linear"], ["zoom"],
-      5, 1,
-      10, 2,
-      15, 3
-    ],
-  },
+  const sourceId = `${slug}-trk-${index}`;
+  map.addSource(sourceId, {
+    type: "geojson",
+    data: trkGeoJSON,
+  });
+
+  map.addLayer({
+    id: `${sourceId}-line`,
+    type: "line",
+    source: sourceId,
+    layout: {
+      "line-join": "round",
+      "line-cap": "round",
+      visibility: showTracks ? "visible" : "none",
+    },
+    paint: {
+      "line-color": trackColor,
+      "line-width": [
+        "interpolate", ["linear"], ["zoom"],
+        5, 1,
+        10, 2,
+        15, 3
+      ],
+    },
+  });
+
+  const nameFeature = trkGeoJSON.features.find(f =>
+    f.properties?.name && f.geometry?.type === "LineString"
+  );
+
+  if (nameFeature) {
+    map.addLayer({
+      id: `${sourceId}-label`,
+      type: "symbol",
+      source: sourceId,
+      layout: {
+        "symbol-placement": "line",
+        "text-field": nameFeature.properties.name,
+        "text-font": ["Open Sans Bold"],
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          8, 10,
+          14, 14
+        ],
+        visibility: showNames ? "visible" : "none",
+      },
+      paint: {
+        "text-color": "#333",
+        "text-halo-color": "#fff",
+        "text-halo-width": 2,
+      },
+      filter: ["==", "$type", "LineString"],
+      minzoom: 10,
+    });
+  }
 });
+
 
 
                 const nameFeature = geojson.features.find(f =>
