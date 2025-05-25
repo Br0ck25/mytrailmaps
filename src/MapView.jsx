@@ -87,16 +87,16 @@ export default function MapView({
     });
 
     map.addControl(geolocate);
-map.once('idle', () => {
+map.on("load", () => {
   if (onGeolocateControlReady) {
     setTimeout(() => {
       onGeolocateControlReady(() => geolocate.trigger());
-    }, 100);
+    }, 0);
   }
+
+  fetchVisibleTracks();
 });
 
-
-    map.on("load", fetchVisibleTracks);
 
     map.on("moveend", () => {
       const center = map.getCenter();
