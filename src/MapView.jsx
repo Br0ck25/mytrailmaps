@@ -77,17 +77,24 @@ export default function MapView({
     });
 
     currentMap.current = map;
-    if (mapRef) mapRef.current = map;
+if (mapRef) mapRef.current = map;
 
-    const geolocate = new maplibregl.GeolocateControl({
+// ✅ Add compass-only navigation control
+const navControl = new maplibregl.NavigationControl({
+  showZoom: false, // disable zoom buttons
+  visualizePitch: true
+});
+map.addControl(navControl, "bottom-left");
+
+// ✅ Geolocate button
+const geolocate = new maplibregl.GeolocateControl({
   positionOptions: { enableHighAccuracy: true },
   trackUserLocation: true,
   showUserHeading: true,
-  showAccuracyCircle: false, // ❌ Hide it
+  showAccuracyCircle: false,
 });
+map.addControl(geolocate, "bottom-left"); // place next to compass
 
-
-    map.addControl(geolocate);
 map.on("load", () => {
   if (onGeolocateControlReady) {
     setTimeout(() => {
@@ -97,6 +104,7 @@ map.on("load", () => {
 
   fetchVisibleTracks();
 });
+
 
 
     map.on("moveend", () => {

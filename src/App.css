@@ -126,3 +126,15 @@ input:checked + .slider:before {
   justify-content: center;
   cursor: pointer;
 }
+/* Style the compass like your floating button */
+.maplibregl-ctrl-bottom-left .maplibregl-ctrl {
+  position: absolute !important;
+  bottom: 8rem; /* roughly matches bottom-32 */
+  left: 1rem;   /* matches left-4 */
+  z-index: 1000;
+  background-color: white;
+  color: black;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 0.75rem;
+}

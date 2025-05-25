@@ -49,18 +49,6 @@ function App() {
           <FiLayers className="text-xl" />
         </button>
 
-<button
-  onClick={() => {
-    if (triggerGeolocate) triggerGeolocate(); // 📍 Recenter on user
-    const map = mapRef.current?.current;
-    if (map) map.resetNorth();               // 🧭 Reset rotation
-  }}
-  className="absolute z-50 bottom-32 left-4 p-3 bg-white-600 text-black rounded-full shadow-lg"
-  aria-label="Locate and Reset North"
->
-  <FiCrosshair className="text-xl" />
-</button>
-
 
         {showOverlaysPanel && (
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
