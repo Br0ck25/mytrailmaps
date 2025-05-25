@@ -104,7 +104,8 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
             if (id.startsWith("track-")) {
               if (!slugs.find(s => id.includes(s.slug))) {
                 if (map.getLayer(id)) map.removeLayer(id);
-                if (map.getSource(id.replace(/-(line|label)$/, ""))) map.removeSource(id.replace(/-(line|label)$/, ""));
+                const srcId = id.replace(/-(line|label)$/, "");
+                if (map.getSource(srcId)) map.removeSource(srcId);
               }
             }
           });
@@ -122,20 +123,25 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
                 Array.from(trkElements).forEach((trkEl, index) => {
                   const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
-                  const gpxRoot = gpxDoc.documentElement;
-                  gpxRoot.appendChild(trkEl.cloneNode(true));
+                  gpxDoc.documentElement.appendChild(trkEl.cloneNode(true));
 
                   const geojson = toGeoJSON(gpxDoc);
                   if (!geojson || !geojson.features.length) return;
+
+                  // Strip all properties except 'name' for label use
+                  geojson.features.forEach(f => {
+                    if (f.geometry.type === "LineString") {
+                      f.properties = { name: f.properties?.name };
+                    } else {
+                      delete f.properties;
+                    }
+                  });
 
                   const trackColor = parseTrackColor(trkEl);
                   const sourceId = `${slug}-trk-${index}`;
 
                   if (!map.getSource(sourceId)) {
-                    map.addSource(sourceId, {
-                      type: "geojson",
-                      data: geojson,
-                    });
+                    map.addSource(sourceId, { type: "geojson", data: geojson });
 
                     map.addLayer({
                       id: `${sourceId}-line`,
@@ -150,12 +156,10 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                         "line-color": trackColor,
                         "line-width": [
                           "interpolate", ["linear"], ["zoom"],
-                          5, 1,
-                          10, 2,
-                          15, 3
+                          5, 1, 10, 2, 15, 3
                         ],
                         "line-opacity": showTracks ? 1 : 0
-                      },
+                      }
                     });
 
                     const nameFeature = geojson.features.find(f =>
@@ -171,20 +175,16 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                           "symbol-placement": "line",
                           "text-field": nameFeature.properties.name,
                           "text-font": ["Open Sans Bold"],
-                          "text-size": [
-                            "interpolate", ["linear"], ["zoom"],
-                            8, 10,
-                            14, 14
-                          ],
-                          visibility: showNames ? "visible" : "none",
+                          "text-size": ["interpolate", ["linear"], ["zoom"], 8, 10, 14, 14],
+                          visibility: showNames ? "visible" : "none"
                         },
                         paint: {
                           "text-color": "#333",
                           "text-halo-color": "#fff",
-                          "text-halo-width": 2,
+                          "text-halo-width": 2
                         },
                         filter: ["==", "$type", "LineString"],
-                        minzoom: 10,
+                        minzoom: 10
                       });
                     }
                   }
@@ -199,30 +199,21 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                   if (!map.getSource(waypointSourceId)) {
                     map.addSource(waypointSourceId, {
                       type: "geojson",
-                      data: {
-                        type: "FeatureCollection",
-                        features: waypointFeatures,
-                      },
+                      data: { type: "FeatureCollection", features: waypointFeatures }
                     });
 
                     map.addLayer({
                       id: `${waypointSourceId}-icons`,
                       type: "circle",
                       source: waypointSourceId,
-                      layout: {
-                        visibility: showWaypoints ? "visible" : "none",
-                      },
+                      layout: { visibility: showWaypoints ? "visible" : "none" },
                       paint: {
-                        "circle-radius": [
-                          "interpolate", ["linear"], ["zoom"],
-                          8, 4,
-                          14, 6
-                        ],
+                        "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
                         "circle-color": "#ff6600",
                         "circle-stroke-width": 1,
-                        "circle-stroke-color": "#fff",
+                        "circle-stroke-color": "#fff"
                       },
-                      minzoom: 9,
+                      minzoom: 9
                     });
 
                     map.addLayer({
@@ -232,20 +223,16 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                       layout: {
                         "text-field": ["get", "name"],
                         "text-font": ["Open Sans Regular"],
-                        "text-size": [
-                          "interpolate", ["linear"], ["zoom"],
-                          10, 10,
-                          14, 14
-                        ],
+                        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
                         "text-offset": [0, 1.2],
-                        visibility: showWaypointLabels ? "visible" : "none",
+                        visibility: showWaypointLabels ? "visible" : "none"
                       },
                       paint: {
                         "text-color": "#333",
                         "text-halo-color": "#fff",
-                        "text-halo-width": 1.5,
+                        "text-halo-width": 1.5
                       },
-                      minzoom: 12,
+                      minzoom: 12
                     });
                   }
                 }
