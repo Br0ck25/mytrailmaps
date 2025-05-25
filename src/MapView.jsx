@@ -4,7 +4,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { gpx as toGeoJSON } from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
 
-export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels }) {
+export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels, onGeolocateControlReady }) {
   const mapRef = useRef(null);
   const sourcesLoaded = useRef(new Set());
   const currentMap = useRef(null);
@@ -82,18 +82,13 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       showUserHeading: true,
       showAccuracyCircle: true
     });
-    map.addControl(geolocate, "bottom-left");
+    map.addControl(geolocate); // Don't set position
 
-    map.on("load", () => {
-      fetchVisibleTracks();
+    if (onGeolocateControlReady) {
+      onGeolocateControlReady(() => geolocate.trigger());
+    }
 
-      const ctrlContainer = document.querySelector(".maplibregl-ctrl-bottom-left");
-      const geoBtn = document.querySelector(".maplibregl-ctrl-geolocate");
-      if (ctrlContainer && geoBtn) {
-        geoBtn.classList.add("custom-geolocate");
-        ctrlContainer.prepend(geoBtn);
-      }
-    });
+    map.on("load", fetchVisibleTracks);
 
     map.on("moveend", () => {
       const center = map.getCenter();

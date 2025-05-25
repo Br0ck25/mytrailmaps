@@ -47,6 +47,15 @@ function App() {
           <FiLayers className="text-xl" />
         </button>
 
+        <button
+  onClick={() => triggerGeolocate?.()}
+  className="absolute z-50 bottom-36 left-4 p-3 bg-green-600 text-white rounded-full shadow-lg"
+  aria-label="Locate Me"
+>
+  <FiCrosshair className="text-xl" />
+</button>
+
+
         {showOverlaysPanel && (
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
             <div className="flex items-center justify-between p-4 border-b">
