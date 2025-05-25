@@ -32,7 +32,10 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
   const parseTrackColor = (trkEl) => {
     const fallback = "#3388ff";
-    const extensions = [...trkEl.children].find(c => c.tagName.toLowerCase().endsWith("extensions"));
+    const extensions = Array.from(trkEl.childNodes)
+  .filter(n => n.nodeType === 1)
+  .find(c => c.tagName.toLowerCase().endsWith("extensions"));
+
     if (!extensions) return fallback;
 
     const colorTag = [...extensions.getElementsByTagName("*")].find(c =>
