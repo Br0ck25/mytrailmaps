@@ -1,1 +1,7 @@
-{"tilejson": "2.2.0", "name": "trackdata", "tiles": ["https://mytrailmaps.brocksville.com/tiles/{z}/{x}/{y}.pbf"], "minzoom": 10, "maxzoom": 16}
+{
+  "tilejson": "2.2.0",
+  "name": "trackdata",
+  "tiles": ["https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"],
+  "minzoom": 10,
+  "maxzoom": 16
+}
