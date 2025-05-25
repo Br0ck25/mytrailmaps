@@ -87,8 +87,7 @@ export default function MapView({
     });
 
     map.addControl(geolocate);
-
-map.once("load", () => {
+map.once('idle', () => {
   if (onGeolocateControlReady) {
     onGeolocateControlReady(() => geolocate.trigger());
   }
