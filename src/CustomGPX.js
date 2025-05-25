@@ -23,6 +23,8 @@ export default class CustomGPX extends L.FeatureGroup {
     this._waypointMarkerGroup = L.layerGroup();
     this._waypointLabelGroup = L.layerGroup();
 
+    this._map = null;
+
     this._parse();
   }
 
@@ -108,16 +110,39 @@ export default class CustomGPX extends L.FeatureGroup {
       this._waypointLabelGroup.addLayer(label);
     });
 
-    // Initial layer group display
-    if (this._options.showTrackNames) this.addLayer(this._trackLabelGroup);
-    if (this._options.showWaypoints) this.addLayer(this._waypointMarkerGroup);
-    if (this._options.showWaypointLabels) this.addLayer(this._waypointLabelGroup);
+    // Add layers conditionally after zoom logic
+    this._map = this._trackPolylines[0]?.__map || this._waypointMarkerGroup._map;
+    if (this._map) {
+      this._map.on("zoomend", () => this._onZoomChanged());
+      this._onZoomChanged();
+    }
 
     const allLines = this.getLayers().filter((l) => l instanceof L.Polyline);
     if (allLines.length > 0) {
       const bounds = L.latLngBounds([]);
       allLines.forEach((line) => bounds.extend(line.getBounds()));
       this.fire("loaded", { bounds });
+    }
+  }
+
+  _onZoomChanged() {
+    if (!this._map) return;
+
+    const zoom = this._map.getZoom();
+
+    if (this._options.showTrackNames) {
+      if (zoom >= 13) this.addLayer(this._trackLabelGroup);
+      else this.removeLayer(this._trackLabelGroup);
+    }
+
+    if (this._options.showWaypoints) {
+      if (zoom >= 12) this.addLayer(this._waypointMarkerGroup);
+      else this.removeLayer(this._waypointMarkerGroup);
+    }
+
+    if (this._options.showWaypointLabels) {
+      if (zoom >= 13) this.addLayer(this._waypointLabelGroup);
+      else this.removeLayer(this._waypointLabelGroup);
     }
   }
 
@@ -129,22 +154,21 @@ export default class CustomGPX extends L.FeatureGroup {
   }
 
   setShowTrackNames(visible) {
-    if (visible) this.addLayer(this._trackLabelGroup);
-    else this.removeLayer(this._trackLabelGroup);
-
+    this._options.showTrackNames = visible;
     this._trackPolylines.forEach(polyline => {
       this._labelVisibleMap.set(polyline, visible);
     });
+    this._onZoomChanged();
   }
 
   setShowWaypoints(visible) {
-    if (visible) this.addLayer(this._waypointMarkerGroup);
-    else this.removeLayer(this._waypointMarkerGroup);
+    this._options.showWaypoints = visible;
+    this._onZoomChanged();
   }
 
   setShowWaypointLabels(visible) {
-    if (visible) this.addLayer(this._waypointLabelGroup);
-    else this.removeLayer(this._waypointLabelGroup);
+    this._options.showWaypointLabels = visible;
+    this._onZoomChanged();
   }
 
   _mapDisplayColor(displayColorName) {
