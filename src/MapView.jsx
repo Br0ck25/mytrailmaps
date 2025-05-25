@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { gpx as toGeoJSON } from "@tmcw/togeojson";
@@ -7,16 +7,28 @@ import { DOMParser } from "@xmldom/xmldom";
 export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels }) {
   const mapRef = useRef(null);
   const sourcesLoaded = useRef(new Set());
+  const mapInstance = useRef(null);
 
   useEffect(() => {
+    const savedCenter = JSON.parse(localStorage.getItem("mapCenter")) || [-84.3, 36.5];
+    const savedZoom = parseFloat(localStorage.getItem("mapZoom")) || 9;
+
     const map = new maplibregl.Map({
       container: mapRef.current,
       style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
-      center: [-84.3, 36.5],
-      zoom: 9,
+      center: savedCenter,
+      zoom: savedZoom,
     });
 
+    mapInstance.current = map;
     map.addControl(new maplibregl.NavigationControl(), "top-right");
+
+    map.on("moveend", () => {
+      const center = map.getCenter();
+      localStorage.setItem("mapCenter", JSON.stringify([center.lng, center.lat]));
+      localStorage.setItem("mapZoom", map.getZoom());
+      fetchVisibleTracks();
+    });
 
     function fetchVisibleTracks() {
       if (!map || !showTracks) return;
@@ -45,6 +57,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 if (!geojson || !geojson.features.length) return;
 
                 const sourceId = `track-${slug}`;
+                if (map.getSource(sourceId)) return;
 
                 map.addSource(sourceId, {
                   type: "geojson",
@@ -163,9 +176,14 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
     }
 
     map.on("load", fetchVisibleTracks);
-    map.on("moveend", fetchVisibleTracks);
 
     return () => map.remove();
+  }, []);
+
+  useEffect(() => {
+    if (mapInstance.current) {
+      mapInstance.current.triggerRepaint();
+    }
   }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
