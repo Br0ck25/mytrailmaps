@@ -1,6 +1,5 @@
 export default {
   async fetch(request, env) {
-    // Handle CORS preflight
     if (request.method === "OPTIONS") {
       return new Response(null, {
         status: 204,
@@ -11,16 +10,15 @@ export default {
         },
       });
     }
-    
+
     try {
       const url = new URL(request.url);
-      const path = url.pathname.replace(/\/+$/, "");
+      const path = url.pathname.replace(/\/+\$/, "");
       const method = request.method;
 
       console.log("🛬 Method:", method);
       console.log("🛣️ Path:", path);
 
-      // 1. Return all user tracks
       if (method === "GET" && path === "/api/tracks") {
         const authHeader = request.headers.get("Authorization");
         const token = authHeader?.split("Bearer ")[1];
@@ -64,7 +62,6 @@ export default {
         });
       }
 
-      // 2. List all admin GPX metadata
       if (method === "GET" && path === "/api/admin-gpx-list") {
         const list = await env.TRACKS_KV.list({ prefix: "meta:admin:" });
         const results = [];
@@ -84,7 +81,6 @@ export default {
         });
       }
 
-      // 3. Serve admin GPX file (not downloadable)
       if (method === "GET" && path.startsWith("/api/admin-gpx/")) {
         const slug = path.split("/").pop();
         const file = await env.TRACKS_KV.get(`gpx:admin:${slug}.gpx`, "arrayBuffer");
@@ -99,43 +95,66 @@ export default {
           },
         });
       }
-      // 4. Serve GPX slugs within bounding box
-if (method === "GET" && path === "/api/tracks-in-bounds") {
-  const { searchParams } = new URL(request.url);
-  const north = parseFloat(searchParams.get("north"));
-  const south = parseFloat(searchParams.get("south"));
-  const east = parseFloat(searchParams.get("east"));
-  const west = parseFloat(searchParams.get("west"));
 
-  if ([north, south, east, west].some(v => isNaN(v))) {
-    return new Response("Invalid bounds", {
-      status: 400,
-      headers: { "Access-Control-Allow-Origin": "*" }
-    });
-  }
+      if (method === "GET" && path === "/api/tracks-in-bounds") {
+        const { searchParams } = new URL(request.url);
+        const north = parseFloat(searchParams.get("north"));
+        const south = parseFloat(searchParams.get("south"));
+        const east = parseFloat(searchParams.get("east"));
+        const west = parseFloat(searchParams.get("west"));
 
-  const indexJSON = await env.TRACKS_KV.get("track-index");
-  if (!indexJSON) {
-    return new Response("No index available", {
-      status: 404,
-      headers: { "Access-Control-Allow-Origin": "*" }
-    });
-  }
+        if ([north, south, east, west].some(v => isNaN(v))) {
+          return new Response("Invalid bounds", {
+            status: 400,
+            headers: { "Access-Control-Allow-Origin": "*" }
+          });
+        }
 
-  const index = JSON.parse(indexJSON);
-  const matches = index.filter(t =>
-    !(t.maxLat < south || t.minLat > north || t.maxLon < west || t.minLon > east)
-  );
+        const indexJSON = await env.TRACKS_KV.get("track-index");
+        if (!indexJSON) {
+          return new Response("No index available", {
+            status: 404,
+            headers: { "Access-Control-Allow-Origin": "*" }
+          });
+        }
 
-  return new Response(JSON.stringify(matches.map(t => ({ slug: t.slug }))), {
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
-    }
-  });
-}
+        const index = JSON.parse(indexJSON);
+        const matches = index.filter(t =>
+          !(t.maxLat < south || t.minLat > north || t.maxLon < west || t.minLon > east)
+        );
 
-      // Fallback: not found
+        return new Response(JSON.stringify(matches.map(t => ({ slug: t.slug }))), {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+          }
+        });
+      }
+
+      // 5. Serve vector tile or metadata from R2 under /tiles/*
+      if (method === "GET" && path.startsWith("/tiles/")) {
+        const key = path.replace(/^\/tiles\//, "tiles/");
+        const object = await env.MYTRAILMAPS.get(key);
+
+        if (!object)
+          return new Response("Tile not found", {
+            status: 404,
+            headers: { "Access-Control-Allow-Origin": "*" },
+          });
+
+        const headers = new Headers();
+        headers.set("Access-Control-Allow-Origin", "*");
+
+        if (key.endsWith(".pbf")) {
+          headers.set("Content-Type", "application/x-protobuf");
+          headers.set("Content-Encoding", "gzip");
+        } else if (key.endsWith(".json")) {
+          headers.set("Content-Type", "application/json");
+        }
+
+        return new Response(object.body, { headers });
+      }
+
       return new Response("Not Found", {
         status: 404,
         headers: { "Access-Control-Allow-Origin": "*" },
@@ -151,7 +170,6 @@ if (method === "GET" && path === "/api/tracks-in-bounds") {
   }
 };
 
-// 🧪 Fake auth logic — replace later with real token decoding
 async function getUserIdFromToken(token) {
   if (token === "testtoken") return "testuser";
   return null;
