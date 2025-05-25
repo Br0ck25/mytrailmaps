@@ -16,11 +16,12 @@ export default class CustomGPX extends L.FeatureGroup {
     };
 
     this._trackPolylines = [];
-    this._trackLabels = [];
-    this._waypointMarkers = [];
-    this._waypointLabels = [];
+    this._labelVisibleMap = new Map();
 
-    this._labelVisibleMap = new Map(); // 🆕 Add visibility map
+    // 🧱 Layer groups for performance
+    this._trackLabelGroup = L.layerGroup();
+    this._waypointMarkerGroup = L.layerGroup();
+    this._waypointLabelGroup = L.layerGroup();
 
     this._parse();
   }
@@ -31,8 +32,6 @@ export default class CustomGPX extends L.FeatureGroup {
     const allElements = gpx.querySelectorAll("*");
 
     const trks = [...allElements].filter(el => el.tagName.endsWith("trk"));
-    let totalSegments = 0;
-
     trks.forEach((trk) => {
       let color = this._options.polyline_options.color;
 
@@ -49,13 +48,9 @@ export default class CustomGPX extends L.FeatureGroup {
       const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
       trksegs.forEach((trkseg) => {
         const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
-        const pts = trkpts.map((pt) => [
-          parseFloat(pt.getAttribute("lat")),
-          parseFloat(pt.getAttribute("lon")),
-        ]);
+        const pts = trkpts.map(pt => [parseFloat(pt.getAttribute("lat")), parseFloat(pt.getAttribute("lon"))]);
 
         if (pts.length) {
-          totalSegments++;
           const polyline = L.polyline(pts, {
             ...this._options.polyline_options,
             color,
@@ -72,24 +67,17 @@ export default class CustomGPX extends L.FeatureGroup {
               permanent: true,
               direction: "center",
               className: "gpx-track-label",
-            })
-              .setContent(trkName)
-              .setLatLng(mid);
+            }).setContent(trkName).setLatLng(mid);
 
-            this._trackLabels.push(label);
-            this._labelVisibleMap.set(polyline, this._options.showTrackNames); // 🆕 Store initial state
+            this._trackLabelGroup.addLayer(label);
+            this._labelVisibleMap.set(polyline, this._options.showTrackNames);
 
-            if (this._options.showTrackNames) {
-              this.addLayer(label);
-            }
-
-            // 🆕 Add click-to-toggle behavior
             polyline.on("click", () => {
               const visible = this._labelVisibleMap.get(polyline);
               if (visible) {
-                this.removeLayer(label);
+                this._trackLabelGroup.removeLayer(label);
               } else {
-                this.addLayer(label);
+                this._trackLabelGroup.addLayer(label);
               }
               this._labelVisibleMap.set(polyline, !visible);
             });
@@ -105,29 +93,25 @@ export default class CustomGPX extends L.FeatureGroup {
 
       const lat = parseFloat(wpt.getAttribute("lat"));
       const lon = parseFloat(wpt.getAttribute("lon"));
-      const descEl = [...wpt.children].find(c => c.tagName.endsWith("desc"));
-      const desc = descEl?.textContent?.trim() || "";
+      const desc = [...wpt.children].find(c => c.tagName.endsWith("desc"))?.textContent?.trim() || "";
 
       const marker = L.marker([lat, lon], this._options.marker_options)
         .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
-      this._waypointMarkers.push(marker);
-      if (this._options.showWaypoints) {
-        marker.addTo(this);
-      }
+      this._waypointMarkerGroup.addLayer(marker);
 
       const label = L.tooltip({
         permanent: true,
         direction: "top",
         className: "gpx-waypoint-label",
         offset: [0, -15],
-      })
-        .setContent(nameEl.textContent.trim())
-        .setLatLng([lat, lon]);
-      this._waypointLabels.push(label);
-      if (this._options.showWaypointLabels) {
-        this.addLayer(label);
-      }
+      }).setContent(nameEl.textContent.trim()).setLatLng([lat, lon]);
+      this._waypointLabelGroup.addLayer(label);
     });
+
+    // Initial layer group display
+    if (this._options.showTrackNames) this.addLayer(this._trackLabelGroup);
+    if (this._options.showWaypoints) this.addLayer(this._waypointMarkerGroup);
+    if (this._options.showWaypointLabels) this.addLayer(this._waypointLabelGroup);
 
     const allLines = this.getLayers().filter((l) => l instanceof L.Polyline);
     if (allLines.length > 0) {
@@ -139,47 +123,28 @@ export default class CustomGPX extends L.FeatureGroup {
 
   setShowTracks(visible) {
     this._trackPolylines.forEach(polyline => {
-      if (visible) {
-        this.addLayer(polyline);
-      } else {
-        this.removeLayer(polyline);
-      }
+      if (visible) this.addLayer(polyline);
+      else this.removeLayer(polyline);
     });
   }
 
   setShowTrackNames(visible) {
-    this._trackLabels.forEach(label => {
-      if (visible) {
-        this.addLayer(label);
-      } else {
-        this.removeLayer(label);
-      }
-    });
+    if (visible) this.addLayer(this._trackLabelGroup);
+    else this.removeLayer(this._trackLabelGroup);
 
-    // 🆕 Sync label visibility state
     this._trackPolylines.forEach(polyline => {
       this._labelVisibleMap.set(polyline, visible);
     });
   }
 
   setShowWaypoints(visible) {
-    this._waypointMarkers.forEach(marker => {
-      if (visible) {
-        this.addLayer(marker);
-      } else {
-        this.removeLayer(marker);
-      }
-    });
+    if (visible) this.addLayer(this._waypointMarkerGroup);
+    else this.removeLayer(this._waypointMarkerGroup);
   }
 
   setShowWaypointLabels(visible) {
-    this._waypointLabels.forEach(label => {
-      if (visible) {
-        this.addLayer(label);
-      } else {
-        this.removeLayer(label);
-      }
-    });
+    if (visible) this.addLayer(this._waypointLabelGroup);
+    else this.removeLayer(this._waypointLabelGroup);
   }
 
   _mapDisplayColor(displayColorName) {
