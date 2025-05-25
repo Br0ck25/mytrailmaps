@@ -86,10 +86,14 @@ export default function MapView({
       showAccuracyCircle: true
     });
 
-    map.addControl(geolocate); // Do not specify position
-    if (typeof onGeolocateControlReady === "function") {
-      onGeolocateControlReady(() => geolocate.trigger());
-    }
+    map.addControl(geolocate);
+
+map.once("load", () => {
+  if (onGeolocateControlReady) {
+    onGeolocateControlReady(() => geolocate.trigger());
+  }
+});
+
 
     map.on("load", fetchVisibleTracks);
 
