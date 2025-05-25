@@ -23,39 +23,23 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypoin
     if (!map) return;
 
     setLeafletMap(map);
-    gpxLayersRef.current = [];
 
-    const apiBase = import.meta.env.PROD
-      ? "https://mytrailmapsworker.jamesbrock25.workers.dev/api"
-      : "/api";
+    // 🧭 Restore previous position/zoom if available
+    const saved = localStorage.getItem("mapView");
+    if (saved) {
+      const { lat, lng, zoom } = JSON.parse(saved);
+      map.setView([lat, lng], zoom);
+    }
 
-    fetch(`${apiBase}/admin-gpx-list`)
-      .then((res) => res.json())
-      .then((tracks) => {
-        tracks.forEach((track) => {
-          const url = `${apiBase}/admin-gpx/${track.slug}`;
+    const onMoveEnd = () => {
+      const center = map.getCenter();
+      const zoom = map.getZoom();
+      localStorage.setItem("mapView", JSON.stringify({ lat: center.lat, lng: center.lng, zoom }));
+    };
 
-          fetch(url)
-            .then((res) => res.text())
-            .then((gpxText) => {
-              const gpxLayer = new CustomGPX(gpxText, {
-                polyline_options: { color: "#3388ff", weight: 3 },
-                showTrackNames: showNames,
-                showWaypoints: showWaypoints,
-                showWaypointLabels: showWaypointLabels,
-                showTracks: showTracks,
-              });
-
-              gpxLayer.on("loaded", (e) => {
-                map.fitBounds(e.bounds);
-              });
-
-              gpxLayer.addTo(map);
-              gpxLayersRef.current.push(gpxLayer);
-            });
-        });
-      });
-  }, [map, setLeafletMap]);
+    map.on("moveend", onMoveEnd);
+    return () => map.off("moveend", onMoveEnd);
+  }, [map]);
 
   return null;
 }
