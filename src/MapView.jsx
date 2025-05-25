@@ -35,11 +35,14 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       }
 
       map.addSource("tracks", {
-        type: "vector",
-        tiles: ["https://mytrailmaps.brocksville.com/tiles/{z}/{x}/{y}.pbf"],
-        minzoom: 10,
-        maxzoom: 16
-      });
+  type: "vector",
+  tiles: [
+    "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
+  ],
+  minzoom: 10,
+  maxzoom: 16
+});
+
 
       map.addLayer({
         id: "trackdata-line",
