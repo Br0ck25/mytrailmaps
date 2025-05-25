@@ -11,11 +11,10 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
   const updateLayerVisibility = () => {
     const map = currentMap.current;
-    if (!map) return;
+    if (!map || !map.getStyle()) return;
 
-    map.getStyle().layers.forEach(layer => {
+    map.getStyle().layers?.forEach(layer => {
       const id = layer.id;
-
       if (id.endsWith("-line")) {
         map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
       }
@@ -36,15 +35,25 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
   }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
 
   useEffect(() => {
+    const savedCenter = localStorage.getItem("mapCenter");
+    const savedZoom = localStorage.getItem("mapZoom");
+
     const map = new maplibregl.Map({
       container: mapRef.current,
       style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
-      center: [-84.3, 36.5],
-      zoom: 9,
+      center: savedCenter ? JSON.parse(savedCenter) : [-84.3, 36.5],
+      zoom: savedZoom ? parseFloat(savedZoom) : 9,
     });
 
     currentMap.current = map;
+
     map.addControl(new maplibregl.NavigationControl(), "top-right");
+
+    map.on("moveend", () => {
+      const center = map.getCenter();
+      localStorage.setItem("mapCenter", JSON.stringify([center.lng, center.lat]));
+      localStorage.setItem("mapZoom", map.getZoom());
+    });
 
     const fetchVisibleTracks = () => {
       if (!map) return;
@@ -71,6 +80,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 const geojson = toGeoJSON(xml);
 
                 if (!geojson || !geojson.features.length) return;
+
                 const sourceId = `track-${slug}`;
                 const labelId = `${sourceId}-label`;
                 const lineId = `${sourceId}-line`;
@@ -198,4 +208,3 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
-
