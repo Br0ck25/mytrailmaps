@@ -77,7 +77,7 @@ export default function MapView({
     });
 
     currentMap.current = map;
-    map.addControl(new maplibregl.NavigationControl(), "top-right");
+    if (mapRef) mapRef.current = map;
 
     const geolocate = new maplibregl.GeolocateControl({
   positionOptions: { enableHighAccuracy: true },
