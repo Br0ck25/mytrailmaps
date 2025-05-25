@@ -84,7 +84,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       showAccuracyCircle: true
     });
 
-    map.addControl(geolocate);
+    map.addControl(geolocate, "bottom-left");
 
     map.on("load", () => {
       const ctrlContainer = document.querySelector(".maplibregl-ctrl-bottom-left");
