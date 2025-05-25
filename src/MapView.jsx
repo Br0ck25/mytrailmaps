@@ -104,10 +104,10 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 const trkElements = xml.getElementsByTagName("trk");
 
                 Array.from(trkElements).forEach((trkEl, index) => {
-                  const gpxDoc = document.implementation.createDocument("", "", null);
-                  const gpxRoot = gpxDoc.createElement("gpx");
-                  gpxDoc.appendChild(gpxRoot);
-                  gpxRoot.appendChild(trkEl.cloneNode(true));
+                  const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
+const gpxRoot = gpxDoc.documentElement;
+gpxRoot.appendChild(trkEl.cloneNode(true));
+
 
                   const geojson = toGeoJSON(gpxDoc);
                   if (!geojson || !geojson.features.length) return;
