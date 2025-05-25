@@ -81,10 +81,11 @@ if (mapRef) mapRef.current = map;
 
 // ✅ Add compass-only navigation control
 const navControl = new maplibregl.NavigationControl({
-  showZoom: false, // disable zoom buttons
+  showZoom: false,
   visualizePitch: true
 });
-map.addControl(navControl, "bottom-left");
+map.addControl(navControl, "top-left"); // We'll move it manually with CSS
+
 
 // ✅ Geolocate button
 const geolocate = new maplibregl.GeolocateControl({

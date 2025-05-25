@@ -126,10 +126,10 @@ input:checked + .slider:before {
   justify-content: center;
   cursor: pointer;
 }
-/* Style the compass like your floating button */
-.maplibregl-ctrl-bottom-left .maplibregl-ctrl {
+/* Style MapLibre compass like your floating buttons */
+.maplibregl-ctrl.maplibregl-ctrl-group {
   position: absolute !important;
-  bottom: 8rem; /* roughly matches bottom-32 */
+  bottom: 8rem; /* roughly bottom-32 */
   left: 1rem;   /* matches left-4 */
   z-index: 1000;
   background-color: white;
@@ -137,4 +137,14 @@ input:checked + .slider:before {
   border-radius: 9999px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
+
+/* Hide zoom buttons */
+.maplibregl-ctrl-zoom-in,
+.maplibregl-ctrl-zoom-out {
+  display: none !important;
+}
+
