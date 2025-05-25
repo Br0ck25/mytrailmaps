@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import MapView from "./MapView";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog } from "react-icons/fa";
-import { FiLayers } from "react-icons/fi";
+import { FiLayers, FiCrosshair } from "react-icons/fi";
 
 function App() {
   const [activeTab, setActiveTab] = useState("map");
