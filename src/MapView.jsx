@@ -10,10 +10,13 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
   const mapInstance = useRef(null);
 
   const updateLayerVisibility = () => {
-    if (!mapInstance.current) return;
     const map = mapInstance.current;
+    if (!map || !map.isStyleLoaded()) return;
 
-    map.getStyle().layers.forEach(layer => {
+    const layers = map.getStyle()?.layers;
+    if (!layers) return;
+
+    layers.forEach(layer => {
       if (layer.id.includes("-line")) {
         map.setLayoutProperty(layer.id, "visibility", showTracks ? "visible" : "none");
       }
@@ -50,6 +53,8 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       fetchVisibleTracks();
     });
 
+    map.on("styledata", updateLayerVisibility);
+
     function fetchVisibleTracks() {
       if (!map || !showTracks) return;
 
@@ -61,28 +66,24 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       const url = `${apiBase}/tracks-in-bounds?north=${bounds.getNorth()}&south=${bounds.getSouth()}&east=${bounds.getEast()}&west=${bounds.getWest()}`;
 
       fetch(url)
-        .then((res) => res.json())
-        .then((slugs) => {
+        .then(res => res.json())
+        .then(slugs => {
           slugs.forEach(({ slug }) => {
             if (sourcesLoaded.current.has(slug)) return;
             sourcesLoaded.current.add(slug);
 
             fetch(`${apiBase}/admin-gpx/${slug}`)
-              .then((res) => res.text())
-              .then((gpxText) => {
+              .then(res => res.text())
+              .then(gpxText => {
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(gpxText, "application/xml");
                 const geojson = toGeoJSON(xml);
-
-                if (!geojson || !geojson.features.length) return;
+                if (!geojson?.features?.length) return;
 
                 const sourceId = `track-${slug}`;
                 if (map.getSource(sourceId)) return;
 
-                map.addSource(sourceId, {
-                  type: "geojson",
-                  data: geojson,
-                });
+                map.addSource(sourceId, { type: "geojson", data: geojson });
 
                 map.addLayer({
                   id: `${sourceId}-line`,
@@ -138,7 +139,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 );
                 if (waypointFeatures.length > 0) {
                   const waypointSourceId = `${sourceId}-waypoints`;
-
                   map.addSource(waypointSourceId, {
                     type: "geojson",
                     data: {
@@ -177,7 +177,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                       "text-size": [
                         "interpolate", ["linear"], ["zoom"],
                         10, 10,
-                        14,  14,
+                        14, 14,
                       ],
                       "text-offset": [0, 1.2],
                       visibility: showWaypointLabels ? "visible" : "none",
@@ -196,7 +196,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
     }
 
     map.on("load", fetchVisibleTracks);
-
     return () => map.remove();
   }, []);
 
