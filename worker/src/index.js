@@ -99,6 +99,41 @@ export default {
           },
         });
       }
+      // 4. Serve GPX slugs within bounding box
+if (method === "GET" && path === "/api/tracks-in-bounds") {
+  const { searchParams } = new URL(request.url);
+  const north = parseFloat(searchParams.get("north"));
+  const south = parseFloat(searchParams.get("south"));
+  const east = parseFloat(searchParams.get("east"));
+  const west = parseFloat(searchParams.get("west"));
+
+  if ([north, south, east, west].some(v => isNaN(v))) {
+    return new Response("Invalid bounds", {
+      status: 400,
+      headers: { "Access-Control-Allow-Origin": "*" }
+    });
+  }
+
+  const indexJSON = await env.TRACKS_KV.get("track-index");
+  if (!indexJSON) {
+    return new Response("No index available", {
+      status: 404,
+      headers: { "Access-Control-Allow-Origin": "*" }
+    });
+  }
+
+  const index = JSON.parse(indexJSON);
+  const matches = index.filter(t =>
+    !(t.maxLat < south || t.minLat > north || t.maxLon < west || t.minLon > east)
+  );
+
+  return new Response(JSON.stringify(matches.map(t => ({ slug: t.slug }))), {
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    }
+  });
+}
 
       // Fallback: not found
       return new Response("Not Found", {

@@ -18,6 +18,7 @@ L.Icon.Default.mergeOptions({
 
 function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypointLabels, showTracks, gpxLayersRef }) {
   const map = useMap();
+  const loadedSlugsRef = useRef(new Set());
 
   useEffect(() => {
     if (!map) return;
@@ -29,36 +30,47 @@ function MapReady({ setLeafletMap, mapRef, showNames, showWaypoints, showWaypoin
       ? "https://mytrailmapsworker.jamesbrock25.workers.dev/api"
       : "/api";
 
-    fetch(`${apiBase}/admin-gpx-list`)
-      .then((res) => res.json())
-      .then((tracks) => {
-        tracks.forEach((track) => {
-          const url = `${apiBase}/admin-gpx/${track.slug}`;
+    const fetchTracksInView = () => {
+      const bounds = map.getBounds();
+      const url = `${apiBase}/tracks-in-bounds?north=${bounds.getNorth()}&south=${bounds.getSouth()}&east=${bounds.getEast()}&west=${bounds.getWest()}`;
 
-          fetch(url)
-            .then((res) => res.text())
-            .then((gpxText) => {
-              const gpxLayer = new CustomGPX(gpxText, {
-                polyline_options: { color: "#3388ff", weight: 3 },
-                showTrackNames: showNames,
-                showWaypoints: showWaypoints,
-                showWaypointLabels: showWaypointLabels,
-                showTracks: showTracks,
+      fetch(url)
+        .then(res => res.json())
+        .then(slugs => {
+          slugs.forEach(({ slug }) => {
+            if (loadedSlugsRef.current.has(slug)) return;
+
+            loadedSlugsRef.current.add(slug);
+            const gpxUrl = `${apiBase}/admin-gpx/${slug}`;
+            fetch(gpxUrl)
+              .then(res => res.text())
+              .then(gpxText => {
+                const gpxLayer = new CustomGPX(gpxText, {
+                  polyline_options: { color: "#3388ff", weight: 3 },
+                  showTrackNames: showNames,
+                  showWaypoints: showWaypoints,
+                  showWaypointLabels: showWaypointLabels,
+                  showTracks: showTracks,
+                });
+
+                gpxLayer.addTo(map);
+                gpxLayersRef.current.push(gpxLayer);
               });
-
-              gpxLayer.on("loaded", (e) => {
-                map.fitBounds(e.bounds);
-              });
-
-              gpxLayer.addTo(map);
-              gpxLayersRef.current.push(gpxLayer);
-            });
+          });
         });
-      });
+    };
+
+    // Trigger fetch on move
+    map.on("moveend", fetchTracksInView);
+
+    // Initial fetch on mount
+    fetchTracksInView();
+
   }, [map, setLeafletMap]);
 
   return null;
 }
+
 
 function App() {
   const [leafletMap, setLeafletMap] = useState(null);
