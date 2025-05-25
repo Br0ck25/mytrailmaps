@@ -4,7 +4,13 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { gpx as toGeoJSON } from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
 
-export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels, onGeolocateControlReady }) {
+export default function MapView({
+  showTracks,
+  showNames,
+  showWaypoints,
+  showWaypointLabels,
+  onGeolocateControlReady
+}) {
   const mapRef = useRef(null);
   const sourcesLoaded = useRef(new Set());
   const currentMap = useRef(null);
@@ -32,10 +38,8 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
   const parseTrackColor = (trkEl) => {
     const fallback = "#3388ff";
-    const extensions = Array.from(trkEl.childNodes)
-      .filter(n => n.nodeType === 1)
+    const extensions = Array.from(trkEl.childNodes).filter(n => n.nodeType === 1)
       .find(c => c.tagName.toLowerCase().endsWith("extensions"));
-
     if (!extensions) return fallback;
 
     const colorTag = [...extensions.getElementsByTagName("*")].find(c =>
@@ -45,7 +49,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
     const value = colorTag.textContent.trim();
     const hexColor = value.match(/^#?[0-9a-f]{6}$/i) ? `#${value.replace(/^#/, "")}` : null;
-    if (hexColor) return hexColor;
 
     const namedColors = {
       "DarkRed": "#8B0000", "DarkGreen": "#006400", "DarkBlue": "#00008B",
@@ -55,7 +58,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       "Green": "#00FF00", "Blue": "#0000FF"
     };
 
-    return namedColors[value] || fallback;
+    return hexColor || namedColors[value] || fallback;
   };
 
   useEffect(() => {
@@ -82,9 +85,9 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       showUserHeading: true,
       showAccuracyCircle: true
     });
-    map.addControl(geolocate); // Don't set position
 
-    if (onGeolocateControlReady) {
+    map.addControl(geolocate); // Do not specify position
+    if (typeof onGeolocateControlReady === "function") {
       onGeolocateControlReady(() => geolocate.trigger());
     }
 
@@ -98,8 +101,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
     });
 
     const fetchVisibleTracks = () => {
-      if (!map) return;
-
       const bounds = map.getBounds();
       const apiBase = import.meta.env.PROD
         ? "https://mytrailmapsworker.jamesbrock25.workers.dev/api"
@@ -137,9 +138,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 Array.from(trkElements).forEach((trkEl, index) => {
                   const gpxDoc = new DOMParser().parseFromString("<gpx></gpx>", "application/xml");
                   gpxDoc.documentElement.appendChild(trkEl.cloneNode(true));
-
                   const geojson = toGeoJSON(gpxDoc);
-                  if (!geojson || !geojson.features.length) return;
 
                   geojson.features.forEach(f => {
                     if (f.geometry.type === "LineString") {
@@ -208,7 +207,10 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                   if (!map.getSource(waypointSourceId)) {
                     map.addSource(waypointSourceId, {
                       type: "geojson",
-                      data: { type: "FeatureCollection", features: waypointFeatures }
+                      data: {
+                        type: "FeatureCollection",
+                        features: waypointFeatures
+                      }
                     });
 
                     map.addLayer({

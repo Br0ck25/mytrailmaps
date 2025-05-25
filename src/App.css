@@ -99,7 +99,7 @@ input:checked + .slider:before {
   transform: translateX(16px);
 }
 
-/* Custom positioning for geolocate button */
+/* Custom positioning for geolocate and overlays buttons */
 .maplibregl-ctrl-bottom-left {
   display: flex;
   flex-direction: column-reverse;
@@ -107,18 +107,22 @@ input:checked + .slider:before {
 }
 
 .maplibregl-ctrl-geolocate.custom-geolocate {
-  margin-bottom: 60px; /* Adjust this to sit above your layers icon */
+  margin-bottom: 60px;
 }
 
+/* Match green circular style for floating buttons */
 .geolocate-button {
   position: absolute;
-  bottom: 90px;
-  left: 16px;
+  bottom: 9rem; /* Matches bottom-36 */
+  left: 1rem;    /* Matches left-4 */
   z-index: 1000;
-  background: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  padding: 10px;
+  background-color: #16a34a; /* Tailwind green-600 */
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
