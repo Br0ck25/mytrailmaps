@@ -3,6 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 
+// 🆕 Marker cluster styles
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+import 'leaflet.markercluster/dist/MarkerCluster.css';
+
 // ✅ React app render
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -1,4 +1,5 @@
 import L from "leaflet";
+import "leaflet.markercluster";
 
 export default class CustomGPX extends L.FeatureGroup {
   constructor(gpxText, options = {}) {
@@ -18,10 +19,10 @@ export default class CustomGPX extends L.FeatureGroup {
     this._trackPolylines = [];
     this._labelVisibleMap = new Map();
 
-    // 🧱 Layer groups for performance
+    // 🧱 Layer groups
     this._trackLabelGroup = L.layerGroup();
-    this._waypointMarkerGroup = L.layerGroup();
     this._waypointLabelGroup = L.layerGroup();
+    this._waypointClusterGroup = L.markerClusterGroup();
 
     this._parse();
   }
@@ -32,6 +33,7 @@ export default class CustomGPX extends L.FeatureGroup {
     const allElements = gpx.querySelectorAll("*");
 
     const trks = [...allElements].filter(el => el.tagName.endsWith("trk"));
+
     trks.forEach((trk) => {
       let color = this._options.polyline_options.color;
 
@@ -48,7 +50,10 @@ export default class CustomGPX extends L.FeatureGroup {
       const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
       trksegs.forEach((trkseg) => {
         const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
-        const pts = trkpts.map(pt => [parseFloat(pt.getAttribute("lat")), parseFloat(pt.getAttribute("lon"))]);
+        const pts = trkpts.map((pt) => [
+          parseFloat(pt.getAttribute("lat")),
+          parseFloat(pt.getAttribute("lon")),
+        ]);
 
         if (pts.length) {
           const polyline = L.polyline(pts, {
@@ -97,7 +102,7 @@ export default class CustomGPX extends L.FeatureGroup {
 
       const marker = L.marker([lat, lon], this._options.marker_options)
         .bindPopup(`<strong>${nameEl.textContent.trim()}</strong><br>${desc}`);
-      this._waypointMarkerGroup.addLayer(marker);
+      this._waypointClusterGroup.addLayer(marker);
 
       const label = L.tooltip({
         permanent: true,
@@ -108,12 +113,20 @@ export default class CustomGPX extends L.FeatureGroup {
       this._waypointLabelGroup.addLayer(label);
     });
 
-    // Initial layer group display
-    if (this._options.showTrackNames) this.addLayer(this._trackLabelGroup);
-    if (this._options.showWaypoints) this.addLayer(this._waypointMarkerGroup);
+    // Initial add
+    if (this._options.showTracks) this._trackPolylines.forEach(p => this.addLayer(p));
+    if (this._options.showWaypoints) this.addLayer(this._waypointClusterGroup);
     if (this._options.showWaypointLabels) this.addLayer(this._waypointLabelGroup);
 
-    const allLines = this.getLayers().filter((l) => l instanceof L.Polyline);
+    // Add labels conditionally by zoom
+    const anyMap = this._trackPolylines[0]?.__map || this._waypointClusterGroup._map;
+    if (anyMap) {
+      this._map = anyMap;
+      anyMap.on("zoomend", () => this._onZoomChanged());
+      this._onZoomChanged(); // run once
+    }
+
+    const allLines = this.getLayers().filter(l => l instanceof L.Polyline);
     if (allLines.length > 0) {
       const bounds = L.latLngBounds([]);
       allLines.forEach((line) => bounds.extend(line.getBounds()));
@@ -121,30 +134,40 @@ export default class CustomGPX extends L.FeatureGroup {
     }
   }
 
+  _onZoomChanged() {
+    if (!this._map) return;
+    const zoom = this._map.getZoom();
+    const show = zoom >= 13;
+
+    if (show) {
+      if (this._options.showTrackNames) this.addLayer(this._trackLabelGroup);
+      if (this._options.showWaypointLabels) this.addLayer(this._waypointLabelGroup);
+    } else {
+      this.removeLayer(this._trackLabelGroup);
+      this.removeLayer(this._waypointLabelGroup);
+    }
+  }
+
   setShowTracks(visible) {
-    this._trackPolylines.forEach(polyline => {
-      if (visible) this.addLayer(polyline);
-      else this.removeLayer(polyline);
+    this._trackPolylines.forEach(p => {
+      if (visible) this.addLayer(p);
+      else this.removeLayer(p);
     });
   }
 
   setShowTrackNames(visible) {
-    if (visible) this.addLayer(this._trackLabelGroup);
-    else this.removeLayer(this._trackLabelGroup);
-
-    this._trackPolylines.forEach(polyline => {
-      this._labelVisibleMap.set(polyline, visible);
-    });
+    this._trackPolylines.forEach(p => this._labelVisibleMap.set(p, visible));
+    this._onZoomChanged(); // respect zoom and toggle visibility
   }
 
   setShowWaypoints(visible) {
-    if (visible) this.addLayer(this._waypointMarkerGroup);
-    else this.removeLayer(this._waypointMarkerGroup);
+    if (visible) this.addLayer(this._waypointClusterGroup);
+    else this.removeLayer(this._waypointClusterGroup);
   }
 
   setShowWaypointLabels(visible) {
-    if (visible) this.addLayer(this._waypointLabelGroup);
-    else this.removeLayer(this._waypointLabelGroup);
+    this._options.showWaypointLabels = visible;
+    this._onZoomChanged(); // respect zoom and toggle visibility
   }
 
   _mapDisplayColor(displayColorName) {
