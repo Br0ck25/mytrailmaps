@@ -24,7 +24,6 @@ export default class CustomGPX extends L.FeatureGroup {
     this._waypointMarkerGroup = L.layerGroup();
     this._waypointLabelGroup = L.layerGroup();
 
-    // ⏳ Delay _parse() until map is ready
     this.once("add", () => {
       this._map = this._map || this._layerAdd?._map || this._map;
       this._parse();
@@ -35,6 +34,8 @@ export default class CustomGPX extends L.FeatureGroup {
     const parser = new DOMParser();
     const gpx = parser.parseFromString(this._gpxText, "application/xml");
     const allElements = gpx.querySelectorAll("*");
+
+    const allPts = [];
 
     const trks = [...allElements].filter(el => el.tagName.endsWith("trk"));
     trks.forEach((trk) => {
@@ -53,10 +54,16 @@ export default class CustomGPX extends L.FeatureGroup {
       const trksegs = [...trk.getElementsByTagName("*")].filter(el => el.tagName.endsWith("trkseg"));
       trksegs.forEach((trkseg) => {
         const trkpts = [...trkseg.children].filter(el => el.tagName.endsWith("trkpt"));
-        const rawPts = trkpts.map(pt => ({
-          x: parseFloat(pt.getAttribute("lon")),
-          y: parseFloat(pt.getAttribute("lat")),
-        }));
+        const rawPts = trkpts
+          .map(pt => {
+            const lat = parseFloat(pt.getAttribute("lat"));
+            const lon = parseFloat(pt.getAttribute("lon"));
+            if (isNaN(lat) || isNaN(lon)) return null;
+            return { x: lon, y: lat };
+          })
+          .filter(p => p !== null);
+
+        if (rawPts.length < 2) return;
 
         const zoom = this._map?.getZoom?.() ?? 13;
         const tolerance = zoom >= 13 ? 0 : zoom >= 10 ? 0.0005 : 0.001;
@@ -64,43 +71,36 @@ export default class CustomGPX extends L.FeatureGroup {
         const simplified = simplify(rawPts, tolerance, true);
         const pts = simplified.map(p => [p.y, p.x]);
 
-        if (!pts || pts.length < 2) return;
+        if (pts.length >= 2) {
+          allPts.push(...pts);
 
-        const glLayer = glify.lines({
-          map: this._map,
-          data: pts,
-          weight: this._options.polyline_options.weight || 3,
-          color,
-          opacity: 1,
-          click: e => console.log('Track clicked', e)
-        });
+          const trkName = [...trk.children].find(c => c.tagName.endsWith("name"))?.textContent?.trim();
+          if (trkName) {
+            const mid = pts[Math.floor(pts.length / 2)];
+            const label = L.tooltip({
+              permanent: true,
+              direction: "center",
+              className: "gpx-track-label",
+            }).setContent(trkName).setLatLng(mid);
 
-        this._trackPolylines.push(glLayer);
-
-        const trkName = [...trk.children].find(c => c.tagName.endsWith("name"))?.textContent?.trim();
-        if (trkName) {
-          const mid = pts[Math.floor(pts.length / 2)];
-          const label = L.tooltip({
-            permanent: true,
-            direction: "center",
-            className: "gpx-track-label",
-          }).setContent(trkName).setLatLng(mid);
-
-          this._trackLabelGroup.addLayer(label);
-          this._labelVisibleMap.set(glLayer, this._options.showTrackNames);
-
-          glLayer.canvas?.addEventListener("click", () => {
-            const visible = this._labelVisibleMap.get(glLayer);
-            if (visible) {
-              this._trackLabelGroup.removeLayer(label);
-            } else {
-              this._trackLabelGroup.addLayer(label);
-            }
-            this._labelVisibleMap.set(glLayer, !visible);
-          });
+            this._trackLabelGroup.addLayer(label);
+          }
         }
       });
     });
+
+    if (allPts.length >= 2 && this._options.showTracks) {
+      const glLayer = glify.lines({
+        map: this._map,
+        data: allPts,
+        weight: this._options.polyline_options.weight || 3,
+        color: this._options.polyline_options.color,
+        opacity: 1,
+        click: e => console.log('Track clicked', e)
+      });
+
+      this._trackPolylines.push(glLayer);
+    }
 
     const waypoints = [...allElements].filter(el => el.tagName.endsWith("wpt"));
     waypoints.forEach((wpt) => {
@@ -140,10 +140,6 @@ export default class CustomGPX extends L.FeatureGroup {
   setShowTrackNames(visible) {
     if (visible) this.addLayer(this._trackLabelGroup);
     else this.removeLayer(this._trackLabelGroup);
-
-    this._trackPolylines.forEach(layer => {
-      this._labelVisibleMap.set(layer, visible);
-    });
   }
 
   setShowWaypoints(visible) {
