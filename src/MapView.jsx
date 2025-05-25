@@ -16,7 +16,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
     map.getStyle().layers?.forEach(layer => {
       const id = layer.id;
       if (id.endsWith("-line")) {
-        map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
+        map.setPaintProperty(id, "line-opacity", showTracks ? 1 : 0);
       }
       if (id.endsWith("-label")) {
         map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
@@ -129,7 +129,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                     layout: {
                       "line-join": "round",
                       "line-cap": "round",
-                      visibility: showTracks ? "visible" : "none",
+                      visibility: "visible"
                     },
                     paint: {
                       "line-color": trackColor,
@@ -139,6 +139,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                         10, 2,
                         15, 3
                       ],
+                      "line-opacity": showTracks ? 1 : 0
                     },
                   });
 
@@ -173,7 +174,6 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                   }
                 });
 
-                // ✅ Always extract waypoints from full GPX
                 const allGeoJSON = toGeoJSON(xml);
                 const waypointFeatures = allGeoJSON.features.filter(f => f.geometry?.type === "Point");
 
