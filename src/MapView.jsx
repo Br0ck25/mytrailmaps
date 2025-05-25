@@ -45,25 +45,25 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
 
       map.addLayer({
-        id: "trackdata-line",
-        type: "line",
-        source: "tracks",
-        "source-layer": "trackdata",
-        paint: {
-          "line-color": "#3388ff",
-          "line-width": ["interpolate", ["linear"], ["zoom"], 10, 1.5, 14, 3],
-          "line-opacity": showTracks ? 1 : 0
-        },
-        layout: {
-          visibility: showTracks ? "visible" : "none"
-        }
-      });
+  id: "trackdata-line",
+  type: "line",
+  source: "tracks",
+  "source-layer": "layer0", // <- most common fallback
+  paint: {
+    "line-color": "#ff0000",
+    "line-width": 4,
+    "line-opacity": 1
+  },
+  layout: {
+    visibility: "visible"
+  }
+});
 
       map.addLayer({
         id: "trackdata-label",
         type: "symbol",
         source: "tracks",
-        "source-layer": "trackdata",
+        "source-layer": "layer0",
         layout: {
           "text-field": ["get", "name"],
           "symbol-placement": "line",
