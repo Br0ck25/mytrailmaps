@@ -6,29 +6,33 @@ import { glify } from 'leaflet.glify';
 
 export default class CustomGPX extends L.FeatureGroup {
   constructor(gpxText, options = {}) {
-    super();
+  super();
 
-    this._gpxText = gpxText;
-    this._options = {
-      polyline_options: { color: "#3388ff", weight: 3 },
-      marker_options: {},
-      showTrackNames: true,
-      showWaypoints: true,
-      showWaypointLabels: true,
-      showTracks: true,
-      ...options,
-    };
+  this._gpxText = gpxText;
+  this._options = {
+    polyline_options: { color: "#3388ff", weight: 3 },
+    marker_options: {},
+    showTrackNames: true,
+    showWaypoints: true,
+    showWaypointLabels: true,
+    showTracks: true,
+    ...options,
+  };
 
-    this._trackPolylines = [];
-    this._labelVisibleMap = new Map();
+  this._trackPolylines = [];
+  this._labelVisibleMap = new Map();
 
-    // 🧱 Layer groups for performance
-    this._trackLabelGroup = L.layerGroup();
-    this._waypointMarkerGroup = L.layerGroup();
-    this._waypointLabelGroup = L.layerGroup();
+  this._trackLabelGroup = L.layerGroup();
+  this._waypointMarkerGroup = L.layerGroup();
+  this._waypointLabelGroup = L.layerGroup();
 
+  // ⏳ Delay _parse() until map is ready
+  this.once("add", () => {
+    this._map = this._map || this._layerAdd?._map || this._map;
     this._parse();
-  }
+  });
+}
+
 
   _parse() {
     const parser = new DOMParser();
