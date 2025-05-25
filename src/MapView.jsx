@@ -28,20 +28,27 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
     map.addControl(geolocate);
 
     map.on("load", () => {
-      if (onGeolocateControlReady) {
-        setTimeout(() => {
-          onGeolocateControlReady(() => geolocate.trigger());
-        }, 0);
-      }
+  if (onGeolocateControlReady) {
+    setTimeout(() => {
+      onGeolocateControlReady(() => geolocate.trigger());
+    }, 0);
+  }
 
-      map.addSource("tracks", {
-  type: "vector",
-  tiles: [
-    "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
-  ],
-  minzoom: 10,
-  maxzoom: 16
-});
+  // ✅ Add this block to debug tile loading
+  map.on("sourcedata", (e) => {
+    if (e.sourceId === "tracks") {
+      console.log("🔍 Source loaded event:", e);
+    }
+  });
+
+  map.addSource("tracks", {
+    type: "vector",
+    tiles: [
+      "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
+    ],
+    minzoom: 10,
+    maxzoom: 16
+  });
 
 
       map.addLayer({
