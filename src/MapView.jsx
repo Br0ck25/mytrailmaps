@@ -7,56 +7,47 @@ import { DOMParser } from "@xmldom/xmldom";
 export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels }) {
   const mapRef = useRef(null);
   const sourcesLoaded = useRef(new Set());
-  const mapInstance = useRef(null);
+  const currentMap = useRef(null);
 
   const updateLayerVisibility = () => {
-    const map = mapInstance.current;
-    if (!map || !map.isStyleLoaded()) return;
+    const map = currentMap.current;
+    if (!map) return;
 
-    const layers = map.getStyle()?.layers;
-    if (!layers) return;
+    map.getStyle().layers.forEach(layer => {
+      const id = layer.id;
 
-    layers.forEach(layer => {
-      if (layer.id.includes("-line")) {
-        map.setLayoutProperty(layer.id, "visibility", showTracks ? "visible" : "none");
+      if (id.endsWith("-line")) {
+        map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
       }
-      if (layer.id.includes("-label") && layer.id.includes("track")) {
-        map.setLayoutProperty(layer.id, "visibility", showNames ? "visible" : "none");
+      if (id.endsWith("-label")) {
+        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
       }
-      if (layer.id.includes("-icons")) {
-        map.setLayoutProperty(layer.id, "visibility", showWaypoints ? "visible" : "none");
+      if (id.endsWith("-waypoints-icons")) {
+        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
       }
-      if (layer.id.includes("-labels") && layer.id.includes("waypoints")) {
-        map.setLayoutProperty(layer.id, "visibility", showWaypointLabels ? "visible" : "none");
+      if (id.endsWith("-waypoints-labels")) {
+        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
       }
     });
   };
 
   useEffect(() => {
-    const savedCenter = JSON.parse(localStorage.getItem("mapCenter")) || [-84.3, 36.5];
-    const savedZoom = parseFloat(localStorage.getItem("mapZoom")) || 9;
+    updateLayerVisibility();
+  }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
 
+  useEffect(() => {
     const map = new maplibregl.Map({
       container: mapRef.current,
       style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
-      center: savedCenter,
-      zoom: savedZoom,
+      center: [-84.3, 36.5],
+      zoom: 9,
     });
 
-    mapInstance.current = map;
+    currentMap.current = map;
     map.addControl(new maplibregl.NavigationControl(), "top-right");
 
-    map.on("moveend", () => {
-      const center = map.getCenter();
-      localStorage.setItem("mapCenter", JSON.stringify([center.lng, center.lat]));
-      localStorage.setItem("mapZoom", map.getZoom());
-      fetchVisibleTracks();
-    });
-
-    map.on("styledata", updateLayerVisibility);
-
-    function fetchVisibleTracks() {
-      if (!map || !showTracks) return;
+    const fetchVisibleTracks = () => {
+      if (!map) return;
 
       const bounds = map.getBounds();
       const apiBase = import.meta.env.PROD
@@ -66,27 +57,32 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       const url = `${apiBase}/tracks-in-bounds?north=${bounds.getNorth()}&south=${bounds.getSouth()}&east=${bounds.getEast()}&west=${bounds.getWest()}`;
 
       fetch(url)
-        .then(res => res.json())
-        .then(slugs => {
+        .then((res) => res.json())
+        .then((slugs) => {
           slugs.forEach(({ slug }) => {
             if (sourcesLoaded.current.has(slug)) return;
             sourcesLoaded.current.add(slug);
 
             fetch(`${apiBase}/admin-gpx/${slug}`)
-              .then(res => res.text())
-              .then(gpxText => {
+              .then((res) => res.text())
+              .then((gpxText) => {
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(gpxText, "application/xml");
                 const geojson = toGeoJSON(xml);
-                if (!geojson?.features?.length) return;
 
+                if (!geojson || !geojson.features.length) return;
                 const sourceId = `track-${slug}`;
-                if (map.getSource(sourceId)) return;
+                const labelId = `${sourceId}-label`;
+                const lineId = `${sourceId}-line`;
+                const waypointSourceId = `${sourceId}-waypoints`;
 
-                map.addSource(sourceId, { type: "geojson", data: geojson });
+                map.addSource(sourceId, {
+                  type: "geojson",
+                  data: geojson,
+                });
 
                 map.addLayer({
-                  id: `${sourceId}-line`,
+                  id: lineId,
                   type: "line",
                   source: sourceId,
                   layout: {
@@ -100,7 +96,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                       "interpolate", ["linear"], ["zoom"],
                       5, 1,
                       10, 2,
-                      15, 3,
+                      15, 3
                     ],
                   },
                 });
@@ -108,9 +104,10 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                 const nameFeature = geojson.features.find(f =>
                   f.properties?.name && f.geometry?.type === "LineString"
                 );
+
                 if (nameFeature) {
                   map.addLayer({
-                    id: `${sourceId}-label`,
+                    id: labelId,
                     type: "symbol",
                     source: sourceId,
                     layout: {
@@ -120,7 +117,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                       "text-size": [
                         "interpolate", ["linear"], ["zoom"],
                         8, 10,
-                        14, 14,
+                        14, 14
                       ],
                       visibility: showNames ? "visible" : "none",
                     },
@@ -134,11 +131,9 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                   });
                 }
 
-                const waypointFeatures = geojson.features.filter(f =>
-                  f.geometry?.type === "Point"
-                );
+                const waypointFeatures = geojson.features.filter(f => f.geometry?.type === "Point");
+
                 if (waypointFeatures.length > 0) {
-                  const waypointSourceId = `${sourceId}-waypoints`;
                   map.addSource(waypointSourceId, {
                     type: "geojson",
                     data: {
@@ -158,7 +153,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                       "circle-radius": [
                         "interpolate", ["linear"], ["zoom"],
                         8, 4,
-                        14, 6,
+                        14, 6
                       ],
                       "circle-color": "#ff6600",
                       "circle-stroke-width": 1,
@@ -177,7 +172,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
                       "text-size": [
                         "interpolate", ["linear"], ["zoom"],
                         10, 10,
-                        14, 14,
+                        14, 14
                       ],
                       "text-offset": [0, 1.2],
                       visibility: showWaypointLabels ? "visible" : "none",
@@ -193,15 +188,14 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
               });
           });
         });
-    }
+    };
 
     map.on("load", fetchVisibleTracks);
+    map.on("moveend", fetchVisibleTracks);
+
     return () => map.remove();
   }, []);
 
-  useEffect(() => {
-    updateLayerVisibility();
-  }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
-
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
+
