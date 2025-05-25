@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import MapView from "./MapView";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog } from "react-icons/fa";
 import { FiLayers } from "react-icons/fi";
@@ -11,6 +11,7 @@ function App() {
   const [showWaypointLabels, setShowWaypointLabels] = useState(() => localStorage.getItem("showWaypointLabels") !== "false");
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
+  const mapRef = useRef();
 
   useEffect(() => localStorage.setItem("showTracks", showTracks), [showTracks]);
   useEffect(() => localStorage.setItem("showNames", showNames), [showNames]);
@@ -27,6 +28,7 @@ function App() {
         {activeTab === "map" && (
           <div className="absolute inset-0 z-0">
             <MapView
+              mapRef={mapRef}
               showNames={showNames}
               showWaypoints={showWaypoints}
               showWaypointLabels={showWaypointLabels}
@@ -69,7 +71,7 @@ function App() {
                   <input
                     type="checkbox"
                     checked={showTracks}
-                    onChange={() => setShowTracks(prev => !prev)}
+                    onChange={(e) => setShowTracks(e.target.checked)}
                     className="toggle"
                   />
                 </label>
@@ -78,7 +80,7 @@ function App() {
                   <input
                     type="checkbox"
                     checked={showNames}
-                    onChange={() => setShowNames(prev => !prev)}
+                    onChange={(e) => setShowNames(e.target.checked)}
                     className="toggle"
                   />
                 </label>
@@ -87,7 +89,7 @@ function App() {
                   <input
                     type="checkbox"
                     checked={showWaypoints}
-                    onChange={() => setShowWaypoints(prev => !prev)}
+                    onChange={(e) => setShowWaypoints(e.target.checked)}
                     className="toggle"
                   />
                 </label>
@@ -96,7 +98,7 @@ function App() {
                   <input
                     type="checkbox"
                     checked={showWaypointLabels}
-                    onChange={() => setShowWaypointLabels(prev => !prev)}
+                    onChange={(e) => setShowWaypointLabels(e.target.checked)}
                     className="toggle"
                   />
                 </label>
