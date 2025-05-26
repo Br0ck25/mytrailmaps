@@ -133,27 +133,29 @@ export default {
 
       // 5. Serve vector tile or metadata from R2 under /tiles/*
       if (method === "GET" && path.startsWith("/tiles/")) {
-        const key = path.replace(/^\/tiles\//, "tiles/");
-        const object = await env.MYTRAILMAPS.get(key);
+  const key = path.replace(/^\/tiles\//, "tiles/");
+  const tile = await env.MYTRAILMAPS.get(key, { type: "arrayBuffer" });
 
-        if (!object)
-          return new Response("Tile not found", {
-            status: 404,
-            headers: { "Access-Control-Allow-Origin": "*" },
-          });
+  if (!tile) {
+    return new Response("Tile not found", {
+      status: 404,
+      headers: { "Access-Control-Allow-Origin": "*" },
+    });
+  }
 
-        const headers = new Headers();
-        headers.set("Access-Control-Allow-Origin", "*");
+  const headers = new Headers();
+  headers.set("Access-Control-Allow-Origin", "*");
 
-        if (key.endsWith(".pbf")) {
-          headers.set("Content-Type", "application/x-protobuf");
-          headers.set("Content-Encoding", "gzip");
-        } else if (key.endsWith(".json")) {
-          headers.set("Content-Type", "application/json");
-        }
+  if (key.endsWith(".pbf")) {
+    headers.set("Content-Type", "application/x-protobuf");
+    headers.set("Content-Encoding", "gzip");
+  } else if (key.endsWith(".json")) {
+    headers.set("Content-Type", "application/json");
+  }
 
-        return new Response(object.body, { headers });
-      }
+  return new Response(tile, { headers });
+}
+
 
       return new Response("Not Found", {
         status: 404,
