@@ -1,14 +1,14 @@
 {
-"name": "tiles/",
-"description": "tiles/",
+"name": "tiles",
+"description": "tiles",
 "version": "2",
 "minzoom": "0",
 "maxzoom": "11",
-"center": "-83.230789,36.904860,11",
-"bounds": "-83.230789,36.875687,-83.175791,36.904860",
+"center": "-83.232422,36.911192,11",
+"bounds": "-83.279726,36.861834,-83.154718,36.911192",
 "type": "overlay",
 "format": "pbf",
 "generator": "tippecanoe v1.36.0",
-"generator_options": "tippecanoe -e tiles/ -l trackdata -zg -P BlackMountainOffRoadAdventureArea.geojson",
-"json": "{\"vector_layers\": [ { \"id\": \"trackdata\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 11, \"fields\": {\"_gpxType\": \"String\", \"coordinateProperties\": \"String\", \"desc\": \"String\", \"name\": \"String\", \"stroke\": \"String\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"trackdata\",\"count\": 4,\"geometry\": \"LineString\",\"attributeCount\": 5,\"attributes\": [{\"attribute\": \"_gpxType\",\"count\": 1,\"type\": \"string\",\"values\": [\"trk\"]},{\"attribute\": \"coordinateProperties\",\"count\": 1,\"type\": \"string\",\"values\": [\"{}\"]},{\"attribute\": \"desc\",\"count\": 2,\"type\": \"string\",\"values\": [\"ATV Beginner Trail (Truck Class 2)\",\"ATV Intermediate Trail (Truck Class 3)\"]},{\"attribute\": \"name\",\"count\": 3,\"type\": \"string\",\"values\": [\"10\",\"11\",\"12\"]},{\"attribute\": \"stroke\",\"count\": 2,\"type\": \"string\",\"values\": [\"#2D3FC7\",\"#36C03B\"]}]}]}}"
+"generator_options": "tippecanoe -e tiles -l trackdata -zg -P --force BlackMountainOffRoadAdventureArea-lines.geojson",
+"json": "{\"vector_layers\": [ { \"id\": \"trackdata\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 11, \"fields\": {\"_gpxType\": \"String\", \"coordinateProperties\": \"String\", \"desc\": \"String\", \"name\": \"String\", \"stroke\": \"String\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"trackdata\",\"count\": 100,\"geometry\": \"LineString\",\"attributeCount\": 5,\"attributes\": [{\"attribute\": \"_gpxType\",\"count\": 1,\"type\": \"string\",\"values\": [\"trk\"]},{\"attribute\": \"coordinateProperties\",\"count\": 1,\"type\": \"string\",\"values\": [\"{}\"]},{\"attribute\": \"desc\",\"count\": 8,\"type\": \"string\",\"values\": [\"ATV Advance Trail (Truck Class 4)\",\"ATV Beginner Trail (Truck Class 2)\",\"ATV Intermediate Trail (Truck Class 3)\",\"Hiking Trail (Foot Traffic Only)\",\"Truck-Only 5\",\"Truck-Only Class 4\",\"Truck-Only Class 5\",\"Tuck-Only Class 4\"]},{\"attribute\": \"name\",\"count\": 85,\"type\": \"string\",\"values\": [\"10\",\"11\",\"12\",\"13\",\"15\",\"15/20 Connector\",\"16\",\"17\",\"18\",\"20\",\"21\",\"22\",\"22/20 Connector\",\"23\",\"25\",\"25/28 Connector\",\"26\",\"27\",\"28\",\"29\",\"30\",\"31\",\"32\",\"33\",\"34\",\"35\",\"35/37 Connector\",\"36\",\"36/35 Connector\",\"37\",\"38\",\"38/Pucker II, Misery Connector\",\"45\",\"48\",\"5\",\"6\",\"8\",\"9\",\"9/10 Connector\",\"9/11 Connector\",\"Bruiser\",\"Bud's Bypass\",\"Challenge Course\",\"Cinco Falls\",\"Cliffhanger\",\"Connector\",\"Coyote Ugly\",\"Crawford's Cry\",\"Cream Puff\",\"Fish Fossil\",\"Fly Trap\",\"Frankenstein\",\"Fuquarwe Trail\",\"Fuquarwe Trail/Flay Trap\",\"Grace Trail\",\"Hell's Revenge\",\"Jerry White Trail\",\"Killing Time\",\"Lion's Den\",\"Little Jagger\",\"MASONJAR\",\"Misery\",\"Old Mine (17/11 Connector)\",\"Pappys Pass\",\"Pineball\",\"Plateau\",\"Pony Hill\",\"Pucker I\",\"Pucker II\",\"Rail Bed\",\"Rock Garden\",\"Roger's Ridge\",\"Running Board\",\"Shameless\",\"T.R.O.U.B.L.E\",\"Tailgate\",\"Tombstone\",\"Truck-Only Class 4\",\"Truck-Only Class 5\",\"Underestimated\",\"Upper Grace\",\"Upper Rock Garden & Can Opener\",\"White Tail Crawl\",\"Windmill Trail\",\"Your Turn\"]},{\"attribute\": \"stroke\",\"count\": 5,\"type\": \"string\",\"values\": [\"#2D3FC7\",\"#36C03B\",\"#784D3E\",\"#F42410\",\"#FF9D00\"]}]}]}}"
 }

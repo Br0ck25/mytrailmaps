@@ -49,7 +49,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
     tiles: [
       "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
     ],
-    minzoom: 10,
+    minzoom: 0,
     maxzoom: 16
   });
 
