@@ -27,12 +27,16 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
     map.addControl(geolocate);
 
-    map.on("load", () => {
+map.on("load", () => {
+  map.showTileBoundaries = true;
+  map.showCollisionBoxes = true;
+
   if (onGeolocateControlReady) {
     setTimeout(() => {
       onGeolocateControlReady(() => geolocate.trigger());
     }, 0);
   }
+
 
   // ✅ Add this block to debug tile loading
   map.on("sourcedata", (e) => {
@@ -44,14 +48,15 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 });
 
 
-  map.addSource("tracks", {
-    type: "vector",
-    tiles: [
-      "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
-    ],
-    minzoom: 0,
-    maxzoom: 16
-  });
+map.addSource("tracks", {
+  type: "vector",
+  tiles: [
+    "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
+  ],
+  minzoom: 0,
+  maxzoom: 14
+});
+
 
 
       map.addLayer({
@@ -89,6 +94,18 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
         minzoom: 10
       });
     });
+
+    map.addLayer({
+  id: "trackdata-debug-points",
+  type: "circle",
+  source: "tracks",
+  "source-layer": "trackdata",
+  paint: {
+    "circle-radius": 6,
+    "circle-color": "#00f"
+  }
+});
+
 
     map.on("moveend", () => {
       const center = map.getCenter();
