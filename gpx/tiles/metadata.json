@@ -1,0 +1,14 @@
+{
+"name": "tiles/",
+"description": "tiles/",
+"version": "2",
+"minzoom": "0",
+"maxzoom": "11",
+"center": "-83.230789,36.904860,11",
+"bounds": "-83.230789,36.875687,-83.175791,36.904860",
+"type": "overlay",
+"format": "pbf",
+"generator": "tippecanoe v1.36.0",
+"generator_options": "tippecanoe -e tiles/ -l trackdata -zg -P BlackMountainOffRoadAdventureArea.geojson",
+"json": "{\"vector_layers\": [ { \"id\": \"trackdata\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 11, \"fields\": {\"_gpxType\": \"String\", \"coordinateProperties\": \"String\", \"desc\": \"String\", \"name\": \"String\", \"stroke\": \"String\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"trackdata\",\"count\": 4,\"geometry\": \"LineString\",\"attributeCount\": 5,\"attributes\": [{\"attribute\": \"_gpxType\",\"count\": 1,\"type\": \"string\",\"values\": [\"trk\"]},{\"attribute\": \"coordinateProperties\",\"count\": 1,\"type\": \"string\",\"values\": [\"{}\"]},{\"attribute\": \"desc\",\"count\": 2,\"type\": \"string\",\"values\": [\"ATV Beginner Trail (Truck Class 2)\",\"ATV Intermediate Trail (Truck Class 3)\"]},{\"attribute\": \"name\",\"count\": 3,\"type\": \"string\",\"values\": [\"10\",\"11\",\"12\"]},{\"attribute\": \"stroke\",\"count\": 2,\"type\": \"string\",\"values\": [\"#2D3FC7\",\"#36C03B\"]}]}]}}"
+}

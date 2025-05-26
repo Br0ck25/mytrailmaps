@@ -58,7 +58,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
   id: "trackdata-line",
   type: "line",
   source: "tracks",
-  "source-layer": "layer0", // <- most common fallback
+  "source-layer": "trackdata", // <- most common fallback
   paint: {
     "line-color": "#ff0000",
     "line-width": 4,
@@ -73,7 +73,7 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
         id: "trackdata-label",
         type: "symbol",
         source: "tracks",
-        "source-layer": "layer0",
+        "source-layer": "trackdata",
         layout: {
           "text-field": ["get", "name"],
           "symbol-placement": "line",
