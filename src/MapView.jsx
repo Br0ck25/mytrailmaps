@@ -27,52 +27,45 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
 
     map.addControl(geolocate);
 
-map.on("load", () => {
-  map.showTileBoundaries = true;
-  map.showCollisionBoxes = true;
+    map.on("load", () => {
+      map.showTileBoundaries = true;
+      map.showCollisionBoxes = true;
 
-  if (onGeolocateControlReady) {
-    setTimeout(() => {
-      onGeolocateControlReady(() => geolocate.trigger());
-    }, 0);
-  }
+      if (onGeolocateControlReady) {
+        setTimeout(() => {
+          onGeolocateControlReady(() => geolocate.trigger());
+        }, 0);
+      }
 
+      map.on("sourcedata", (e) => {
+        if (e.sourceId === "tracks" && e.tile && e.tile.rawData) {
+          console.log("🧩 Tile rawData:", e.tile.rawData);
+        } else {
+          console.log("📡 Source loaded event:", e);
+        }
+      });
 
-  // ✅ Add this block to debug tile loading
-  map.on("sourcedata", (e) => {
-  if (e.sourceId === "tracks" && e.tile && e.tile.rawData) {
-    console.log("🧩 Tile rawData:", e.tile.rawData);
-  } else {
-    console.log("📡 Source loaded event:", e);
-  }
-});
-
-
-map.addSource("tracks", {
-  type: "vector",
-  tiles: [
-    "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
-  ],
-  minzoom: 0,
-  maxzoom: 14
-});
-
-
+      map.addSource("tracks", {
+        type: "vector",
+        tiles: ["https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"],
+        minzoom: 0,
+        maxzoom: 14,
+      });
 
       map.addLayer({
-  id: "trackdata-line",
-  type: "line",
-  source: "tracks",
-  "source-layer": "trackdata", // <- most common fallback
-  paint: {
-    "line-color": "#ff0000",
-    "line-width": 4,
-    "line-opacity": 1
-  },
-  layout: {
-    visibility: "visible"
-  }
-});
+        id: "trackdata-line",
+        type: "line",
+        source: "tracks",
+        "source-layer": "trackdata",
+        paint: {
+          "line-color": "#ff0000",
+          "line-width": 4,
+          "line-opacity": 1,
+        },
+        layout: {
+          visibility: "visible",
+        },
+      });
 
       map.addLayer({
         id: "trackdata-label",
@@ -84,28 +77,27 @@ map.addSource("tracks", {
           "symbol-placement": "line",
           "text-font": ["Open Sans Bold"],
           "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-          visibility: showNames ? "visible" : "none"
+          visibility: showNames ? "visible" : "none",
         },
         paint: {
           "text-color": "#333",
           "text-halo-color": "#fff",
-          "text-halo-width": 2
+          "text-halo-width": 2,
         },
-        minzoom: 10
+        minzoom: 10,
+      });
+
+      map.addLayer({
+        id: "trackdata-debug-points",
+        type: "circle",
+        source: "tracks",
+        "source-layer": "trackdata",
+        paint: {
+          "circle-radius": 6,
+          "circle-color": "#00f",
+        },
       });
     });
-
-    map.addLayer({
-  id: "trackdata-debug-points",
-  type: "circle",
-  source: "tracks",
-  "source-layer": "trackdata",
-  paint: {
-    "circle-radius": 6,
-    "circle-color": "#00f"
-  }
-});
-
 
     map.on("moveend", () => {
       const center = map.getCenter();
