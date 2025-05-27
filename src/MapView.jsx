@@ -2,7 +2,14 @@ import React, { useEffect, useRef } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-export default function MapView({ showTracks, showNames, showWaypoints, showWaypointLabels, onGeolocateControlReady }) {
+export default function MapView({
+  showTracks,
+  showNames,
+  showWaypoints,
+  showWaypointLabels,
+  onGeolocateControlReady,
+  tileJson // ✅ new prop
+}) {
   const mapRef = useRef(null);
 
   useEffect(() => {
@@ -46,11 +53,11 @@ export default function MapView({ showTracks, showNames, showWaypoints, showWayp
       });
 
       map.addSource("tracks", {
-        type: "vector",
-        tiles: ["https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"],
-        minzoom: 0,
-        maxzoom: 14,
-      });
+  type: "vector",
+  tiles: tileJson.tiles,
+  minzoom: tileJson.minzoom,
+  maxzoom: tileJson.maxzoom
+});
 
       map.addLayer({
         id: "trackdata-line",

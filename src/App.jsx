@@ -3,6 +3,17 @@ import MapView from "./MapView";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog } from "react-icons/fa";
 import { FiLayers, FiCrosshair } from "react-icons/fi";
 
+const tileJson = {
+  tilejson: "2.2.0",
+  name: "Track Tiles",
+  tiles: [
+    "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
+  ],
+  minzoom: 5,
+  maxzoom: 15
+};
+
+
 function App() {
   const [activeTab, setActiveTab] = useState("map");
   const [showTracks, setShowTracks] = useState(() => localStorage.getItem("showTracks") !== "false");
@@ -35,6 +46,7 @@ function App() {
               showWaypointLabels={showWaypointLabels}
               showTracks={showTracks}
               onGeolocateControlReady={setTriggerGeolocate}
+              tileJson={tileJson}
             />
           </div>
         )}
