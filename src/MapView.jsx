@@ -103,6 +103,26 @@ geojsonFiles.forEach((filename) => {
     })
     .then((data) => {
       map.addSource(sourceId, { type: "geojson", data });
+map.on("click", (e) => {
+  const features = map.queryRenderedFeatures(e.point, {
+    layers: map.getStyle().layers
+      .filter((l) => l.id.endsWith("-line"))
+      .map((l) => l.id),
+  });
+
+  if (features.length > 0) {
+    const props = features[0].properties;
+    const coordinates = e.lngLat;
+
+    new maplibregl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(`
+        <h3 class="font-bold text-md">${props.name || "Unnamed Track"}</h3>
+        <p class="text-sm text-gray-700 mt-1">${props.description || "No description available."}</p>
+      `)
+      .addTo(map);
+  }
+});
 
       // Track Line
       map.addLayer({
