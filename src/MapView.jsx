@@ -5,10 +5,25 @@ import "maplibre-gl/dist/maplibre-gl.css";
 // List your converted GeoJSON files here
 const geojsonFiles = [
   "BlackMountainOffRoadAdventureArea.geojson",
+  "BlueHollerOff-RoadPark.geojson",
   "Brimstone2023.geojson",
-  "WindrockPark.geojson",
-  // Add more here
+  "BryantGroveTrail.geojson",
+  "CarolinaAdventureWorld.geojson",
+  "DirtyTurtleOff-RoadParkDTOR.geojson",
+  "FlatNastyOff-RoadPark.geojson",
+  "GoldenMountainPark.geojson",
+  "HatfieldMcCoyTrails-Bearwallow.geojson",
+  "HatfieldMcCoyTrails-Warrior.geojson",
+  "HawkPrideOff-Road.geojson",
+  "Hollerwood.geojson",
+  "KentuckyAdventureTrail.geojson",
+  "leatherwood-off-road-park.geojson",
+  "MineMadeAdventurePark.geojson",
+  "PatawomackAdventurePark.geojson",
+  "PickettStateForestOHVTrailMap.geojson",
+  "RedbirdCrestTrailSystem.geojson"
 ];
+
 
 export default function MapView({
   showTracks,
