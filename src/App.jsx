@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import MapView from "./MapView";
+import ToggleSwitch from "./components/ToggleSwitch";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog } from "react-icons/fa";
 import { FiLayers, FiCrosshair } from "react-icons/fi";
 
@@ -12,7 +13,6 @@ const tileJson = {
   minzoom: 5,
   maxzoom: 15
 };
-
 
 function App() {
   const [activeTab, setActiveTab] = useState("map");
@@ -56,11 +56,18 @@ function App() {
             setShowOverlaysPanel(true);
             setOverlayPage("main");
           }}
-          className="absolute z-50 bottom-20 left-4 p-3 bg-white-600 text-black rounded-full shadow-lg"
+          className="absolute z-50 bottom-20 left-4 p-3 bg-white text-black rounded-full shadow-lg"
         >
           <FiLayers className="text-xl" />
         </button>
 
+        <button
+          onClick={() => triggerGeolocate?.()}
+          className="absolute z-50 bottom-32 left-4 p-3 bg-white text-black rounded-full shadow-lg"
+          aria-label="Locate Me"
+        >
+          <FiCrosshair className="text-xl" />
+        </button>
 
         {showOverlaysPanel && (
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
@@ -80,47 +87,27 @@ function App() {
             )}
 
             {overlayPage === "overlays" && (
-              <div className="p-4 space-y-3">
-                <label className="flex justify-between items-center">
+              <div className="p-4 space-y-4">
+                <div className="flex justify-between items-center">
                   <span>Tracks</span>
-                  <input
-                    type="checkbox"
-                    checked={showTracks}
-                    onChange={(e) => setShowTracks(e.target.checked)}
-                    className="toggle"
-                  />
-                </label>
-                <label className="flex justify-between items-center">
+                  <ToggleSwitch checked={showTracks} onChange={(e) => setShowTracks(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
                   <span>Track Names</span>
-                  <input
-                    type="checkbox"
-                    checked={showNames}
-                    onChange={(e) => setShowNames(e.target.checked)}
-                    className="toggle"
-                  />
-                </label>
-                <label className="flex justify-between items-center">
+                  <ToggleSwitch checked={showNames} onChange={(e) => setShowNames(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
                   <span>Waypoints</span>
-                  <input
-                    type="checkbox"
-                    checked={showWaypoints}
-                    onChange={(e) => setShowWaypoints(e.target.checked)}
-                    className="toggle"
-                  />
-                </label>
-                <label className="flex justify-between items-center">
+                  <ToggleSwitch checked={showWaypoints} onChange={(e) => setShowWaypoints(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
                   <span>Waypoint Labels</span>
-                  <input
-                    type="checkbox"
-                    checked={showWaypointLabels}
-                    onChange={(e) => setShowWaypointLabels(e.target.checked)}
-                    className="toggle"
-                  />
-                </label>
-                <label className="flex justify-between items-center">
+                  <ToggleSwitch checked={showWaypointLabels} onChange={(e) => setShowWaypointLabels(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center opacity-50">
                   <span>Public Tracks</span>
-                  <input type="checkbox" checked={true} readOnly className="toggle" />
-                </label>
+                  <ToggleSwitch checked={true} onChange={() => {}} />
+                </div>
               </div>
             )}
           </div>
