@@ -15,28 +15,22 @@ fs.readdirSync(inputDir)
     // Convert GPX to GeoJSON
     const geojson = togeojson.gpx(dom);
 
-    // Add track descriptions and names from <desc>, <cmt>, or <name> into GeoJSON properties
+    // Extract track names and descriptions
     const trkEls = dom.getElementsByTagName("trk");
-    const descriptions = [];
     const names = [];
 
-    // Loop through each <trk> and grab its name and description or comment
+    // Loop through each <trk> and grab the name
     for (let i = 0; i < trkEls.length; i++) {
       const nameTag = trkEls[i].getElementsByTagName("name")[0];
-      const descTag = trkEls[i].getElementsByTagName("desc")[0];
-      const cmtTag = trkEls[i].getElementsByTagName("cmt")[0];
-
-      // Store names and descriptions for each track
       names.push(nameTag ? nameTag.textContent : `Track ${i + 1}`);
-      descriptions.push(descTag ? descTag.textContent : cmtTag ? cmtTag.textContent : "No description available");
     }
 
-    // Add name and description to each feature in the GeoJSON
+    // Ensure each track in the GeoJSON gets its correct name
     let trkIndex = 0;
     geojson.features.forEach((f) => {
       if (f.geometry?.type === "LineString") {
-        f.properties.name = names[trkIndex++] || f.properties.name; // Set correct name
-        f.properties.description = descriptions[trkIndex - 1] || f.properties.description; // Set description
+        // Preserve the correct name from GPX <name>
+        f.properties.name = names[trkIndex++] || f.properties.name; 
       }
     });
 

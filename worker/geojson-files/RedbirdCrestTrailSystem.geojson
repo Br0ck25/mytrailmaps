@@ -8,8 +8,7 @@
         "name": "Section 14",
         "desc": "Street Legal Vehicles Only",
         "stroke": "#aa00ff",
-        "coordinateProperties": {},
-        "description": "Street Legal Vehicles Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -514,8 +513,7 @@
         "name": "Section 1",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1370,8 +1368,7 @@
         "name": "Section 4",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2216,8 +2213,7 @@
         "name": "Section 7",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4202,8 +4198,7 @@
         "name": "Section 6A",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6803,8 +6798,7 @@
         "name": "Section 5",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7629,8 +7623,7 @@
         "name": "Section 9",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9230,8 +9223,7 @@
         "name": "Section 18",
         "desc": "Motorcycles Only",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Motorcycles Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9706,8 +9698,7 @@
         "name": "Section 3",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9907,8 +9898,7 @@
         "name": "Section 11",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14803,8 +14793,7 @@
         "name": "Section 13",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16719,8 +16708,7 @@
         "name": "Section 5A",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19940,8 +19928,7 @@
         "name": "Section 20",
         "desc": "Motocycles Only",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Motocycles Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20086,8 +20073,7 @@
         "name": "Section 17",
         "desc": "Motorcycles Only",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Motorcycles Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21442,8 +21428,7 @@
         "name": "Section 7A",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24128,8 +24113,7 @@
         "name": "Section 19",
         "desc": "Motocycles Only",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Motocycles Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25029,8 +25013,7 @@
         "name": "Section 8",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29580,8 +29563,7 @@
         "name": "Section 6B",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32206,8 +32188,7 @@
         "name": "Section 12",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32572,8 +32553,7 @@
         "name": "Old Section 8",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33243,8 +33223,7 @@
         "name": "Section 2",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35249,8 +35228,7 @@
         "name": "Section 6",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37365,8 +37343,7 @@
         "name": "Old Section 1",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38016,8 +37993,7 @@
         "name": "Section 21",
         "desc": "Motocycles Only",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Motocycles Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39712,8 +39688,7 @@
         "name": "Section 10",
         "desc": "OHV's Less Than 50\" Wide",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "OHV's Less Than 50\" Wide"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40478,8 +40453,7 @@
         "name": "Section 16",
         "desc": "Motorcycles Only",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Motorcycles Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40949,8 +40923,7 @@
         "name": "Section 15",
         "desc": "Street Legal Vehicels Only",
         "stroke": "#aa00ff",
-        "coordinateProperties": {},
-        "description": "Street Legal Vehicels Only"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",

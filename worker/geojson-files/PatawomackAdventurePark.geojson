@@ -6025,8 +6025,7 @@
         "name": "Main RD.",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6461,8 +6460,7 @@
         "name": "Main RD.",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",

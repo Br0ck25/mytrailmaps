@@ -8,8 +8,7 @@
         "name": "10",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -635,8 +634,7 @@
         "name": "11",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1330,8 +1328,7 @@
         "name": "12",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1536,8 +1533,7 @@
         "name": "12",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2967,8 +2963,7 @@
         "name": "12",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7558,8 +7553,7 @@
         "name": "13",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7660,8 +7654,7 @@
         "name": "13",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8176,8 +8169,7 @@
         "name": "15",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9173,8 +9165,7 @@
         "name": "15/20 Connector",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9229,8 +9220,7 @@
         "name": "15/20 Connector",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9386,8 +9376,7 @@
         "name": "16",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9662,8 +9651,7 @@
         "name": "17",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9830,8 +9818,7 @@
         "name": "18",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10112,8 +10099,7 @@
         "name": "18",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10323,8 +10309,7 @@
         "name": "18",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10395,8 +10380,7 @@
         "name": "20",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11225,8 +11209,7 @@
         "name": "21",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11471,8 +11454,7 @@
         "name": "22",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12008,8 +11990,7 @@
         "name": "22/20 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12064,8 +12045,7 @@
         "name": "22/20 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12128,8 +12108,7 @@
         "name": "23",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13349,8 +13328,7 @@
         "name": "25",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14318,8 +14296,7 @@
         "name": "25/28 Connector",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14440,8 +14417,7 @@
         "name": "26",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14668,8 +14644,7 @@
         "name": "27",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15486,8 +15461,7 @@
         "name": "28",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16275,8 +16249,7 @@
         "name": "29",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17285,8 +17258,7 @@
         "name": "29",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17576,8 +17548,7 @@
         "name": "30",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17997,8 +17968,7 @@
         "name": "31",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18703,8 +18673,7 @@
         "name": "32",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18984,8 +18953,7 @@
         "name": "33",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19219,8 +19187,7 @@
         "name": "34",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20410,8 +20377,7 @@
         "name": "35",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23221,8 +23187,7 @@
         "name": "35/37 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23702,8 +23667,7 @@
         "name": "36",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24373,8 +24337,7 @@
         "name": "36/35 Connector",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24573,8 +24536,7 @@
         "name": "37",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24999,8 +24961,7 @@
         "name": "38",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25991,8 +25952,7 @@
         "name": "38/Pucker II, Misery Connector",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26222,8 +26182,7 @@
         "name": "45",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27043,8 +27002,7 @@
         "name": "48",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27214,8 +27172,7 @@
         "name": "5",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27449,8 +27406,7 @@
         "name": "6",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27737,8 +27693,7 @@
         "name": "8",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28023,8 +27978,7 @@
         "name": "9",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28421,8 +28375,7 @@
         "name": "9/10 Connector",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28481,8 +28434,7 @@
         "name": "9/11 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28547,8 +28499,7 @@
         "name": "Bruiser",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28643,8 +28594,7 @@
         "name": "Bud's Bypass",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28740,8 +28690,7 @@
         "name": "Challenge Course",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29691,8 +29640,7 @@
         "name": "Cinco Falls",
         "desc": "Hiking Trail (Foot Traffic Only)",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "Hiking Trail (Foot Traffic Only)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29867,8 +29815,7 @@
         "name": "Cliffhanger",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30773,8 +30720,7 @@
         "name": "Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30819,8 +30765,7 @@
         "name": "Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31030,8 +30975,7 @@
         "name": "Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31201,8 +31145,7 @@
         "name": "Coyote Ugly",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31297,8 +31240,7 @@
         "name": "Crawford's Cry",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31373,8 +31315,7 @@
         "name": "Crawford's Cry",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31549,8 +31490,7 @@
         "name": "Cream Puff",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31635,8 +31575,7 @@
         "name": "Fish Fossil",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31841,8 +31780,7 @@
         "name": "Fly Trap",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32109,8 +32047,7 @@
         "name": "Frankenstein",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32500,8 +32437,7 @@
         "name": "Fuquarwe Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32771,8 +32707,7 @@
         "name": "Fuquarwe Trail/Flay Trap",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32827,8 +32762,7 @@
         "name": "Grace Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33353,8 +33287,7 @@
         "name": "Hell's Revenge",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33459,8 +33392,7 @@
         "name": "Jerry White Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33516,8 +33448,7 @@
         "name": "Killing Time",
         "desc": "Tuck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Tuck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33647,8 +33578,7 @@
         "name": "Killing Time",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33713,8 +33643,7 @@
         "name": "Lion's Den",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33814,8 +33743,7 @@
         "name": "Little Jagger",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33890,8 +33818,7 @@
         "name": "Little Jagger",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33966,8 +33893,7 @@
         "name": "MASONJAR",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34196,8 +34122,7 @@
         "name": "Misery",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34752,8 +34677,7 @@
         "name": "Old Mine (17/11 Connector)",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34867,8 +34791,7 @@
         "name": "Pappys Pass",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35438,8 +35361,7 @@
         "name": "Pineball",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35534,8 +35456,7 @@
         "name": "Plateau",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37015,8 +36936,7 @@
         "name": "Pony Hill",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37201,8 +37121,7 @@
         "name": "Pucker I",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37592,8 +37511,7 @@
         "name": "Pucker II",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37963,8 +37881,7 @@
         "name": "Rail Bed",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38059,8 +37976,7 @@
         "name": "Rock Garden",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38165,8 +38081,7 @@
         "name": "Roger's Ridge",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38381,8 +38296,7 @@
         "name": "Running Board",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38547,8 +38461,7 @@
         "name": "Shameless",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38619,8 +38532,7 @@
         "name": "T.R.O.U.B.L.E",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38950,8 +38862,7 @@
         "name": "Tailgate",
         "desc": "Truck-Only 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39116,8 +39027,7 @@
         "name": "Tombstone",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39172,8 +39082,7 @@
         "name": "Truck-Only Class 4",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39348,8 +39257,7 @@
         "name": "Truck-Only Class 5",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39669,8 +39577,7 @@
         "name": "Truck-Only Class 5",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40000,8 +39907,7 @@
         "name": "Underestimated",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40121,8 +40027,7 @@
         "name": "Upper Grace",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40332,8 +40237,7 @@
         "name": "Upper Rock Garden & Can Opener",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40418,8 +40322,7 @@
         "name": "White Tail Crawl",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40614,8 +40517,7 @@
         "name": "Windmill Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40945,8 +40847,7 @@
         "name": "Your Turn",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41126,8 +41027,7 @@
         "name": "Your Turn",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",

@@ -123,6 +123,7 @@ export default function MapView({
 
             // Track Name Label
             // Track Name Label
+// Track Name Label
 const nameFeature = data.features.find(
   (f) => f.geometry?.type === "LineString" && f.properties?.name
 );
@@ -135,7 +136,7 @@ if (nameFeature) {
     filter: ["==", "$type", "LineString"],
     layout: {
       "symbol-placement": "line",
-      "text-field": nameFeature.properties.name, // This should now show the correct name
+      "text-field": nameFeature.properties.name, // Correctly shows the name
       "text-font": ["Open Sans Bold"],
       "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
       visibility: showNames ? "visible" : "none",
