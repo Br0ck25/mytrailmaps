@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-// List your converted GeoJSON files here
 const geojsonFiles = [
   "BlackMountainOffRoadAdventureArea.geojson",
   "BlueHollerOff-RoadPark.geojson",
@@ -24,16 +23,40 @@ const geojsonFiles = [
   "RedbirdCrestTrailSystem.geojson"
 ];
 
-
 export default function MapView({
   showTracks,
   showNames,
   showWaypoints,
   showWaypointLabels,
-  onGeolocateControlReady,
+  onGeolocateControlReady
 }) {
   const mapRef = useRef(null);
+  const currentMap = useRef(null);
 
+  // 🔁 Update visibility of existing layers
+  useEffect(() => {
+    const map = currentMap.current;
+    if (!map || !map.getStyle()) return;
+
+    map.getStyle().layers?.forEach((layer) => {
+      const id = layer.id;
+
+      if (id.endsWith("-line")) {
+        map.setPaintProperty(id, "line-opacity", showTracks ? 1 : 0);
+      }
+      if (id.endsWith("-label")) {
+        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+      }
+      if (id.endsWith("-waypoints")) {
+        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+      }
+      if (id.endsWith("-waypoint-labels")) {
+        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+      }
+    });
+  }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
+
+  // ✅ Only run once to initialize map
   useEffect(() => {
     const savedCenter = localStorage.getItem("mapCenter");
     const savedZoom = localStorage.getItem("mapZoom");
@@ -44,6 +67,8 @@ export default function MapView({
       center: savedCenter ? JSON.parse(savedCenter) : [-84.3, 36.5],
       zoom: savedZoom ? parseFloat(savedZoom) : 9,
     });
+
+    currentMap.current = map;
 
     map.addControl(new maplibregl.NavigationControl(), "top-right");
 
@@ -79,7 +104,7 @@ export default function MapView({
           .then((data) => {
             map.addSource(sourceId, { type: "geojson", data });
 
-            // Line track
+            // Track Line
             map.addLayer({
               id: lineId,
               type: "line",
@@ -96,7 +121,7 @@ export default function MapView({
               },
             });
 
-            // Label track (if name exists)
+            // Track Name Label
             const nameFeature = data.features.find(
               (f) => f.geometry?.type === "LineString" && f.properties?.name
             );
@@ -123,7 +148,7 @@ export default function MapView({
               });
             }
 
-            // Waypoints (points)
+            // Waypoints
             map.addLayer({
               id: waypointId,
               type: "circle",
@@ -173,7 +198,7 @@ export default function MapView({
     });
 
     return () => map.remove();
-  }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
+  }, []);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
