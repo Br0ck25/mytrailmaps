@@ -2,14 +2,15 @@ import React, { useEffect, useRef } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-export default function MapView({
-  showTracks,
-  showNames,
-  showWaypoints,
-  showWaypointLabels,
-  onGeolocateControlReady,
-  tileJson // ✅ new prop
-}) {
+// List your geojson filenames (no path needed)
+const geojsonFiles = [
+  "BlackMountainOffRoadAdventureArea.geojson",
+  "WindrockPark.geojson",
+  "Brimstone2023.geojson",
+  // Add more filenames here
+];
+
+export default function MapView({ showTracks, showNames, onGeolocateControlReady }) {
   const mapRef = useRef(null);
 
   useEffect(() => {
@@ -35,87 +36,63 @@ export default function MapView({
     map.addControl(geolocate);
 
     map.on("load", () => {
-      map.showTileBoundaries = true;
-      map.showCollisionBoxes = true;
-
       if (onGeolocateControlReady) {
         setTimeout(() => {
           onGeolocateControlReady(() => geolocate.trigger());
         }, 0);
       }
 
-      map.on("sourcedata", (e) => {
-        if (e.sourceId === "tracks" && e.tile && e.tile.rawData) {
-          console.log("🧩 Tile rawData:", e.tile.rawData);
-        } else {
-          console.log("📡 Source loaded event:", e);
-        }
+      geojsonFiles.forEach((filename, index) => {
+        const slug = filename.replace(".geojson", "").toLowerCase();
+        const sourceId = `track-${slug}`;
+        const lineId = `${sourceId}-line`;
+        const labelId = `${sourceId}-label`;
+
+        fetch(`/tracks/${filename}`)
+          .then((res) => res.json())
+          .then((data) => {
+            map.addSource(sourceId, { type: "geojson", data });
+
+            map.addLayer({
+              id: lineId,
+              type: "line",
+              source: sourceId,
+              paint: {
+                "line-color": "#00f",
+                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
+                "line-opacity": showTracks ? 1 : 0,
+              },
+              layout: {
+                "line-cap": "round",
+                "line-join": "round",
+              },
+            });
+
+            const namedFeature = data.features.find(
+              (f) => f.geometry.type === "LineString" && f.properties?.name
+            );
+
+            if (namedFeature) {
+              map.addLayer({
+                id: labelId,
+                type: "symbol",
+                source: sourceId,
+                layout: {
+                  "symbol-placement": "line",
+                  "text-field": namedFeature.properties.name,
+                  "text-font": ["Open Sans Bold"],
+                  "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+                  visibility: showNames ? "visible" : "none",
+                },
+                paint: {
+                  "text-color": "#333",
+                  "text-halo-color": "#fff",
+                  "text-halo-width": 2,
+                },
+              });
+            }
+          });
       });
-
-      map.addSource("tracks", {
-  type: "vector",
-  tiles: tileJson.tiles,
-  minzoom: tileJson.minzoom,
-  maxzoom: tileJson.maxzoom
-});
-
-      map.addLayer({
-        id: "trackdata-line",
-        type: "line",
-        source: "tracks",
-        "source-layer": "trackdata",
-        paint: {
-          "line-color": "#ff0000",
-          "line-width": 4,
-          "line-opacity": 1,
-        },
-        layout: {
-          visibility: "visible",
-        },
-      });
-
-      map.addLayer({
-        id: "trackdata-label",
-        type: "symbol",
-        source: "tracks",
-        "source-layer": "trackdata",
-        layout: {
-          "text-field": ["get", "name"],
-          "symbol-placement": "line",
-          "text-font": ["Open Sans Bold"],
-          "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-          visibility: showNames ? "visible" : "none",
-        },
-        paint: {
-          "text-color": "#333",
-          "text-halo-color": "#fff",
-          "text-halo-width": 2,
-        },
-        minzoom: 10,
-      });
-
-      map.addLayer({
-        id: "trackdata-debug-points",
-        type: "circle",
-        source: "tracks",
-        "source-layer": "trackdata",
-        paint: {
-          "circle-radius": 6,
-          "circle-color": "#00f",
-        },
-      });
-
-      map.addLayer({
-  id: "trackdata-fill",
-  type: "fill", // ⬅️ fill layer for polygons
-  source: "tracks",
-  "source-layer": "trackdata",
-  paint: {
-    "fill-color": "#ff0000",
-    "fill-opacity": 0.3,
-  }
-});
-
     });
 
     map.on("moveend", () => {
