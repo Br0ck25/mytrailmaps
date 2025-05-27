@@ -8,7 +8,8 @@
         "name": "Route 10",
         "desc": "Approved Highways",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Approved Highways"
       },
       "geometry": {
         "type": "LineString",
@@ -508,7 +509,8 @@
         "name": "Route 5",
         "desc": "Approved Highways",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Approved Highways"
       },
       "geometry": {
         "type": "LineString",
@@ -2018,7 +2020,8 @@
         "name": "14",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -3968,7 +3971,8 @@
         "name": "16",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -5573,7 +5577,8 @@
         "name": "94 Jagger",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -5693,7 +5698,8 @@
         "name": "5",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -5818,7 +5824,8 @@
         "name": "91",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -6018,7 +6025,8 @@
         "name": "46 Pinion",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -6208,7 +6216,8 @@
         "name": "75 Table Top",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -6323,7 +6332,8 @@
         "name": "17",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -6858,7 +6868,8 @@
         "name": "88",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -7293,7 +7304,8 @@
         "name": "73 Purgatory",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -7418,7 +7430,8 @@
         "name": "53 Hellion",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -7503,7 +7516,8 @@
         "name": "36",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -8128,7 +8142,8 @@
         "name": "Route 17",
         "desc": "Approved Highways",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Approved Highways"
       },
       "geometry": {
         "type": "LineString",
@@ -8258,7 +8273,8 @@
         "name": "83",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -9398,7 +9414,8 @@
         "name": "25",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -9493,7 +9510,8 @@
         "name": "78 Grudge",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -9563,7 +9581,8 @@
         "name": "24",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -10438,7 +10457,8 @@
         "name": "92",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -10698,7 +10718,8 @@
         "name": "87 Double Barrel",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -10763,7 +10784,8 @@
         "name": "31",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -11043,7 +11065,8 @@
         "name": "27",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -11752,7 +11775,8 @@
         "name": "80 Shaft",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -12102,7 +12126,8 @@
         "name": "86",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -12452,7 +12477,8 @@
         "name": "74 The Wall",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -12722,7 +12748,8 @@
         "name": "89",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -12812,7 +12839,8 @@
         "name": "10",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -13437,7 +13465,8 @@
         "name": "45 Deadfall",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -13552,7 +13581,8 @@
         "name": "81 Pickle",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -13642,7 +13672,8 @@
         "name": "42 Triple Nickel",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -13817,7 +13848,8 @@
         "name": "76 The Cooler",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -13957,7 +13989,8 @@
         "name": "Route 17",
         "desc": "Approved Highways",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Approved Highways"
       },
       "geometry": {
         "type": "LineString",
@@ -15092,7 +15125,8 @@
         "name": "196",
         "desc": "Single Track Most",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Single Track Most"
       },
       "geometry": {
         "type": "LineString",
@@ -15237,7 +15271,8 @@
         "name": "26",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -15832,7 +15867,8 @@
         "name": "68",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -16107,7 +16143,8 @@
         "name": "59",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -16522,7 +16559,8 @@
         "name": "194",
         "desc": "Single Track Most",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Single Track Most"
       },
       "geometry": {
         "type": "LineString",
@@ -16977,7 +17015,8 @@
         "name": "90",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -17102,7 +17141,8 @@
         "name": "50",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -18212,7 +18252,8 @@
         "name": "11",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -18872,7 +18913,8 @@
         "name": "79 Firecracker",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -18937,7 +18979,8 @@
         "name": "72 Wishfull Thinking",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -19012,7 +19055,8 @@
         "name": "69",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -20227,7 +20271,8 @@
         "name": "13",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -22526,7 +22571,8 @@
         "name": "35",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -22841,7 +22887,8 @@
         "name": "82 Exit",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -22886,7 +22933,8 @@
         "name": "77 Lower Branch",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -22961,7 +23009,8 @@
         "name": "70",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -23091,7 +23140,8 @@
         "name": "18",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -23411,7 +23461,8 @@
         "name": "93",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -23906,7 +23957,8 @@
         "name": "95",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -23971,7 +24023,8 @@
         "name": "15",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -25211,7 +25264,8 @@
         "name": "Highway 73",
         "desc": "Approved Highways",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Approved Highways"
       },
       "geometry": {
         "type": "LineString",
@@ -25351,7 +25405,8 @@
         "name": "33",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -25416,7 +25471,8 @@
         "name": "12",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -27431,7 +27487,8 @@
         "name": "32",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -27741,7 +27798,8 @@
         "name": "97",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -28001,7 +28059,8 @@
         "name": "28",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -29776,7 +29835,8 @@
         "name": "195",
         "desc": "Single Track Most",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Single Track Most"
       },
       "geometry": {
         "type": "LineString",
@@ -29996,7 +30056,8 @@
         "name": "41",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -30366,7 +30427,8 @@
         "name": "23",
         "desc": "More Difficult",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "More Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -31316,7 +31378,8 @@
         "name": "67 Cotterwood",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -31416,7 +31479,8 @@
         "name": "71 Long Crawl",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",

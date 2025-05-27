@@ -8,7 +8,8 @@
         "name": "312",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -3298,7 +3299,8 @@
         "name": "209",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -7033,7 +7035,8 @@
         "name": "106",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -8718,7 +8721,8 @@
         "name": "123",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -9768,7 +9772,8 @@
         "name": "120",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -11093,7 +11098,8 @@
         "name": "112",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -11283,7 +11289,8 @@
         "name": "222",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -11383,7 +11390,8 @@
         "name": "124",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -11638,7 +11646,8 @@
         "name": "205",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -12458,7 +12467,8 @@
         "name": "323",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -13118,7 +13128,8 @@
         "name": "105",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -14748,7 +14759,8 @@
         "name": "133",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -14823,7 +14835,8 @@
         "name": "203",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -15498,7 +15511,8 @@
         "name": "113",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -16218,7 +16232,8 @@
         "name": "Unknown",
         "desc": "Unknown",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Unknown"
       },
       "geometry": {
         "type": "LineString",
@@ -16743,7 +16758,8 @@
         "name": "129",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -17253,7 +17269,8 @@
         "name": "202",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -17318,7 +17335,8 @@
         "name": "110",
         "desc": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates.",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -18463,7 +18481,8 @@
         "name": "319",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -19508,7 +19527,8 @@
         "name": "127",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -19868,7 +19888,8 @@
         "name": "111",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -20538,7 +20559,8 @@
         "name": "203",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -21073,7 +21095,8 @@
         "name": "KY-699",
         "desc": "Asphalt",
         "stroke": "#7d7f7b",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Asphalt"
       },
       "geometry": {
         "type": "LineString",
@@ -21218,7 +21241,8 @@
         "name": "216",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -25883,7 +25907,8 @@
         "name": "311",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -26948,7 +26973,8 @@
         "name": "116",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -27118,7 +27144,8 @@
         "name": "128",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -27653,7 +27680,8 @@
         "name": "225",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -27863,7 +27891,8 @@
         "name": "KY-221",
         "desc": "Asphalt",
         "stroke": "#7d7f7b",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Asphalt"
       },
       "geometry": {
         "type": "LineString",
@@ -27998,7 +28027,8 @@
         "name": "119",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -28893,7 +28923,8 @@
         "name": "224",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -29078,7 +29109,8 @@
         "name": "212",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -30168,7 +30200,8 @@
         "name": "327",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -30733,7 +30766,8 @@
         "name": "325",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -31458,7 +31492,8 @@
         "name": "211",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -35553,7 +35588,8 @@
         "name": "328",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -36313,7 +36349,8 @@
         "name": "117",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -36423,7 +36460,8 @@
         "name": "130",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -36908,7 +36946,8 @@
         "name": "324",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -37248,7 +37287,8 @@
         "name": "204",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -39933,7 +39973,8 @@
         "name": "203",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -43008,7 +43049,8 @@
         "name": "321",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -44478,7 +44520,8 @@
         "name": "126",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -44508,7 +44551,8 @@
         "name": "110B",
         "desc": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates.",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -44643,7 +44687,8 @@
         "name": "125",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -44983,7 +45028,8 @@
         "name": "221",
         "desc": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates.",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -45268,7 +45314,8 @@
         "name": "203",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -47773,7 +47820,8 @@
         "name": "223",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -47863,7 +47911,8 @@
         "name": "121",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -48073,7 +48122,8 @@
         "name": "226",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -48473,7 +48523,8 @@
         "name": "215",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -48853,7 +48904,8 @@
         "name": "103",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -49523,7 +49575,8 @@
         "name": "104",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -56953,7 +57006,8 @@
         "name": "122",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -57243,7 +57297,8 @@
         "name": "219",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -58173,7 +58228,8 @@
         "name": "206",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -62008,7 +62064,8 @@
         "name": "201",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -62363,7 +62420,8 @@
         "name": "Unknown",
         "desc": "Unknown",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Unknown"
       },
       "geometry": {
         "type": "LineString",
@@ -62473,7 +62531,8 @@
         "name": "127",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -62603,7 +62662,8 @@
         "name": "217",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -67273,7 +67333,8 @@
         "name": "109",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -67443,7 +67504,8 @@
         "name": "101",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -77608,7 +77670,8 @@
         "name": "210",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0000ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -77843,7 +77906,8 @@
         "name": "105A",
         "desc": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates.",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Black trails are the hardest difficulty and are only for more experienced riders. Large rocks, ruts, and steep climbs make up the majority of these trails. These trails are more specifically for SxS's, Crawlers, Buggies, and Bouncers. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -78163,7 +78227,8 @@
         "name": "118",
         "desc": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates.",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Expect more dirt, mud, and rocks along with steeper and more rutted out segments on moderate trails. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -78238,7 +78303,8 @@
         "name": "131",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -83633,7 +83699,8 @@
         "name": "214",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -85043,7 +85110,8 @@
         "name": "107",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -88993,7 +89061,8 @@
         "name": "114",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -91038,7 +91107,8 @@
         "name": "316",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -92733,7 +92803,8 @@
         "name": "102",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
@@ -94718,7 +94789,8 @@
         "name": "132",
         "desc": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates.",
         "stroke": "#00ff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Good for beginners on all vehicles. Easy trails are mostly gravel. See website or call park for details on rules and rates."
       },
       "geometry": {
         "type": "LineString",
