@@ -7,7 +7,7 @@ const tileJson = {
   tilejson: "2.2.0",
   name: "Track Tiles",
   tiles: [
-    "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
+    `https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf?nocache=${Date.now()}`
   ],
   minzoom: 5,
   maxzoom: 15

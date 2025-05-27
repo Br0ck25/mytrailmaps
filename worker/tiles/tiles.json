@@ -1,0 +1,9 @@
+{
+  "tilejson": "2.2.0",
+  "name": "Track Tiles",
+  "tiles": [
+    "https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf"
+  ],
+  "minzoom": 5,
+  "maxzoom": 15
+}

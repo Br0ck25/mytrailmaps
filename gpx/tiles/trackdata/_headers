@@ -1,0 +1,4 @@
+/tiles/trackdata/*
+  Content-Type: application/x-protobuf
+  Access-Control-Allow-Origin: *
+  Cache-Control: no-store
