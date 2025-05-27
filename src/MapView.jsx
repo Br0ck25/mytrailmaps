@@ -186,6 +186,26 @@ export default function MapView({
               },
               minzoom: 12,
             });
+
+            // Add Description (Note) to the track on click
+            map.on("click", (e) => {
+              const features = map.queryRenderedFeatures(e.point, {
+                layers: [lineId] // target specific layer
+              });
+
+              if (features.length > 0) {
+                const props = features[0].properties;
+                const coordinates = e.lngLat;
+
+                new maplibregl.Popup()
+                  .setLngLat(coordinates)
+                  .setHTML(`
+                    <h3 class="font-bold text-md">${props.name || "Unnamed Track"}</h3>
+                    <p class="text-sm text-gray-700 mt-1">${props.description || "No description available."}</p>
+                  `)
+                  .addTo(map);
+              }
+            });
           })
           .catch((err) => console.error(err));
       });
