@@ -8,7 +8,8 @@
         "name": "33",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -138,7 +139,8 @@
         "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -188,7 +190,8 @@
         "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -398,7 +401,8 @@
         "name": "4",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -743,7 +747,8 @@
         "name": "2 B",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -818,7 +823,8 @@
         "name": "24",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -852,7 +858,8 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",
@@ -1042,7 +1049,8 @@
         "name": "39",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -1132,7 +1140,8 @@
         "name": "19",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -1287,7 +1296,8 @@
         "name": "27 B",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1362,7 +1372,8 @@
         "name": "4A",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -1407,7 +1418,8 @@
         "name": "25",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1551,7 +1563,8 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",
@@ -1826,7 +1839,8 @@
         "name": "11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1896,7 +1910,8 @@
         "name": "26",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -1986,7 +2001,8 @@
         "name": "22 Helivator",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -2051,7 +2067,8 @@
         "name": "7",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -2291,7 +2308,8 @@
         "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2341,7 +2359,8 @@
         "name": "36",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2481,7 +2500,8 @@
         "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -3026,7 +3046,8 @@
         "name": "12",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -3131,7 +3152,8 @@
         "name": "15",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -3391,7 +3413,8 @@
         "name": "28",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3681,7 +3704,8 @@
         "name": "17",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -3825,7 +3849,8 @@
         "_gpxType": "trk",
         "name": "Motorcross Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",
@@ -4105,7 +4130,8 @@
         "name": "41",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4175,7 +4201,8 @@
         "name": "29",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4325,7 +4352,8 @@
         "name": "3",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -4505,7 +4533,8 @@
         "name": "13",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -4690,7 +4719,8 @@
         "name": "32",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -4875,7 +4905,8 @@
         "name": "14",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -5319,7 +5350,8 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",
@@ -5599,7 +5631,8 @@
         "name": "18",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -5874,7 +5907,8 @@
         "name": "11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6164,7 +6198,8 @@
         "name": "37",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -6414,7 +6449,8 @@
         "name": "34",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6624,7 +6660,8 @@
         "name": "2",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6784,7 +6821,8 @@
         "name": "31",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6859,7 +6897,8 @@
         "name": "12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7354,7 +7393,8 @@
         "name": "27",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7433,7 +7473,8 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",
@@ -7538,7 +7579,8 @@
         "name": "13 B",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -7693,7 +7735,8 @@
         "name": "20",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7798,7 +7841,8 @@
         "name": "12",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7993,7 +8037,8 @@
         "name": "14",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -8143,7 +8188,8 @@
         "name": "6",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -8368,7 +8414,8 @@
         "name": "30",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8458,7 +8505,8 @@
         "name": "24",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -8553,7 +8601,8 @@
         "name": "21",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -8693,7 +8742,8 @@
         "name": "16",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8878,7 +8928,8 @@
         "name": "23 B",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -8928,7 +8979,8 @@
         "name": "10",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -9113,7 +9165,8 @@
         "name": "38",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -9168,7 +9221,8 @@
         "name": "40",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -9263,7 +9317,8 @@
         "name": "35",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -9418,7 +9473,8 @@
         "name": "8",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -9883,7 +9939,8 @@
         "name": "23",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -9953,7 +10010,8 @@
         "name": "12",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9988,7 +10046,8 @@
         "name": "32 B",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -10047,7 +10106,8 @@
         "_gpxType": "trk",
         "name": "Dirt Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",
@@ -10187,7 +10247,8 @@
         "name": "1",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -10692,7 +10753,8 @@
         "name": "9 Bounty Hill",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -10772,7 +10834,8 @@
         "name": "5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",

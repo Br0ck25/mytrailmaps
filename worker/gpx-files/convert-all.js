@@ -18,23 +18,28 @@ fs.readdirSync(inputDir)
     // Extract track names and descriptions
     const trkEls = dom.getElementsByTagName("trk");
     const names = [];
+    const descriptions = [];
 
-    // Loop through each <trk> and grab the name
     for (let i = 0; i < trkEls.length; i++) {
       const nameTag = trkEls[i].getElementsByTagName("name")[0];
+      const descTag = trkEls[i].getElementsByTagName("desc")[0];
+      const cmtTag = trkEls[i].getElementsByTagName("cmt")[0];
+
       names.push(nameTag ? nameTag.textContent : `Track ${i + 1}`);
+      descriptions.push(descTag?.textContent || cmtTag?.textContent || "");
     }
 
-    // Ensure each track in the GeoJSON gets its correct name
+    // Assign correct name + description to each LineString
     let trkIndex = 0;
     geojson.features.forEach((f) => {
       if (f.geometry?.type === "LineString") {
-        // Preserve the correct name from GPX <name>
-        f.properties.name = names[trkIndex++] || f.properties.name; 
+        f.properties.name = names[trkIndex] || f.properties.name;
+        f.properties.description = descriptions[trkIndex] || "No description available";
+        trkIndex++;
       }
     });
 
-    // Define output file path and save the GeoJSON
+    // Save GeoJSON
     const outPath = path.join(outputDir, file.replace(".gpx", ".geojson"));
     fs.writeFileSync(outPath, JSON.stringify(geojson, null, 2));
 

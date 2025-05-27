@@ -152,7 +152,8 @@
             "2018-10-23T19:42:15Z",
             "2018-10-23T19:43:15Z"
           ]
-        }
+        },
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",

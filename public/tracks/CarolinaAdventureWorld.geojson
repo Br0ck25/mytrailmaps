@@ -8,7 +8,8 @@
         "name": "SR1",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -563,7 +564,8 @@
         "name": "29",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -708,7 +710,8 @@
         "name": "3",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -1258,7 +1261,8 @@
         "name": "SR 23",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -1573,7 +1577,8 @@
         "name": "6",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -1763,7 +1768,8 @@
         "name": "34",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -1848,7 +1854,8 @@
         "name": "9",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -2088,7 +2095,8 @@
         "name": "3",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -2123,7 +2131,8 @@
         "name": "SR21",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -2538,7 +2547,8 @@
         "name": "10",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -2783,7 +2793,8 @@
         "name": "2",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3408,7 +3419,8 @@
         "name": "SR19",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -3578,7 +3590,8 @@
         "name": "36",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3698,7 +3711,8 @@
         "name": "SR9",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -3743,7 +3757,8 @@
         "name": "15",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -3858,7 +3873,8 @@
         "name": "5",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -3983,7 +3999,8 @@
         "name": "SR3",
         "desc": "Searvice Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Searvice Road"
       },
       "geometry": {
         "type": "LineString",
@@ -4023,7 +4040,8 @@
         "name": "31",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4218,7 +4236,8 @@
         "name": "3",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -4458,7 +4477,8 @@
         "name": "6",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -6053,7 +6073,8 @@
         "name": "SR7",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -6168,7 +6189,8 @@
         "name": "SR11",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -6408,7 +6430,8 @@
         "name": "5",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -6698,7 +6721,8 @@
         "name": "22",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6878,7 +6902,8 @@
         "name": "11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7058,7 +7083,8 @@
         "name": "18",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7543,7 +7569,8 @@
         "name": "8",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -7683,7 +7710,8 @@
         "name": "26",
         "desc": "Most Difficulr Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficulr Single Track"
       },
       "geometry": {
         "type": "LineString",
@@ -7818,7 +7846,8 @@
         "name": "SR10",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -7923,7 +7952,8 @@
         "name": "1",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8608,7 +8638,8 @@
         "name": "SR20",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -8708,7 +8739,8 @@
         "name": "17",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8863,7 +8895,8 @@
         "name": "5",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -9278,7 +9311,8 @@
         "name": "SR4",
         "desc": "Service road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service road"
       },
       "geometry": {
         "type": "LineString",
@@ -9793,7 +9827,8 @@
         "name": "SR13",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -9893,7 +9928,8 @@
         "name": "12",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -9983,7 +10019,8 @@
         "name": "16",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -10248,7 +10285,8 @@
         "name": "23",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11188,7 +11226,8 @@
         "name": "11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11383,7 +11422,8 @@
         "name": "Speed Track",
         "desc": "Speed Track",
         "stroke": "#ff00ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Speed Track"
       },
       "geometry": {
         "type": "LineString",
@@ -11483,7 +11523,8 @@
         "name": "SR18",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -12208,7 +12249,8 @@
         "name": "14",
         "desc": "Most Difficult Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult Single Track"
       },
       "geometry": {
         "type": "LineString",
@@ -12568,7 +12610,8 @@
         "name": "32",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12943,7 +12986,8 @@
         "name": "SR22",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -13043,7 +13087,8 @@
         "name": "6",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -13173,7 +13218,8 @@
         "name": "6",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -13718,7 +13764,8 @@
         "name": "7",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -13903,7 +13950,8 @@
         "name": "19",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -14403,7 +14451,8 @@
         "name": "4",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -15238,7 +15287,8 @@
         "name": "Enduro Cross",
         "desc": "Enduro Cross",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Enduro Cross"
       },
       "geometry": {
         "type": "LineString",
@@ -15483,7 +15533,8 @@
         "name": "25",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -17538,7 +17589,8 @@
         "name": "Junior Moto Cross",
         "desc": "Junior Moto Cross",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Junior Moto Cross"
       },
       "geometry": {
         "type": "LineString",
@@ -17708,7 +17760,8 @@
         "name": "33",
         "desc": "Most Difficult Single Track ",
         "stroke": "#ffff00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult Single Track "
       },
       "geometry": {
         "type": "LineString",
@@ -18438,7 +18491,8 @@
         "name": "4",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19418,7 +19472,8 @@
         "name": "6",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -21008,7 +21063,8 @@
         "name": "28",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -21293,7 +21349,8 @@
         "name": "12",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",
@@ -21433,7 +21490,8 @@
         "name": "SR2",
         "desc": "Service Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Service Road"
       },
       "geometry": {
         "type": "LineString",
@@ -21523,7 +21581,8 @@
         "name": "40",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -21988,7 +22047,8 @@
         "name": "38",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easiest"
       },
       "geometry": {
         "type": "LineString",
@@ -22088,7 +22148,8 @@
         "name": "34",
         "desc": "Most Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Most Difficult"
       },
       "geometry": {
         "type": "LineString",

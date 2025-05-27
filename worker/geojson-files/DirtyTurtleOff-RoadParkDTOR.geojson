@@ -8,7 +8,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -228,7 +229,8 @@
         "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Main Road"
       },
       "geometry": {
         "type": "LineString",
@@ -443,7 +445,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -508,7 +511,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -633,7 +637,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -688,7 +693,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -728,7 +734,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1018,7 +1025,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -1088,7 +1096,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1168,7 +1177,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1283,7 +1293,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -1458,7 +1469,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1533,7 +1545,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1608,7 +1621,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1648,7 +1662,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -1708,7 +1723,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1813,7 +1829,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1863,7 +1880,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -1928,7 +1946,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -2033,7 +2052,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -2108,7 +2128,8 @@
         "name": "2 Thumpers Glory",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -2383,7 +2404,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2488,7 +2510,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2528,7 +2551,8 @@
         "name": "22 Snot Hill",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -2718,7 +2742,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -2783,7 +2808,8 @@
         "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Main Road"
       },
       "geometry": {
         "type": "LineString",
@@ -2873,7 +2899,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2938,7 +2965,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2978,7 +3006,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -3033,7 +3062,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -3128,7 +3158,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3273,7 +3304,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -3323,7 +3355,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -3363,7 +3396,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3403,7 +3437,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -3523,7 +3558,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3703,7 +3739,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4008,7 +4045,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4058,7 +4096,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -4208,7 +4247,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4288,7 +4328,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4403,7 +4444,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4483,7 +4525,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4548,7 +4591,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4713,7 +4757,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4893,7 +4938,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5018,7 +5064,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -5093,7 +5140,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -5143,7 +5191,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -5383,7 +5432,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5448,7 +5498,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -5513,7 +5564,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5563,7 +5615,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -5653,7 +5706,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5783,7 +5837,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -5858,7 +5913,8 @@
         "name": "10 Step Up",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5988,7 +6044,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -6073,7 +6130,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -6168,7 +6226,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6283,7 +6342,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -6333,7 +6393,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -6488,7 +6549,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -6593,7 +6655,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6703,7 +6766,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -6793,7 +6857,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6888,7 +6953,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -6938,7 +7004,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -6978,7 +7045,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -7048,7 +7116,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -7123,7 +7192,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -7198,7 +7268,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7303,7 +7374,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7348,7 +7420,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7388,7 +7461,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7538,7 +7612,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -8138,7 +8213,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -8178,7 +8254,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -8288,7 +8365,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8583,7 +8661,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -8673,7 +8752,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8808,7 +8888,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8963,7 +9044,8 @@
         "name": "16 Cliff Hanger",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -9033,7 +9115,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9113,7 +9196,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9168,7 +9252,8 @@
         "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Main Road"
       },
       "geometry": {
         "type": "LineString",
@@ -9213,7 +9298,8 @@
         "name": "15 Horse Shoe",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -11493,7 +11579,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -11803,7 +11890,8 @@
         "name": "8 Pee Pee's Revenge",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -11978,7 +12066,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12113,7 +12202,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12213,7 +12303,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -12263,7 +12354,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -12398,7 +12490,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -12503,7 +12596,8 @@
         "name": "4 Orange Crusher",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -12638,7 +12732,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -12678,7 +12773,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12728,7 +12824,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12798,7 +12895,8 @@
         "name": "1 Haul Road",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -13258,7 +13356,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -13403,7 +13502,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -13448,7 +13548,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -13703,7 +13804,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -13818,7 +13920,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -14018,7 +14121,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14108,7 +14212,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14153,7 +14258,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14208,7 +14314,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14298,7 +14405,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14523,7 +14631,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -14738,7 +14847,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -14798,7 +14908,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14833,7 +14944,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14913,7 +15025,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -14993,7 +15106,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -15128,7 +15242,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -15218,7 +15333,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -15338,7 +15454,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -15408,7 +15525,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -15448,7 +15566,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -15553,7 +15672,8 @@
         "name": "MX Track",
         "desc": "MX Track",
         "stroke": "#ff5500",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "MX Track"
       },
       "geometry": {
         "type": "LineString",
@@ -16183,7 +16303,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -16258,7 +16379,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -16603,7 +16725,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -16663,7 +16786,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -16733,7 +16857,8 @@
         "name": "17 Dork Hill",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -16878,7 +17003,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -16978,7 +17104,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -17053,7 +17180,8 @@
         "name": "3 Copperhead Ravine",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -17598,7 +17726,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -17723,7 +17852,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -18048,7 +18178,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -18168,7 +18299,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -18293,7 +18425,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -18348,7 +18481,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -18473,7 +18607,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -18512,7 +18647,8 @@
         "_gpxType": "trk",
         "name": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "No description available"
       },
       "geometry": {
         "type": "LineString",
@@ -18592,7 +18728,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -18667,7 +18804,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -18717,7 +18855,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -18847,7 +18986,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -18962,7 +19102,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -19167,7 +19308,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19322,7 +19464,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19457,7 +19600,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19497,7 +19641,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19612,7 +19757,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -19667,7 +19813,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19717,7 +19864,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19792,7 +19940,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -19837,7 +19986,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -19877,7 +20027,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -20067,7 +20218,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -20202,7 +20354,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -20242,7 +20395,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -20292,7 +20446,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -20332,7 +20487,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -20412,7 +20568,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -20472,7 +20629,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -20542,7 +20700,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -20597,7 +20756,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -20672,7 +20832,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -20717,7 +20878,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -20792,7 +20954,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -21117,7 +21280,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -21157,7 +21321,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -21307,7 +21472,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -21432,7 +21598,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -21507,7 +21674,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -21547,7 +21715,8 @@
         "name": "25 Mission Impossible",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -21712,7 +21881,8 @@
         "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Main Road"
       },
       "geometry": {
         "type": "LineString",
@@ -21837,7 +22007,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -21887,7 +22058,8 @@
         "name": "24 Cedar Avenue",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -22242,7 +22414,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -22332,7 +22505,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -22442,7 +22616,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -22597,7 +22772,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -22877,7 +23053,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -23117,7 +23294,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -23182,7 +23360,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -23232,7 +23411,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -23297,7 +23477,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -23407,7 +23588,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -23592,7 +23774,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -23682,7 +23865,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -23832,7 +24016,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -24047,7 +24232,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -24202,7 +24388,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -24272,7 +24459,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -24377,7 +24565,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -24492,7 +24681,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -24692,7 +24882,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -24787,7 +24978,8 @@
         "name": "5 Bloody Thicket",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -24972,7 +25164,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -25032,7 +25225,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -25097,7 +25291,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -25147,7 +25342,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -25267,7 +25463,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -25312,7 +25509,8 @@
         "name": "20 Str8t Up",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -25392,7 +25590,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -25437,7 +25636,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -25627,7 +25827,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -25697,7 +25898,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -25777,7 +25979,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -25852,7 +26055,8 @@
         "name": "12 In The Pink",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -25912,7 +26116,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -26032,7 +26237,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -26177,7 +26383,8 @@
         "name": "Mini MX Track",
         "desc": "Mini MX Track",
         "stroke": "#ff5500",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Mini MX Track"
       },
       "geometry": {
         "type": "LineString",
@@ -26322,7 +26529,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -26377,7 +26585,8 @@
         "name": "19 Lady Gaga",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -26487,7 +26696,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -26522,7 +26732,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -26602,7 +26813,8 @@
         "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Main Road"
       },
       "geometry": {
         "type": "LineString",
@@ -26687,7 +26899,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -26792,7 +27005,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -26922,7 +27136,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -27092,7 +27307,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -27372,7 +27588,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -27417,7 +27634,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -27602,7 +27820,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -27702,7 +27921,8 @@
         "name": "23 Dakota's Run",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -27847,7 +28067,8 @@
         "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Main Road"
       },
       "geometry": {
         "type": "LineString",
@@ -27912,7 +28133,8 @@
         "name": "14 Turtle Crack",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -28042,7 +28264,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -28117,7 +28340,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -28197,7 +28421,8 @@
         "name": "21 Hillbilly Stomp",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -28302,7 +28527,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -28432,7 +28658,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -28537,7 +28764,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -28572,7 +28800,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -28612,7 +28841,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -28952,7 +29182,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -29027,7 +29258,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -29167,7 +29399,8 @@
         "name": "9 Getcha Sum",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -29332,7 +29565,8 @@
         "name": "7 Bobby's Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -29487,7 +29721,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -29567,7 +29802,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -29602,7 +29838,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -29742,7 +29979,8 @@
         "name": "13 Showtime",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -29792,7 +30030,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -30012,7 +30251,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -30077,7 +30317,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -30227,7 +30468,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -30292,7 +30534,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -30352,7 +30595,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -30432,7 +30676,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -30587,7 +30832,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -30657,7 +30903,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -30742,7 +30989,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -30817,7 +31065,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -30987,7 +31236,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -31057,7 +31307,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -31607,7 +31858,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -31682,7 +31934,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -31762,7 +32015,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -31827,7 +32081,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -31997,7 +32252,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -32042,7 +32298,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -32227,7 +32484,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -32362,7 +32620,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -32497,7 +32756,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -32607,7 +32867,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -32887,7 +33148,8 @@
         "name": "6 Oh Sh...",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -32932,7 +33194,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -33017,7 +33280,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -33097,7 +33361,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -33247,7 +33512,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -33357,7 +33623,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -33467,7 +33734,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -33532,7 +33800,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -33632,7 +33901,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -33717,7 +33987,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -33762,7 +34033,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -33942,7 +34214,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -34037,7 +34310,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -34097,7 +34371,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -34292,7 +34567,8 @@
         "name": "MX Track",
         "desc": "MX Track",
         "stroke": "#ff5500",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "MX Track"
       },
       "geometry": {
         "type": "LineString",
@@ -34597,7 +34873,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -34702,7 +34979,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -35062,7 +35340,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -35167,7 +35446,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -35237,7 +35517,8 @@
         "name": "11 Super Flex",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -35437,7 +35718,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -35522,7 +35804,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -35562,7 +35845,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -35617,7 +35901,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -35657,7 +35942,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -35697,7 +35983,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -35867,7 +36154,8 @@
         "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -35992,7 +36280,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -36142,7 +36431,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -36247,7 +36537,8 @@
         "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -36362,7 +36653,8 @@
         "name": "18 Tina's Trail",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -36572,7 +36864,8 @@
         "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Extreme"
       },
       "geometry": {
         "type": "LineString",
@@ -36702,7 +36995,8 @@
         "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",

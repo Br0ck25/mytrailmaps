@@ -8,7 +8,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -38,7 +39,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -748,7 +750,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -803,7 +806,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -848,7 +852,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -903,7 +908,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -1093,7 +1099,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1198,7 +1205,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1253,7 +1261,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1388,7 +1397,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -1563,7 +1573,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -1788,7 +1799,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -1882,7 +1894,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -1946,7 +1959,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2136,7 +2150,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2195,7 +2210,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2228,7 +2244,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2473,7 +2490,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2538,7 +2556,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -2633,7 +2652,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -3083,7 +3103,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3148,7 +3169,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3283,7 +3305,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -3378,7 +3401,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -3403,7 +3427,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -3688,7 +3713,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -3923,7 +3949,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4198,7 +4225,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4363,7 +4391,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4458,7 +4487,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4513,7 +4543,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -4763,7 +4794,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4828,7 +4860,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -4988,7 +5021,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5098,7 +5132,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5203,7 +5238,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5378,7 +5414,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -5493,7 +5530,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -5553,7 +5591,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -5758,7 +5797,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -5978,7 +6018,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -6243,7 +6284,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -6848,7 +6890,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -6898,7 +6941,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7208,7 +7252,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7261,7 +7306,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7746,7 +7792,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7811,7 +7858,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -7960,7 +8008,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -7985,7 +8034,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -8620,7 +8670,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8695,7 +8746,8 @@
         "name": "BHORP",
         "desc": "easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "easy"
       },
       "geometry": {
         "type": "LineString",
@@ -8725,7 +8777,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8833,7 +8886,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -8937,7 +8991,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9026,7 +9081,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9081,7 +9137,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -9206,7 +9263,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9304,7 +9362,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9449,7 +9508,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9614,7 +9674,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#FD2500",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -9679,7 +9740,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#FD2500",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -9749,7 +9811,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9813,7 +9876,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -9978,7 +10042,8 @@
         "name": "BHORP",
         "desc": "Hard",
         "stroke": "#FD2500",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Hard"
       },
       "geometry": {
         "type": "LineString",
@@ -10078,7 +10143,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -10261,7 +10327,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -10376,7 +10443,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -10431,7 +10499,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -11276,7 +11345,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11386,7 +11456,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11481,7 +11552,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11606,7 +11678,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11656,7 +11729,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11801,7 +11875,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -11876,7 +11951,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -11926,7 +12002,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -11981,7 +12058,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -12051,7 +12129,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12266,7 +12345,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -12534,7 +12614,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12689,7 +12770,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -12779,7 +12861,8 @@
         "name": "BHORP",
         "desc": "Moderate",
         "stroke": "#FF9D00",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Moderate"
       },
       "geometry": {
         "type": "LineString",
@@ -12829,7 +12912,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
@@ -13159,7 +13243,8 @@
         "name": "BHORP",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {}
+        "coordinateProperties": {},
+        "description": "Easy"
       },
       "geometry": {
         "type": "LineString",
