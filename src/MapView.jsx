@@ -142,31 +142,26 @@ map.on("click", (e) => {
       });
 
       // Track Name Label
-      const nameFeature = data.features.find(
-        (f) => f.geometry?.type === "LineString" && f.properties?.name
-      );
+      map.addLayer({
+  id: labelId,
+  type: "symbol",
+  source: sourceId,
+  filter: ["==", "$type", "LineString"],
+  layout: {
+    "symbol-placement": "line",
+    "text-field": ["get", "name"], // ✅ use feature's own name
+    "text-font": ["Open Sans Bold"],
+    "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+    visibility: showNames ? "visible" : "none",
+  },
+  paint: {
+    "text-color": "#333",
+    "text-halo-color": "#fff",
+    "text-halo-width": 2,
+  },
+  minzoom: 10,
+});
 
-      if (nameFeature) {
-        map.addLayer({
-          id: labelId,
-          type: "symbol",
-          source: sourceId,
-          filter: ["==", "$type", "LineString"],
-          layout: {
-            "symbol-placement": "line",
-            "text-field": nameFeature.properties.name, // Correct track name from properties
-            "text-font": ["Open Sans Bold"],
-            "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-            visibility: showNames ? "visible" : "none",
-          },
-          paint: {
-            "text-color": "#333",
-            "text-halo-color": "#fff",
-            "text-halo-width": 2,
-          },
-          minzoom: 10,
-        });
-      }
 
       // Waypoints
       map.addLayer({
