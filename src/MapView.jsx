@@ -104,6 +104,18 @@ export default function MapView({
           "circle-color": "#00f",
         },
       });
+
+      map.addLayer({
+  id: "trackdata-fill",
+  type: "fill", // ⬅️ fill layer for polygons
+  source: "tracks",
+  "source-layer": "trackdata",
+  paint: {
+    "fill-color": "#ff0000",
+    "fill-opacity": 0.3,
+  }
+});
+
     });
 
     map.on("moveend", () => {
