@@ -115,23 +115,36 @@ function App() {
       </div>
 
       <div className="fixed bottom-0 left-0 right-0 z-40 flex justify-around items-center border-t border-gray-300 bg-white h-14">
-        <button onClick={() => setActiveTab("map")} className="flex flex-col items-center text-xs">
-          <FaMapMarkedAlt className="text-lg" />
-          <span>Map</span>
-        </button>
-        <button onClick={() => setActiveTab("trip")} className="flex flex-col items-center text-xs">
-          <FaRoute className="text-lg" />
-          <span>Trip</span>
-        </button>
-        <button onClick={() => setActiveTab("tracks")} className="flex flex-col items-center text-xs">
-          <FaMap className="text-lg" />
-          <span>My Tracks</span>
-        </button>
-        <button onClick={() => setActiveTab("settings")} className="flex flex-col items-center text-xs">
-          <FaCog className="text-lg" />
-          <span>Settings</span>
-        </button>
-      </div>
+  <button
+    onClick={() => setActiveTab("map")}
+    className={`flex flex-col items-center text-xs ${activeTab === "map" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+  >
+    <FaMapMarkedAlt className="text-lg" />
+    <span>Map</span>
+  </button>
+  <button
+    onClick={() => setActiveTab("trip")}
+    className={`flex flex-col items-center text-xs ${activeTab === "trip" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+  >
+    <FaRoute className="text-lg" />
+    <span>Trip</span>
+  </button>
+  <button
+    onClick={() => setActiveTab("tracks")}
+    className={`flex flex-col items-center text-xs ${activeTab === "tracks" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+  >
+    <FaMap className="text-lg" />
+    <span>My Tracks</span>
+  </button>
+  <button
+    onClick={() => setActiveTab("settings")}
+    className={`flex flex-col items-center text-xs ${activeTab === "settings" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+  >
+    <FaCog className="text-lg" />
+    <span>Settings</span>
+  </button>
+</div>
+
     </div>
   );
 }
