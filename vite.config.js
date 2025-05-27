@@ -67,6 +67,17 @@ export default defineConfig({
               cacheName: 'static-resources',
             },
           },
+            {
+    urlPattern: /\/tracks\/.*\.geojson$/,
+    handler: 'CacheFirst',
+    options: {
+      cacheName: 'track-files',
+      expiration: {
+        maxEntries: 100,
+        maxAgeSeconds: 30 * 24 * 60 * 60,
+      },
+    },
+  },
           
             // Cache GPX files
             {

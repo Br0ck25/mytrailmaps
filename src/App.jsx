@@ -25,6 +25,46 @@ function App() {
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
   const mapRef = useRef();
 
+  // 🧠 Auto-cache all .geojson files on load
+  useEffect(() => {
+    async function autoCacheTracks() {
+      const trackList = [
+        "BlackMountainOffRoadAdventureArea.geojson",
+        "BlueHollerOff-RoadPark.geojson",
+        "Brimstone2023.geojson",
+        "BryantGroveTrail.geojson",
+        "CarolinaAdventureWorld.geojson",
+        "DirtyTurtleOff-RoadParkDTOR.geojson",
+        "FlatNastyOff-RoadPark.geojson",
+        "GoldenMountainPark.geojson",
+        "HatfieldMcCoyTrails-Bearwallow.geojson",
+        "HatfieldMcCoyTrails-Warrior.geojson",
+        "HawkPrideOff-Road.geojson",
+        "Hollerwood.geojson",
+        "KentuckyAdventureTrail.geojson",
+        "leatherwood-off-road-park.geojson",
+        "MineMadeAdventurePark.geojson",
+        "PatawomackAdventurePark.geojson",
+        "PickettStateForestOHVTrailMap.geojson",
+        "RedbirdCrestTrailSystem.geojson"
+      ];
+
+      try {
+        const cache = await caches.open("track-files");
+        for (const file of trackList) {
+          const url = `/tracks/${file}`;
+          const res = await fetch(url);
+          if (res.ok) await cache.put(url, res.clone());
+        }
+        console.log("✅ All tracks cached offline.");
+      } catch (err) {
+        console.error("❌ Error caching tracks:", err);
+      }
+    }
+
+    autoCacheTracks();
+  }, []);
+
   useEffect(() => localStorage.setItem("showTracks", showTracks), [showTracks]);
   useEffect(() => localStorage.setItem("showNames", showNames), [showNames]);
   useEffect(() => localStorage.setItem("showWaypoints", showWaypoints), [showWaypoints]);
@@ -115,36 +155,35 @@ function App() {
       </div>
 
       <div className="fixed bottom-0 left-0 right-0 z-40 flex justify-around items-center border-t border-gray-300 bg-white h-14">
-  <button
-    onClick={() => setActiveTab("map")}
-    className={`flex flex-col items-center text-xs ${activeTab === "map" ? "text-green-700 font-semibold" : "text-gray-600"}`}
-  >
-    <FaMapMarkedAlt className="text-lg" />
-    <span>Map</span>
-  </button>
-  <button
-    onClick={() => setActiveTab("trip")}
-    className={`flex flex-col items-center text-xs ${activeTab === "trip" ? "text-green-700 font-semibold" : "text-gray-600"}`}
-  >
-    <FaRoute className="text-lg" />
-    <span>Trip</span>
-  </button>
-  <button
-    onClick={() => setActiveTab("tracks")}
-    className={`flex flex-col items-center text-xs ${activeTab === "tracks" ? "text-green-700 font-semibold" : "text-gray-600"}`}
-  >
-    <FaMap className="text-lg" />
-    <span>My Tracks</span>
-  </button>
-  <button
-    onClick={() => setActiveTab("settings")}
-    className={`flex flex-col items-center text-xs ${activeTab === "settings" ? "text-green-700 font-semibold" : "text-gray-600"}`}
-  >
-    <FaCog className="text-lg" />
-    <span>Settings</span>
-  </button>
-</div>
-
+        <button
+          onClick={() => setActiveTab("map")}
+          className={`flex flex-col items-center text-xs ${activeTab === "map" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+        >
+          <FaMapMarkedAlt className="text-lg" />
+          <span>Map</span>
+        </button>
+        <button
+          onClick={() => setActiveTab("trip")}
+          className={`flex flex-col items-center text-xs ${activeTab === "trip" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+        >
+          <FaRoute className="text-lg" />
+          <span>Trip</span>
+        </button>
+        <button
+          onClick={() => setActiveTab("tracks")}
+          className={`flex flex-col items-center text-xs ${activeTab === "tracks" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+        >
+          <FaMap className="text-lg" />
+          <span>My Tracks</span>
+        </button>
+        <button
+          onClick={() => setActiveTab("settings")}
+          className={`flex flex-col items-center text-xs ${activeTab === "settings" ? "text-green-700 font-semibold" : "text-gray-600"}`}
+        >
+          <FaCog className="text-lg" />
+          <span>Settings</span>
+        </button>
+      </div>
     </div>
   );
 }
