@@ -3,24 +3,6 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { feature } from "topojson-client";
 
-function isDuplicateLine(lineFeature, mainLines, threshold = 0.8) {
-  const coords = lineFeature.geometry?.coordinates;
-  if (!coords || !Array.isArray(coords)) return false;
-
-  return mainLines.some(main => {
-    const mainCoords = main.geometry?.coordinates;
-    if (!mainCoords || !Array.isArray(mainCoords)) return false;
-
-    const shared = coords.filter(c1 =>
-      mainCoords.some(c2 =>
-        Math.abs(c1[0] - c2[0]) < 0.0001 && Math.abs(c1[1] - c2[1]) < 0.0001
-      )
-    );
-    return shared.length / coords.length >= threshold;
-  });
-}
-
-
 export default function MapView({
   showTracks,
   showNames,
@@ -86,8 +68,6 @@ export default function MapView({
 
     map.on("load", () => {
       const mainWaypointNames = new Set();
-      const mainTrackLines = [];
-
       map.once("idle", () => {
         if (typeof onGeolocateControlReady === "function") {
           onGeolocateControlReady(() => {
@@ -118,38 +98,26 @@ export default function MapView({
       }
 
       // Assign IDs and track waypoint names
-      // Assign IDs
-data.features = data.features.map((f, i) => {
-  f.id = i;
-  return f;
-});
+      data.features = data.features.map((f, i) => {
+        f.id = i;
+        return f;
+      });
 
-// 🧠 Store main track lines + waypoint names
-if (!isPublic) {
-  data.features.forEach(f => {
-    if (f.geometry?.type === "LineString") {
-      mainTrackLines.push(f);
-    }
-    if (f.geometry?.type === "Point" && f.properties?.name) {
-      mainWaypointNames.add(f.properties.name.trim());
-    }
-  });
-}
+      if (!isPublic) {
+        data.features.forEach(f => {
+          if (f.geometry?.type === "Point" && f.properties?.name) {
+            mainWaypointNames.add(f.properties.name.trim());
+          }
+        });
+      }
 
-// 🧹 Filter out duplicates in public data
-if (isPublic) {
-  data.features = data.features.filter(f => {
-    if (f.geometry?.type === "LineString") {
-      return !isDuplicateLine(f, mainTrackLines); // Remove public duplicate tracks
-    }
-    if (f.geometry?.type === "Point") {
-      const name = f.properties?.name?.trim();
-      return !mainWaypointNames.has(name);
-    }
-    return true;
-  });
-}
-
+      if (isPublic) {
+        data.features = data.features.filter(f => {
+          if (f.geometry?.type !== "Point") return true;
+          const name = f.properties?.name?.trim();
+          return !name || !mainWaypointNames.has(name);
+        });
+      }
 
       map.addSource(sourceId, { type: "geojson", data });
 
