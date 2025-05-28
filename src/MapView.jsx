@@ -203,15 +203,14 @@ export default function MapView({
               source: sourceId,
               filter: ["==", "$type", "LineString"],
               paint: {
-                "line-color": ["coalesce", ["get", "stroke"], "#666"],
-
-                "line-opacity": [
-                  "case",
-                  ["boolean", ["feature-state", "highlighted"], false],
-                  1, 0.2
-                ],
-                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
-              },
+  "line-color": ["coalesce", ["get", "stroke"], "#666"],
+  "line-opacity": [
+    "case",
+    ["boolean", ["feature-state", "highlighted"], false],
+    1, 0.2
+  ],
+  "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
+},
               layout: { "line-cap": "round", "line-join": "round" }
             });
 
