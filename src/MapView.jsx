@@ -114,6 +114,12 @@ export default function MapView({
                 "line-join": "round",
               },
             });
+            map.on("mouseenter", lineId, () => {
+  map.getCanvas().style.cursor = "pointer";
+});
+map.on("mouseleave", lineId, () => {
+  map.getCanvas().style.cursor = "";
+});
 
             map.addLayer({
               id: labelId,

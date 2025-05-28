@@ -148,26 +148,27 @@ input:checked + .slider:before {
   display: none !important;
 }
 
-/* Track info popup style */
+/* Popup styling (equivalent to Tailwind classes used in your setHTML) */
 .track-popup {
   background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  padding: 0.75rem;
-  max-width: 16rem;
-  font-size: 0.875rem; /* Tailwind's text-sm */
+  border-radius: 0.5rem;            /* rounded-lg */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* shadow */
+  padding: 0.75rem;                 /* p-3 */
+  max-width: 16rem;                /* max-w-xs */
+  font-size: 0.875rem;             /* text-sm */
   font-family: sans-serif;
 }
 
 .track-popup h3 {
-  color: #047857; /* Tailwind's green-700 */
-  font-weight: bold;
-  font-size: 1rem; /* Tailwind's text-base */
+  font-size: 1rem;                 /* text-base */
+  font-weight: 700;                /* font-bold */
   margin: 0;
+  color: #047857;                  /* Tailwind green-700 */
 }
 
 .track-popup p {
-  margin-top: 0.25rem;
-  color: #374151; /* Tailwind's gray-700 */
+  margin-top: 0.5rem;              /* mt-1 */
+  color: #374151;                  /* gray-700 */
 }
+
 
