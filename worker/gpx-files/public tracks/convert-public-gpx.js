@@ -3,17 +3,18 @@ const path = require("path");
 const togeojson = require("@tmcw/togeojson");
 const { DOMParser } = require("@xmldom/xmldom");
 
-// ✅ Fix: current folder contains GPX files
+// 📂 Input directory: this script's folder
 const inputDir = __dirname;
 
-// ✅ Output GeoJSON to your public-facing folder
+// 📂 Output directory: public-facing /public/public-tracks
 const outputDir = path.resolve(__dirname, "../../../public/public-tracks");
 
+// Ensure output folder exists
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-
+// Read all GPX files in the input folder
 fs.readdirSync(inputDir)
   .filter((file) => file.toLowerCase().endsWith(".gpx"))
   .forEach((file) => {
@@ -24,31 +25,47 @@ fs.readdirSync(inputDir)
     // Convert GPX to GeoJSON
     const geojson = togeojson.gpx(dom);
 
-    // Extract track names and descriptions
+    // Extract track names, descriptions, and colors from <trk>
     const trkEls = dom.getElementsByTagName("trk");
     const names = [];
     const descriptions = [];
+    const colors = [];
 
     for (let i = 0; i < trkEls.length; i++) {
-      const nameTag = trkEls[i].getElementsByTagName("name")[0];
-      const descTag = trkEls[i].getElementsByTagName("desc")[0];
-      const cmtTag = trkEls[i].getElementsByTagName("cmt")[0];
+      const trk = trkEls[i];
+      const nameTag = trk.getElementsByTagName("name")[0];
+      const descTag = trk.getElementsByTagName("desc")[0];
+      const cmtTag = trk.getElementsByTagName("cmt")[0];
 
       names.push(nameTag ? nameTag.textContent : `Track ${i + 1}`);
       descriptions.push(descTag?.textContent || cmtTag?.textContent || "");
+
+      // Look in <extensions> for <color>
+      let color = null;
+      const ext = trk.getElementsByTagName("extensions")[0];
+      if (ext) {
+        const colorTag = ext.getElementsByTagName("color")[0] || ext.getElementsByTagName("trk:color")[0];
+        if (colorTag?.textContent) {
+          color = colorTag.textContent.trim();
+        }
+      }
+      colors.push(color);
     }
 
-    // Assign name and description to LineString features
+    // Assign name, description, and color to each LineString
     let trkIndex = 0;
     geojson.features.forEach((f) => {
       if (f.geometry?.type === "LineString") {
         f.properties.name = names[trkIndex] || f.properties.name;
         f.properties.description = descriptions[trkIndex] || "No description available";
+        if (colors[trkIndex]) {
+          f.properties.stroke = colors[trkIndex]; // ⬅️ Use GPX-defined stroke color
+        }
         trkIndex++;
       }
     });
 
-    // Write output file to public-tracks folder
+    // Save as .geojson
     const outFile = path.join(outputDir, file.replace(/\.gpx$/i, ".geojson"));
     fs.writeFileSync(outFile, JSON.stringify(geojson, null, 2));
 

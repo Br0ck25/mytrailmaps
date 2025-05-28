@@ -204,10 +204,12 @@ export default function MapView({
               filter: ["==", "$type", "LineString"],
               paint: {
                 "line-color": [
-                  "case",
-                  ["boolean", ["feature-state", "highlighted"], false],
-                  "#ff0000", "#666"
-                ],
+  "case",
+  ["boolean", ["feature-state", "highlighted"], false],
+  "#ff0000",
+  ["coalesce", ["get", "stroke"], "#666"]
+],
+
                 "line-opacity": [
                   "case",
                   ["boolean", ["feature-state", "highlighted"], false],
