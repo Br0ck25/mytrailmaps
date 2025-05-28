@@ -46,8 +46,11 @@ fs.readdirSync(inputDir)
       if (ext) {
         const colorTag = ext.getElementsByTagName("color")[0] || ext.getElementsByTagName("trk:color")[0];
         if (colorTag?.textContent) {
-          color = colorTag.textContent.trim();
-        }
+  let raw = colorTag.textContent.trim();
+  if (!raw.startsWith("#")) raw = `#${raw}`;
+  color = raw;
+}
+
       }
       colors.push(color);
     }
