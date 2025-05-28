@@ -3,19 +3,23 @@ const path = require("path");
 const togeojson = require("@tmcw/togeojson");
 const { DOMParser } = require("@xmldom/xmldom");
 
-const inputDir = "."; // your input directory with GPX files
-const outputDir = "../geojson-files"; // output directory for GeoJSON files
+const inputDir = "."; // GPX input directory
+const outputDir = "../geojson-files"; // GeoJSON output directory
 
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true });
+}
+
+// ✅ Convert all GPX files
 fs.readdirSync(inputDir)
   .filter((file) => file.endsWith(".gpx"))
   .forEach((file) => {
     const gpxText = fs.readFileSync(path.join(inputDir, file), "utf8");
     const dom = new DOMParser().parseFromString(gpxText, "application/xml");
 
-    // Convert GPX to GeoJSON
     const geojson = togeojson.gpx(dom);
 
-    // Extract track names and descriptions
+    // Extract track metadata
     const trkEls = dom.getElementsByTagName("trk");
     const names = [];
     const descriptions = [];
@@ -29,7 +33,7 @@ fs.readdirSync(inputDir)
       descriptions.push(descTag?.textContent || cmtTag?.textContent || "");
     }
 
-    // Assign correct name + description to each LineString
+    // Assign metadata to LineString features
     let trkIndex = 0;
     geojson.features.forEach((f) => {
       if (f.geometry?.type === "LineString") {
@@ -40,8 +44,18 @@ fs.readdirSync(inputDir)
     });
 
     // Save GeoJSON
-    const outPath = path.join(outputDir, file.replace(".gpx", ".geojson"));
+    const outPath = path.join(outputDir, file.replace(/\.gpx$/i, ".geojson"));
     fs.writeFileSync(outPath, JSON.stringify(geojson, null, 2));
 
     console.log("✅ Converted:", file);
   });
+
+// ✅ Auto-generate manifest.json
+const manifestFiles = fs.readdirSync(outputDir)
+  .filter(f => f.toLowerCase().endsWith(".geojson"))
+  .sort();
+
+const manifestPath = path.join(outputDir, "manifest.json");
+fs.writeFileSync(manifestPath, JSON.stringify(manifestFiles, null, 2));
+
+console.log(`📄 Manifest updated with ${manifestFiles.length} track(s).`);

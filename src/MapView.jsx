@@ -2,28 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-// ✅ Your core track files
-const geojsonFiles = [
-  "BlackMountainOffRoadAdventureArea.geojson",
-  "BlueHollerOff-RoadPark.geojson",
-  "Brimstone2023.geojson",
-  "BryantGroveTrail.geojson",
-  "CarolinaAdventureWorld.geojson",
-  "DirtyTurtleOff-RoadParkDTOR.geojson",
-  "FlatNastyOff-RoadPark.geojson",
-  "GoldenMountainPark.geojson",
-  "HatfieldMcCoyTrails-Bearwallow.geojson",
-  "HatfieldMcCoyTrails-Warrior.geojson",
-  "HawkPrideOff-Road.geojson",
-  "Hollerwood.geojson",
-  "KentuckyAdventureTrail.geojson",
-  "leatherwood-off-road-park.geojson",
-  "MineMadeAdventurePark.geojson",
-  "PatawomackAdventurePark.geojson",
-  "PickettStateForestOHVTrailMap.geojson",
-  "RedbirdCrestTrailSystem.geojson"
-];
-
 export default function MapView({
   showTracks,
   showNames,
@@ -34,9 +12,19 @@ export default function MapView({
   const mapRef = useRef(null);
   const currentMap = useRef(null);
   const lastHighlighted = useRef(null);
+
+  const [mainGeojsonFiles, setMainGeojsonFiles] = useState([]);
   const [publicGeojsonFiles, setPublicGeojsonFiles] = useState([]);
 
-  // 🔁 Load manifest.json for public tracks
+  // Load main tracks from /tracks/manifest.json
+  useEffect(() => {
+    fetch("/tracks/manifest.json")
+      .then((res) => res.json())
+      .then(setMainGeojsonFiles)
+      .catch((err) => console.error("❌ Failed to load main track manifest:", err));
+  }, []);
+
+  // Load public tracks from /public-tracks/manifest.json
   useEffect(() => {
     fetch("/public-tracks/manifest.json")
       .then((res) => res.json())
@@ -44,7 +32,7 @@ export default function MapView({
       .catch((err) => console.error("❌ Failed to load public track manifest:", err));
   }, []);
 
-  // 🧭 Update visibility of dynamic layers
+  // Toggle visibility for layers
   useEffect(() => {
     const map = currentMap.current;
     if (!map || !map.getStyle()) return;
@@ -97,8 +85,8 @@ export default function MapView({
         }
       });
 
-      // 🟩 MAIN TRACKS
-      geojsonFiles.forEach((filename) => {
+      // MAIN TRACKS
+      mainGeojsonFiles.forEach((filename) => {
         const slug = filename.replace(".geojson", "").toLowerCase();
         const sourceId = `track-${slug}`;
         const lineId = `${sourceId}-line`;
@@ -184,7 +172,7 @@ export default function MapView({
           });
       });
 
-      // 🟨 PUBLIC TRACKS
+      // PUBLIC TRACKS
       publicGeojsonFiles.forEach((filename) => {
         const slug = filename.replace(".geojson", "").toLowerCase();
         const sourceId = `public-${slug}`;
@@ -193,7 +181,7 @@ export default function MapView({
         fetch(`/public-tracks/${filename}`)
           .then(res => res.json())
           .then((data) => {
-            data.features.forEach((f, idx) => f.id = idx); // Assign feature IDs
+            data.features.forEach((f, idx) => f.id = idx);
 
             map.addSource(sourceId, { type: "geojson", data });
 
@@ -203,14 +191,14 @@ export default function MapView({
               source: sourceId,
               filter: ["==", "$type", "LineString"],
               paint: {
-  "line-color": ["coalesce", ["get", "stroke"], "#666"],
-  "line-opacity": [
-    "case",
-    ["boolean", ["feature-state", "highlighted"], false],
-    1, 0.2
-  ],
-  "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
-},
+                "line-color": ["coalesce", ["get", "stroke"], "#666"],
+                "line-opacity": [
+                  "case",
+                  ["boolean", ["feature-state", "highlighted"], false],
+                  1, 0.2
+                ],
+                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
+              },
               layout: { "line-cap": "round", "line-join": "round" }
             });
 
@@ -219,6 +207,7 @@ export default function MapView({
           });
       });
 
+      // CLICK HANDLER
       map.on("click", (e) => {
         const layersToCheck = map.getStyle().layers.filter((l) =>
           l.id.endsWith("-line")
@@ -260,7 +249,7 @@ export default function MapView({
     });
 
     return () => map.remove();
-  }, [publicGeojsonFiles]);
+  }, [mainGeojsonFiles, publicGeojsonFiles]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
