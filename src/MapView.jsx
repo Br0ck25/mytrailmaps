@@ -6,7 +6,7 @@ import booleanEqual from "@turf/boolean-equal";
 import lineOverlap from "@turf/line-overlap";
 import { lineString } from "@turf/helpers";
 
-function isDuplicateLine(lineFeature, mainLines, threshold = 0.05) {
+function isDuplicateLine(lineFeature, mainLines, threshold = 0.01) {
   const publicLine = lineString(lineFeature.geometry.coordinates);
 
   return mainLines.some(main => {
