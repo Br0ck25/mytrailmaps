@@ -104,7 +104,10 @@ export default function MapView({
         const sourceId = `${sourcePrefix}-${slug}`;
 
         fetch(isPublic ? `/public-tracks/${filename}` : `/tracks/${filename}`)
-          .then(res => res.json())
+          .then(res => {
+            if (!res.ok) throw new Error(`Failed to fetch ${filename}: ${res.statusText}`);
+            return res.json();
+          })
           .then(rawData => {
             let data = filename.endsWith(".topojson")
               ? feature(rawData, rawData.objects[Object.keys(rawData.objects)[0]])
@@ -228,7 +231,8 @@ export default function MapView({
 
             map.on("mouseenter", `${sourceId}-line`, () => map.getCanvas().style.cursor = "pointer");
             map.on("mouseleave", `${sourceId}-line`, () => map.getCanvas().style.cursor = "");
-          });
+          })
+          .catch(err => console.error(`❌ Error loading ${filename}:`, err));
       };
 
       mainGeojsonFiles.forEach(f => addTrackLayers(f, "track"));
