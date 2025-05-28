@@ -3,6 +3,24 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { feature } from "topojson-client";
 
+function isDuplicateLine(lineFeature, mainLines, threshold = 0.8) {
+  const coords = lineFeature.geometry?.coordinates;
+  if (!coords || !Array.isArray(coords)) return false;
+
+  return mainLines.some(main => {
+    const mainCoords = main.geometry?.coordinates;
+    if (!mainCoords || !Array.isArray(mainCoords)) return false;
+
+    const shared = coords.filter(c1 =>
+      mainCoords.some(c2 =>
+        Math.abs(c1[0] - c2[0]) < 0.0001 && Math.abs(c1[1] - c2[1]) < 0.0001
+      )
+    );
+    return shared.length / coords.length >= threshold;
+  });
+}
+
+
 export default function MapView({
   showTracks,
   showNames,
@@ -68,6 +86,8 @@ export default function MapView({
 
     map.on("load", () => {
       const mainWaypointNames = new Set();
+    const mainTrackLines = [];
+
       map.once("idle", () => {
         if (typeof onGeolocateControlReady === "function") {
           onGeolocateControlReady(() => {
@@ -261,8 +281,18 @@ export default function MapView({
       localStorage.setItem("mapZoom", map.getZoom());
     });
 
-    return () => map.remove();
-  }, [mainGeojsonFiles, publicGeojsonFiles]);
+    if (!mapRef.current) return;
+
+    return () => map.remove();return () => {
+  if (currentMap.current) {
+    try {
+      currentMap.current.remove();
+    } catch (e) {
+      console.warn("Map removal failed:", e.message);
+    }
+  }
+}
+}, [mainGeojsonFiles, publicGeojsonFiles]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
