@@ -203,12 +203,7 @@ export default function MapView({
               source: sourceId,
               filter: ["==", "$type", "LineString"],
               paint: {
-                "line-color": [
-  "case",
-  ["boolean", ["feature-state", "highlighted"], false],
-  "#ff0000",
-  ["coalesce", ["get", "stroke"], "#666"]
-],
+                "line-color": ["coalesce", ["get", "stroke"], "#666"],
 
                 "line-opacity": [
                   "case",
