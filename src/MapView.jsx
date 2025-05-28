@@ -6,7 +6,7 @@ import length from "@turf/length";
 import { lineString } from "@turf/helpers";
 import lineOverlap from "@turf/line-overlap";
 
-function isDuplicateLine(lineFeature, mainLines, threshold = 0.8) {
+function isDuplicateLine(lineFeature, mainLines, threshold = 0.05) {
   const coords = lineFeature.geometry?.coordinates;
   if (!Array.isArray(coords) || coords.some(c => !Array.isArray(c) || c.length !== 2 || isNaN(c[0]) || isNaN(c[1]))) {
     return false; // invalid geometry
