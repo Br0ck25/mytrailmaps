@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
+// ✅ Your core track files
 const geojsonFiles = [
   "BlackMountainOffRoadAdventureArea.geojson",
   "BlueHollerOff-RoadPark.geojson",
@@ -32,7 +33,18 @@ export default function MapView({
 }) {
   const mapRef = useRef(null);
   const currentMap = useRef(null);
+  const lastHighlighted = useRef(null);
+  const [publicGeojsonFiles, setPublicGeojsonFiles] = useState([]);
 
+  // 🔁 Load manifest.json for public tracks
+  useEffect(() => {
+    fetch("/public-tracks/manifest.json")
+      .then((res) => res.json())
+      .then(setPublicGeojsonFiles)
+      .catch((err) => console.error("❌ Failed to load public track manifest:", err));
+  }, []);
+
+  // 🧭 Update visibility of dynamic layers
   useEffect(() => {
     const map = currentMap.current;
     if (!map || !map.getStyle()) return;
@@ -76,22 +88,16 @@ export default function MapView({
     });
     map.addControl(geolocate);
 
-    // Add after geolocate definition
-map.on("load", () => {
-  // ✅ Wait until the map finishes rendering everything (controls too)
-  map.once("idle", () => {
-    if (onGeolocateControlReady && typeof onGeolocateControlReady === "function") {
-      onGeolocateControlReady(() => {
-        if (geolocate && typeof geolocate.trigger === "function") {
-          geolocate.trigger();
+    map.on("load", () => {
+      map.once("idle", () => {
+        if (typeof onGeolocateControlReady === "function") {
+          onGeolocateControlReady(() => {
+            if (geolocate?.trigger) geolocate.trigger();
+          });
         }
       });
-    }
-  });
 
-
-
-
+      // 🟩 MAIN TRACKS
       geojsonFiles.forEach((filename) => {
         const slug = filename.replace(".geojson", "").toLowerCase();
         const sourceId = `track-${slug}`;
@@ -101,10 +107,7 @@ map.on("load", () => {
         const waypointLabelId = `${sourceId}-waypoint-labels`;
 
         fetch(`/tracks/${filename}`)
-          .then((res) => {
-            if (!res.ok) throw new Error(`❌ Failed to load ${filename}`);
-            return res.json();
-          })
+          .then((res) => res.json())
           .then((data) => {
             map.addSource(sourceId, { type: "geojson", data });
 
@@ -118,17 +121,11 @@ map.on("load", () => {
                 "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
                 "line-opacity": showTracks ? 1 : 0,
               },
-              layout: {
-                "line-cap": "round",
-                "line-join": "round",
-              },
+              layout: { "line-cap": "round", "line-join": "round" }
             });
-            map.on("mouseenter", lineId, () => {
-  map.getCanvas().style.cursor = "pointer";
-});
-map.on("mouseleave", lineId, () => {
-  map.getCanvas().style.cursor = "";
-});
+
+            map.on("mouseenter", lineId, () => map.getCanvas().style.cursor = "pointer");
+            map.on("mouseleave", lineId, () => map.getCanvas().style.cursor = "");
 
             map.addLayer({
               id: labelId,
@@ -155,9 +152,7 @@ map.on("mouseleave", lineId, () => {
               type: "circle",
               source: sourceId,
               filter: ["==", "$type", "Point"],
-              layout: {
-                visibility: showWaypoints ? "visible" : "none",
-              },
+              layout: { visibility: showWaypoints ? "visible" : "none" },
               paint: {
                 "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
                 "circle-color": "#ff6600",
@@ -186,11 +181,48 @@ map.on("mouseleave", lineId, () => {
               },
               minzoom: 12,
             });
-          })
-          .catch((err) => console.error(err));
+          });
       });
 
-      // ✅ Show popup with name + description
+      // 🟨 PUBLIC TRACKS
+      publicGeojsonFiles.forEach((filename) => {
+        const slug = filename.replace(".geojson", "").toLowerCase();
+        const sourceId = `public-${slug}`;
+        const lineId = `${sourceId}-line`;
+
+        fetch(`/public-tracks/${filename}`)
+          .then(res => res.json())
+          .then((data) => {
+            data.features.forEach((f, idx) => f.id = idx); // Assign feature IDs
+
+            map.addSource(sourceId, { type: "geojson", data });
+
+            map.addLayer({
+              id: lineId,
+              type: "line",
+              source: sourceId,
+              filter: ["==", "$type", "LineString"],
+              paint: {
+                "line-color": [
+                  "case",
+                  ["boolean", ["feature-state", "highlighted"], false],
+                  "#ff0000", "#666"
+                ],
+                "line-opacity": [
+                  "case",
+                  ["boolean", ["feature-state", "highlighted"], false],
+                  1, 0.2
+                ],
+                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
+              },
+              layout: { "line-cap": "round", "line-join": "round" }
+            });
+
+            map.on("mouseenter", lineId, () => map.getCanvas().style.cursor = "pointer");
+            map.on("mouseleave", lineId, () => map.getCanvas().style.cursor = "");
+          });
+      });
+
       map.on("click", (e) => {
         const layersToCheck = map.getStyle().layers.filter((l) =>
           l.id.endsWith("-line")
@@ -198,7 +230,20 @@ map.on("mouseleave", lineId, () => {
 
         const features = map.queryRenderedFeatures(e.point, { layers: layersToCheck });
         if (features.length > 0) {
-          const props = features[0].properties;
+          const feature = features[0];
+          const source = feature.layer.source;
+          const id = feature.id;
+
+          if (lastHighlighted.current) {
+            map.setFeatureState(lastHighlighted.current, { highlighted: false });
+          }
+
+          if (id !== undefined) {
+            lastHighlighted.current = { source, id };
+            map.setFeatureState({ source, id }, { highlighted: true });
+          }
+
+          const props = feature.properties;
           new maplibregl.Popup()
             .setLngLat(e.lngLat)
             .setHTML(`
@@ -219,7 +264,7 @@ map.on("mouseleave", lineId, () => {
     });
 
     return () => map.remove();
-  }, []);
+  }, [publicGeojsonFiles]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }

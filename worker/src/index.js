@@ -156,6 +156,63 @@ export default {
   return new Response(tile, { headers });
 }
 
+// POST /upload-public-track — allow public GPX uploads and convert to GeoJSON
+if (method === "POST" && path === "/upload-public-track") {
+  const contentType = request.headers.get("content-type") || "";
+  if (!contentType.includes("multipart/form-data")) {
+    return new Response("Expected multipart/form-data", {
+      status: 400,
+      headers: { "Access-Control-Allow-Origin": "*" },
+    });
+  }
+
+  const formData = await request.formData();
+  const file = formData.get("file");
+
+  if (!file || typeof file.arrayBuffer !== "function") {
+    return new Response("Missing or invalid file upload", {
+      status: 400,
+      headers: { "Access-Control-Allow-Origin": "*" },
+    });
+  }
+
+  const gpxBuffer = await file.arrayBuffer();
+  const gpxText = new TextDecoder().decode(gpxBuffer);
+
+  try {
+    // Convert GPX → GeoJSON
+    const { gpx } = await import("@tmcw/togeojson");
+    const { DOMParser } = await import("@xmldom/xmldom");
+    const dom = new DOMParser().parseFromString(gpxText, "application/xml");
+    const geojson = gpx(dom);
+
+    // Save to R2 under a UUID
+    const id = crypto.randomUUID();
+    await env.MYTRAILMAPS.put(`public-tracks/${id}/original.gpx`, gpxText);
+    await env.MYTRAILMAPS.put(
+      `public-tracks/${id}/converted.geojson`,
+      JSON.stringify(geojson, null, 2)
+    );
+
+    return new Response(JSON.stringify({
+      success: true,
+      id,
+      geojsonUrl: `/public-tracks/${id}/converted.geojson`
+    }), {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      }
+    });
+
+  } catch (err) {
+    console.error("❌ Failed to convert GPX:", err);
+    return new Response("GPX conversion error", {
+      status: 500,
+      headers: { "Access-Control-Allow-Origin": "*" },
+    });
+  }
+}
 
       return new Response("Not Found", {
         status: 404,
