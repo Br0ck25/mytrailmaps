@@ -78,14 +78,17 @@ export default function MapView({
 
     // Add after geolocate definition
 map.on("load", () => {
-  if (onGeolocateControlReady && typeof onGeolocateControlReady === "function") {
-    onGeolocateControlReady(() => {
-      // Make sure the control is initialized
-      if (geolocate) {
-        geolocate.trigger(); // 👉 this should fire the location update
-      }
-    });
-  }
+  // ✅ Wait until the map finishes rendering everything (controls too)
+  map.once("idle", () => {
+    if (onGeolocateControlReady && typeof onGeolocateControlReady === "function") {
+      onGeolocateControlReady(() => {
+        if (geolocate && typeof geolocate.trigger === "function") {
+          geolocate.trigger();
+        }
+      });
+    }
+  });
+
 
 
 
