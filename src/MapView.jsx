@@ -77,11 +77,12 @@ export default function MapView({
     map.addControl(geolocate);
 
     map.on("load", () => {
-      if (onGeolocateControlReady) {
-        setTimeout(() => {
-          onGeolocateControlReady(() => geolocate.trigger());
-        }, 0);
-      }
+  if (onGeolocateControlReady) {
+    onGeolocateControlReady(() => {
+      geolocate.trigger(); // 👈 this is the key
+    });
+  }
+
 
       geojsonFiles.forEach((filename) => {
         const slug = filename.replace(".geojson", "").toLowerCase();
