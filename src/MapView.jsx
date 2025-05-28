@@ -100,7 +100,7 @@ export default function MapView({
                 "line-opacity": [
                   "case",
                   ["boolean", ["feature-state", "highlighted"], false],
-                  1, isPublic ? 0.2 : 1
+                  1, isPublic ? 0.6 : 1
                 ],
                 "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
               },
