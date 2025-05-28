@@ -76,12 +76,17 @@ export default function MapView({
     });
     map.addControl(geolocate);
 
-    map.on("load", () => {
-  if (onGeolocateControlReady) {
+    // Add after geolocate definition
+map.on("load", () => {
+  if (onGeolocateControlReady && typeof onGeolocateControlReady === "function") {
     onGeolocateControlReady(() => {
-      geolocate.trigger(); // 👈 this is the key
+      // Make sure the control is initialized
+      if (geolocate) {
+        geolocate.trigger(); // 👉 this should fire the location update
+      }
     });
   }
+
 
 
       geojsonFiles.forEach((filename) => {
