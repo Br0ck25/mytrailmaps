@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "44 (Hatfield Mc Coy Trails Warrior)",
+        "name": "44",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1241,11 +1240,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 (Hatfield Mc Coy Trails Warrior)",
+        "name": "21",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3387,11 +3385,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "54 (Hatfield Mc Coy Trails Warrior)",
+        "name": "54",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3848,11 +3845,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 (Hatfield Mc Coy Trails Warrior)",
+        "name": "29",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4959,11 +4955,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (Hatfield Mc Coy Trails Warrior)",
+        "name": "17",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5960,11 +5955,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 (Hatfield Mc Coy Trails Warrior)",
+        "name": "37",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7506,11 +7500,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 (Hatfield Mc Coy Trails Warrior)",
+        "name": "32",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9587,11 +9580,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "77 (Hatfield Mc Coy Trails Warrior)",
+        "name": "77",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10373,11 +10365,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "95 (Hatfield Mc Coy Trails Warrior)",
+        "name": "95",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10669,11 +10660,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "97 (Hatfield Mc Coy Trails Warrior)",
+        "name": "97",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11435,11 +11425,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (Hatfield Mc Coy Trails Warrior)",
+        "name": "11",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12581,11 +12570,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (Hatfield Mc Coy Trails Warrior)",
+        "name": "30",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13912,11 +13900,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 (Hatfield Mc Coy Trails Warrior)",
+        "name": "31",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14178,11 +14165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "58 (Hatfield Mc Coy Trails Warrior)",
+        "name": "58",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15714,11 +15700,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 (Hatfield Mc Coy Trails Warrior)",
+        "name": "22",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17615,11 +17600,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "71 (Hatfield Mc Coy Trails Warrior)",
+        "name": "71",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18481,11 +18465,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50 (Hatfield Mc Coy Trails Warrior)",
+        "name": "50",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18822,11 +18805,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 (Hatfield Mc Coy Trails Warrior)",
+        "name": "16",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20553,11 +20535,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "73 (Hatfield Mc Coy Trails Warrior)",
+        "name": "73",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21212,6 +21193,22 @@
           37.35718766239637,
           699
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.60429297593836,
+          37.344106113747685
+        ]
+      },
+      "properties": {
+        "name": "Hatfield Mc Coy Trails Warrior",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

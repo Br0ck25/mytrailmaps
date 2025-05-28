@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Gauntlet (southington off road park)",
+        "name": "The Gauntlet",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -306,11 +305,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Entrance to Mini-Sand Dunes (southington off road park)",
+        "name": "Entrance to Mini-Sand Dunes",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -577,11 +575,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Lower Rim (southington off road park)",
+        "name": "Lower Rim",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -603,11 +600,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Lower Rim (southington off road park)",
+        "name": "Lower Rim",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -634,11 +630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Haul Rd (southington off road park)",
+        "name": "Haul Rd",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -710,11 +705,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Gauntlet (southington off road park)",
+        "name": "The Gauntlet",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1281,11 +1275,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Entrance to Mini-Sand Dunes (southington off road park)",
+        "name": "Entrance to Mini-Sand Dunes",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3082,11 +3075,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Gauntlet (southington off road park)",
+        "name": "The Gauntlet",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3328,11 +3320,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Backwoods 3 (southington off road park)",
+        "name": "Backwoods 3",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3474,11 +3465,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Haul Rd (southington off road park)",
+        "name": "Haul Rd",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3555,11 +3545,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Backwoods 4 (southington off road park)",
+        "name": "Backwoods 4",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3671,11 +3660,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Upper Rim (southington off road park)",
+        "name": "Upper Rim",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3942,11 +3930,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Lower Rim (southington off road park)",
+        "name": "Lower Rim",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4048,11 +4035,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Not So Mini Tank Trap (southington off road park)",
+        "name": "Not So Mini Tank Trap",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4339,11 +4325,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Backwoods 1 (southington off road park)",
+        "name": "Backwoods 1",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4830,11 +4815,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Gauntlet (southington off road park)",
+        "name": "The Gauntlet",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5176,11 +5160,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Frazier Hills (southington off road park)",
+        "name": "Frazier Hills",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5287,11 +5270,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Backwoods 5 (southington off road park)",
+        "name": "Backwoods 5",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5563,11 +5545,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Gauntlet (southington off road park)",
+        "name": "The Gauntlet",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5739,11 +5720,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Beaver Way (southington off road park)",
+        "name": "Beaver Way",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5905,11 +5885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Timber Trail (southington off road park)",
+        "name": "Timber Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6606,11 +6585,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Gauntlet (southington off road park)",
+        "name": "The Gauntlet",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7637,11 +7615,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Fraizer Hills (southington off road park)",
+        "name": "Fraizer Hills",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7763,11 +7740,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Tiger's Back (southington off road park)",
+        "name": "Tiger's Back",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7819,11 +7795,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Haul Rd (southington off road park)",
+        "name": "Haul Rd",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7910,11 +7885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Colorado (southington off road park)",
+        "name": "The Colorado",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7996,11 +7970,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Angry Beaver (southington off road park)",
+        "name": "Angry Beaver",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8112,11 +8085,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Haul Rd (southington off road park)",
+        "name": "Haul Rd",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8443,11 +8415,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Photo Run (southington off road park)",
+        "name": "Photo Run",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8754,11 +8725,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Haul Rd (southington off road park)",
+        "name": "Haul Rd",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8955,11 +8925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Lower Rim (southington off road park)",
+        "name": "Lower Rim",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9211,11 +9180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Photo Run Extreme (southington off road park)",
+        "name": "Photo Run Extreme",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9402,11 +9370,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Entrance to Mini-Sand Dunes (southington off road park)",
+        "name": "Entrance to Mini-Sand Dunes",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11992,6 +11959,22 @@
           41.2752462158021,
           291
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.01940335073023,
+          41.278010284700194
+        ]
+      },
+      "properties": {
+        "name": "southington off road park",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

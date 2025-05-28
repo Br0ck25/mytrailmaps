@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Solana Forest Loop South (northwoods)",
+        "name": "Solana Forest Loop South",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -66,11 +65,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Ten Bruin Shortcut (northwoods)",
+        "name": "Ten Bruin Shortcut",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -507,11 +505,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Adventure (northwoods)",
+        "name": "Adventure",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1103,11 +1100,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Rabey Line Trail (northwoods)",
+        "name": "Rabey Line Trail",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1339,11 +1335,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Southeast Run (northwoods)",
+        "name": "Southeast Run",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1620,11 +1615,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Hill City Quadna Spur (northwoods)",
+        "name": "Hill City Quadna Spur",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1776,11 +1770,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Blind Lake Loop South (northwoods)",
+        "name": "Blind Lake Loop South",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2272,11 +2265,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Clear Cut Road (northwoods)",
+        "name": "Clear Cut Road",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2428,11 +2420,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moose River North (northwoods)",
+        "name": "Moose River North",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4309,11 +4300,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Adventure (northwoods)",
+        "name": "Adventure",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6690,11 +6680,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Idun Road (northwoods)",
+        "name": "Idun Road",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6891,11 +6880,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "UPM Blandin South (northwoods)",
+        "name": "UPM Blandin South",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10932,11 +10920,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Solana Forest Loop Main Trail (northwoods)",
+        "name": "Solana Forest Loop Main Trail",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12008,11 +11995,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moose River Cutoff (northwoods)",
+        "name": "Moose River Cutoff",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12299,11 +12285,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "South Lawler South Loop (northwoods)",
+        "name": "South Lawler South Loop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12900,11 +12885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "North Lawler Loop Cutoff (northwoods)",
+        "name": "North Lawler Loop Cutoff",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12991,11 +12975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Solana Forest Loop Little Loop (northwoods)",
+        "name": "Solana Forest Loop Little Loop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13122,11 +13105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "South Lawler North Loop (northwoods)",
+        "name": "South Lawler North Loop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13328,11 +13310,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moose River Little Loop (northwoods)",
+        "name": "Moose River Little Loop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16904,11 +16885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Blind Lake Connector (northwoods)",
+        "name": "Blind Lake Connector",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18615,11 +18595,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "North Lawler Loop 006 (northwoods)",
+        "name": "North Lawler Loop 006",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19236,11 +19215,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Blind Lake Loop North (northwoods)",
+        "name": "Blind Lake Loop North",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19652,11 +19630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Hill City Connector (northwoods)",
+        "name": "Hill City Connector",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20738,11 +20715,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Solana Forest Loop Center (northwoods)",
+        "name": "Solana Forest Loop Center",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20804,11 +20780,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Walter Jacobson Trl (northwoods)",
+        "name": "Walter Jacobson Trl",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21650,11 +21625,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moose River at Soo (northwoods)",
+        "name": "Moose River at Soo",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21981,11 +21955,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "South Lawler Loop Connector 1 (northwoods)",
+        "name": "South Lawler Loop Connector 1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22207,11 +22180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Solana Forest Loop West (northwoods)",
+        "name": "Solana Forest Loop West",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22338,11 +22310,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "UPM Blandin North (northwoods)",
+        "name": "UPM Blandin North",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26264,11 +26235,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moose River West Loop (northwoods)",
+        "name": "Moose River West Loop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27155,11 +27125,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Birch Creek (northwoods)",
+        "name": "Birch Creek",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27266,11 +27235,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "South Lawler Soo to Loop (northwoods)",
+        "name": "South Lawler Soo to Loop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27307,11 +27275,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moose River South (northwoods)",
+        "name": "Moose River South",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31558,11 +31525,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Northwest Corner (northwoods)",
+        "name": "Northwest Corner",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31829,11 +31795,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jones Farm Road (northwoods)",
+        "name": "Jones Farm Road",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31980,11 +31945,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Campground Spur (northwoods)",
+        "name": "Campground Spur",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32066,11 +32030,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Sand Hills (northwoods)",
+        "name": "Sand Hills",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32357,11 +32320,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "North Soo Line (northwoods)",
+        "name": "North Soo Line",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32548,11 +32510,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "South Soo (northwoods)",
+        "name": "South Soo",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32678,6 +32639,22 @@
             378.67578125
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.57086993843858,
+          46.778298426312254
+        ]
+      },
+      "properties": {
+        "name": "northwoods",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

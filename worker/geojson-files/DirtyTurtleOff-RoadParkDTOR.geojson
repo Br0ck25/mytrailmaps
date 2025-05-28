@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -226,11 +225,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Dirty Turtle Off Road Park DTOR)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -442,11 +440,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -508,11 +505,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -634,11 +630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -690,11 +685,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -731,11 +725,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1022,11 +1015,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1093,11 +1085,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1174,11 +1165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1290,11 +1280,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1466,11 +1455,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1542,11 +1530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1618,11 +1605,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1659,11 +1645,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1720,11 +1705,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1826,11 +1810,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1877,11 +1860,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1943,11 +1925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2049,11 +2030,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2125,11 +2105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 Thumpers Glory (Dirty Turtle Off Road Park DTOR)",
+        "name": "2 Thumpers Glory",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2401,11 +2380,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2507,11 +2485,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2548,11 +2525,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 Snot Hill (Dirty Turtle Off Road Park DTOR)",
+        "name": "22 Snot Hill",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2739,11 +2715,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2805,11 +2780,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Dirty Turtle Off Road Park DTOR)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2896,11 +2870,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2962,11 +2935,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3003,11 +2975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3059,11 +3030,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3155,11 +3125,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3301,11 +3270,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3352,11 +3320,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3393,11 +3360,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3434,11 +3400,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3555,11 +3520,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3736,11 +3700,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4042,11 +4005,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4093,11 +4055,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4244,11 +4205,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4325,11 +4285,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4441,11 +4400,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4522,11 +4480,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4588,11 +4545,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4754,11 +4710,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4935,11 +4890,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5061,11 +5015,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5137,11 +5090,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5188,11 +5140,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5429,11 +5380,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5495,11 +5445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5561,11 +5510,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5612,11 +5560,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5703,11 +5650,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5834,11 +5780,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5910,11 +5855,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 Step Up (Dirty Turtle Off Road Park DTOR)",
+        "name": "10 Step Up",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6041,11 +5985,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6127,11 +6070,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6223,11 +6165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6339,11 +6280,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6390,11 +6330,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6546,11 +6485,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6652,11 +6590,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6763,11 +6700,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6854,11 +6790,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6950,11 +6885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7001,11 +6935,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7042,11 +6975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7113,11 +7045,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7189,11 +7120,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7265,11 +7195,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7371,11 +7300,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7417,11 +7345,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7458,11 +7385,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7609,11 +7535,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8210,11 +8135,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8251,11 +8175,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8362,11 +8285,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8658,11 +8580,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8749,11 +8670,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8885,11 +8805,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9041,11 +8960,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 Cliff Hanger (Dirty Turtle Off Road Park DTOR)",
+        "name": "16 Cliff Hanger",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9112,11 +9030,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9193,11 +9110,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9249,11 +9165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "RV Road (Dirty Turtle Off Road Park DTOR)",
+        "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9295,11 +9210,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 Horse Shoe (Dirty Turtle Off Road Park DTOR)",
+        "name": "15 Horse Shoe",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11576,11 +11490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11887,11 +11800,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 Pee Pee's Revenge (Dirty Turtle Off Road Park DTOR)",
+        "name": "8 Pee Pee's Revenge",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12063,11 +11975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12199,11 +12110,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12300,11 +12210,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12351,11 +12260,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12487,11 +12395,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12593,11 +12500,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 Orange Crusher (Dirty Turtle Off Road Park DTOR)",
+        "name": "4 Orange Crusher",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12729,11 +12635,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12770,11 +12675,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12821,11 +12725,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12892,11 +12795,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 Haul Road (Dirty Turtle Off Road Park DTOR)",
+        "name": "1 Haul Road",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13353,11 +13255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13499,11 +13400,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13545,11 +13445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13801,11 +13700,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13917,11 +13815,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14118,11 +14015,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14209,11 +14105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14255,11 +14150,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14311,11 +14205,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14402,11 +14295,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14628,11 +14520,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14844,11 +14735,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14905,11 +14795,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14941,11 +14830,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15022,11 +14910,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15103,11 +14990,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15239,11 +15125,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15330,11 +15215,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15451,11 +15335,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15522,11 +15405,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15563,11 +15445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15669,11 +15550,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX Track (Dirty Turtle Off Road Park DTOR)",
+        "name": "MX Track",
         "desc": "MX Track",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "MX Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16300,11 +16180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16376,11 +16255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16722,11 +16600,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16783,11 +16660,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16854,11 +16730,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 Dork Hill (Dirty Turtle Off Road Park DTOR)",
+        "name": "17 Dork Hill",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17000,11 +16875,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17101,11 +16975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17177,11 +17050,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 Copperhead Ravine (Dirty Turtle Off Road Park DTOR)",
+        "name": "3 Copperhead Ravine",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17723,11 +17595,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17849,11 +17720,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18175,11 +18045,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18296,11 +18165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18422,11 +18290,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18478,11 +18345,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18604,11 +18470,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18645,10 +18510,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Easy (Dirty Turtle Off Road Park DTOR)",
+        "name": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18725,11 +18589,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18801,11 +18664,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18852,11 +18714,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18983,11 +18844,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19099,11 +18959,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19305,11 +19164,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19461,11 +19319,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19597,11 +19454,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19638,11 +19494,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19754,11 +19609,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19810,11 +19664,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19861,11 +19714,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19937,11 +19789,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19983,11 +19834,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20024,11 +19874,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20215,11 +20064,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20351,11 +20199,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20392,11 +20239,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20443,11 +20289,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20484,11 +20329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20565,11 +20409,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20626,11 +20469,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20697,11 +20539,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20753,11 +20594,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20829,11 +20669,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20875,11 +20714,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20951,11 +20789,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21277,11 +21114,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21318,11 +21154,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21469,11 +21304,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21595,11 +21429,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21671,11 +21504,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21712,11 +21544,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 Mission Impossible (Dirty Turtle Off Road Park DTOR)",
+        "name": "25 Mission Impossible",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21878,11 +21709,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "RV Road (Dirty Turtle Off Road Park DTOR)",
+        "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22004,11 +21834,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22055,11 +21884,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 Cedar Avenue (Dirty Turtle Off Road Park DTOR)",
+        "name": "24 Cedar Avenue",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22411,11 +22239,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22502,11 +22329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22613,11 +22439,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22769,11 +22594,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23050,11 +22874,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23291,11 +23114,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23357,11 +23179,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23408,11 +23229,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23474,11 +23294,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23585,11 +23404,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23771,11 +23589,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23862,11 +23679,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24013,11 +23829,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24229,11 +24044,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24385,11 +24199,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24456,11 +24269,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24562,11 +24374,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24678,11 +24489,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24879,11 +24689,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24975,11 +24784,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 Bloody Thicket (Dirty Turtle Off Road Park DTOR)",
+        "name": "5 Bloody Thicket",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25161,11 +24969,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25222,11 +25029,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25288,11 +25094,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25339,11 +25144,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25460,11 +25264,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25506,11 +25309,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "20 Str8t Up (Dirty Turtle Off Road Park DTOR)",
+        "name": "20 Str8t Up",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25587,11 +25389,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25633,11 +25434,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25824,11 +25624,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25895,11 +25694,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25976,11 +25774,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26052,11 +25849,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 In The Pink (Dirty Turtle Off Road Park DTOR)",
+        "name": "12 In The Pink",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26113,11 +25909,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26234,11 +26029,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26380,11 +26174,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Mini MX Track (Dirty Turtle Off Road Park DTOR)",
+        "name": "Mini MX Track",
         "desc": "Mini MX Track",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "Mini MX Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26526,11 +26319,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26582,11 +26374,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 Lady Gaga (Dirty Turtle Off Road Park DTOR)",
+        "name": "19 Lady Gaga",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26693,11 +26484,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26729,11 +26519,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26810,11 +26599,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "RV Road (Dirty Turtle Off Road Park DTOR)",
+        "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26896,11 +26684,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27002,11 +26789,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27133,11 +26919,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27304,11 +27089,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27585,11 +27369,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27631,11 +27414,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27817,11 +27599,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27918,11 +27699,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 Dakota's Run (Dirty Turtle Off Road Park DTOR)",
+        "name": "23 Dakota's Run",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28064,11 +27844,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "RV Road (Dirty Turtle Off Road Park DTOR)",
+        "name": "RV Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28130,11 +27909,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 Turtle Crack (Dirty Turtle Off Road Park DTOR)",
+        "name": "14 Turtle Crack",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28261,11 +28039,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28337,11 +28114,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28418,11 +28194,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 Hillbilly Stomp (Dirty Turtle Off Road Park DTOR)",
+        "name": "21 Hillbilly Stomp",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28524,11 +28299,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28655,11 +28429,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28761,11 +28534,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28797,11 +28569,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28838,11 +28609,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29179,11 +28949,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29255,11 +29024,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29396,11 +29164,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 Getcha Sum (Dirty Turtle Off Road Park DTOR)",
+        "name": "9 Getcha Sum",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29562,11 +29329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 Bobby's Hill (Dirty Turtle Off Road Park DTOR)",
+        "name": "7 Bobby's Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29718,11 +29484,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29799,11 +29564,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29835,11 +29599,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29976,11 +29739,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 Showtime (Dirty Turtle Off Road Park DTOR)",
+        "name": "13 Showtime",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30027,11 +29789,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30248,11 +30009,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30314,11 +30074,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30465,11 +30224,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30531,11 +30289,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30592,11 +30349,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30673,11 +30429,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30829,11 +30584,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30900,11 +30654,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30986,11 +30739,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31062,11 +30814,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31233,11 +30984,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31304,11 +31054,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31855,11 +31604,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31931,11 +31679,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32012,11 +31759,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32078,11 +31824,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32249,11 +31994,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32295,11 +32039,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32481,11 +32224,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32617,11 +32359,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32753,11 +32494,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32864,11 +32604,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33145,11 +32884,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 Oh Sh... (Dirty Turtle Off Road Park DTOR)",
+        "name": "6 Oh Sh...",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33191,11 +32929,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33277,11 +33014,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33358,11 +33094,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33509,11 +33244,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33620,11 +33354,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33731,11 +33464,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33797,11 +33529,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33898,11 +33629,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33984,11 +33714,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34030,11 +33759,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34211,11 +33939,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34307,11 +34034,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34368,11 +34094,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34564,11 +34289,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX Track (Dirty Turtle Off Road Park DTOR)",
+        "name": "MX Track",
         "desc": "MX Track",
         "stroke": "#ff5500",
-        "coordinateProperties": {},
-        "description": "MX Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34870,11 +34594,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34976,11 +34699,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35337,11 +35059,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35443,11 +35164,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35514,11 +35234,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 Super Flex (Dirty Turtle Off Road Park DTOR)",
+        "name": "11 Super Flex",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35715,11 +35434,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35801,11 +35519,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35842,11 +35559,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35898,11 +35614,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35939,11 +35654,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35980,11 +35694,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36151,11 +35864,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36277,11 +35989,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36428,11 +36139,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36534,11 +36244,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36650,11 +36359,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 Tina's Trail (Dirty Turtle Off Road Park DTOR)",
+        "name": "18 Tina's Trail",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36861,11 +36569,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36992,11 +36699,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Dirty Turtle Off Road Park DTOR)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37291,6 +36997,22 @@
           38.64022704258963,
           271
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.28209172420223,
+          38.63752079374114
+        ]
+      },
+      "properties": {
+        "name": "Dirty Turtle Off Road Park DTOR",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

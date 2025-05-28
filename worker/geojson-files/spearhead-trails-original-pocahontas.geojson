@@ -5,10 +5,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Approved Road (spearhead trails original pocahontas)",
+        "name": "ATV Approved Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6300,11 +6299,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 41 (spearhead trails original pocahontas)",
+        "name": "Trail 41",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6606,11 +6604,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 35 (spearhead trails original pocahontas)",
+        "name": "Trail 35",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10407,11 +10404,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 46 (spearhead trails original pocahontas)",
+        "name": "Trail 46",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10973,11 +10969,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 25 (spearhead trails original pocahontas)",
+        "name": "Trail 25",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14759,11 +14754,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 75 (spearhead trails original pocahontas)",
+        "name": "Trail 75",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15335,11 +15329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 61 - Haulroad (spearhead trails original pocahontas)",
+        "name": "Trail 61 - Haulroad",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21321,11 +21314,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX Trail 914 (spearhead trails original pocahontas)",
+        "name": "MX Trail 914",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21987,11 +21979,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 56 (spearhead trails original pocahontas)",
+        "name": "Trail 56",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22833,11 +22824,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 49 (spearhead trails original pocahontas)",
+        "name": "Trail 49",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24974,11 +24964,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 90 (spearhead trails original pocahontas)",
+        "name": "Trail 90",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26740,11 +26729,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 30 (spearhead trails original pocahontas)",
+        "name": "Trail 30",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28091,11 +28079,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 82 (spearhead trails original pocahontas)",
+        "name": "Trail 82",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29187,11 +29174,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 96 (spearhead trails original pocahontas)",
+        "name": "Trail 96",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30193,11 +30179,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 93 (spearhead trails original pocahontas)",
+        "name": "Trail 93",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30429,11 +30414,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 0 (spearhead trails original pocahontas)",
+        "name": "Trail 0",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30600,11 +30584,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 10 (spearhead trails original pocahontas)",
+        "name": "Trail 10",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31571,10 +31554,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Approved Road (spearhead trails original pocahontas)",
+        "name": "ATV Approved Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32001,11 +31983,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 21 (spearhead trails original pocahontas)",
+        "name": "Trail 21",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33957,11 +33938,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 33 (spearhead trails original pocahontas)",
+        "name": "Trail 33",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35608,11 +35588,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 16 (spearhead trails original pocahontas)",
+        "name": "Trail 16",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36564,11 +36543,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 1 - Mine Parking (spearhead trails original pocahontas)",
+        "name": "Trail 1 - Mine Parking",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37130,10 +37108,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Approved Road (spearhead trails original pocahontas)",
+        "name": "ATV Approved Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38055,11 +38032,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 19 (spearhead trails original pocahontas)",
+        "name": "Trail 19",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41026,11 +41002,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 99 (spearhead trails original pocahontas)",
+        "name": "Trail 99",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41512,11 +41487,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 16 (spearhead trails original pocahontas)",
+        "name": "Trail 16",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42358,11 +42332,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 89 (spearhead trails original pocahontas)",
+        "name": "Trail 89",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43234,11 +43207,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 86 (spearhead trails original pocahontas)",
+        "name": "Trail 86",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44719,6 +44691,22 @@
             0
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.36636297159025,
+          37.3130078174173
+        ]
+      },
+      "properties": {
+        "name": "spearhead trails original pocahontas",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

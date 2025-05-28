@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 All Day Sucker (Flat Nasty Off Road Park)",
+        "name": "18 All Day Sucker",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -671,11 +670,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bunny C (Flat Nasty Off Road Park)",
+        "name": "Bunny C",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -797,11 +795,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Flat Nasty Off Road Park)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1558,11 +1555,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bunny (Flat Nasty Off Road Park)",
+        "name": "Bunny",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2354,11 +2350,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 Teardrop (Flat Nasty Off Road Park)",
+        "name": "3 Teardrop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2405,11 +2400,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 The Pretzel (Flat Nasty Off Road Park)",
+        "name": "2 The Pretzel",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2546,11 +2540,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "HG Hill & Gully (Flat Nasty Off Road Park)",
+        "name": "HG Hill & Gully",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4647,11 +4640,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (Flat Nasty Off Road Park)",
+        "name": "6",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4888,10 +4880,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main road (Flat Nasty Off Road Park)",
+        "name": "Main road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4923,11 +4914,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 A Few Dollars More (Flat Nasty Off Road Park)",
+        "name": "13 A Few Dollars More",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5094,11 +5084,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "PG Proving Grounds (Flat Nasty Off Road Park)",
+        "name": "PG Proving Grounds",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5655,11 +5644,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "20 (Flat Nasty Off Road Park)",
+        "name": "20",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6891,10 +6879,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main road (Flat Nasty Off Road Park)",
+        "name": "Main road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7166,11 +7153,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road/10 Connector (Flat Nasty Off Road Park)",
+        "name": "Main Road/10 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7322,11 +7308,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road/Bunny Connector (Flat Nasty Off Road Park)",
+        "name": "Main Road/Bunny Connector",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7488,11 +7473,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "DD (Flat Nasty Off Road Park)",
+        "name": "DD",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7989,11 +7973,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Sabertooth Bunny (Flat Nasty Off Road Park)",
+        "name": "Sabertooth Bunny",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8240,11 +8223,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 Teardrop (Flat Nasty Off Road Park)",
+        "name": "3 Teardrop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8706,10 +8688,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Flat Nasty Off Road Park)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10431,11 +10412,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 The Pretzel (Flat Nasty Off Road Park)",
+        "name": "2 The Pretzel",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10877,11 +10857,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bunny (Flat Nasty Off Road Park)",
+        "name": "Bunny",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12543,11 +12522,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "HG Hill & Gully (Flat Nasty Off Road Park)",
+        "name": "HG Hill & Gully",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12809,11 +12787,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 All Day Sucker (Flat Nasty Off Road Park)",
+        "name": "18 All Day Sucker",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12985,11 +12962,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (Flat Nasty Off Road Park)",
+        "name": "17",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13286,10 +13262,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Flat Nasty Off Road Park)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13421,10 +13396,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Flat Nasty Off Road Park)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14201,11 +14175,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "20 (Flat Nasty Off Road Park)",
+        "name": "20",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14267,11 +14240,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jim's Secert (Flat Nasty Off Road Park)",
+        "name": "Jim's Secert",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14393,10 +14365,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Doublecross Course (Flat Nasty Off Road Park)",
+        "name": "Doublecross Course",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14733,11 +14704,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 Bypass (Flat Nasty Off Road Park)",
+        "name": "12 Bypass",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14969,11 +14939,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 (Flat Nasty Off Road Park)",
+        "name": "21",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15060,10 +15029,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Flat Nasty Off Road Park)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15085,11 +15053,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 Devil's Throat (Flat Nasty Off Road Park)",
+        "name": "7 Devil's Throat",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15221,11 +15188,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 (Flat Nasty Off Road Park)",
+        "name": "16",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15267,11 +15233,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 Teardrop (Flat Nasty Off Road Park)",
+        "name": "3 Teardrop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15363,11 +15328,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "HG Hill & Gully (Flat Nasty Off Road Park)",
+        "name": "HG Hill & Gully",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17054,11 +17018,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "CC (Flat Nasty Off Road Park)",
+        "name": "CC",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17990,10 +17953,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Doublecross Course (Flat Nasty Off Road Park)",
+        "name": "Doublecross Course",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18440,11 +18402,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 Copperhead (Flat Nasty Off Road Park)",
+        "name": "9 Copperhead",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18516,11 +18477,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bunny A (Flat Nasty Off Road Park)",
+        "name": "Bunny A",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18667,11 +18627,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "AA (Flat Nasty Off Road Park)",
+        "name": "AA",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19213,10 +19172,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Flat Nasty Off Road Park)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19713,11 +19671,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road/HG Connector (Flat Nasty Off Road Park)",
+        "name": "Main Road/HG Connector",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19809,10 +19766,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (Flat Nasty Off Road Park)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20164,11 +20120,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 A Few Dollars More (Flat Nasty Off Road Park)",
+        "name": "13 A Few Dollars More",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20360,11 +20315,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6B (Flat Nasty Off Road Park)",
+        "name": "6B",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20876,11 +20830,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 Get-It-Billy (Flat Nasty Off Road Park)",
+        "name": "11 Get-It-Billy",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20957,11 +20910,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (Flat Nasty Off Road Park)",
+        "name": "8",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21013,11 +20965,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Airplane Hill (Flat Nasty Off Road Park)",
+        "name": "Airplane Hill",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21059,11 +21010,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "HG Hill & Gully (Flat Nasty Off Road Park)",
+        "name": "HG Hill & Gully",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21125,11 +21075,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 Rock N' Roll (Flat Nasty Off Road Park)",
+        "name": "4 Rock N' Roll",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21526,11 +21475,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 Sleepy Hollow (Flat Nasty Off Road Park)",
+        "name": "14 Sleepy Hollow",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21817,11 +21765,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "EE (Flat Nasty Off Road Park)",
+        "name": "EE",
         "desc": "ATV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22723,11 +22670,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road/EE Connector (Flat Nasty Off Road Park)",
+        "name": "Main Road/EE Connector",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22809,11 +22755,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road/10 Connector (Flat Nasty Off Road Park)",
+        "name": "Main Road/10 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22970,11 +22915,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 Watch This (Flat Nasty Off Road Park)",
+        "name": "15 Watch This",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23101,11 +23045,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (Flat Nasty Off Road Park)",
+        "name": "10",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23152,11 +23095,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 Precision (Flat Nasty Off Road Park)",
+        "name": "19 Precision",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23238,11 +23180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 The Pretzel (Flat Nasty Off Road Park)",
+        "name": "2 The Pretzel",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23484,11 +23425,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bunny B (Flat Nasty Off Road Park)",
+        "name": "Bunny B",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23615,10 +23555,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Motocross Course (Flat Nasty Off Road Park)",
+        "name": "Motocross Course",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24345,11 +24284,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "BB (Flat Nasty Off Road Park)",
+        "name": "BB",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24706,11 +24644,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6A The Canadian Trail (Flat Nasty Off Road Park)",
+        "name": "6A The Canadian Trail",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24777,11 +24714,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 White Knuckle (Flat Nasty Off Road Park)",
+        "name": "10 White Knuckle",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26488,11 +26424,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 Depends (Flat Nasty Off Road Park)",
+        "name": "5 Depends",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28034,6 +27969,22 @@
           37.46746858465903,
           366
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.6037944437206,
+          37.47248714627659
+        ]
+      },
+      "properties": {
+        "name": "Flat Nasty Off Road Park",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

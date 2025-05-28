@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "99A (spearhaed trails mountain view)",
+        "name": "99A",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -461,11 +460,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhaed trails mountain view)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -812,11 +810,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "54 (spearhaed trails mountain view)",
+        "name": "54",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -943,11 +940,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "55 (spearhaed trails mountain view)",
+        "name": "55",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1209,11 +1205,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (spearhaed trails mountain view)",
+        "name": "3",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1495,11 +1490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (spearhaed trails mountain view)",
+        "name": "8",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2601,11 +2595,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhaed trails mountain view)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11882,11 +11875,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhaed trails mountain view)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13558,11 +13550,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27 (spearhaed trails mountain view)",
+        "name": "27",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14384,11 +14375,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 (spearhaed trails mountain view)",
+        "name": "9",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14530,11 +14520,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "95 (spearhaed trails mountain view)",
+        "name": "95",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14691,11 +14680,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "86 (spearhaed trails mountain view)",
+        "name": "86",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15052,11 +15040,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "59 (spearhaed trails mountain view)",
+        "name": "59",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15318,11 +15305,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 (spearhaed trails mountain view)",
+        "name": "16",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15809,11 +15795,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (spearhaed trails mountain view)",
+        "name": "17",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17710,11 +17695,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 (spearhaed trails mountain view)",
+        "name": "14",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18281,11 +18265,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (spearhaed trails mountain view)",
+        "name": "52",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18547,11 +18530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "80 (spearhaed trails mountain view)",
+        "name": "80",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19023,11 +19005,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 (spearhaed trails mountain view)",
+        "name": "5",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20189,11 +20170,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 (spearhaed trails mountain view)",
+        "name": "15",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20630,11 +20610,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (spearhaed trails mountain view)",
+        "name": "53",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20761,11 +20740,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "75 (spearhaed trails mountain view)",
+        "name": "75",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21512,11 +21490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "26 (spearhaed trails mountain view)",
+        "name": "26",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23193,11 +23170,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "73 (spearhaed trails mountain view)",
+        "name": "73",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24069,11 +24045,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (spearhaed trails mountain view)",
+        "name": "10",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24190,11 +24165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "93C (spearhaed trails mountain view)",
+        "name": "93C",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24396,11 +24370,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 (spearhaed trails mountain view)",
+        "name": "25",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25027,11 +25000,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "69 (spearhaed trails mountain view)",
+        "name": "69",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25313,11 +25285,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "99 (spearhaed trails mountain view)",
+        "name": "99",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25579,11 +25550,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "91 (spearhaed trails mountain view)",
+        "name": "91",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26035,10 +26005,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (spearhaed trails mountain view)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26125,11 +26094,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "83 (spearhaed trails mountain view)",
+        "name": "83",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26261,11 +26229,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 (spearhaed trails mountain view)",
+        "name": "29",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27212,11 +27179,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "58 (spearhaed trails mountain view)",
+        "name": "58",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27358,11 +27324,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "74 (spearhaed trails mountain view)",
+        "name": "74",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29104,11 +29069,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "66 (spearhaed trails mountain view)",
+        "name": "66",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30330,11 +30294,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "87 (spearhaed trails mountain view)",
+        "name": "87",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30526,10 +30489,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (spearhaed trails mountain view)",
+        "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31036,11 +30998,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "94 (spearhaed trails mountain view)",
+        "name": "94",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31692,10 +31653,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail - Road (spearhaed trails mountain view)",
+        "name": "Trail - Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32252,11 +32212,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "82 (spearhaed trails mountain view)",
+        "name": "82",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32743,11 +32702,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "57 (spearhaed trails mountain view)",
+        "name": "57",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32864,10 +32822,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail - Road (spearhaed trails mountain view)",
+        "name": "Trail - Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33124,11 +33081,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "97 (spearhaed trails mountain view)",
+        "name": "97",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33365,11 +33321,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "68 (spearhaed trails mountain view)",
+        "name": "68",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33576,11 +33531,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (spearhaed trails mountain view)",
+        "name": "4",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36312,11 +36266,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (spearhaed trails mountain view)",
+        "name": "10",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36388,11 +36341,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "90 (spearhaed trails mountain view)",
+        "name": "90",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36499,11 +36451,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "88 (spearhaed trails mountain view)",
+        "name": "88",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36960,11 +36911,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50 (spearhaed trails mountain view)",
+        "name": "50",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37351,11 +37301,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 (spearhaed trails mountain view)",
+        "name": "13",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37532,11 +37481,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (spearhaed trails mountain view)",
+        "name": "6",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38423,11 +38371,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (spearhaed trails mountain view)",
+        "name": "18",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38844,11 +38791,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 (spearhaed trails mountain view)",
+        "name": "22",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39865,11 +39811,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "73A (spearhaed trails mountain view)",
+        "name": "73A",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40246,11 +40191,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "96 (spearhaed trails mountain view)",
+        "name": "96",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40497,11 +40441,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "85 (spearhaed trails mountain view)",
+        "name": "85",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41408,11 +41351,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "28 (spearhaed trails mountain view)",
+        "name": "28",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41969,11 +41911,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "60 (spearhaed trails mountain view)",
+        "name": "60",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42110,11 +42051,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "72 (spearhaed trails mountain view)",
+        "name": "72",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42286,11 +42226,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "89 (spearhaed trails mountain view)",
+        "name": "89",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42467,11 +42406,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "56 (spearhaed trails mountain view)",
+        "name": "56",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42578,11 +42516,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "79 (spearhaed trails mountain view)",
+        "name": "79",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44074,11 +44011,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "67 (spearhaed trails mountain view)",
+        "name": "67",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44280,11 +44216,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 (spearhaed trails mountain view)",
+        "name": "24",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44991,11 +44926,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (spearhaed trails mountain view)",
+        "name": "12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46332,11 +46266,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "51 (spearhaed trails mountain view)",
+        "name": "51",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46673,11 +46606,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 (spearhaed trails mountain view)",
+        "name": "21",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46934,11 +46866,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (spearhaed trails mountain view)",
+        "name": "7",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -47600,11 +47531,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "92 (spearhaed trails mountain view)",
+        "name": "92",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -47981,11 +47911,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "76 (spearhaed trails mountain view)",
+        "name": "76",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -48377,11 +48306,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (spearhaed trails mountain view)",
+        "name": "19",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52556,6 +52484,22 @@
           36.95803164725849,
           859
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.36061528593426,
+          36.95159259408018
+        ]
+      },
+      "properties": {
+        "name": "spearhaed trails mountain view",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

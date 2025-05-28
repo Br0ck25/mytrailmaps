@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "93 (rush off road)",
+        "name": "93",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -141,11 +140,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (rush off road)",
+        "name": "30",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -542,11 +540,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 (rush off road)",
+        "name": "5",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -823,11 +820,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (rush off road)",
+        "name": "11",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1489,11 +1485,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "20 (rush off road)",
+        "name": "20",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1770,11 +1765,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 (rush off road)",
+        "name": "22",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2126,11 +2120,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27 (rush off road)",
+        "name": "27",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2277,11 +2270,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "84 (rush off road)",
+        "name": "84",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2398,11 +2390,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "62 (rush off road)",
+        "name": "62",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2674,11 +2665,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jordan (rush off road)",
+        "name": "Jordan",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2790,11 +2780,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50 (rush off road)",
+        "name": "50",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4531,7 +4520,7 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "43 (rush off road)",
+        "name": "43",
         "desc": "Medium",
         "time": "2013-05-22T21:01:06Z",
         "stroke": "#0498FF",
@@ -4547,8 +4536,7 @@
             "2013-05-22T21:01:35Z",
             "2013-05-22T21:01:43Z"
           ]
-        },
-        "description": "Medium"
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -5180,11 +5168,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "51 (rush off road)",
+        "name": "51",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5306,11 +5293,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 (rush off road)",
+        "name": "24",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6002,11 +5988,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (rush off road)",
+        "name": "1",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6508,11 +6493,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (rush off road)",
+        "name": "19",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6789,11 +6773,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 (rush off road)",
+        "name": "31",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6955,11 +6938,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 (rush off road)",
+        "name": "13",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7096,11 +7078,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (rush off road)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7587,7 +7568,7 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "70 (rush off road)",
+        "name": "70",
         "desc": "Easy",
         "time": "2013-04-07T17:41:15Z",
         "stroke": "#36C03B",
@@ -7635,8 +7616,7 @@
             "2013-04-07T17:44:37Z",
             "2013-04-07T17:44:43Z"
           ]
-        },
-        "description": "Easy"
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -8063,11 +8043,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "61 (rush off road)",
+        "name": "61",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8624,11 +8603,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (rush off road)",
+        "name": "6",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8760,11 +8738,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "56 (rush off road)",
+        "name": "56",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8876,11 +8853,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (rush off road)",
+        "name": "12",
         "desc": "Medium",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9332,11 +9308,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "63 (rush off road)",
+        "name": "63",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9478,11 +9453,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "83 (rush off road)",
+        "name": "83",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9614,11 +9588,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "61 (rush off road)",
+        "name": "61",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9805,11 +9778,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "96 (rush off road)",
+        "name": "96",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10116,11 +10088,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "91 (rush off road)",
+        "name": "91",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10332,11 +10303,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Butterball (rush off road)",
+        "name": "Butterball",
         "desc": "Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10608,11 +10578,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (rush off road)",
+        "name": "10",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11969,11 +11938,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 (rush off road)",
+        "name": "21",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12100,11 +12068,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "90 (rush off road)",
+        "name": "90",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12296,11 +12263,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "92 (rush off road)",
+        "name": "92",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12342,7 +12308,7 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "72 (rush off road)",
+        "name": "72",
         "desc": "Medium",
         "time": "2014-11-02T20:49:52Z",
         "stroke": "#00B2FF",
@@ -12632,8 +12598,7 @@
             "2014-11-02T20:41:21Z",
             "2014-11-02T20:41:20Z"
           ]
-        },
-        "description": "Medium"
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -15265,11 +15230,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "97 (rush off road)",
+        "name": "97",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15431,11 +15395,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "97 (rush off road)",
+        "name": "97",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16202,11 +16165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (rush off road)",
+        "name": "8",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16653,11 +16615,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "94 (rush off road)",
+        "name": "94",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16869,11 +16830,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "71 (rush off road)",
+        "name": "71",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18585,11 +18545,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "98 (rush off road)",
+        "name": "98",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19376,7 +19335,7 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "57 (rush off road)",
+        "name": "57",
         "desc": "Medium",
         "time": "2013-05-22T20:55:07Z",
         "stroke": "#0498FF",
@@ -19404,8 +19363,7 @@
             "2013-05-22T21:04:15Z",
             "2013-05-22T21:04:19Z"
           ]
-        },
-        "description": "Medium"
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -19707,7 +19665,7 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 (rush off road)",
+        "name": "38",
         "desc": "Easy",
         "time": "2013-04-07T20:27:12Z",
         "stroke": "#36C03B",
@@ -19727,8 +19685,7 @@
             "2013-04-07T20:25:38Z",
             "2013-04-07T20:25:32Z"
           ]
-        },
-        "description": "Easy"
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -19835,11 +19792,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "41 (rush off road)",
+        "name": "41",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20271,11 +20227,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (rush off road)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20587,11 +20542,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "68 (rush off road)",
+        "name": "68",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20753,11 +20707,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "60 (rush off road)",
+        "name": "60",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21054,11 +21007,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "92 (rush off road)",
+        "name": "92",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21145,11 +21097,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "89 (rush off road)",
+        "name": "89",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21451,11 +21402,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "39 (rush off road)",
+        "name": "39",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21562,11 +21512,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Slickrock (rush off road)",
+        "name": "Slickrock",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21688,11 +21637,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 (rush off road)",
+        "name": "9",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23294,11 +23242,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "60 (rush off road)",
+        "name": "60",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23355,11 +23302,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36 (rush off road)",
+        "name": "36",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23546,11 +23492,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50 (rush off road)",
+        "name": "50",
         "desc": "Easy",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23927,11 +23872,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "41 (rush off road)",
+        "name": "41",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24033,11 +23977,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "81 (rush off road)",
+        "name": "81",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24159,11 +24102,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Connector (rush off road)",
+        "name": "Connector",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24240,11 +24182,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 (rush off road)",
+        "name": "25",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24326,11 +24267,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "None (rush off road)",
+        "name": "None",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24382,11 +24322,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "95 (rush off road)",
+        "name": "95",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25358,11 +25297,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "82 (rush off road)",
+        "name": "82",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25464,11 +25402,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 (rush off road)",
+        "name": "9",
         "desc": "Easy",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26365,11 +26302,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "26 (rush off road)",
+        "name": "26",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26716,11 +26652,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "69 (rush off road)",
+        "name": "69",
         "desc": "Easy",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27537,11 +27472,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (rush off road)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27598,11 +27532,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Woodypole (rush off road)",
+        "name": "Woodypole",
         "desc": "Hard",
         "stroke": "#5E7A8C",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27824,11 +27757,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (rush off road)",
+        "name": "4",
         "desc": "Easy",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27950,11 +27882,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "95 (rush off road)",
+        "name": "95",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28096,11 +28027,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "35 (rush off road)",
+        "name": "35",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28372,11 +28302,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "39 (rush off road)",
+        "name": "39",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28593,11 +28522,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Connector (rush off road)",
+        "name": "Connector",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28674,11 +28602,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "55 (rush off road)",
+        "name": "55",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28765,11 +28692,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 (rush off road)",
+        "name": "37",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28936,11 +28862,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 (rush off road)",
+        "name": "15",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29262,11 +29187,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Machete (rush off road)",
+        "name": "Machete",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29358,11 +29282,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "69 (rush off road)",
+        "name": "69",
         "desc": "Rock Crawl",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Rock Crawl"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29784,11 +29707,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "70 (rush off road)",
+        "name": "70",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31950,11 +31872,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (rush off road)",
+        "name": "30",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32431,11 +32352,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (rush off road)",
+        "name": "3",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34452,11 +34372,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (rush off road)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36068,10 +35987,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "73 (rush off road)",
+        "name": "73",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39098,11 +39016,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 (rush off road)",
+        "name": "23",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40594,11 +40511,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (rush off road)",
+        "name": "11",
         "desc": "Medium",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42889,6 +42805,22 @@
             276.506524415438
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.78505968436453,
+          38.313728220128596
+        ]
+      },
+      "properties": {
+        "name": "rush off road",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

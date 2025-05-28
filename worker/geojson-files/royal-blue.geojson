@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 Lee Asbury Rd. (royal blue)",
+        "name": "13 Lee Asbury Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2101,11 +2100,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 Top of the World Trail (royal blue)",
+        "name": "30 Top of the World Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2347,11 +2345,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 Jordan Fields Rd. (royal blue)",
+        "name": "34 Jordan Fields Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2788,11 +2785,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "33 Short Ridge Trail (royal blue)",
+        "name": "33 Short Ridge Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3094,11 +3090,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 Pond Trail (royal blue)",
+        "name": "29 Pond Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3640,11 +3635,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 Short Mountain Trail (royal blue)",
+        "name": "6 Short Mountain Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4296,11 +4290,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 Pond Ridge Trail (royal blue)",
+        "name": "22 Pond Ridge Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5657,11 +5650,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "39 Slide Rock Trail (royal blue)",
+        "name": "39 Slide Rock Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6148,11 +6140,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "28 Freds Way Trail (royal blue)",
+        "name": "28 Freds Way Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7154,11 +7145,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 Long Haul Hollow Trail (royal blue)",
+        "name": "31 Long Haul Hollow Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7985,11 +7975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 McCormick Cemetery Rd. (royal blue)",
+        "name": "24 McCormick Cemetery Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8896,11 +8885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 Stell Branch Trail (royal blue)",
+        "name": "11 Stell Branch Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9447,11 +9435,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 Short Mountain Rd. (royal blue)",
+        "name": "4 Short Mountain Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10543,11 +10530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 Ollis Creek Trail (royal blue)",
+        "name": "2 Ollis Creek Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11554,11 +11540,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 Elk Viewing Tower Rd. (royal blue)",
+        "name": "25 Elk Viewing Tower Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12615,11 +12600,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 Thirteen Hollow Trail (royal blue)",
+        "name": "3 Thirteen Hollow Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12871,11 +12855,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 Meadow Ridge Rd. (royal blue)",
+        "name": "5 Meadow Ridge Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13022,11 +13005,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27 Ride Royal Blue Trail (royal blue)",
+        "name": "27 Ride Royal Blue Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13698,11 +13680,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 Lost Ridge Trail (royal blue)",
+        "name": "14 Lost Ridge Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14249,11 +14230,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "35 Thompson Hollow Trail (royal blue)",
+        "name": "35 Thompson Hollow Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14505,11 +14485,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 Cell Tower Rd. (royal blue)",
+        "name": "12 Cell Tower Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14741,11 +14720,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 Wilson Loop Trail (royal blue)",
+        "name": "38 Wilson Loop Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15202,11 +15180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 Short Cut Trail (royal blue)",
+        "name": "18 Short Cut Trail",
         "desc": "More Difficult",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "More Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15348,11 +15325,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 Muse Hollow Trail (royal blue)",
+        "name": "21 Muse Hollow Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15919,11 +15895,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 Tram Branch Trail (ATV) (royal blue)",
+        "name": "15 Tram Branch Trail (ATV)",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16165,11 +16140,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 Campbells Split Trail (royal blue)",
+        "name": "23 Campbells Split Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16496,11 +16470,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 Meadow Branch Trail (royal blue)",
+        "name": "7 Meadow Branch Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17942,11 +17915,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 Hickory Creek Trail (royal blue)",
+        "name": "37 Hickory Creek Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19368,11 +19340,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 Ridge Top Trail (royal blue)",
+        "name": "32 Ridge Top Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19714,11 +19685,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 High Rock Trail (royal blue)",
+        "name": "9 High Rock Trail",
         "desc": "Hard",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20200,11 +20170,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 School House Trail (royal blue)",
+        "name": "16 School House Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20521,11 +20490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 Jennings Creek Trail (royal blue)",
+        "name": "8 Jennings Creek Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21492,11 +21460,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 Broyles Branch Trail (royal blue)",
+        "name": "17 Broyles Branch Trail",
         "desc": "Medium",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "Medium"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23123,11 +23090,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 Cumberland Mountain Trail (royal blue)",
+        "name": "10 Cumberland Mountain Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24959,11 +24925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 Flatwoods Rd. (royal blue)",
+        "name": "1 Flatwoods Rd.",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26525,11 +26490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36 Overlook Trail (royal blue)",
+        "name": "36 Overlook Trail",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28345,6 +28309,22 @@
             432.25
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.19277065889861,
+          36.41557635664591
+        ]
+      },
+      "properties": {
+        "name": "royal blue",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

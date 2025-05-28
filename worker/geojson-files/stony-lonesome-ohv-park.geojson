@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 Hello Kitty (stony lonesome ohv park)",
+        "name": "4 Hello Kitty",
         "desc": "Exteme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Exteme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31,11 +30,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 Timbuk 2 (stony lonesome ohv park)",
+        "name": "3 Timbuk 2",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -62,11 +60,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 Cousin Eddy (stony lonesome ohv park)",
+        "name": "9 Cousin Eddy",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -118,11 +115,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "409C (stony lonesome ohv park)",
+        "name": "409C",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -609,11 +605,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "419G (stony lonesome ohv park)",
+        "name": "419G",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -880,11 +875,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 Rock Creek (stony lonesome ohv park)",
+        "name": "23 Rock Creek",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -986,11 +980,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 3 Kings (stony lonesome ohv park)",
+        "name": "13 3 Kings",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1027,11 +1020,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "35 Bobby's World (stony lonesome ohv park)",
+        "name": "35 Bobby's World",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1068,11 +1060,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "419A (stony lonesome ohv park)",
+        "name": "419A",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1539,11 +1530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 Skullcrusher (stony lonesome ohv park)",
+        "name": "10 Skullcrusher",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1645,11 +1635,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "503 (stony lonesome ohv park)",
+        "name": "503",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2116,11 +2105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 Old NO. 7 (stony lonesome ohv park)",
+        "name": "22 Old NO. 7",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2162,11 +2150,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "505 (stony lonesome ohv park)",
+        "name": "505",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2428,11 +2415,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418F (stony lonesome ohv park)",
+        "name": "418F",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3024,11 +3010,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "42 Better Not (stony lonesome ohv park)",
+        "name": "42 Better Not",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3055,11 +3040,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407H (stony lonesome ohv park)",
+        "name": "407H",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3166,11 +3150,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36 Square Peg Round Hole (stony lonesome ohv park)",
+        "name": "36 Square Peg Round Hole",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3227,11 +3210,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "39 Tailhook (stony lonesome ohv park)",
+        "name": "39 Tailhook",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3348,11 +3330,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pavilion RD. (stony lonesome ohv park)",
+        "name": "Pavilion RD.",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3429,11 +3410,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "33 Axle Hill (stony lonesome ohv park)",
+        "name": "33 Axle Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3460,11 +3440,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 The Ledges (stony lonesome ohv park)",
+        "name": "32 The Ledges",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3496,11 +3475,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "kid's Track (stony lonesome ohv park)",
+        "name": "kid's Track",
         "desc": "kid's Track",
         "stroke": "#848484",
-        "coordinateProperties": {},
-        "description": "kid's Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3752,11 +3730,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "43 Rammer Jammer (stony lonesome ohv park)",
+        "name": "43 Rammer Jammer",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3788,11 +3765,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "44 Baldie (stony lonesome ohv park)",
+        "name": "44 Baldie",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8204,11 +8180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 Valley Hill (stony lonesome ohv park)",
+        "name": "12 Valley Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8265,11 +8240,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "425 (stony lonesome ohv park)",
+        "name": "425",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8716,11 +8690,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407C (stony lonesome ohv park)",
+        "name": "407C",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9182,11 +9155,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "417F (stony lonesome ohv park)",
+        "name": "417F",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9518,11 +9490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 Compa-Loopa (stony lonesome ohv park)",
+        "name": "19 Compa-Loopa",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9549,11 +9520,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "405C (stony lonesome ohv park)",
+        "name": "405C",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10090,11 +10060,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "310 (stony lonesome ohv park)",
+        "name": "310",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11146,11 +11115,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 Child Support (stony lonesome ohv park)",
+        "name": "38 Child Support",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11187,11 +11155,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "409B (stony lonesome ohv park)",
+        "name": "409B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11878,11 +11845,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406D (stony lonesome ohv park)",
+        "name": "406D",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12919,11 +12885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "20 Sum Ting Wong (stony lonesome ohv park)",
+        "name": "20 Sum Ting Wong",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12950,11 +12915,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 Gutbuster (stony lonesome ohv park)",
+        "name": "17 Gutbuster",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13061,11 +13025,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "405A (stony lonesome ohv park)",
+        "name": "405A",
         "desc": "Eastiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Eastiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13512,11 +13475,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "401C (stony lonesome ohv park)",
+        "name": "401C",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14313,11 +14275,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "409D (stony lonesome ohv park)",
+        "name": "409D",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14399,11 +14360,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "302 (stony lonesome ohv park)",
+        "name": "302",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15640,11 +15600,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 X-Wife (stony lonesome ohv park)",
+        "name": "37 X-Wife",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15671,11 +15630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 Who's Your Daddy/Donkey Punch (stony lonesome ohv park)",
+        "name": "18 Who's Your Daddy/Donkey Punch",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15702,11 +15660,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "405B (stony lonesome ohv park)",
+        "name": "405B",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16238,11 +16195,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 Yeti Bottoms (stony lonesome ohv park)",
+        "name": "21 Yeti Bottoms",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16344,11 +16300,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Campground RD. (stony lonesome ohv park)",
+        "name": "Campground RD.",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17090,11 +17045,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "40 Lunchtime (stony lonesome ohv park)",
+        "name": "40 Lunchtime",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17411,11 +17365,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "307 (stony lonesome ohv park)",
+        "name": "307",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18317,11 +18270,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407 (stony lonesome ohv park)",
+        "name": "407",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20358,11 +20310,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "509 (stony lonesome ohv park)",
+        "name": "509",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20639,11 +20590,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "401B (stony lonesome ohv park)",
+        "name": "401B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21020,11 +20970,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "413 (stony lonesome ohv park)",
+        "name": "413",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22016,11 +21965,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (stony lonesome ohv park)",
+        "name": "Main Road",
         "desc": "&nbsp;Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "&nbsp;Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22247,11 +22195,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 Youtube Hill (stony lonesome ohv park)",
+        "name": "8 Youtube Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22273,11 +22220,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "422 (stony lonesome ohv park)",
+        "name": "422",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23004,11 +22950,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "402 (stony lonesome ohv park)",
+        "name": "402",
         "desc": "Eastiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Eastiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23310,11 +23255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "411 (stony lonesome ohv park)",
+        "name": "411",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25636,11 +25580,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "502 (stony lonesome ohv park)",
+        "name": "502",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26662,11 +26605,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "417A (stony lonesome ohv park)",
+        "name": "417A",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28238,11 +28180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "419D (stony lonesome ohv park)",
+        "name": "419D",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28474,11 +28415,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "503 (stony lonesome ohv park)",
+        "name": "503",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30530,11 +30470,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Big Hill Bypass (stony lonesome ohv park)",
+        "name": "Big Hill Bypass",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31716,11 +31655,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407E (stony lonesome ohv park)",
+        "name": "407E",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32592,11 +32530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "504 (stony lonesome ohv park)",
+        "name": "504",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32998,11 +32935,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "416 (stony lonesome ohv park)",
+        "name": "416",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34454,11 +34390,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407G (stony lonesome ohv park)",
+        "name": "407G",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35430,11 +35365,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "404 (stony lonesome ohv park)",
+        "name": "404",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36281,11 +36215,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406 (stony lonesome ohv park)",
+        "name": "406",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37347,11 +37280,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "411C (stony lonesome ohv park)",
+        "name": "411C",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37778,11 +37710,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418E (stony lonesome ohv park)",
+        "name": "418E",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38194,11 +38125,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "417C (stony lonesome ohv park)",
+        "name": "417C",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38500,11 +38430,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "420A (stony lonesome ohv park)",
+        "name": "420A",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40576,11 +40505,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "415 (stony lonesome ohv park)",
+        "name": "415",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43102,11 +43030,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 Sledgehammer (stony lonesome ohv park)",
+        "name": "7 Sledgehammer",
         "desc": "Exteme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Exteme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43133,11 +43060,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27 God's Gift (stony lonesome ohv park)",
+        "name": "27 God's Gift",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43174,11 +43100,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "300 (stony lonesome ohv park)",
+        "name": "300",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43680,11 +43605,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "422B (stony lonesome ohv park)",
+        "name": "422B",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43931,11 +43855,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Spur RD. (stony lonesome ohv park)",
+        "name": "Spur RD.",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44552,11 +44475,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "313 (stony lonesome ohv park)",
+        "name": "313",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -45653,11 +45575,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407H (stony lonesome ohv park)",
+        "name": "407H",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46354,11 +46275,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 Bootleg Creek (stony lonesome ohv park)",
+        "name": "29 Bootleg Creek",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -48530,11 +48450,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "300 (stony lonesome ohv park)",
+        "name": "300",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -48716,11 +48635,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Turkey Hill (stony lonesome ohv park)",
+        "name": "Turkey Hill",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -49827,11 +49745,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 Youtube Hill (stony lonesome ohv park)",
+        "name": "8 Youtube Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -49858,11 +49775,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 Screwdriver/Wendetta (stony lonesome ohv park)",
+        "name": "16 Screwdriver/Wendetta",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -49904,11 +49820,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "417A (stony lonesome ohv park)",
+        "name": "417A",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -50440,11 +50355,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "417E (stony lonesome ohv park)",
+        "name": "417E",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51326,11 +51240,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "508 (stony lonesome ohv park)",
+        "name": "508",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51957,11 +51870,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418 (stony lonesome ohv park)",
+        "name": "418",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52418,11 +52330,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "501 (stony lonesome ohv park)",
+        "name": "501",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -53649,11 +53560,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "504 (stony lonesome ohv park)",
+        "name": "504",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -54015,11 +53925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Snake RD. (stony lonesome ohv park)",
+        "name": "Snake RD.",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -54786,11 +54695,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Front Track (stony lonesome ohv park)",
+        "name": "Front Track",
         "desc": "Front Track",
         "stroke": "#848484",
-        "coordinateProperties": {},
-        "description": "Front Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -56162,11 +56070,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 Quarheedus (stony lonesome ohv park)",
+        "name": "24 Quarheedus",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -56218,11 +56125,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 Switchback (stony lonesome ohv park)",
+        "name": "5 Switchback",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -56344,11 +56250,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Access  Road (stony lonesome ohv park)",
+        "name": "Main Access  Road",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -56485,11 +56390,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "304 (stony lonesome ohv park)",
+        "name": "304",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57636,10 +57540,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "421A (stony lonesome ohv park)",
+        "name": "421A",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57701,11 +57604,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "408B (stony lonesome ohv park)",
+        "name": "408B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58247,11 +58149,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "504 (stony lonesome ohv park)",
+        "name": "504",
         "desc": "Advance\n",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance\n"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58393,11 +58294,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 Crawl Mama/Geranimo (stony lonesome ohv park)",
+        "name": "15 Crawl Mama/Geranimo",
         "desc": "Exteme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Exteme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58429,11 +58329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "421A (stony lonesome ohv park)",
+        "name": "421A",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58985,11 +58884,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 Crawl Mama/Geranimo (stony lonesome ohv park)",
+        "name": "15 Crawl Mama/Geranimo",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -59021,11 +58919,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "45 Ego Killer (stony lonesome ohv park)",
+        "name": "45 Ego Killer",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -59057,11 +58954,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "420 (stony lonesome ohv park)",
+        "name": "420",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -59913,11 +59809,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "303 (stony lonesome ohv park)",
+        "name": "303",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -61584,11 +61479,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406A (stony lonesome ohv park)",
+        "name": "406A",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -62015,11 +61909,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418C (stony lonesome ohv park)",
+        "name": "418C",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -62141,11 +62034,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bird Point (stony lonesome ohv park)",
+        "name": "Bird Point",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -63177,11 +63069,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406D (stony lonesome ohv park)",
+        "name": "406D",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -63433,11 +63324,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "417D (stony lonesome ohv park)",
+        "name": "417D",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -63744,11 +63634,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "419F (stony lonesome ohv park)",
+        "name": "419F",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -64240,11 +64129,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Blacksmith (stony lonesome ohv park)",
+        "name": "Blacksmith",
         "desc": "Eastiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Eastiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -64791,11 +64679,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "311 (stony lonesome ohv park)",
+        "name": "311",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -65782,11 +65669,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Little River (stony lonesome ohv park)",
+        "name": "Little River",
         "desc": "Exteme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Exteme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -65848,11 +65734,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 Bootleg Creek (stony lonesome ohv park)",
+        "name": "29 Bootleg Creek",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -65879,11 +65764,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406 (stony lonesome ohv park)",
+        "name": "406",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -66360,11 +66244,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "424 (stony lonesome ohv park)",
+        "name": "424",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -66951,11 +66834,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 Pick Ax (stony lonesome ohv park)",
+        "name": "6 Pick Ax",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -66982,11 +66864,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Mary's RD. (stony lonesome ohv park)",
+        "name": "Mary's RD.",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -67813,11 +67694,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "401 (stony lonesome ohv park)",
+        "name": "401",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -69369,11 +69249,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Cell Tower Rd. (stony lonesome ohv park)",
+        "name": "Cell Tower Rd.",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -74085,11 +73964,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 Halfway Hill (stony lonesome ohv park)",
+        "name": "11 Halfway Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -74126,11 +74004,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "425A (stony lonesome ohv park)",
+        "name": "425A",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -74417,11 +74294,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "26 Str8 Up (stony lonesome ohv park)",
+        "name": "26 Str8 Up",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -74453,11 +74329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "507 (stony lonesome ohv park)",
+        "name": "507",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -75439,11 +75314,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 Powder Puff (stony lonesome ohv park)",
+        "name": "14 Powder Puff",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -75495,11 +75369,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "417B (stony lonesome ohv park)",
+        "name": "417B",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -76056,11 +75929,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "300 (stony lonesome ohv park)",
+        "name": "300",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -78147,11 +78019,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406B (stony lonesome ohv park)",
+        "name": "406B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -78278,11 +78149,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 Who's Your Daddy/Donkey Punch (stony lonesome ohv park)",
+        "name": "18 Who's Your Daddy/Donkey Punch",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -78314,11 +78184,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (stony lonesome ohv park)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -78890,11 +78759,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407A (stony lonesome ohv park)",
+        "name": "407A",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -78976,11 +78844,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Mule RD. (stony lonesome ohv park)",
+        "name": "Mule RD.",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -80367,11 +80234,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Back Track (stony lonesome ohv park)",
+        "name": "Back Track",
         "desc": "Back Track",
         "stroke": "#848484",
-        "coordinateProperties": {},
-        "description": "Back Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -81363,11 +81229,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "410 (stony lonesome ohv park)",
+        "name": "410",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -81949,11 +81814,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Ash RD. (stony lonesome ohv park)",
+        "name": "Ash RD.",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -82505,11 +82369,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "413A (stony lonesome ohv park)",
+        "name": "413A",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -82886,11 +82749,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "405B (stony lonesome ohv park)",
+        "name": "405B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -83187,11 +83049,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (stony lonesome ohv park)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -83873,11 +83734,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407A (stony lonesome ohv park)",
+        "name": "407A",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -84679,11 +84539,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "505 (stony lonesome ohv park)",
+        "name": "505",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -85690,11 +85549,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "305 (stony lonesome ohv park)",
+        "name": "305",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -86676,11 +86534,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "405E (stony lonesome ohv park)",
+        "name": "405E",
         "desc": "Eastiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Eastiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -87407,11 +87264,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406 (stony lonesome ohv park)",
+        "name": "406",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -87578,11 +87434,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 Screwdriver/Wendetta (stony lonesome ohv park)",
+        "name": "16 Screwdriver/Wendetta",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -87624,11 +87479,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 Stairway To Heaven (stony lonesome ohv park)",
+        "name": "25 Stairway To Heaven",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -87655,11 +87509,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "312 (stony lonesome ohv park)",
+        "name": "312",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -89316,11 +89169,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "301 (stony lonesome ohv park)",
+        "name": "301",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -92112,11 +91964,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "411B (stony lonesome ohv park)",
+        "name": "411B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -93718,11 +93569,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Horseshoe Bend (stony lonesome ohv park)",
+        "name": "Horseshoe Bend",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -94184,11 +94034,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "414 (stony lonesome ohv park)",
+        "name": "414",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -95595,11 +95444,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (stony lonesome ohv park)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -97041,11 +96889,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "422A (stony lonesome ohv park)",
+        "name": "422A",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -97847,11 +97694,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "421 (stony lonesome ohv park)",
+        "name": "421",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -100218,11 +100064,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "409 (stony lonesome ohv park)",
+        "name": "409",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -101919,11 +101764,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pavilion RD. (stony lonesome ohv park)",
+        "name": "Pavilion RD.",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -102720,11 +102564,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "419 (stony lonesome ohv park)",
+        "name": "419",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -103251,11 +103094,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "408 (stony lonesome ohv park)",
+        "name": "408",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -104887,11 +104729,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418 (stony lonesome ohv park)",
+        "name": "418",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -105443,11 +105284,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "408A (stony lonesome ohv park)",
+        "name": "408A",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -105539,11 +105379,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "408A (stony lonesome ohv park)",
+        "name": "408A",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -106335,11 +106174,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407D (stony lonesome ohv park)",
+        "name": "407D",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -107226,11 +107064,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "306 (stony lonesome ohv park)",
+        "name": "306",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -107942,11 +107779,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "405D (stony lonesome ohv park)",
+        "name": "405D",
         "desc": "Eastiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Eastiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -108723,11 +108559,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "413B (stony lonesome ohv park)",
+        "name": "413B",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -108909,11 +108744,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "41 Area 51 (stony lonesome ohv park)",
+        "name": "41 Area 51",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -108955,11 +108789,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407F (stony lonesome ohv park)",
+        "name": "407F",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -110806,11 +110639,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 Yella Hammer (stony lonesome ohv park)",
+        "name": "31 Yella Hammer",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -110857,11 +110689,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "28 Widowmaker (stony lonesome ohv park)",
+        "name": "28 Widowmaker",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -110893,11 +110724,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "423 (stony lonesome ohv park)",
+        "name": "423",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -111484,11 +111314,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "403 (stony lonesome ohv park)",
+        "name": "403",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -112900,11 +112729,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "309 (stony lonesome ohv park)",
+        "name": "309",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -113516,11 +113344,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 Bill's Hill (stony lonesome ohv park)",
+        "name": "1 Bill's Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -113572,11 +113399,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418 (stony lonesome ohv park)",
+        "name": "418",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -114353,11 +114179,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "421B (stony lonesome ohv park)",
+        "name": "421B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -115334,11 +115159,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (stony lonesome ohv park)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -115855,11 +115679,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "407B (stony lonesome ohv park)",
+        "name": "407B",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -116486,11 +116309,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418A (stony lonesome ohv park)",
+        "name": "418A",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -117417,11 +117239,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "314 (stony lonesome ohv park)",
+        "name": "314",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -118168,11 +117989,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "419E (stony lonesome ohv park)",
+        "name": "419E",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -118499,11 +118319,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "418D (stony lonesome ohv park)",
+        "name": "418D",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -119295,11 +119114,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "506 (stony lonesome ohv park)",
+        "name": "506",
         "desc": "Easiest",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easiest"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -119796,11 +119614,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 Youtube Hill (stony lonesome ohv park)",
+        "name": "8 Youtube Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -119822,11 +119639,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "413 (stony lonesome ohv park)",
+        "name": "413",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -122178,11 +121994,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "308 (stony lonesome ohv park)",
+        "name": "308",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -124419,11 +124234,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 Terminus (stony lonesome ohv park)",
+        "name": "34 Terminus",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -124455,11 +124269,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "412 (stony lonesome ohv park)",
+        "name": "412",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -124651,11 +124464,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "408C (stony lonesome ohv park)",
+        "name": "408C",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -125487,11 +125299,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "406C (stony lonesome ohv park)",
+        "name": "406C",
         "desc": "Advance",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Advance"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -126803,11 +126614,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 Timbuk 1 (Rock Garden) (stony lonesome ohv park)",
+        "name": "2 Timbuk 1 (Rock Garden)",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -126823,6 +126633,22 @@
             151.91
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.9777167764542,
+          33.9673538164152
+        ]
+      },
+      "properties": {
+        "name": "stony lonesome ohv park",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

@@ -16,7 +16,6 @@ export default function MapView({
   const [mainGeojsonFiles, setMainGeojsonFiles] = useState([]);
   const [publicGeojsonFiles, setPublicGeojsonFiles] = useState([]);
 
-  // Load main tracks from /tracks/manifest.json
   useEffect(() => {
     fetch("/tracks/manifest.json")
       .then((res) => res.json())
@@ -24,7 +23,6 @@ export default function MapView({
       .catch((err) => console.error("❌ Failed to load main track manifest:", err));
   }, []);
 
-  // Load public tracks from /public-tracks/manifest.json
   useEffect(() => {
     fetch("/public-tracks/manifest.json")
       .then((res) => res.json())
@@ -32,25 +30,16 @@ export default function MapView({
       .catch((err) => console.error("❌ Failed to load public track manifest:", err));
   }, []);
 
-  // Toggle visibility for layers
   useEffect(() => {
     const map = currentMap.current;
     if (!map || !map.getStyle()) return;
 
     map.getStyle().layers?.forEach((layer) => {
       const id = layer.id;
-      if (id.endsWith("-line")) {
-        map.setPaintProperty(id, "line-opacity", showTracks ? 1 : 0);
-      }
-      if (id.endsWith("-label")) {
-        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
-      }
-      if (id.endsWith("-waypoints")) {
-        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
-      }
-      if (id.endsWith("-waypoint-labels")) {
-        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
-      }
+      if (id.endsWith("-line")) map.setPaintProperty(id, "line-opacity", showTracks ? 1 : 0);
+      if (id.endsWith("-label")) map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+      if (id.endsWith("-waypoints")) map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+      if (id.endsWith("-waypoint-labels")) map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
     });
   }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
 
@@ -85,18 +74,20 @@ export default function MapView({
         }
       });
 
-      // MAIN TRACKS
-      mainGeojsonFiles.forEach((filename) => {
+      const addTrackLayers = (filename, sourcePrefix, isPublic = false) => {
         const slug = filename.replace(".geojson", "").toLowerCase();
-        const sourceId = `track-${slug}`;
+        const sourceId = `${sourcePrefix}-${slug}`;
         const lineId = `${sourceId}-line`;
         const labelId = `${sourceId}-label`;
         const waypointId = `${sourceId}-waypoints`;
         const waypointLabelId = `${sourceId}-waypoint-labels`;
+        const fileLabelId = `${sourceId}-file-label`;
 
-        fetch(`/tracks/${filename}`)
-          .then((res) => res.json())
-          .then((data) => {
+        const url = isPublic ? `/public-tracks/${filename}` : `/tracks/${filename}`;
+        fetch(url)
+          .then(res => res.json())
+          .then(data => {
+            data.features.forEach((f, i) => (f.id = i));
             map.addSource(sourceId, { type: "geojson", data });
 
             map.addLayer({
@@ -105,15 +96,16 @@ export default function MapView({
               source: sourceId,
               filter: ["==", "$type", "LineString"],
               paint: {
-                "line-color": ["coalesce", ["get", "stroke"], "#00f"],
-                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
-                "line-opacity": showTracks ? 1 : 0,
+                "line-color": ["coalesce", ["get", "stroke"], "#666"],
+                "line-opacity": [
+                  "case",
+                  ["boolean", ["feature-state", "highlighted"], false],
+                  1, isPublic ? 0.2 : 1
+                ],
+                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
               },
               layout: { "line-cap": "round", "line-join": "round" }
             });
-
-            map.on("mouseenter", lineId, () => map.getCanvas().style.cursor = "pointer");
-            map.on("mouseleave", lineId, () => map.getCanvas().style.cursor = "");
 
             map.addLayer({
               id: labelId,
@@ -125,7 +117,7 @@ export default function MapView({
                 "text-field": ["get", "name"],
                 "text-font": ["Open Sans Bold"],
                 "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-                visibility: showNames ? "visible" : "none",
+                visibility: showNames ? "visible" : "none"
               },
               paint: {
                 "text-color": "#333",
@@ -145,9 +137,9 @@ export default function MapView({
                 "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
                 "circle-color": "#ff6600",
                 "circle-stroke-width": 1,
-                "circle-stroke-color": "#fff",
+                "circle-stroke-color": "#fff"
               },
-              minzoom: 9,
+              minzoom: 9
             });
 
             map.addLayer({
@@ -160,54 +152,44 @@ export default function MapView({
                 "text-font": ["Open Sans Regular"],
                 "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
                 "text-offset": [0, 1.2],
-                visibility: showWaypointLabels ? "visible" : "none",
+                visibility: showWaypointLabels ? "visible" : "none"
               },
               paint: {
                 "text-color": "#333",
                 "text-halo-color": "#fff",
-                "text-halo-width": 1.5,
+                "text-halo-width": 1.5
               },
-              minzoom: 12,
+              minzoom: 12
             });
-          });
-      });
 
-      // PUBLIC TRACKS
-      publicGeojsonFiles.forEach((filename) => {
-        const slug = filename.replace(".geojson", "").toLowerCase();
-        const sourceId = `public-${slug}`;
-        const lineId = `${sourceId}-line`;
-
-        fetch(`/public-tracks/${filename}`)
-          .then(res => res.json())
-          .then((data) => {
-            data.features.forEach((f, idx) => f.id = idx);
-
-            map.addSource(sourceId, { type: "geojson", data });
-
+            // 🆕 Add center label for the file if exists
             map.addLayer({
-              id: lineId,
-              type: "line",
+              id: fileLabelId,
+              type: "symbol",
               source: sourceId,
-              filter: ["==", "$type", "LineString"],
-              paint: {
-                "line-color": ["coalesce", ["get", "stroke"], "#666"],
-                "line-opacity": [
-                  "case",
-                  ["boolean", ["feature-state", "highlighted"], false],
-                  1, 0.2
-                ],
-                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
+              filter: ["==", ["get", "type"], "file-label"],
+              layout: {
+                "text-field": ["get", "label"],
+                "text-font": ["Open Sans Bold"],
+                "text-size": ["interpolate", ["linear"], ["zoom"], 8, 10, 14, 16],
+                "text-anchor": "center"
               },
-              layout: { "line-cap": "round", "line-join": "round" }
+              paint: {
+                "text-color": "#000",
+                "text-halo-color": "#fff",
+                "text-halo-width": 2
+              },
+              minzoom: 9
             });
 
             map.on("mouseenter", lineId, () => map.getCanvas().style.cursor = "pointer");
             map.on("mouseleave", lineId, () => map.getCanvas().style.cursor = "");
           });
-      });
+      };
 
-      // CLICK HANDLER
+      mainGeojsonFiles.forEach(f => addTrackLayers(f, "track"));
+      publicGeojsonFiles.forEach(f => addTrackLayers(f, "public", true));
+
       map.on("click", (e) => {
         const layersToCheck = map.getStyle().layers.filter((l) =>
           l.id.endsWith("-line")

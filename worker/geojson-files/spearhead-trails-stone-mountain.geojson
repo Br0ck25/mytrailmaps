@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 11 (spearhead trails stone mountain)",
+        "name": "ATV Trail 11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36,11 +35,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 904 (spearhead trails stone mountain)",
+        "name": "MX 904",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -262,11 +260,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 0 (spearhead trails stone mountain)",
+        "name": "ATV Trail 0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -338,11 +335,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 14 (spearhead trails stone mountain)",
+        "name": "ATV Trail 14",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4119,10 +4115,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 20 (spearhead trails stone mountain)",
+        "name": "ATV Trail 20",
         "stroke": "#0000ff",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4174,11 +4169,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 15 (spearhead trails stone mountain)",
+        "name": "ATV Trail 15",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10475,11 +10469,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 901 (spearhead trails stone mountain)",
+        "name": "MX 901",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11186,11 +11179,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 11 (spearhead trails stone mountain)",
+        "name": "ATV Trail 11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11337,11 +11329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 0 (spearhead trails stone mountain)",
+        "name": "ATV Trail 0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11478,11 +11469,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 908 (spearhead trails stone mountain)",
+        "name": "MX 908",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12309,11 +12299,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 8 (spearhead trails stone mountain)",
+        "name": "ATV Trail 8",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12850,11 +12839,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 10 (spearhead trails stone mountain)",
+        "name": "ATV Trail 10",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13791,11 +13779,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 91 (spearhead trails stone mountain)",
+        "name": "ATV Trail 91",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13847,11 +13834,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 87 (spearhead trails stone mountain)",
+        "name": "ATV Trail 87",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15548,11 +15534,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 96 (spearhead trails stone mountain)",
+        "name": "ATV Trail 96",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15579,11 +15564,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 96 (spearhead trails stone mountain)",
+        "name": "ATV Trail 96",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16440,11 +16424,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 909 (spearhead trails stone mountain)",
+        "name": "MX 909",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17161,11 +17144,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 900 (spearhead trails stone mountain)",
+        "name": "MX 900",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18167,11 +18149,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 89 (spearhead trails stone mountain)",
+        "name": "ATV Trail 89",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18248,11 +18229,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 1 (spearhead trails stone mountain)",
+        "name": "ATV Trail 1",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18329,11 +18309,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 910 (spearhead trails stone mountain)",
+        "name": "MX 910",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18610,11 +18589,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 14 (spearhead trails stone mountain)",
+        "name": "ATV Trail 14",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18656,11 +18634,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 905 (spearhead trails stone mountain)",
+        "name": "MX 905",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18857,11 +18834,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 94 (spearhead trails stone mountain)",
+        "name": "ATV Trail 94",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19718,11 +19694,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 93 (spearhead trails stone mountain)",
+        "name": "ATV Trail 93",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20619,11 +20594,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 90 (spearhead trails stone mountain)",
+        "name": "ATV Trail 90",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20655,11 +20629,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 0 (spearhead trails stone mountain)",
+        "name": "ATV Trail 0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20806,11 +20779,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 90 (spearhead trails stone mountain)",
+        "name": "ATV Trail 90",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20917,11 +20889,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 0 (spearhead trails stone mountain)",
+        "name": "ATV Trail 0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20983,11 +20954,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 92 (spearhead trails stone mountain)",
+        "name": "ATV Trail 92",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21114,11 +21084,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 88 (spearhead trails stone mountain)",
+        "name": "ATV Trail 88",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21655,11 +21624,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 5 (spearhead trails stone mountain)",
+        "name": "ATV Trail 5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23116,11 +23084,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 12 (spearhead trails stone mountain)",
+        "name": "ATV Trail 12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23207,11 +23174,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 20 (spearhead trails stone mountain)",
+        "name": "ATV Trail 20",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24308,11 +24274,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 0 (spearhead trails stone mountain)",
+        "name": "ATV Trail 0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24384,11 +24349,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 6 (spearhead trails stone mountain)",
+        "name": "ATV Trail 6",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24460,11 +24424,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 0 (spearhead trails stone mountain)",
+        "name": "ATV Trail 0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24506,11 +24469,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 11 (spearhead trails stone mountain)",
+        "name": "ATV Trail 11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24532,11 +24494,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 12 (spearhead trails stone mountain)",
+        "name": "ATV Trail 12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24618,11 +24579,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 906 (spearhead trails stone mountain)",
+        "name": "MX 906",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25279,11 +25239,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 95 (spearhead trails stone mountain)",
+        "name": "ATV Trail 95",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26260,11 +26219,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 12 (spearhead trails stone mountain)",
+        "name": "ATV Trail 12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26286,11 +26244,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 912 (spearhead trails stone mountain)",
+        "name": "MX 912",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26487,11 +26444,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 14 (spearhead trails stone mountain)",
+        "name": "ATV Trail 14",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26638,11 +26594,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 7 (spearhead trails stone mountain)",
+        "name": "ATV Trail 7",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26764,11 +26719,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 0 (spearhead trails stone mountain)",
+        "name": "ATV Trail 0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26805,11 +26759,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 1 (spearhead trails stone mountain)",
+        "name": "ATV Trail 1",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -50486,11 +50439,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 97 (spearhead trails stone mountain)",
+        "name": "ATV Trail 97",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51227,11 +51179,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 911 (spearhead trails stone mountain)",
+        "name": "MX 911",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52063,11 +52014,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 3 (spearhead trails stone mountain)",
+        "name": "ATV Trail 3",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -53364,11 +53314,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 9 (spearhead trails stone mountain)",
+        "name": "ATV Trail 9",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -53625,11 +53574,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 15 (spearhead trails stone mountain)",
+        "name": "ATV Trail 15",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -53701,11 +53649,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 907 (spearhead trails stone mountain)",
+        "name": "MX 907",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -54117,11 +54064,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 11 (spearhead trails stone mountain)",
+        "name": "ATV Trail 11",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -54148,11 +54094,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 86 (spearhead trails stone mountain)",
+        "name": "ATV Trail 86",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -54944,11 +54889,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 99 (spearhead trails stone mountain)",
+        "name": "ATV Trail 99",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -55205,11 +55149,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 4 (spearhead trails stone mountain)",
+        "name": "ATV Trail 4",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58546,11 +58489,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 98 (spearhead trails stone mountain)",
+        "name": "ATV Trail 98",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58847,11 +58789,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 98 (spearhead trails stone mountain)",
+        "name": "ATV Trail 98",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -60308,11 +60249,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 92 (spearhead trails stone mountain)",
+        "name": "ATV Trail 92",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -60349,11 +60289,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 2 (spearhead trails stone mountain)",
+        "name": "ATV Trail 2",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -62890,11 +62829,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "ATV Trail 99 (spearhead trails stone mountain)",
+        "name": "ATV Trail 99",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -65391,11 +65329,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX 903 (spearhead trails stone mountain)",
+        "name": "MX 903",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -68095,6 +68032,22 @@
           36.798722614400276,
           510
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.00485483820565,
+          36.78825076025181
+        ]
+      },
+      "properties": {
+        "name": "spearhead trails stone mountain",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

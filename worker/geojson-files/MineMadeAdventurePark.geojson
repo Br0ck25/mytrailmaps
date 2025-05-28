@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Mine Made Adventure Park)",
+        "name": "12",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -96,11 +95,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -347,11 +345,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 (Mine Made Adventure Park)",
+        "name": "25",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1618,11 +1615,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 (Mine Made Adventure Park)",
+        "name": "23",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1829,11 +1825,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 (Mine Made Adventure Park)",
+        "name": "23",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2190,11 +2185,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 (Mine Made Adventure Park)",
+        "name": "25",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2591,11 +2585,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (Mine Made Adventure Park)",
+        "name": "11",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2737,11 +2730,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 (Mine Made Adventure Park)",
+        "name": "5",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5128,11 +5120,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "65 (Mine Made Adventure Park)",
+        "name": "65",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5289,11 +5280,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (Mine Made Adventure Park)",
+        "name": "6",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5325,11 +5315,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (Mine Made Adventure Park)",
+        "name": "52",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6721,11 +6710,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6767,11 +6755,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "55 (Mine Made Adventure Park)",
+        "name": "55",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8403,11 +8390,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (Mine Made Adventure Park)",
+        "name": "6",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10234,11 +10220,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (Mine Made Adventure Park)",
+        "name": "18",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12320,11 +12305,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17781,11 +17765,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (Mine Made Adventure Park)",
+        "name": "53",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18927,11 +18910,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Mine Made Adventure Park)",
+        "name": "12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21258,11 +21240,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21299,11 +21280,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 (Mine Made Adventure Park)",
+        "name": "22",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21520,11 +21500,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21616,11 +21595,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (Mine Made Adventure Park)",
+        "name": "53",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21792,11 +21770,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "87 (Mine Made Adventure Park)",
+        "name": "87",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23243,11 +23220,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (Mine Made Adventure Park)",
+        "name": "7",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24324,11 +24300,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (Mine Made Adventure Park)",
+        "name": "18",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24480,11 +24455,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (Mine Made Adventure Park)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24641,11 +24615,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (Mine Made Adventure Park)",
+        "name": "19",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24977,11 +24950,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 (Mine Made Adventure Park)",
+        "name": "16",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25443,11 +25415,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25624,11 +25595,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26405,11 +26375,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (Mine Made Adventure Park)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29511,11 +29480,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33657,11 +33625,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (Mine Made Adventure Park)",
+        "name": "18",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33703,11 +33670,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33999,11 +33965,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (Mine Made Adventure Park)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35810,11 +35775,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (Mine Made Adventure Park)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36181,11 +36145,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "84 (Mine Made Adventure Park)",
+        "name": "84",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37252,11 +37215,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (Mine Made Adventure Park)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37348,11 +37310,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37964,11 +37925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 (Mine Made Adventure Park)",
+        "name": "14",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39055,11 +39015,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Tunnel (Mine Made Adventure Park)",
+        "name": "Tunnel",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39101,11 +39060,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (Mine Made Adventure Park)",
+        "name": "19",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39337,11 +39295,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (Mine Made Adventure Park)",
+        "name": "10",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40663,11 +40620,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "65 (Mine Made Adventure Park)",
+        "name": "65",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41334,11 +41290,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41435,11 +41390,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42701,11 +42655,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (Mine Made Adventure Park)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42857,11 +42810,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "56 (Mine Made Adventure Park)",
+        "name": "56",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43818,11 +43770,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44029,11 +43980,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44155,11 +44105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Mine Made Adventure Park)",
+        "name": "12",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44206,11 +44155,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (Mine Made Adventure Park)",
+        "name": "53",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -45537,11 +45485,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "62 (Mine Made Adventure Park)",
+        "name": "62",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -45683,11 +45630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (Mine Made Adventure Park)",
+        "name": "52",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -45809,11 +45755,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "62 (Mine Made Adventure Park)",
+        "name": "62",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -45865,11 +45810,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (Mine Made Adventure Park)",
+        "name": "52",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46281,11 +46225,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46402,11 +46345,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "54 (Mine Made Adventure Park)",
+        "name": "54",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -47203,11 +47145,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -47264,11 +47205,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -47375,11 +47315,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -47426,11 +47365,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -47602,11 +47540,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -48763,11 +48700,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Little Buckhorn (Mine Made Adventure Park)",
+        "name": "Little Buckhorn",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51174,11 +51110,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "0 (Mine Made Adventure Park)",
+        "name": "0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51400,11 +51335,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "41 (Mine Made Adventure Park)",
+        "name": "41",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51691,11 +51625,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52062,11 +51995,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (Mine Made Adventure Park)",
+        "name": "19",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52438,11 +52370,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "<p>DIFFICULTY: NULL\n</p>",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "<p>DIFFICULTY: NULL\n</p>"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52464,11 +52395,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (Mine Made Adventure Park)",
+        "name": "4",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -53810,11 +53740,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -55291,11 +55220,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "51 (Mine Made Adventure Park)",
+        "name": "51",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -55697,11 +55625,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (Mine Made Adventure Park)",
+        "name": "17",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -55953,11 +55880,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (Mine Made Adventure Park)",
+        "name": "53",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57209,11 +57135,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (Mine Made Adventure Park)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57310,11 +57235,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (Mine Made Adventure Park)",
+        "name": "11",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57741,11 +57665,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 (Mine Made Adventure Park)",
+        "name": "15",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58172,11 +58095,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "42 (Mine Made Adventure Park)",
+        "name": "42",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58753,11 +58675,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "0 (Mine Made Adventure Park)",
+        "name": "0",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58799,11 +58720,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58990,11 +58910,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -60181,11 +60100,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -62597,11 +62515,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "0 (Mine Made Adventure Park)",
+        "name": "0",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -62633,11 +62550,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "60 (Mine Made Adventure Park)",
+        "name": "60",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -63669,11 +63585,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -64440,11 +64355,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -65466,11 +65380,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Mine Made Adventure Park)",
+        "name": "12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -65542,11 +65455,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -66553,11 +66465,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "59 (Mine Made Adventure Park)",
+        "name": "59",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -68974,11 +68885,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 (Mine Made Adventure Park)",
+        "name": "15",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -69105,11 +69015,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "60 (Mine Made Adventure Park)",
+        "name": "60",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -70226,11 +70135,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (Mine Made Adventure Park)",
+        "name": "11",
         "desc": " Easy\n",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": " Easy\n"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -70342,11 +70250,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -72233,11 +72140,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -72469,11 +72375,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "81 (Mine Made Adventure Park)",
+        "name": "81",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -73040,11 +72945,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy\n",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy\n"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -73216,11 +73120,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -73402,11 +73305,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Little Buckhorn (Mine Made Adventure Park)",
+        "name": "Little Buckhorn",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -76363,11 +76265,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (Mine Made Adventure Park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -76454,11 +76355,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -79215,11 +79115,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -82546,11 +82445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -83547,11 +83445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (Mine Made Adventure Park)",
+        "name": "7",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -83878,11 +83775,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "NULL",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "NULL"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -84209,11 +84105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Campground Road (Mine Made Adventure Park)",
+        "name": "Campground Road",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -84315,11 +84210,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Buckhorn Trail (Mine Made Adventure Park)",
+        "name": "Buckhorn Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -84701,11 +84595,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -85672,11 +85565,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "85 (Mine Made Adventure Park)",
+        "name": "85",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -86053,11 +85945,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "51 (Mine Made Adventure Park)",
+        "name": "51",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -86664,11 +86555,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 (Mine Made Adventure Park)",
+        "name": "24",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -86740,11 +86630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 (Mine Made Adventure Park)",
+        "name": "24",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -86806,11 +86695,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "58 (Mine Made Adventure Park)",
+        "name": "58",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -88137,11 +88025,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (Mine Made Adventure Park)",
+        "name": "17",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -89503,11 +89390,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 (Mine Made Adventure Park)",
+        "name": "13",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -90039,11 +89925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "45 (Mine Made Adventure Park)",
+        "name": "45",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -90090,11 +89975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "45 (Mine Made Adventure Park)",
+        "name": "45",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -90131,11 +90015,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "89 (Mine Made Adventure Park)",
+        "name": "89",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -91662,11 +91545,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "57 (Mine Made Adventure Park)",
+        "name": "57",
         "desc": " Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": " Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -93138,11 +93020,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "62 (Mine Made Adventure Park)",
+        "name": "62",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -93544,11 +93425,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Mine Made Adventure Park)",
+        "name": "12",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -95150,11 +95030,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "67 (Mine Made Adventure Park)",
+        "name": "67",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -95461,11 +95340,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 (Mine Made Adventure Park)",
+        "name": "24",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -95892,11 +95770,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -96343,11 +96220,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -96419,11 +96295,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -103630,11 +103505,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (Mine Made Adventure Park)",
+        "name": "18",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -103831,11 +103705,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "NULL (Mine Made Adventure Park)",
+        "name": "NULL",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -104627,11 +104500,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Highway (Mine Made Adventure Park)",
+        "name": "Main Highway",
         "desc": "Main Highway",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Main Highway"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -104758,11 +104630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "86 (Mine Made Adventure Park)",
+        "name": "86",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -106639,11 +106510,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (Mine Made Adventure Park)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -107075,11 +106945,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (Mine Made Adventure Park)",
+        "name": "53",
         "desc": "Difficult",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -107797,6 +107666,22 @@
           37.4389768594861,
           331
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04287235471776,
+          37.43728327168208
+        ]
+      },
+      "properties": {
+        "name": "Mine Made Adventure Park",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

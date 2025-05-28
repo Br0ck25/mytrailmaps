@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (Black Mountain Off Road Adventure Area)",
+        "name": "10",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -632,11 +631,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (Black Mountain Off Road Adventure Area)",
+        "name": "11",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1327,11 +1325,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Black Mountain Off Road Adventure Area)",
+        "name": "12",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1533,11 +1530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Black Mountain Off Road Adventure Area)",
+        "name": "12",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2964,11 +2960,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Black Mountain Off Road Adventure Area)",
+        "name": "12",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7555,11 +7550,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 (Black Mountain Off Road Adventure Area)",
+        "name": "13",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7657,11 +7651,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 (Black Mountain Off Road Adventure Area)",
+        "name": "13",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8173,11 +8166,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 (Black Mountain Off Road Adventure Area)",
+        "name": "15",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9170,11 +9162,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15/20 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "15/20 Connector",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9226,11 +9217,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15/20 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "15/20 Connector",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9383,11 +9373,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 (Black Mountain Off Road Adventure Area)",
+        "name": "16",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9659,11 +9648,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (Black Mountain Off Road Adventure Area)",
+        "name": "17",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9827,11 +9815,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (Black Mountain Off Road Adventure Area)",
+        "name": "18",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10109,11 +10096,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (Black Mountain Off Road Adventure Area)",
+        "name": "18",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10320,11 +10306,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (Black Mountain Off Road Adventure Area)",
+        "name": "18",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10392,11 +10377,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "20 (Black Mountain Off Road Adventure Area)",
+        "name": "20",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11222,11 +11206,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 (Black Mountain Off Road Adventure Area)",
+        "name": "21",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11468,11 +11451,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 (Black Mountain Off Road Adventure Area)",
+        "name": "22",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12005,11 +11987,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22/20 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "22/20 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12061,11 +12042,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22/20 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "22/20 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12125,11 +12105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 (Black Mountain Off Road Adventure Area)",
+        "name": "23",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13346,11 +13325,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 (Black Mountain Off Road Adventure Area)",
+        "name": "25",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14315,11 +14293,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25/28 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "25/28 Connector",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14437,11 +14414,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "26 (Black Mountain Off Road Adventure Area)",
+        "name": "26",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14665,11 +14641,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27 (Black Mountain Off Road Adventure Area)",
+        "name": "27",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15483,11 +15458,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "28 (Black Mountain Off Road Adventure Area)",
+        "name": "28",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16272,11 +16246,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 (Black Mountain Off Road Adventure Area)",
+        "name": "29",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17282,11 +17255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 (Black Mountain Off Road Adventure Area)",
+        "name": "29",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17573,11 +17545,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (Black Mountain Off Road Adventure Area)",
+        "name": "30",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17994,11 +17965,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 (Black Mountain Off Road Adventure Area)",
+        "name": "31",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18700,11 +18670,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 (Black Mountain Off Road Adventure Area)",
+        "name": "32",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18981,11 +18950,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "33 (Black Mountain Off Road Adventure Area)",
+        "name": "33",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19216,11 +19184,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 (Black Mountain Off Road Adventure Area)",
+        "name": "34",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20407,11 +20374,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "35 (Black Mountain Off Road Adventure Area)",
+        "name": "35",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23218,11 +23184,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "35/37 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "35/37 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23699,11 +23664,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36 (Black Mountain Off Road Adventure Area)",
+        "name": "36",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24370,11 +24334,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36/35 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "36/35 Connector",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24570,11 +24533,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 (Black Mountain Off Road Adventure Area)",
+        "name": "37",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24996,11 +24958,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 (Black Mountain Off Road Adventure Area)",
+        "name": "38",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25988,11 +25949,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38/Pucker II, Misery Connector (Black Mountain Off Road Adventure Area)",
+        "name": "38/Pucker II, Misery Connector",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26219,11 +26179,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "45 (Black Mountain Off Road Adventure Area)",
+        "name": "45",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27040,11 +26999,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "48 (Black Mountain Off Road Adventure Area)",
+        "name": "48",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27211,11 +27169,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 (Black Mountain Off Road Adventure Area)",
+        "name": "5",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27446,11 +27403,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (Black Mountain Off Road Adventure Area)",
+        "name": "6",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27734,11 +27690,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (Black Mountain Off Road Adventure Area)",
+        "name": "8",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28020,11 +27975,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 (Black Mountain Off Road Adventure Area)",
+        "name": "9",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28418,11 +28372,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9/10 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "9/10 Connector",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28478,11 +28431,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9/11 Connector (Black Mountain Off Road Adventure Area)",
+        "name": "9/11 Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28544,11 +28496,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bruiser (Black Mountain Off Road Adventure Area)",
+        "name": "Bruiser",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28640,11 +28591,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bud's Bypass (Black Mountain Off Road Adventure Area)",
+        "name": "Bud's Bypass",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28737,11 +28687,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Challenge Course (Black Mountain Off Road Adventure Area)",
+        "name": "Challenge Course",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29688,11 +29637,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Cinco Falls (Black Mountain Off Road Adventure Area)",
+        "name": "Cinco Falls",
         "desc": "Hiking Trail (Foot Traffic Only)",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "Hiking Trail (Foot Traffic Only)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29864,11 +29812,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Cliffhanger (Black Mountain Off Road Adventure Area)",
+        "name": "Cliffhanger",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30770,11 +30717,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Connector (Black Mountain Off Road Adventure Area)",
+        "name": "Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30816,11 +30762,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Connector (Black Mountain Off Road Adventure Area)",
+        "name": "Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31027,11 +30972,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Connector (Black Mountain Off Road Adventure Area)",
+        "name": "Connector",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31198,11 +31142,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Coyote Ugly (Black Mountain Off Road Adventure Area)",
+        "name": "Coyote Ugly",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31294,11 +31237,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Crawford's Cry (Black Mountain Off Road Adventure Area)",
+        "name": "Crawford's Cry",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31370,11 +31312,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Crawford's Cry (Black Mountain Off Road Adventure Area)",
+        "name": "Crawford's Cry",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31546,11 +31487,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Cream Puff (Black Mountain Off Road Adventure Area)",
+        "name": "Cream Puff",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31632,11 +31572,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Fish Fossil (Black Mountain Off Road Adventure Area)",
+        "name": "Fish Fossil",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31838,11 +31777,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Fly Trap (Black Mountain Off Road Adventure Area)",
+        "name": "Fly Trap",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32106,11 +32044,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Frankenstein (Black Mountain Off Road Adventure Area)",
+        "name": "Frankenstein",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32497,11 +32434,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Fuquarwe Trail (Black Mountain Off Road Adventure Area)",
+        "name": "Fuquarwe Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32768,11 +32704,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Fuquarwe Trail/Flay Trap (Black Mountain Off Road Adventure Area)",
+        "name": "Fuquarwe Trail/Flay Trap",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32824,11 +32759,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Grace Trail (Black Mountain Off Road Adventure Area)",
+        "name": "Grace Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33350,11 +33284,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Hell's Revenge (Black Mountain Off Road Adventure Area)",
+        "name": "Hell's Revenge",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33456,11 +33389,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jerry White Trail (Black Mountain Off Road Adventure Area)",
+        "name": "Jerry White Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33513,11 +33445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Killing Time (Black Mountain Off Road Adventure Area)",
+        "name": "Killing Time",
         "desc": "Tuck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Tuck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33644,11 +33575,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Killing Time (Black Mountain Off Road Adventure Area)",
+        "name": "Killing Time",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33710,11 +33640,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Lion's Den (Black Mountain Off Road Adventure Area)",
+        "name": "Lion's Den",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33811,11 +33740,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Little Jagger (Black Mountain Off Road Adventure Area)",
+        "name": "Little Jagger",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33887,11 +33815,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Little Jagger (Black Mountain Off Road Adventure Area)",
+        "name": "Little Jagger",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33963,11 +33890,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MASONJAR (Black Mountain Off Road Adventure Area)",
+        "name": "MASONJAR",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34193,11 +34119,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Misery (Black Mountain Off Road Adventure Area)",
+        "name": "Misery",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34749,11 +34674,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Old Mine (17/11 Connector) (Black Mountain Off Road Adventure Area)",
+        "name": "Old Mine (17/11 Connector)",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34864,11 +34788,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pappys Pass (Black Mountain Off Road Adventure Area)",
+        "name": "Pappys Pass",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35435,11 +35358,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pineball (Black Mountain Off Road Adventure Area)",
+        "name": "Pineball",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35531,11 +35453,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Plateau (Black Mountain Off Road Adventure Area)",
+        "name": "Plateau",
         "desc": "ATV Beginner Trail (Truck Class 2)",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "ATV Beginner Trail (Truck Class 2)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37012,11 +36933,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pony Hill (Black Mountain Off Road Adventure Area)",
+        "name": "Pony Hill",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37198,11 +37118,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pucker I (Black Mountain Off Road Adventure Area)",
+        "name": "Pucker I",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37589,11 +37508,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pucker II (Black Mountain Off Road Adventure Area)",
+        "name": "Pucker II",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37960,11 +37878,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Rail Bed (Black Mountain Off Road Adventure Area)",
+        "name": "Rail Bed",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38056,11 +37973,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Rock Garden (Black Mountain Off Road Adventure Area)",
+        "name": "Rock Garden",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38162,11 +38078,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Roger's Ridge (Black Mountain Off Road Adventure Area)",
+        "name": "Roger's Ridge",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38378,11 +38293,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Running Board (Black Mountain Off Road Adventure Area)",
+        "name": "Running Board",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38544,11 +38458,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Shameless (Black Mountain Off Road Adventure Area)",
+        "name": "Shameless",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38616,11 +38529,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "T.R.O.U.B.L.E (Black Mountain Off Road Adventure Area)",
+        "name": "T.R.O.U.B.L.E",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38947,11 +38859,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Tailgate (Black Mountain Off Road Adventure Area)",
+        "name": "Tailgate",
         "desc": "Truck-Only 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39113,11 +39024,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Tombstone (Black Mountain Off Road Adventure Area)",
+        "name": "Tombstone",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39169,11 +39079,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Truck-Only Class 4 (Black Mountain Off Road Adventure Area)",
+        "name": "Truck-Only Class 4",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39345,11 +39254,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Truck-Only Class 5 (Black Mountain Off Road Adventure Area)",
+        "name": "Truck-Only Class 5",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39666,11 +39574,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Truck-Only Class 5 (Black Mountain Off Road Adventure Area)",
+        "name": "Truck-Only Class 5",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39997,11 +39904,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Underestimated (Black Mountain Off Road Adventure Area)",
+        "name": "Underestimated",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40118,11 +40024,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Upper Grace (Black Mountain Off Road Adventure Area)",
+        "name": "Upper Grace",
         "desc": "ATV Advance Trail (Truck Class 4)",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "ATV Advance Trail (Truck Class 4)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40329,11 +40234,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Upper Rock Garden & Can Opener (Black Mountain Off Road Adventure Area)",
+        "name": "Upper Rock Garden & Can Opener",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40415,11 +40319,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "White Tail Crawl (Black Mountain Off Road Adventure Area)",
+        "name": "White Tail Crawl",
         "desc": "Truck-Only Class 4",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 4"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40611,11 +40514,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Windmill Trail (Black Mountain Off Road Adventure Area)",
+        "name": "Windmill Trail",
         "desc": "ATV Intermediate Trail (Truck Class 3)",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "ATV Intermediate Trail (Truck Class 3)"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40942,11 +40844,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Your Turn (Black Mountain Off Road Adventure Area)",
+        "name": "Your Turn",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41123,11 +41024,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Your Turn (Black Mountain Off Road Adventure Area)",
+        "name": "Your Turn",
         "desc": "Truck-Only Class 5",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Truck-Only Class 5"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41857,6 +41757,22 @@
           36.8764070985525,
           907
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.21633833374564,
+          36.88489120655711
+        ]
+      },
+      "properties": {
+        "name": "Black Mountain Off Road Adventure Area",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

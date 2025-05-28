@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bryant Grove Trail (Bryant Grove Trail)",
+        "name": "Bryant Grove Trail",
         "time": "2018-10-23T17:23:15Z",
         "stroke": "#0479FF",
         "coordinateProperties": {
@@ -152,8 +152,7 @@
             "2018-10-23T19:42:15Z",
             "2018-10-23T19:43:15Z"
           ]
-        },
-        "description": "No description available"
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -864,6 +863,22 @@
             153.52
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.52449014184398,
+          36.08264504255318
+        ]
+      },
+      "properties": {
+        "name": "Bryant Grove Trail",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

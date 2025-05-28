@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "220 (rocky ridge off road park)",
+        "name": "220",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -121,11 +120,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -202,11 +200,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Flat Rock Trail (rocky ridge off road park)",
+        "name": "Flat Rock Trail",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -258,11 +255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -349,11 +345,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -375,11 +370,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -401,11 +395,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -427,11 +420,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 160 (rocky ridge off road park)",
+        "name": "Trail 160",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -493,11 +485,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Track Rd (rocky ridge off road park)",
+        "name": "Track Rd",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -599,11 +590,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail #5 (rocky ridge off road park)",
+        "name": "Trail #5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -625,10 +615,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Camp Access (rocky ridge off road park)",
+        "name": "Camp Access",
         "stroke": "#a4a4a4",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -680,11 +669,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail # (rocky ridge off road park)",
+        "name": "Trail #",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -736,10 +724,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "stroke": "#a4a4a4",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -776,10 +763,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -886,11 +872,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -952,11 +937,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail #5 (rocky ridge off road park)",
+        "name": "Trail #5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -978,11 +962,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (rocky ridge off road park)",
+        "name": "7",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1119,10 +1102,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Future Road (rocky ridge off road park)",
+        "name": "Future Road",
         "stroke": "#a4a4a4",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1219,11 +1201,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1245,11 +1226,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1271,11 +1251,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Rabbit Trap (rocky ridge off road park)",
+        "name": "Rabbit Trap",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1337,11 +1316,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 50 (rocky ridge off road park)",
+        "name": "Trail 50",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1498,11 +1476,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (rocky ridge off road park)",
+        "name": "4",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1584,11 +1561,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1670,11 +1646,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 4 (rocky ridge off road park)",
+        "name": "Trail 4",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1911,11 +1886,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 1 (rocky ridge off road park)",
+        "name": "Trail 1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2262,10 +2236,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2392,11 +2365,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2448,11 +2420,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2474,11 +2445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Waterfall Trail (8) (rocky ridge off road park)",
+        "name": "Waterfall Trail (8)",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2850,11 +2820,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail #5 (rocky ridge off road park)",
+        "name": "Trail #5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2876,11 +2845,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 3 (rocky ridge off road park)",
+        "name": "Trail 3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3232,11 +3200,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3258,11 +3225,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3284,11 +3250,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail #5 (rocky ridge off road park)",
+        "name": "Trail #5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3310,11 +3275,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3336,11 +3300,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3362,11 +3325,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3388,10 +3350,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Knight Club Rd (rocky ridge off road park)",
+        "name": "Knight Club Rd",
         "stroke": "#a4a4a4",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3453,11 +3414,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail # (rocky ridge off road park)",
+        "name": "Trail #",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3579,11 +3539,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3605,11 +3564,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3631,11 +3589,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3737,11 +3694,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 3 (rocky ridge off road park)",
+        "name": "Trail 3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3883,11 +3839,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 10 (rocky ridge off road park)",
+        "name": "Trail 10",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4279,11 +4234,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 101 (rocky ridge off road park)",
+        "name": "Trail 101",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4375,10 +4329,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Camp Access Road (rocky ridge off road park)",
+        "name": "Camp Access Road",
         "stroke": "#a4a4a4",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4435,11 +4388,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4461,11 +4413,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 6 (rocky ridge off road park)",
+        "name": "Trail 6",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4957,11 +4908,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 (rocky ridge off road park)",
+        "name": "24",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5033,11 +4983,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (rocky ridge off road park)",
+        "name": "8",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5189,11 +5138,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4x4 Entrance (rocky ridge off road park)",
+        "name": "4x4 Entrance",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5360,11 +5308,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5386,11 +5333,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5467,11 +5413,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail # (rocky ridge off road park)",
+        "name": "Trail #",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5533,11 +5478,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5604,11 +5548,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5630,11 +5573,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5696,11 +5638,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 2 (rocky ridge off road park)",
+        "name": "Trail 2",
         "desc": "Ridge Top Trail",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Ridge Top Trail"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6337,11 +6278,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 161 (rocky ridge off road park)",
+        "name": "Trail 161",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6473,11 +6413,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 5 (rocky ridge off road park)",
+        "name": "Trail 5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6849,11 +6788,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6905,11 +6843,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (rocky ridge off road park)",
+        "name": "52",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7041,11 +6978,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7067,11 +7003,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7093,11 +7028,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7119,11 +7053,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7205,11 +7138,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Christmas Tree Hill (rocky ridge off road park)",
+        "name": "Christmas Tree Hill",
         "desc": "Extreme",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7551,11 +7483,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "229 (rocky ridge off road park)",
+        "name": "229",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7697,11 +7628,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail 260 (rocky ridge off road park)",
+        "name": "Trail 260",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7753,11 +7683,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7779,11 +7708,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (rocky ridge off road park)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7835,10 +7763,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moderate (rocky ridge off road park)",
+        "name": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8030,11 +7957,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail #5 (rocky ridge off road park)",
+        "name": "Trail #5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8056,11 +7982,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Trail #5 (rocky ridge off road park)",
+        "name": "Trail #5",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8082,10 +8007,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "MX Track (rocky ridge off road park)",
+        "name": "MX Track",
         "stroke": "#2d3fc7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8346,6 +8270,22 @@
             164.4
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.50041397807138,
+          37.02509695186249
+        ]
+      },
+      "properties": {
+        "name": "rocky ridge off road park",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

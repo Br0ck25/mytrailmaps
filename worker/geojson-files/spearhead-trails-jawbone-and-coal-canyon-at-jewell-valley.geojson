@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "30",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -236,11 +235,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "76 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "76",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -712,11 +710,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "32",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1218,11 +1215,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "5",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1379,11 +1375,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "75 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "75",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1580,11 +1575,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "38",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1881,11 +1875,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "34",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2007,11 +2000,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jewell valley #2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Jewell valley #2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2093,11 +2085,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "100 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "100",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2429,11 +2420,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "73 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "73",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2610,11 +2600,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "6",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2711,11 +2700,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5242,11 +5230,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "40 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "40",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5908,11 +5895,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "34",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6149,11 +6135,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "White Mountain Road (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "White Mountain Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8975,11 +8960,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "42 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "42",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11101,11 +11085,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "39 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "39",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11702,11 +11685,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14273,11 +14255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "7",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15339,11 +15320,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "100 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "100",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16550,11 +16530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "14",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17596,11 +17575,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17827,11 +17805,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20528,11 +20505,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "14",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20654,11 +20630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "71 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "71",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20990,11 +20965,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21801,11 +21775,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "100 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "100",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22462,11 +22435,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "4",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22608,11 +22580,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "41 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "41",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23149,11 +23120,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "4",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23510,11 +23480,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25036,11 +25005,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "11",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25602,11 +25570,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "6",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26408,11 +26375,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "74 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "74",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26749,11 +26715,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27875,11 +27840,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28431,11 +28395,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28637,11 +28600,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "31",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28808,11 +28770,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29144,11 +29105,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "14",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29265,11 +29225,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "6",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29851,11 +29810,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Brown Mountain Road (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Brown Mountain Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30137,11 +30095,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "31",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31088,11 +31045,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31814,11 +31770,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jewell valley #2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Jewell valley #2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31970,11 +31925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "70 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "70",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32196,11 +32150,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "40 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "40",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32377,11 +32330,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "34",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32628,11 +32580,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "36",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32904,11 +32855,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "10",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33095,11 +33045,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "32",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33226,11 +33175,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "4",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33617,11 +33565,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "100 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "100",
         "desc": "Single Track",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33778,11 +33725,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "70 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "70",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34069,11 +34015,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "33 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "33",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34500,11 +34445,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pea Patch Road (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Pea Patch Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39301,11 +39245,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40282,11 +40225,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "32",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -40383,11 +40325,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "34",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42474,11 +42415,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "72 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "72",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42865,11 +42805,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "33 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "33",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43006,11 +42945,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "35 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "35",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -44667,11 +44605,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46498,11 +46435,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -48024,11 +47960,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "92 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "92",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -48380,11 +48315,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "91 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "91",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -49236,11 +49170,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Dismall River  Road (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Dismall River  Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -49312,11 +49245,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "8",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -50423,11 +50355,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "1",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51169,11 +51100,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52235,11 +52165,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "11",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -52651,11 +52580,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "11",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -55092,11 +55020,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -55838,11 +55765,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "2",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -56944,11 +56870,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "37",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57300,11 +57225,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jewell Valley Road (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Jewell Valley Road",
         "desc": "Main Raod",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Raod"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57456,11 +57380,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "38",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -57897,11 +57820,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "38",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58743,11 +58665,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jewell Valley Road (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Jewell Valley Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58834,11 +58755,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Road (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58940,11 +58860,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "10",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -59376,11 +59295,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (spearhead trails jawbone and coal canyon at jewell valley)",
+        "name": "6",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -59736,6 +59654,22 @@
             741.3513999999996
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.84668498025377,
+          37.18461009804292
+        ]
+      },
+      "properties": {
+        "name": "spearhead trails jawbone and coal canyon at jewell valley",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

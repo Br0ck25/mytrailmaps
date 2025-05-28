@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (top trails)",
+        "name": "10",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51,11 +50,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "39 (top trails)",
+        "name": "39",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -132,11 +130,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (top trails)",
+        "name": "12",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -203,11 +200,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "34 (top trails)",
+        "name": "34",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -289,11 +285,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24/23 Connecotr (top trails)",
+        "name": "24/23 Connecotr",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -355,11 +350,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "13 (top trails)",
+        "name": "13",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -406,11 +400,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "45 (top trails)",
+        "name": "45",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -482,11 +475,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 (top trails)",
+        "name": "14",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -538,11 +530,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (top trails)",
+        "name": "2",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -574,11 +565,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -695,11 +685,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "35 (top trails)",
+        "name": "35",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -781,11 +770,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7/8 Connector (top trails)",
+        "name": "7/8 Connector",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -842,11 +830,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "45 (top trails)",
+        "name": "45",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -973,11 +960,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "18 (top trails)",
+        "name": "18",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1099,11 +1085,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1175,11 +1160,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Annex Road (top trails)",
+        "name": "Annex Road",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1271,11 +1255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31/32A Connector (top trails)",
+        "name": "31/32A Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1337,11 +1320,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25/26 Connecot (top trails)",
+        "name": "25/26 Connecot",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1508,11 +1490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1684,11 +1665,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Single Track (top trails)",
+        "name": "Single Track",
         "desc": "Single Track",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "Single Track"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4075,11 +4055,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37A (top trails)",
+        "name": "37A",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4236,11 +4215,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "47 (top trails)",
+        "name": "47",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4307,11 +4285,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "26 (top trails)",
+        "name": "26",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4493,11 +4470,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "15 (top trails)",
+        "name": "15",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4584,11 +4560,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32/25 Connector (top trails)",
+        "name": "32/25 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4655,11 +4630,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11A (top trails)",
+        "name": "11A",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4681,11 +4655,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "25 (top trails)",
+        "name": "25",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5067,11 +5040,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "40 (top trails)",
+        "name": "40",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5163,11 +5135,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5384,11 +5355,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24B (top trails)",
+        "name": "24B",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5480,11 +5450,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "54 (top trails)",
+        "name": "54",
         "desc": "Moderate\n",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate\n"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5601,11 +5570,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (top trails)",
+        "name": "7",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5652,11 +5620,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "58 (top trails)",
+        "name": "58",
         "desc": "Intermediate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Intermediate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6043,11 +6010,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "48 (top trails)",
+        "name": "48",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6434,11 +6400,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (top trails)",
+        "name": "53",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6545,11 +6510,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6916,11 +6880,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36/42 Connector (top trails)",
+        "name": "36/42 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6952,11 +6915,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "tt 1. (top trails)",
+        "name": "tt 1.",
         "desc": "&nbsp;",
         "stroke": "#fd2500",
-        "coordinateProperties": {},
-        "description": "&nbsp;"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7078,11 +7040,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27 (top trails)",
+        "name": "27",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7194,11 +7155,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24A (top trails)",
+        "name": "24A",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7275,11 +7235,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (top trails)",
+        "name": "30",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7361,11 +7320,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Dump Up To Tower (top trails)",
+        "name": "Dump Up To Tower",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7772,11 +7730,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 (top trails)",
+        "name": "9",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7833,11 +7790,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31A (top trails)",
+        "name": "31A",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8084,11 +8040,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Middle Road (top trails)",
+        "name": "Main Middle Road",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8215,11 +8170,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "48/44 Connector (top trails)",
+        "name": "48/44 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8431,11 +8385,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "33 (top trails)",
+        "name": "33",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8642,11 +8595,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12A (top trails)",
+        "name": "12A",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8798,11 +8750,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27A (top trails)",
+        "name": "27A",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8869,11 +8820,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "41 (top trails)",
+        "name": "41",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9010,11 +8960,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "44 (top trails)",
+        "name": "44",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9101,11 +9050,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 (top trails)",
+        "name": "37",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9352,11 +9300,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36 (top trails)",
+        "name": "36",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9473,11 +9420,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Main Lower Road (top trails)",
+        "name": "Main Lower Road",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9664,11 +9610,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (top trails)",
+        "name": "17",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9870,11 +9815,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "11 (top trails)",
+        "name": "11",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9931,11 +9875,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (top trails)",
+        "name": "8",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9982,11 +9925,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9/7 Connector (top trails)",
+        "name": "9/7 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10043,11 +9985,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 (top trails)",
+        "name": "21",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10169,11 +10110,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "46 (top trails)",
+        "name": "46",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10420,11 +10360,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "32 (top trails)",
+        "name": "32",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10581,11 +10520,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "43 (top trails)",
+        "name": "43",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11362,11 +11300,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 (top trails)",
+        "name": "16",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11438,11 +11375,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50 (top trails)",
+        "name": "50",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11929,11 +11865,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (top trails)",
+        "name": "3",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11965,11 +11900,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12151,11 +12085,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (top trails)",
+        "name": "4",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12197,11 +12130,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "22 (top trails)",
+        "name": "22",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12423,11 +12355,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (top trails)",
+        "name": "12",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12509,11 +12440,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (top trails)",
+        "name": "6",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12550,11 +12480,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "49 (top trails)",
+        "name": "49",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12736,11 +12665,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "57 (top trails)",
+        "name": "57",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13752,11 +13680,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (top trails)",
+        "name": "1",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13823,11 +13750,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (top trails)",
+        "name": "19",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13869,11 +13795,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 (top trails)",
+        "name": "38",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14210,11 +14135,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14426,11 +14350,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (top trails)",
+        "name": "Untitled Route",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14562,11 +14485,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Cell Tower Overlook (top trails)",
+        "name": "Cell Tower Overlook",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14833,11 +14755,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "20 (top trails)",
+        "name": "20",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15034,11 +14955,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "29 (top trails)",
+        "name": "29",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15155,11 +15075,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 (top trails)",
+        "name": "23",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15571,11 +15490,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "55 (top trails)",
+        "name": "55",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15807,11 +15725,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "33/42 Connecotr (top trails)",
+        "name": "33/42 Connecotr",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15840,9 +15757,7 @@
         "_gpxType": "trk",
         "desc": "Road",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "name": "Track 84 (top trails)",
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15914,11 +15829,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (top trails)",
+        "name": "52",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16025,11 +15939,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (top trails)",
+        "name": "17",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16066,11 +15979,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (top trails)",
+        "name": "30",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18177,11 +18089,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "24 (top trails)",
+        "name": "24",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18823,11 +18734,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (top trails)",
+        "name": "19",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18929,11 +18839,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "31 (top trails)",
+        "name": "31",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19530,10 +19439,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "RR Bed (top trails)",
+        "name": "RR Bed",
         "stroke": "#a6a6a6",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20145,11 +20053,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 (top trails)",
+        "name": "5",
         "desc": "Road",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20186,11 +20093,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "42 (top trails)",
+        "name": "42",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20552,11 +20458,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "51 (top trails)",
+        "name": "51",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21008,11 +20913,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "28 (top trails)",
+        "name": "28",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21298,6 +21202,22 @@
             185.77
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.07114513493393,
+          33.489551472721
+        ]
+      },
+      "properties": {
+        "name": "top trails",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

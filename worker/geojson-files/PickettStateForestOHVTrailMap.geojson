@@ -5,11 +5,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (Pickett State Forest OHVTrail Map)",
+        "name": "1",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -257,11 +256,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (Pickett State Forest OHVTrail Map)",
+        "name": "1",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2778,11 +2776,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (Pickett State Forest OHVTrail Map)",
+        "name": "10",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3074,11 +3071,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "100 (Pickett State Forest OHVTrail Map)",
+        "name": "100",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4511,11 +4507,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "101 (Pickett State Forest OHVTrail Map)",
+        "name": "101",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5767,11 +5762,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "102 (Pickett State Forest OHVTrail Map)",
+        "name": "102",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8278,11 +8272,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "103 (Pickett State Forest OHVTrail Map)",
+        "name": "103",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8819,11 +8812,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "104 (Pickett State Forest OHVTrail Map)",
+        "name": "104",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9220,11 +9212,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "12 (Pickett State Forest OHVTrail Map)",
+        "name": "12",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10366,11 +10357,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "14 (Pickett State Forest OHVTrail Map)",
+        "name": "14",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11005,11 +10995,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "16 (Pickett State Forest OHVTrail Map)",
+        "name": "16",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11836,11 +11825,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "17 (Pickett State Forest OHVTrail Map)",
+        "name": "17",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12317,11 +12305,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "19 (Pickett State Forest OHVTrail Map)",
+        "name": "19",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12593,11 +12580,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (Pickett State Forest OHVTrail Map)",
+        "name": "2",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12649,11 +12635,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (Pickett State Forest OHVTrail Map)",
+        "name": "2",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12790,11 +12775,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (Pickett State Forest OHVTrail Map)",
+        "name": "2",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14149,11 +14133,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "21 (Pickett State Forest OHVTrail Map)",
+        "name": "21",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14890,11 +14873,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "23 (Pickett State Forest OHVTrail Map)",
+        "name": "23",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15266,11 +15248,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "26 (Pickett State Forest OHVTrail Map)",
+        "name": "26",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15842,11 +15823,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "27 (Pickett State Forest OHVTrail Map)",
+        "name": "27",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16502,11 +16482,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "3 (Pickett State Forest OHVTrail Map)",
+        "name": "3",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17938,11 +17917,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "30 (Pickett State Forest OHVTrail Map)",
+        "name": "30",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18483,11 +18461,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "36 (Pickett State Forest OHVTrail Map)",
+        "name": "36",
         "desc": "Extreme",
         "stroke": "#5726C2",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18899,11 +18876,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "37 (Pickett State Forest OHVTrail Map)",
+        "name": "37",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19515,11 +19491,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "38 (Pickett State Forest OHVTrail Map)",
+        "name": "38",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19776,11 +19751,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "39 (Pickett State Forest OHVTrail Map)",
+        "name": "39",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19917,11 +19891,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "41 (Pickett State Forest OHVTrail Map)",
+        "name": "41",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20403,11 +20376,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "42 (Pickett State Forest OHVTrail Map)",
+        "name": "42",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20494,11 +20466,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "44 (Pickett State Forest OHVTrail Map)",
+        "name": "44",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20622,11 +20593,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "45 (Pickett State Forest OHVTrail Map)",
+        "name": "45",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21073,11 +21043,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "46 (Pickett State Forest OHVTrail Map)",
+        "name": "46",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21258,11 +21227,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "47 (Pickett State Forest OHVTrail Map)",
+        "name": "47",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21641,11 +21609,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "48 (Pickett State Forest OHVTrail Map)",
+        "name": "48",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22101,11 +22068,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "49 (Pickett State Forest OHVTrail Map)",
+        "name": "49",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22462,11 +22428,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50 (Pickett State Forest OHVTrail Map)",
+        "name": "50",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22748,11 +22713,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "51 (Pickett State Forest OHVTrail Map)",
+        "name": "51",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23644,11 +23608,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (Pickett State Forest OHVTrail Map)",
+        "name": "52",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24275,11 +24238,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (Pickett State Forest OHVTrail Map)",
+        "name": "53",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24876,11 +24838,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "54 (Pickett State Forest OHVTrail Map)",
+        "name": "54",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27219,11 +27180,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "54S (Pickett State Forest OHVTrail Map)",
+        "name": "54S",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27295,11 +27255,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "55 (Pickett State Forest OHVTrail Map)",
+        "name": "55",
         "desc": "Extreme",
         "stroke": "#5726C2",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27381,11 +27340,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "56 (Pickett State Forest OHVTrail Map)",
+        "name": "56",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27708,11 +27666,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "57 (Pickett State Forest OHVTrail Map)",
+        "name": "57",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28279,11 +28236,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "58 (Pickett State Forest OHVTrail Map)",
+        "name": "58",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28465,11 +28421,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "59 (Pickett State Forest OHVTrail Map)",
+        "name": "59",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28631,11 +28586,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "60 (Pickett State Forest OHVTrail Map)",
+        "name": "60",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28945,11 +28899,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "61 (Pickett State Forest OHVTrail Map)",
+        "name": "61",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29531,11 +29484,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "62 (Pickett State Forest OHVTrail Map)",
+        "name": "62",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30402,11 +30354,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "63 (Pickett State Forest OHVTrail Map)",
+        "name": "63",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30798,11 +30749,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "65 (Pickett State Forest OHVTrail Map)",
+        "name": "65",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32519,11 +32469,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "65A (Pickett State Forest OHVTrail Map)",
+        "name": "65A",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32685,11 +32634,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "65S (Pickett State Forest OHVTrail Map)",
+        "name": "65S",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32946,11 +32894,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (Pickett State Forest OHVTrail Map)",
+        "name": "7",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33287,11 +33234,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "70 (Pickett State Forest OHVTrail Map)",
+        "name": "70",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33597,11 +33543,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "75 (Pickett State Forest OHVTrail Map)",
+        "name": "75",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34167,11 +34112,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "75A (Pickett State Forest OHVTrail Map)",
+        "name": "75A",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34268,11 +34212,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "76 (Pickett State Forest OHVTrail Map)",
+        "name": "76",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34774,11 +34717,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (Pickett State Forest OHVTrail Map)",
+        "name": "8",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35142,11 +35084,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9 (Pickett State Forest OHVTrail Map)",
+        "name": "9",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36462,11 +36403,10 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Wow Trail Overlook (Pickett State Forest OHVTrail Map)",
+        "name": "Wow Trail Overlook",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37495,6 +37435,22 @@
           36.6378546844306,
           510
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.92986527542509,
+          36.623789164645835
+        ]
+      },
+      "properties": {
+        "name": "Pickett State Forest OHVTrail Map",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]

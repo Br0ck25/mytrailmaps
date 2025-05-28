@@ -16,47 +16,49 @@ fs.readdirSync(inputDir)
   .forEach((file) => {
     const gpxText = fs.readFileSync(path.join(inputDir, file), "utf8");
     const dom = new DOMParser().parseFromString(gpxText, "application/xml");
-
     const geojson = togeojson.gpx(dom);
 
-    // Extract track metadata
-    const trkEls = dom.getElementsByTagName("trk");
-    const names = [];
-    const descriptions = [];
+    // Format filename label (e.g., "My Trail.gpx" => "My Trail")
+    const filenameLabel = file
+      .replace(/\.gpx$/i, "")
+      .replace(/([a-z])([A-Z])/g, "$1 $2")
+      .replace(/[-_]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
 
-    for (let i = 0; i < trkEls.length; i++) {
-      const nameTag = trkEls[i].getElementsByTagName("name")[0];
-      const descTag = trkEls[i].getElementsByTagName("desc")[0];
-      const cmtTag = trkEls[i].getElementsByTagName("cmt")[0];
+    // Collect coordinates from all LineStrings
+    const allCoords = geojson.features
+      .filter(f => f.geometry?.type === "LineString")
+      .flatMap(f => f.geometry.coordinates);
 
-      names.push(nameTag ? nameTag.textContent : `Track ${i + 1}`);
-      descriptions.push(descTag?.textContent || cmtTag?.textContent || "");
+    // Compute center of all track points
+    let center = [0, 0];
+    if (allCoords.length > 0) {
+      const [sumLng, sumLat] = allCoords.reduce(
+        ([lngSum, latSum], [lng, lat]) => [lngSum + lng, latSum + lat],
+        [0, 0]
+      );
+      center = [sumLng / allCoords.length, sumLat / allCoords.length];
     }
 
-// Create a friendly version of the filename to append
-const filenameLabel = file
-  .replace(/\.gpx$/i, "")
-  .replace(/([a-z])([A-Z])/g, "$1 $2")
-  .replace(/-/g, " ")
-  .replace(/\s+/g, " ")
-  .trim();
-
-let trkIndex = 0;
-geojson.features.forEach((f) => {
-  if (f.geometry?.type === "LineString") {
-    const baseName = names[trkIndex] || `Track ${trkIndex + 1}`;
-    f.properties.name = `${baseName} (${filenameLabel})`; // ✅ Label includes file name
-    f.properties.description = descriptions[trkIndex] || "No description available";
-    trkIndex++;
-  }
-});
-
-
+    // Add label point
+    geojson.features.push({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: center
+      },
+      properties: {
+        name: filenameLabel,
+        label: true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
+      }
+    });
 
     // Save GeoJSON
     const outPath = path.join(outputDir, file.replace(/\.gpx$/i, ".geojson"));
     fs.writeFileSync(outPath, JSON.stringify(geojson, null, 2));
-
     console.log("✅ Converted:", file);
   });
 
@@ -67,5 +69,4 @@ const manifestFiles = fs.readdirSync(outputDir)
 
 const manifestPath = path.join(outputDir, "manifest.json");
 fs.writeFileSync(manifestPath, JSON.stringify(manifestFiles, null, 2));
-
 console.log(`📄 Manifest updated with ${manifestFiles.length} track(s).`);

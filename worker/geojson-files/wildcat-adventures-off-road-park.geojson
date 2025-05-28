@@ -5,10 +5,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "116 (wildcat adventures off road park)",
+        "name": "116",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -75,10 +74,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "518 (wildcat adventures off road park)",
+        "name": "518",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -135,10 +133,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Easier Way (wildcat adventures off road park)",
+        "name": "Easier Way",
         "stroke": "#FFC900",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -195,10 +192,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (wildcat adventures off road park)",
+        "name": "Untitled Route",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -225,10 +221,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (wildcat adventures off road park)",
+        "name": "1",
         "stroke": "#DCEE0E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -300,10 +295,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "110 (wildcat adventures off road park)",
+        "name": "110",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -385,10 +379,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Abort (wildcat adventures off road park)",
+        "name": "Abort",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -440,10 +433,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bear Mountain (wildcat adventures off road park)",
+        "name": "Bear Mountain",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -515,10 +507,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "204 (wildcat adventures off road park)",
+        "name": "204",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -595,10 +586,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "204 (wildcat adventures off road park)",
+        "name": "204",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -635,10 +625,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Eagle X-ing (wildcat adventures off road park)",
+        "name": "Eagle X-ing",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -805,10 +794,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -830,10 +818,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Gate C (wildcat adventures off road park)",
+        "name": "Gate C",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -905,10 +892,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Goose Rock (wildcat adventures off road park)",
+        "name": "Goose Rock",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1150,10 +1136,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "52 (wildcat adventures off road park)",
+        "name": "52",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1465,10 +1450,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Goose Rock (wildcat adventures off road park)",
+        "name": "Goose Rock",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1550,10 +1534,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (wildcat adventures off road park)",
+        "name": "10",
         "stroke": "#E834EC",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1595,10 +1578,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1620,10 +1602,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1645,10 +1626,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1670,10 +1650,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1695,10 +1674,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Hog Hill (wildcat adventures off road park)",
+        "name": "Hog Hill",
         "stroke": "#DCEE0E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1745,10 +1723,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "502 (wildcat adventures off road park)",
+        "name": "502",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1830,10 +1807,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (wildcat adventures off road park)",
+        "name": "Untitled Route",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1865,10 +1841,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1890,10 +1865,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "By-Pass (wildcat adventures off road park)",
+        "name": "By-Pass",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1920,10 +1894,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jett-A-Way (wildcat adventures off road park)",
+        "name": "Jett-A-Way",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2115,10 +2088,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Donkey Trail (wildcat adventures off road park)",
+        "name": "Donkey Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2200,10 +2172,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2225,10 +2196,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "522 (wildcat adventures off road park)",
+        "name": "522",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2300,10 +2270,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Beaver Trail (wildcat adventures off road park)",
+        "name": "Beaver Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2665,10 +2634,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Dragon Hill (wildcat adventures off road park)",
+        "name": "Dragon Hill",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2740,10 +2708,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "504 (wildcat adventures off road park)",
+        "name": "504",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2845,10 +2812,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jett-A-Way (wildcat adventures off road park)",
+        "name": "Jett-A-Way",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2870,10 +2836,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Outlaw Trail (wildcat adventures off road park)",
+        "name": "Outlaw Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3000,10 +2965,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Crutch Hill Trail (wildcat adventures off road park)",
+        "name": "Crutch Hill Trail",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3195,10 +3159,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "122 (wildcat adventures off road park)",
+        "name": "122",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3265,10 +3228,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (wildcat adventures off road park)",
+        "name": "Untitled Route",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3310,10 +3272,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jack Rabbit (wildcat adventures off road park)",
+        "name": "Jack Rabbit",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3475,10 +3436,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "T-Trail (wildcat adventures off road park)",
+        "name": "T-Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3530,10 +3490,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "514 (wildcat adventures off road park)",
+        "name": "514",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3615,10 +3574,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Racoon Trail (wildcat adventures off road park)",
+        "name": "Racoon Trail",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3965,10 +3923,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "304 (wildcat adventures off road park)",
+        "name": "304",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4030,10 +3987,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (wildcat adventures off road park)",
+        "name": "Untitled Route",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4140,10 +4096,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jurassic Trail (wildcat adventures off road park)",
+        "name": "Jurassic Trail",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4465,10 +4420,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Big Bear Pass (wildcat adventures off road park)",
+        "name": "Big Bear Pass",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4755,10 +4709,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "106 (wildcat adventures off road park)",
+        "name": "106",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4870,10 +4823,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "The Claw (wildcat adventures off road park)",
+        "name": "The Claw",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5195,10 +5147,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "109 (wildcat adventures off road park)",
+        "name": "109",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5230,10 +5181,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "BT-508 (wildcat adventures off road park)",
+        "name": "BT-508",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5260,10 +5210,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (wildcat adventures off road park)",
+        "name": "Untitled Route",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5300,10 +5249,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Lost Boat Trail (wildcat adventures off road park)",
+        "name": "Lost Boat Trail",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5480,10 +5428,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "118 (wildcat adventures off road park)",
+        "name": "118",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5545,10 +5492,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5570,10 +5516,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Duck Hill (wildcat adventures off road park)",
+        "name": "Duck Hill",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5675,10 +5620,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5700,10 +5644,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Red Fox Run (wildcat adventures off road park)",
+        "name": "Red Fox Run",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5895,10 +5838,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50-A (wildcat adventures off road park)",
+        "name": "50-A",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6700,10 +6642,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Wildcat Dome (wildcat adventures off road park)",
+        "name": "Wildcat Dome",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6780,10 +6721,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "104 (wildcat adventures off road park)",
+        "name": "104",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6840,10 +6780,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (wildcat adventures off road park)",
+        "name": "7",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7145,10 +7084,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Sasquatch Trail (wildcat adventures off road park)",
+        "name": "Sasquatch Trail",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7180,10 +7118,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Wildcat Dome (wildcat adventures off road park)",
+        "name": "Wildcat Dome",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7455,10 +7392,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "0 (wildcat adventures off road park)",
+        "name": "0",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8015,10 +7951,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Tomcat Trail (wildcat adventures off road park)",
+        "name": "Tomcat Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8150,10 +8085,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Wildcat Trail (wildcat adventures off road park)",
+        "name": "Wildcat Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8375,10 +8309,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Untitled Route (wildcat adventures off road park)",
+        "name": "Untitled Route",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8400,10 +8333,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Tomcat Trail (wildcat adventures off road park)",
+        "name": "Tomcat Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8470,10 +8402,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Wildcat Playground Rd (wildcat adventures off road park)",
+        "name": "Wildcat Playground Rd",
         "stroke": "#A4A4A4",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8690,10 +8621,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50-B (wildcat adventures off road park)",
+        "name": "50-B",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9165,10 +9095,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "JCT AVE (wildcat adventures off road park)",
+        "name": "JCT AVE",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9245,10 +9174,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Moonshine Ridge (wildcat adventures off road park)",
+        "name": "Moonshine Ridge",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9480,10 +9408,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Elk X-ing (wildcat adventures off road park)",
+        "name": "Elk X-ing",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9570,10 +9497,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "9E (wildcat adventures off road park)",
+        "name": "9E",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10040,10 +9966,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "55 (wildcat adventures off road park)",
+        "name": "55",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10165,10 +10090,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Jett-A-Way (wildcat adventures off road park)",
+        "name": "Jett-A-Way",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10190,10 +10114,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Goat X-ing (wildcat adventures off road park)",
+        "name": "Goat X-ing",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10290,10 +10213,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50-C (wildcat adventures off road park)",
+        "name": "50-C",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10720,10 +10642,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "5 (wildcat adventures off road park)",
+        "name": "5",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12070,10 +11991,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12095,10 +12015,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "525 (wildcat adventures off road park)",
+        "name": "525",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12120,10 +12039,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (wildcat adventures off road park)",
+        "name": "10",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12390,10 +12308,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "53 (wildcat adventures off road park)",
+        "name": "53",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12860,10 +12777,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Cub Crawl (wildcat adventures off road park)",
+        "name": "Cub Crawl",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12925,10 +12841,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "1 (wildcat adventures off road park)",
+        "name": "1",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14125,10 +14040,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "2 (wildcat adventures off road park)",
+        "name": "2",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14560,10 +14474,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "00 (wildcat adventures off road park)",
+        "name": "00",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14950,10 +14863,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Crooked Arrow (wildcat adventures off road park)",
+        "name": "Crooked Arrow",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15060,10 +14972,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "506 (wildcat adventures off road park)",
+        "name": "506",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15115,10 +15026,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Hoot Owl (wildcat adventures off road park)",
+        "name": "Hoot Owl",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15215,10 +15125,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Gate B (wildcat adventures off road park)",
+        "name": "Gate B",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15255,10 +15164,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Old Way (wildcat adventures off road park)",
+        "name": "Old Way",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15400,10 +15308,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Pittman Trail (wildcat adventures off road park)",
+        "name": "Pittman Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15960,10 +15867,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Turkey Trot Trail (wildcat adventures off road park)",
+        "name": "Turkey Trot Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16315,10 +16221,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "54 (wildcat adventures off road park)",
+        "name": "54",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16530,10 +16435,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "#4 Easier (wildcat adventures off road park)",
+        "name": "#4 Easier",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16595,10 +16499,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Sidewinder (wildcat adventures off road park)",
+        "name": "Sidewinder",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16760,10 +16663,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50-B (wildcat adventures off road park)",
+        "name": "50-B",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17560,10 +17462,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "WHY NOT (wildcat adventures off road park)",
+        "name": "WHY NOT",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17715,10 +17616,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "51 (wildcat adventures off road park)",
+        "name": "51",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17965,10 +17865,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "50-D (wildcat adventures off road park)",
+        "name": "50-D",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19065,10 +18964,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "112 (wildcat adventures off road park)",
+        "name": "112",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19105,10 +19003,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Easier Way (wildcat adventures off road park)",
+        "name": "Easier Way",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19220,10 +19117,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19245,10 +19141,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Riff Raff Hill (wildcat adventures off road park)",
+        "name": "Riff Raff Hill",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19305,10 +19200,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "10 (wildcat adventures off road park)",
+        "name": "10",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19430,10 +19324,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19455,10 +19348,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "8 (wildcat adventures off road park)",
+        "name": "8",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19730,10 +19622,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "East Branch RD (wildcat adventures off road park)",
+        "name": "East Branch RD",
         "stroke": "#A4A4A4",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20605,10 +20496,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Lil Rattler (wildcat adventures off road park)",
+        "name": "Lil Rattler",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20660,10 +20550,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Triple xXx (wildcat adventures off road park)",
+        "name": "Triple xXx",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20745,10 +20634,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "202 (wildcat adventures off road park)",
+        "name": "202",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20795,10 +20683,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Copperhead RD A (wildcat adventures off road park)",
+        "name": "Copperhead RD A",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20975,10 +20862,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Hazel Patch Trail (wildcat adventures off road park)",
+        "name": "Hazel Patch Trail",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21430,10 +21316,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "7 (wildcat adventures off road park)",
+        "name": "7",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21485,10 +21370,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "114 (wildcat adventures off road park)",
+        "name": "114",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21570,10 +21454,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "#3 Union Pass (wildcat adventures off road park)",
+        "name": "#3 Union Pass",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22230,10 +22113,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "6 (wildcat adventures off road park)",
+        "name": "6",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22740,10 +22622,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Frog Leg (wildcat adventures off road park)",
+        "name": "Frog Leg",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22810,10 +22691,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bear Point (wildcat adventures off road park)",
+        "name": "Bear Point",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22965,10 +22845,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "120 (wildcat adventures off road park)",
+        "name": "120",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23055,10 +22934,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "512 (wildcat adventures off road park)",
+        "name": "512",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23150,10 +23028,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Copperhead RD B (wildcat adventures off road park)",
+        "name": "Copperhead RD B",
         "stroke": "#FF9D00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23380,10 +23257,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Little Bear Run (wildcat adventures off road park)",
+        "name": "Little Bear Run",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23600,10 +23476,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23625,10 +23500,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Waterfall RD (wildcat adventures off road park)",
+        "name": "Waterfall RD",
         "stroke": "#00ACF8",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24520,10 +24394,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "4 (wildcat adventures off road park)",
+        "name": "4",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24895,10 +24768,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "106 (wildcat adventures off road park)",
+        "name": "106",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24950,10 +24822,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Gator Trail (wildcat adventures off road park)",
+        "name": "Gator Trail",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25130,10 +25001,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25155,10 +25025,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Buzzd Roost (wildcat adventures off road park)",
+        "name": "Buzzd Roost",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25330,10 +25199,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Power Grid (wildcat adventures off road park)",
+        "name": "Power Grid",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25445,10 +25313,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Gobbler (wildcat adventures off road park)",
+        "name": "Gobbler",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25525,10 +25392,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Rock Top (wildcat adventures off road park)",
+        "name": "Rock Top",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25590,10 +25456,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Sasquatch Trail (wildcat adventures off road park)",
+        "name": "Sasquatch Trail",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25835,10 +25700,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "206 (wildcat adventures off road park)",
+        "name": "206",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25905,10 +25769,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Dragon Trail (wildcat adventures off road park)",
+        "name": "Dragon Trail",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26030,10 +25893,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Waterfall RD (wildcat adventures off road park)",
+        "name": "Waterfall RD",
         "stroke": "#0498FF",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26175,10 +26037,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "JCT BLVD (wildcat adventures off road park)",
+        "name": "JCT BLVD",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26310,10 +26171,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "102 (wildcat adventures off road park)",
+        "name": "102",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26340,10 +26200,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Frog Leg (wildcat adventures off road park)",
+        "name": "Frog Leg",
         "stroke": "#36C03B",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26420,10 +26279,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Sandtrap #9 (wildcat adventures off road park)",
+        "name": "Sandtrap #9",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26505,10 +26363,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Hoot Owl (wildcat adventures off road park)",
+        "name": "Hoot Owl",
         "stroke": "#FFF011",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26590,10 +26447,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "124 (wildcat adventures off road park)",
+        "name": "124",
         "stroke": "#784D3E",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26690,10 +26546,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Old Way (wildcat adventures off road park)",
+        "name": "Old Way",
         "stroke": "#2D3FC7",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26740,10 +26595,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26765,10 +26619,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26790,10 +26643,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "Bail Out (wildcat adventures off road park)",
+        "name": "Bail Out",
         "stroke": "#8AD42F",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26815,10 +26667,9 @@
       "type": "Feature",
       "properties": {
         "_gpxType": "trk",
-        "name": "56 (wildcat adventures off road park)",
+        "name": "56",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27014,6 +26865,22 @@
           37.2183626499885,
           355
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.17547855753017,
+          37.22317889565285
+        ]
+      },
+      "properties": {
+        "name": "wildcat adventures off road park",
+        "label": true,
+        "marker-color": "#000",
+        "marker-symbol": "marker"
       }
     }
   ]
