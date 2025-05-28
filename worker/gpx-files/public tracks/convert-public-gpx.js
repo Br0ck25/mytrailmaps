@@ -3,6 +3,7 @@ const path = require("path");
 const togeojson = require("@tmcw/togeojson");
 const { DOMParser } = require("@xmldom/xmldom");
 
+
 // 📁 Input: GPX files are located here:
 const inputDir = __dirname; // → C:\Users\James\Desktop\My Trail Maps\mytrailmaps\worker\gpx-files\public tracks
 

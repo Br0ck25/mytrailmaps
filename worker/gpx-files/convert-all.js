@@ -33,24 +33,24 @@ fs.readdirSync(inputDir)
       descriptions.push(descTag?.textContent || cmtTag?.textContent || "");
     }
 
-    // Assign metadata to LineString features
-    let trkIndex = 0;
-    // Create a friendly version of the filename to append
+// Create a friendly version of the filename to append
 const filenameLabel = file
   .replace(/\.gpx$/i, "")
-  .replace(/([a-z])([A-Z])/g, "$1 $2") // Add space before capital letters
-  .replace(/-/g, " ")                  // Replace dashes with spaces
-  .replace(/\s+/g, " ")                // Remove extra spaces
+  .replace(/([a-z])([A-Z])/g, "$1 $2")
+  .replace(/-/g, " ")
+  .replace(/\s+/g, " ")
   .trim();
 
+let trkIndex = 0;
 geojson.features.forEach((f) => {
   if (f.geometry?.type === "LineString") {
-    const nameFromTag = names[trkIndex] || `Track ${trkIndex + 1}`;
-    f.properties.name = `${nameFromTag} (${filenameLabel})`;
+    const baseName = names[trkIndex] || `Track ${trkIndex + 1}`;
+    f.properties.name = `${baseName} (${filenameLabel})`; // ✅ Label includes file name
     f.properties.description = descriptions[trkIndex] || "No description available";
     trkIndex++;
   }
 });
+
 
 
     // Save GeoJSON
