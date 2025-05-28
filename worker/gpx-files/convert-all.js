@@ -35,13 +35,23 @@ fs.readdirSync(inputDir)
 
     // Assign metadata to LineString features
     let trkIndex = 0;
-    geojson.features.forEach((f) => {
-      if (f.geometry?.type === "LineString") {
-        f.properties.name = names[trkIndex] || f.properties.name;
-        f.properties.description = descriptions[trkIndex] || "No description available";
-        trkIndex++;
-      }
-    });
+    // Create a friendly version of the filename to append
+const filenameLabel = file
+  .replace(/\.gpx$/i, "")
+  .replace(/([a-z])([A-Z])/g, "$1 $2") // Add space before capital letters
+  .replace(/-/g, " ")                  // Replace dashes with spaces
+  .replace(/\s+/g, " ")                // Remove extra spaces
+  .trim();
+
+geojson.features.forEach((f) => {
+  if (f.geometry?.type === "LineString") {
+    const nameFromTag = names[trkIndex] || `Track ${trkIndex + 1}`;
+    f.properties.name = `${nameFromTag} (${filenameLabel})`;
+    f.properties.description = descriptions[trkIndex] || "No description available";
+    trkIndex++;
+  }
+});
+
 
     // Save GeoJSON
     const outPath = path.join(outputDir, file.replace(/\.gpx$/i, ".geojson"));
