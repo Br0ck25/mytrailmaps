@@ -33,14 +33,12 @@ export default function MapView({
   const mapRef = useRef(null);
   const currentMap = useRef(null);
 
-  // 🔁 Update visibility of existing layers
   useEffect(() => {
     const map = currentMap.current;
     if (!map || !map.getStyle()) return;
 
     map.getStyle().layers?.forEach((layer) => {
       const id = layer.id;
-
       if (id.endsWith("-line")) {
         map.setPaintProperty(id, "line-opacity", showTracks ? 1 : 0);
       }
@@ -56,7 +54,6 @@ export default function MapView({
     });
   }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
 
-  // ✅ Only run once to initialize map
   useEffect(() => {
     const savedCenter = localStorage.getItem("mapCenter");
     const savedZoom = localStorage.getItem("mapZoom");
@@ -69,7 +66,6 @@ export default function MapView({
     });
 
     currentMap.current = map;
-
     map.addControl(new maplibregl.NavigationControl(), "top-right");
 
     const geolocate = new maplibregl.GeolocateControl({
@@ -78,7 +74,6 @@ export default function MapView({
       showUserHeading: true,
       showAccuracyCircle: false,
     });
-
     map.addControl(geolocate);
 
     map.on("load", () => {
@@ -88,124 +83,118 @@ export default function MapView({
         }, 0);
       }
 
-geojsonFiles.forEach((filename) => {
-  const slug = filename.replace(".geojson", "").toLowerCase();
-  const sourceId = `track-${slug}`;
-  const lineId = `${sourceId}-line`;
-  const labelId = `${sourceId}-label`;
-  const waypointId = `${sourceId}-waypoints`;
-  const waypointLabelId = `${sourceId}-waypoint-labels`;
+      geojsonFiles.forEach((filename) => {
+        const slug = filename.replace(".geojson", "").toLowerCase();
+        const sourceId = `track-${slug}`;
+        const lineId = `${sourceId}-line`;
+        const labelId = `${sourceId}-label`;
+        const waypointId = `${sourceId}-waypoints`;
+        const waypointLabelId = `${sourceId}-waypoint-labels`;
 
-  fetch(`/tracks/${filename}`)
-    .then((res) => {
-      if (!res.ok) throw new Error(`❌ Failed to load ${filename}`);
-      return res.json();
-    })
-    .then((data) => {
-      map.addSource(sourceId, { type: "geojson", data });
-map.on("click", (e) => {
-  const features = map.queryRenderedFeatures(e.point, {
-    layers: map.getStyle().layers
-      .filter((l) => l.id.endsWith("-line"))
-      .map((l) => l.id),
-  });
+        fetch(`/tracks/${filename}`)
+          .then((res) => {
+            if (!res.ok) throw new Error(`❌ Failed to load ${filename}`);
+            return res.json();
+          })
+          .then((data) => {
+            map.addSource(sourceId, { type: "geojson", data });
 
-  if (features.length > 0) {
-    const props = features[0].properties;
-    const coordinates = e.lngLat;
+            map.addLayer({
+              id: lineId,
+              type: "line",
+              source: sourceId,
+              filter: ["==", "$type", "LineString"],
+              paint: {
+                "line-color": ["coalesce", ["get", "stroke"], "#00f"],
+                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
+                "line-opacity": showTracks ? 1 : 0,
+              },
+              layout: {
+                "line-cap": "round",
+                "line-join": "round",
+              },
+            });
 
-    new maplibregl.Popup()
-      .setHTML(`
-  <div class="track-popup">
-    <h3>${props.name || "Unnamed Track"}</h3>
-    <p>${props.description || "No description available."}</p>
-  </div>
-`)
-      .addTo(map);
-  }
-});
+            map.addLayer({
+              id: labelId,
+              type: "symbol",
+              source: sourceId,
+              filter: ["==", "$type", "LineString"],
+              layout: {
+                "symbol-placement": "line",
+                "text-field": ["get", "name"],
+                "text-font": ["Open Sans Bold"],
+                "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+                visibility: showNames ? "visible" : "none",
+              },
+              paint: {
+                "text-color": "#333",
+                "text-halo-color": "#fff",
+                "text-halo-width": 2,
+              },
+              minzoom: 10,
+            });
 
-      // Track Line
-      map.addLayer({
-        id: lineId,
-        type: "line",
-        source: sourceId,
-        filter: ["==", "$type", "LineString"],
-        paint: {
-          "line-color": ["coalesce", ["get", "stroke"], "#00f"],
-          "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3],
-          "line-opacity": showTracks ? 1 : 0,
-        },
-        layout: {
-          "line-cap": "round",
-          "line-join": "round",
-        },
+            map.addLayer({
+              id: waypointId,
+              type: "circle",
+              source: sourceId,
+              filter: ["==", "$type", "Point"],
+              layout: {
+                visibility: showWaypoints ? "visible" : "none",
+              },
+              paint: {
+                "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
+                "circle-color": "#ff6600",
+                "circle-stroke-width": 1,
+                "circle-stroke-color": "#fff",
+              },
+              minzoom: 9,
+            });
+
+            map.addLayer({
+              id: waypointLabelId,
+              type: "symbol",
+              source: sourceId,
+              filter: ["==", "$type", "Point"],
+              layout: {
+                "text-field": ["get", "name"],
+                "text-font": ["Open Sans Regular"],
+                "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+                "text-offset": [0, 1.2],
+                visibility: showWaypointLabels ? "visible" : "none",
+              },
+              paint: {
+                "text-color": "#333",
+                "text-halo-color": "#fff",
+                "text-halo-width": 1.5,
+              },
+              minzoom: 12,
+            });
+          })
+          .catch((err) => console.error(err));
       });
 
-      // Track Name Label
-      map.addLayer({
-  id: labelId,
-  type: "symbol",
-  source: sourceId,
-  filter: ["==", "$type", "LineString"],
-  layout: {
-    "symbol-placement": "line",
-    "text-field": ["get", "name"], // ✅ use feature's own name
-    "text-font": ["Open Sans Bold"],
-    "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-    visibility: showNames ? "visible" : "none",
-  },
-  paint: {
-    "text-color": "#333",
-    "text-halo-color": "#fff",
-    "text-halo-width": 2,
-  },
-  minzoom: 10,
-});
+      // ✅ Show popup with name + description
+      map.on("click", (e) => {
+        const layersToCheck = map.getStyle().layers.filter((l) =>
+          l.id.endsWith("-line")
+        ).map((l) => l.id);
 
-
-      // Waypoints
-      map.addLayer({
-        id: waypointId,
-        type: "circle",
-        source: sourceId,
-        filter: ["==", "$type", "Point"],
-        layout: {
-          visibility: showWaypoints ? "visible" : "none",
-        },
-        paint: {
-          "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
-          "circle-color": "#ff6600",
-          "circle-stroke-width": 1,
-          "circle-stroke-color": "#fff",
-        },
-        minzoom: 9,
+        const features = map.queryRenderedFeatures(e.point, { layers: layersToCheck });
+        if (features.length > 0) {
+          const props = features[0].properties;
+          new maplibregl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(`
+              <div class="track-popup">
+                <h3>${props.name || "Unnamed Track"}</h3>
+                <p>${props.description || "No description available."}</p>
+              </div>
+            `)
+            .addTo(map);
+        }
       });
-
-      // Waypoint Labels
-      map.addLayer({
-        id: waypointLabelId,
-        type: "symbol",
-        source: sourceId,
-        filter: ["==", "$type", "Point"],
-        layout: {
-          "text-field": ["get", "name"],
-          "text-font": ["Open Sans Regular"],
-          "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-          "text-offset": [0, 1.2],
-          visibility: showWaypointLabels ? "visible" : "none",
-        },
-        paint: {
-          "text-color": "#333",
-          "text-halo-color": "#fff",
-          "text-halo-width": 1.5,
-        },
-        minzoom: 12,
-      });
-    })
-    .catch((err) => console.error(err));
-});
-
     });
 
     map.on("moveend", () => {
