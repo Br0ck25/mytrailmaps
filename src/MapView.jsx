@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
+import { feature } from "topojson-client";
 
 export default function MapView({
   showTracks,
@@ -75,7 +76,7 @@ export default function MapView({
       });
 
       const addTrackLayers = (filename, sourcePrefix, isPublic = false) => {
-        const slug = filename.replace(".geojson", "").toLowerCase();
+        const slug = filename.replace(/\.(geojson|topojson)$/i, "").toLowerCase();
         const sourceId = `${sourcePrefix}-${slug}`;
         const lineId = `${sourceId}-line`;
         const labelId = `${sourceId}-label`;
@@ -85,10 +86,21 @@ export default function MapView({
 
         const url = isPublic ? `/public-tracks/${filename}` : `/tracks/${filename}`;
         fetch(url)
-          .then(res => res.json())
-          .then(data => {
-            data.features.forEach((f, i) => (f.id = i));
-            map.addSource(sourceId, { type: "geojson", data });
+  .then(res => res.json())
+  .then(rawData => {
+    let data;
+
+    if (filename.endsWith(".topojson")) {
+      // Convert to GeoJSON
+      const objName = Object.keys(rawData.objects)[0];
+      data = feature(rawData, rawData.objects[objName]);
+    } else {
+      data = rawData;
+    }
+
+    data.features.forEach((f, i) => (f.id = i));
+    map.addSource(sourceId, { type: "geojson", data });
+
 
             map.addLayer({
               id: lineId,

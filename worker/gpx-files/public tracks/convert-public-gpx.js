@@ -3,97 +3,61 @@ const path = require("path");
 const togeojson = require("@tmcw/togeojson");
 const { DOMParser } = require("@xmldom/xmldom");
 const AdmZip = require("adm-zip");
+const { topology } = require("topojson-server");
 
-// 📁 Input: GPX/KML/KMZ files
+// 📁 Input and Output
 const inputDir = __dirname;
 const outputDir = path.resolve(__dirname, "../../../public/public-tracks");
 
-// 🔧 KML sanitizer for broken namespaces and tag mismatches
+if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+
+// 🔧 KML sanitizer
 function sanitizeKML(kmlText) {
   return kmlText
-    .replace(/xmlns(:\w+)?="[^"]*"/g, "")     // remove all xmlns declarations
-    .replace(/<\/?\w+:(\w+)/g, "<$1")         // remove namespace prefixes in tags
-    .replace(/(\s)\w+:(\w+)=/g, "$1$2=")      // remove prefixes in attributes
-    .replace(/<IconStyle>(.*?)<\/headingMode>/gs, "<IconStyle>$1</IconStyle>"); // fix tag mismatch
+    .replace(/xmlns(:\w+)?="[^"]*"/g, "")
+    .replace(/<\/?\w+:(\w+)/g, "<$1")
+    .replace(/(\s)\w+:(\w+)=/g, "$1$2=")
+    .replace(/<headingMode>.*?<\/headingMode>/gs, "");
 }
 
-// 🔁 Convert all supported files in folder
+// 🔁 Process all supported files
 fs.readdirSync(inputDir).forEach((file) => {
   const ext = path.extname(file).toLowerCase();
   const baseName = path.basename(file, ext);
+  const inputPath = path.join(inputDir, file);
 
-  // Convert GPX
-  if (ext === ".gpx") {
-    try {
-      const gpxText = fs.readFileSync(path.join(inputDir, file), "utf8");
+  const convertAndWriteTopo = (geojson, baseName) => {
+    const topo = topology({ data: geojson });
+    const topoPath = path.join(outputDir, `${baseName}.topojson`);
+    fs.writeFileSync(topoPath, JSON.stringify(topo));
+    console.log("✅ Converted to TopoJSON:", topoPath);
+  };
+
+  try {
+    if (ext === ".gpx") {
+      const gpxText = fs.readFileSync(inputPath, "utf8");
       const dom = new DOMParser({ onError: () => {} }).parseFromString(gpxText, "application/xml");
       const geojson = togeojson.gpx(dom);
+      convertAndWriteTopo(geojson, baseName);
 
-      const trkEls = dom.getElementsByTagName("trk");
-      const names = [];
-      const descriptions = [];
+    } else if (ext === ".kml") {
+      let kmlText = fs.readFileSync(inputPath, "utf8");
+      kmlText = sanitizeKML(kmlText);
+      const dom = new DOMParser({ onError: () => {} }).parseFromString(kmlText, "application/xml");
+      const geojson = togeojson.kml(dom);
+      convertAndWriteTopo(geojson, baseName);
 
-      for (let i = 0; i < trkEls.length; i++) {
-        const nameTag = trkEls[i].getElementsByTagName("name")[0];
-        const descTag = trkEls[i].getElementsByTagName("desc")[0];
-        const cmtTag = trkEls[i].getElementsByTagName("cmt")[0];
-
-        names.push(nameTag ? nameTag.textContent : `Track ${i + 1}`);
-        descriptions.push(descTag?.textContent || cmtTag?.textContent || "");
-      }
-
-      let trkIndex = 0;
-      geojson.features.forEach((f) => {
-        if (f.geometry?.type === "LineString") {
-          f.properties.name = names[trkIndex] || f.properties.name;
-          f.properties.description = descriptions[trkIndex] || "No description available";
-          trkIndex++;
-        }
-      });
-
-      const outPath = path.join(outputDir, `${baseName}.geojson`);
-      fs.writeFileSync(outPath, JSON.stringify(geojson, null, 2));
-      console.log("✅ Converted GPX:", file);
-    } catch (err) {
-      console.error(`❌ Failed to convert GPX: ${file} — ${err.message}`);
-    }
-  }
-
-  // Convert KMZ
-  else if (ext === ".kmz") {
-    try {
-      const zip = new AdmZip(path.join(inputDir, file));
+    } else if (ext === ".kmz") {
+      const zip = new AdmZip(inputPath);
       const kmlEntry = zip.getEntries().find(e => e.entryName.endsWith(".kml"));
-      if (!kmlEntry) return console.warn("⚠️ No .kml file found in:", file);
-
+      if (!kmlEntry) throw new Error("No .kml inside .kmz");
       let kmlText = kmlEntry.getData().toString("utf8");
       kmlText = sanitizeKML(kmlText);
-
       const dom = new DOMParser({ onError: () => {} }).parseFromString(kmlText, "application/xml");
       const geojson = togeojson.kml(dom);
-
-      const outPath = path.join(outputDir, `${baseName}.geojson`);
-      fs.writeFileSync(outPath, JSON.stringify(geojson, null, 2));
-      console.log("✅ Converted KMZ:", file);
-    } catch (err) {
-      console.error(`❌ Failed to convert KMZ: ${file} — ${err.message}`);
+      convertAndWriteTopo(geojson, baseName);
     }
-  }
-
-  // Convert KML
-  else if (ext === ".kml") {
-    try {
-      let kmlText = fs.readFileSync(path.join(inputDir, file), "utf8");
-      kmlText = sanitizeKML(kmlText);
-
-      const dom = new DOMParser({ onError: () => {} }).parseFromString(kmlText, "application/xml");
-      const geojson = togeojson.kml(dom);
-
-      const outPath = path.join(outputDir, `${baseName}.geojson`);
-      fs.writeFileSync(outPath, JSON.stringify(geojson, null, 2));
-      console.log("✅ Converted KML:", file);
-    } catch (err) {
-      console.error(`❌ Failed to convert KML: ${file} — ${err.message}`);
-    }
+  } catch (err) {
+    console.error(`❌ Failed to convert ${file}: ${err.message}`);
   }
 });

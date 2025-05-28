@@ -1,14 +1,23 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { dirname } from "path";
 
-// emulate __dirname
+// Needed to resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = dirname(__filename);
 
-const dir = __dirname;
-const files = fs.readdirSync(dir).filter(f => f.endsWith(".geojson"));
-const output = path.join(dir, "manifest.json");
+// 🔍 Directory containing your .topojson files
+const tracksDir = path.resolve(__dirname); // current directory
 
-fs.writeFileSync(output, JSON.stringify(files, null, 2));
-console.log("✅ Manifest created:", output);
+
+// 📄 Output manifest file
+const manifestPath = path.join(tracksDir, "manifest.json");
+
+// 📦 Get all .topojson filenames
+const files = fs.readdirSync(tracksDir)
+  .filter(f => f.endsWith(".topojson") && !f.startsWith("."));
+
+// 🧾 Save manifest
+fs.writeFileSync(manifestPath, JSON.stringify(files, null, 2));
+console.log("✅ Created manifest.json with", files.length, "files");
