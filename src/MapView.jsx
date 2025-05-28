@@ -2,21 +2,23 @@ import React, { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { feature } from "topojson-client";
+import booleanEqual from "@turf/boolean-equal";
+import lineOverlap from "@turf/line-overlap";
+import { lineString } from "@turf/helpers";
 
-function isDuplicateLine(lineFeature, mainLines, threshold = 0.001) {
-  const coords = lineFeature.geometry?.coordinates;
-  if (!coords || !Array.isArray(coords)) return false;
+function isDuplicateLine(lineFeature, mainLines, threshold = 0.8) {
+  const publicLine = lineString(lineFeature.geometry.coordinates);
 
   return mainLines.some(main => {
-    const mainCoords = main.geometry?.coordinates;
-    if (!mainCoords || !Array.isArray(mainCoords)) return false;
+    const mainLine = lineString(main.geometry.coordinates);
 
-    const shared = coords.filter(c1 =>
-      mainCoords.some(c2 =>
-        Math.abs(c1[0] - c2[0]) < 0.0001 && Math.abs(c1[1] - c2[1]) < 0.0001
-      )
-    );
-    return shared.length / coords.length >= threshold;
+    // Overlap returns the overlapping geometry
+    const overlap = lineOverlap(publicLine, mainLine, { tolerance: 0.0001 });
+
+    const overlapLength = overlap.features.reduce((sum, feat) => sum + feat.geometry.coordinates.length, 0);
+    const publicLength = lineFeature.geometry.coordinates.length;
+
+    return overlapLength / publicLength >= threshold;
   });
 }
 
