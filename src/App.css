@@ -148,3 +148,26 @@ input:checked + .slider:before {
   display: none !important;
 }
 
+/* Track info popup style */
+.track-popup {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  max-width: 16rem;
+  font-size: 0.875rem; /* Tailwind's text-sm */
+  font-family: sans-serif;
+}
+
+.track-popup h3 {
+  color: #047857; /* Tailwind's green-700 */
+  font-weight: bold;
+  font-size: 1rem; /* Tailwind's text-base */
+  margin: 0;
+}
+
+.track-popup p {
+  margin-top: 0.25rem;
+  color: #374151; /* Tailwind's gray-700 */
+}
+

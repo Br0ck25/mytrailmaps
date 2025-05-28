@@ -115,11 +115,12 @@ map.on("click", (e) => {
     const coordinates = e.lngLat;
 
     new maplibregl.Popup()
-      .setLngLat(coordinates)
       .setHTML(`
-        <h3 class="font-bold text-md">${props.name || "Unnamed Track"}</h3>
-        <p class="text-sm text-gray-700 mt-1">${props.description || "No description available."}</p>
-      `)
+  <div class="track-popup">
+    <h3>${props.name || "Unnamed Track"}</h3>
+    <p>${props.description || "No description available."}</p>
+  </div>
+`)
       .addTo(map);
   }
 });
