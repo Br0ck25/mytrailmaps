@@ -3,7 +3,7 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { feature } from "topojson-client";
 
-function isDuplicateLine(lineFeature, mainLines, threshold = 0.05) {
+function isDuplicateLine(lineFeature, mainLines, threshold = 0.01) {
   const coords = lineFeature.geometry?.coordinates;
   if (!coords || !Array.isArray(coords)) return false;
 
