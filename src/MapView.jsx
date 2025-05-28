@@ -23,7 +23,7 @@ function isDuplicateLine(lineFeature, mainLines, threshold = 0.05) {
     }
 
     const mainLine = lineString(mainCoords);
-    const overlap = lineOverlap(publicLine, mainLine, { tolerance: 0.0001 });
+    const overlap = lineOverlap(publicLine, mainLine, { tolerance: 0.0009 });
     const overlapLength = overlap.features.reduce((sum, feat) => sum + length(feat), 0);
 
     return overlapLength / publicLength >= threshold;
