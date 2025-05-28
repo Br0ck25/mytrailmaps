@@ -6,9 +6,13 @@ import length from "@turf/length";
 import { lineString } from "@turf/helpers";
 import lineOverlap from "@turf/line-overlap";
 
-function isDuplicateLine(lineFeature, mainLines, threshold = 0.01) {
+function isDuplicateLine(lineFeature, mainLines, threshold = 0.001) {
   const coords = lineFeature.geometry?.coordinates;
-  if (!Array.isArray(coords) || coords.some(c => !Array.isArray(c) || c.length !== 2 || isNaN(c[0]) || isNaN(c[1]))) {
+  if (
+    !Array.isArray(coords) ||
+    coords.length < 2 ||
+    coords.some(c => !Array.isArray(c) || c.length !== 2 || isNaN(c[0]) || isNaN(c[1]))
+  ) {
     return false; // invalid geometry
   }
 
@@ -18,12 +22,16 @@ function isDuplicateLine(lineFeature, mainLines, threshold = 0.01) {
 
   return mainLines.some(main => {
     const mainCoords = main.geometry?.coordinates;
-    if (!Array.isArray(mainCoords) || mainCoords.some(c => !Array.isArray(c) || c.length !== 2 || isNaN(c[0]) || isNaN(c[1]))) {
+    if (
+      !Array.isArray(mainCoords) ||
+      mainCoords.length < 2 ||
+      mainCoords.some(c => !Array.isArray(c) || c.length !== 2 || isNaN(c[0]) || isNaN(c[1]))
+    ) {
       return false;
     }
 
     const mainLine = lineString(mainCoords);
-    const overlap = lineOverlap(publicLine, mainLine, { tolerance: 0.001 });
+    const overlap = lineOverlap(publicLine, mainLine, { tolerance: 0.002 }); // increase tolerance
     const overlapLength = overlap.features.reduce((sum, feat) => sum + length(feat), 0);
 
     return overlapLength / publicLength >= threshold;
