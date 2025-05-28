@@ -23266,10 +23266,8 @@
         ]
       },
       "properties": {
-        "name": "Hollerwood",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Hollerwood"
       }
     }
   ]

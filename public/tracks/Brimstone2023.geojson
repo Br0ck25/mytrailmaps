@@ -8,8 +8,7 @@
         "name": "97 Rock Lick Hollow",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -524,8 +523,7 @@
         "name": "76 Wolf Path",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1090,8 +1088,7 @@
         "name": "112 Twin Sisters",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1706,8 +1703,7 @@
         "name": "90 Roughen-N-Cob",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2052,8 +2048,7 @@
         "name": "75 Indian Fork Creek Trail",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3088,8 +3083,7 @@
         "name": "110 Muley",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3724,8 +3718,7 @@
         "name": "50 Camp'n Rock Trai",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3865,8 +3858,7 @@
         "name": "3B Tak",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4281,8 +4273,7 @@
         "name": "70 Pipeline",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4707,8 +4698,7 @@
         "name": "91",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4798,8 +4788,7 @@
         "name": "85 Short Cut",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5179,8 +5168,7 @@
         "name": "86 Left Prong Loop",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5765,8 +5753,7 @@
         "name": "71 Snatch Trai",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6071,8 +6058,7 @@
         "name": "84 Gas Well Hollar",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6402,8 +6388,7 @@
         "name": "107Y Jumpin Rock",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6623,8 +6608,7 @@
         "name": "103Y Wash'n Machine",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6934,8 +6918,7 @@
         "name": "102 Esau Way",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7540,8 +7523,7 @@
         "name": "109 Easter Ridge",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8631,8 +8613,7 @@
         "name": "52 Sawmill Trail",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9137,8 +9118,7 @@
         "name": "94 Hemlock Haint",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9318,8 +9298,7 @@
         "name": "100 Cove Branch",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9484,8 +9463,7 @@
         "name": "3A Saki Trail",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9800,8 +9778,7 @@
         "name": "87Y Steep",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10241,8 +10218,7 @@
         "name": "98",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10367,8 +10343,7 @@
         "name": "2 Brumett Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11488,8 +11463,7 @@
         "name": "82 Beaver Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11699,8 +11673,7 @@
         "name": "99 Buck Lick Loop",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12010,8 +11983,7 @@
         "name": "87 Huntsville Branch",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13166,8 +13138,7 @@
         "name": "106 Ron's Boulder Gap",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13512,8 +13483,7 @@
         "name": "72Y Country Way",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14013,8 +13983,7 @@
         "name": "75Y Table Rock Trouble",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14499,8 +14468,7 @@
         "name": "105 Gobbler's Knob Waterfall Trail",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14605,8 +14573,7 @@
         "name": "105 Three Forks",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15236,8 +15203,7 @@
         "name": "94",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15337,8 +15303,7 @@
         "name": "7 Byrges Creek Trail",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16433,8 +16398,7 @@
         "name": "98 Cave Branch",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17459,8 +17423,7 @@
         "name": "89Y Sidewinder",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17815,8 +17778,7 @@
         "name": "92 Griffy Top Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17886,8 +17848,7 @@
         "name": "11 Shine Run",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18477,8 +18438,7 @@
         "name": "5 Coal Bank Hollar",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18533,8 +18493,7 @@
         "name": "51 Pheel'n Trail",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18864,8 +18823,7 @@
         "name": "113 Goat Trail",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19330,8 +19288,7 @@
         "name": "92 Griffey Top Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19876,8 +19833,7 @@
         "name": "119 KOTM Cut",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20202,8 +20158,7 @@
         "name": "97A Bear House Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20583,8 +20538,7 @@
         "name": "1 Four Lane",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24879,8 +24833,7 @@
         "name": "111 Gladey",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -25595,8 +25548,7 @@
         "name": "8 Slick Rock Trail",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26396,8 +26348,7 @@
         "name": "13 Dyer Straight",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27222,8 +27173,7 @@
         "name": "83 Broke Bridge Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27998,8 +27948,7 @@
         "name": "25  Lloyd Mountain",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29534,8 +29483,7 @@
         "name": "93 Hooch Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30985,8 +30933,7 @@
         "name": "101 Gander Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -31821,8 +31768,7 @@
         "name": "4 Number One Hollar",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32327,8 +32273,7 @@
         "name": "27 River Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33568,8 +33513,7 @@
         "name": "5 Coal Bank Hollar",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35144,8 +35088,7 @@
         "name": "103 Crows Fly",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35945,8 +35888,7 @@
         "name": "107 Camo Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -38266,8 +38208,7 @@
         "name": "89 '57 Ford Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -39762,8 +39703,7 @@
         "name": "44 Griffy Loop Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -41388,8 +41328,7 @@
         "name": "108 Ole Stogie",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -42194,8 +42133,7 @@
         "name": "31 CC Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -43065,8 +43003,7 @@
         "name": "43 Griffy Pit Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -45316,8 +45253,7 @@
         "name": "12 Pyramid Point",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46357,8 +46293,7 @@
         "name": "44Y Rebel Yell",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -46948,8 +46883,7 @@
         "name": "99 Buck Lick",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -48579,8 +48513,7 @@
         "name": "23 Leavy Hollow",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -49390,8 +49323,7 @@
         "name": "30 Tipple Trail",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -50361,8 +50293,7 @@
         "name": "49 Ingin Joe Trai",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -51712,8 +51643,7 @@
         "name": "88 School House Ridge",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -53128,8 +53058,7 @@
         "name": "91 Hidden Valley Loop",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -54214,8 +54143,7 @@
         "name": "49A",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -54715,8 +54643,7 @@
         "name": "10 Indian Fork",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -55996,8 +55923,7 @@
         "name": "48 Joel Dyer Trail",
         "desc": "Difficult",
         "stroke": "#ff0000",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -56772,8 +56698,7 @@
         "name": "6 Ben Newport Trai",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -58048,8 +57973,7 @@
         "name": "95 Mike Branch",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -59399,8 +59323,7 @@
         "name": "46 Loyd Trail",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -60140,8 +60063,7 @@
         "name": "104 Crowley's Cut",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -61351,8 +61273,7 @@
         "name": "3 Griffy Branch",
         "desc": "Easy",
         "stroke": "#00ff00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -62983,6 +62904,20 @@
             0
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.49607637159731,
+          36.32108691113124
+        ]
+      },
+      "properties": {
+        "type": "file-label",
+        "label": "Brimstone2023"
       }
     }
   ]

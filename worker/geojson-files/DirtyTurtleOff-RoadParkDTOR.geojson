@@ -37009,10 +37009,8 @@
         ]
       },
       "properties": {
-        "name": "Dirty Turtle Off Road Park DTOR",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Dirty Turtle Off Road Park DTOR"
       }
     }
   ]

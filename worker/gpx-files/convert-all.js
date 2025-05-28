@@ -42,19 +42,18 @@ fs.readdirSync(inputDir)
     }
 
     // Add label point
-    geojson.features.push({
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: center
-      },
-      properties: {
-        name: filenameLabel,
-        label: true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
-      }
-    });
+geojson.features.push({
+  type: "Feature",
+  geometry: {
+    type: "Point",
+    coordinates: center
+  },
+  properties: {
+    type: "file-label",
+    label: filenameLabel
+  }
+});
+
 
     // Save GeoJSON
     const outPath = path.join(outputDir, file.replace(/\.gpx$/i, ".geojson"));

@@ -41769,10 +41769,8 @@
         ]
       },
       "properties": {
-        "name": "Black Mountain Off Road Adventure Area",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Black Mountain Off Road Adventure Area"
       }
     }
   ]

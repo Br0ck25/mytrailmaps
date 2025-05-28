@@ -62916,10 +62916,8 @@
         ]
       },
       "properties": {
-        "name": "Brimstone2023",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Brimstone2023"
       }
     }
   ]

@@ -21205,10 +21205,8 @@
         ]
       },
       "properties": {
-        "name": "Hatfield Mc Coy Trails Warrior",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Hatfield Mc Coy Trails Warrior"
       }
     }
   ]

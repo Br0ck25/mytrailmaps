@@ -78947,10 +78947,8 @@
         ]
       },
       "properties": {
-        "name": "Black Hills All Vehicles",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Black Hills All Vehicles"
       }
     }
   ]

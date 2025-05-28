@@ -35808,10 +35808,8 @@
         ]
       },
       "properties": {
-        "name": "Black Hills50Inchesor Less",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Black Hills50Inchesor Less"
       }
     }
   ]

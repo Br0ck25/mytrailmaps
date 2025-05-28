@@ -8,8 +8,7 @@
         "name": "18 All Day Sucker",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -674,8 +673,7 @@
         "name": "Bunny C",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -800,8 +798,7 @@
         "name": "Main Road",
         "desc": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "Main Road"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -1561,8 +1558,7 @@
         "name": "Bunny",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2357,8 +2353,7 @@
         "name": "3 Teardrop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2408,8 +2403,7 @@
         "name": "2 The Pretzel",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2549,8 +2543,7 @@
         "name": "HG Hill & Gully",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4650,8 +4643,7 @@
         "name": "6",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4890,8 +4882,7 @@
         "_gpxType": "trk",
         "name": "Main road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4926,8 +4917,7 @@
         "name": "13 A Few Dollars More",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5097,8 +5087,7 @@
         "name": "PG Proving Grounds",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5658,8 +5647,7 @@
         "name": "20",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -6893,8 +6881,7 @@
         "_gpxType": "trk",
         "name": "Main road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7169,8 +7156,7 @@
         "name": "Main Road/10 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7325,8 +7311,7 @@
         "name": "Main Road/Bunny Connector",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7491,8 +7476,7 @@
         "name": "DD",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -7992,8 +7976,7 @@
         "name": "Sabertooth Bunny",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8243,8 +8226,7 @@
         "name": "3 Teardrop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8708,8 +8690,7 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10434,8 +10415,7 @@
         "name": "2 The Pretzel",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10880,8 +10860,7 @@
         "name": "Bunny",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12546,8 +12525,7 @@
         "name": "HG Hill & Gully",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12812,8 +12790,7 @@
         "name": "18 All Day Sucker",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12988,8 +12965,7 @@
         "name": "17",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13288,8 +13264,7 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -13423,8 +13398,7 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14204,8 +14178,7 @@
         "name": "20",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14270,8 +14243,7 @@
         "name": "Jim's Secert",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14395,8 +14367,7 @@
         "_gpxType": "trk",
         "name": "Doublecross Course",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14736,8 +14707,7 @@
         "name": "12 Bypass",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14972,8 +14942,7 @@
         "name": "21",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15062,8 +15031,7 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15088,8 +15056,7 @@
         "name": "7 Devil's Throat",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15224,8 +15191,7 @@
         "name": "16",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15270,8 +15236,7 @@
         "name": "3 Teardrop",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15366,8 +15331,7 @@
         "name": "HG Hill & Gully",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17057,8 +17021,7 @@
         "name": "CC",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17992,8 +17955,7 @@
         "_gpxType": "trk",
         "name": "Doublecross Course",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18443,8 +18405,7 @@
         "name": "9 Copperhead",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18519,8 +18480,7 @@
         "name": "Bunny A",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18670,8 +18630,7 @@
         "name": "AA",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19215,8 +19174,7 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19716,8 +19674,7 @@
         "name": "Main Road/HG Connector",
         "desc": "Easy",
         "stroke": "#00aa00",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19811,8 +19768,7 @@
         "_gpxType": "trk",
         "name": "Main Road",
         "stroke": "#ffaa00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20167,8 +20123,7 @@
         "name": "13 A Few Dollars More",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20363,8 +20318,7 @@
         "name": "6B",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20879,8 +20833,7 @@
         "name": "11 Get-It-Billy",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20960,8 +20913,7 @@
         "name": "8",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21016,8 +20968,7 @@
         "name": "Airplane Hill",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21062,8 +21013,7 @@
         "name": "HG Hill & Gully",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21128,8 +21078,7 @@
         "name": "4 Rock N' Roll",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21529,8 +21478,7 @@
         "name": "14 Sleepy Hollow",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21820,8 +21768,7 @@
         "name": "EE",
         "desc": "ATV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22726,8 +22673,7 @@
         "name": "Main Road/EE Connector",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22812,8 +22758,7 @@
         "name": "Main Road/10 Connector",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22973,8 +22918,7 @@
         "name": "15 Watch This",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23104,8 +23048,7 @@
         "name": "10",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23155,8 +23098,7 @@
         "name": "19 Precision",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23241,8 +23183,7 @@
         "name": "2 The Pretzel",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23487,8 +23428,7 @@
         "name": "Bunny B",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23617,8 +23557,7 @@
         "_gpxType": "trk",
         "name": "Motocross Course",
         "stroke": "#ffff00",
-        "coordinateProperties": {},
-        "description": "No description available"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24348,8 +24287,7 @@
         "name": "BB",
         "desc": "ATV/UTV",
         "stroke": "#00ffff",
-        "coordinateProperties": {},
-        "description": "ATV/UTV"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24709,8 +24647,7 @@
         "name": "6A The Canadian Trail",
         "desc": "Hard",
         "stroke": "#000000",
-        "coordinateProperties": {},
-        "description": "Hard"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24780,8 +24717,7 @@
         "name": "10 White Knuckle",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -26491,8 +26427,7 @@
         "name": "5 Depends",
         "desc": "Moderate",
         "stroke": "#0055ff",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28034,6 +27969,20 @@
           37.46746858465903,
           366
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.6037944437206,
+          37.47248714627659
+        ]
+      },
+      "properties": {
+        "type": "file-label",
+        "label": "Flat Nasty Off Road Park"
       }
     }
   ]

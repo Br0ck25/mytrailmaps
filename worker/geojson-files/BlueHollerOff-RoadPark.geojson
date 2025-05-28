@@ -14403,10 +14403,8 @@
         ]
       },
       "properties": {
-        "name": "Blue Holler Off Road Park",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Blue Holler Off Road Park"
       }
     }
   ]

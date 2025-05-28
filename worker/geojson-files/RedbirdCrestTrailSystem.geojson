@@ -41543,10 +41543,8 @@
         ]
       },
       "properties": {
-        "name": "Redbird Crest Trail System",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "Redbird Crest Trail System"
       }
     }
   ]

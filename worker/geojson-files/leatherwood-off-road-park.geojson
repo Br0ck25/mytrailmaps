@@ -96390,10 +96390,8 @@
         ]
       },
       "properties": {
-        "name": "leatherwood off road park",
-        "label": true,
-        "marker-color": "#000",
-        "marker-symbol": "marker"
+        "type": "file-label",
+        "label": "leatherwood off road park"
       }
     }
   ]

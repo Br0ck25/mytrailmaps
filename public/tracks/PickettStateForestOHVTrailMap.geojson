@@ -8,8 +8,7 @@
         "name": "1",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -260,8 +259,7 @@
         "name": "1",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -2781,8 +2779,7 @@
         "name": "10",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -3077,8 +3074,7 @@
         "name": "100",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -4514,8 +4510,7 @@
         "name": "101",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -5770,8 +5765,7 @@
         "name": "102",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8281,8 +8275,7 @@
         "name": "103",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -8822,8 +8815,7 @@
         "name": "104",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -9223,8 +9215,7 @@
         "name": "12",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -10369,8 +10360,7 @@
         "name": "14",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11008,8 +10998,7 @@
         "name": "16",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -11839,8 +11828,7 @@
         "name": "17",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12320,8 +12308,7 @@
         "name": "19",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12596,8 +12583,7 @@
         "name": "2",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12652,8 +12638,7 @@
         "name": "2",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -12793,8 +12778,7 @@
         "name": "2",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14152,8 +14136,7 @@
         "name": "21",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -14893,8 +14876,7 @@
         "name": "23",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15269,8 +15251,7 @@
         "name": "26",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -15845,8 +15826,7 @@
         "name": "27",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -16505,8 +16485,7 @@
         "name": "3",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -17941,8 +17920,7 @@
         "name": "30",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18486,8 +18464,7 @@
         "name": "36",
         "desc": "Extreme",
         "stroke": "#5726C2",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -18902,8 +18879,7 @@
         "name": "37",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19518,8 +19494,7 @@
         "name": "38",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19779,8 +19754,7 @@
         "name": "39",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -19920,8 +19894,7 @@
         "name": "41",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20406,8 +20379,7 @@
         "name": "42",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20497,8 +20469,7 @@
         "name": "44",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -20625,8 +20596,7 @@
         "name": "45",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21076,8 +21046,7 @@
         "name": "46",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21261,8 +21230,7 @@
         "name": "47",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -21644,8 +21612,7 @@
         "name": "48",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22104,8 +22071,7 @@
         "name": "49",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22465,8 +22431,7 @@
         "name": "50",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -22751,8 +22716,7 @@
         "name": "51",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -23647,8 +23611,7 @@
         "name": "52",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24278,8 +24241,7 @@
         "name": "53",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -24879,8 +24841,7 @@
         "name": "54",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27222,8 +27183,7 @@
         "name": "54S",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27298,8 +27258,7 @@
         "name": "55",
         "desc": "Extreme",
         "stroke": "#5726C2",
-        "coordinateProperties": {},
-        "description": "Extreme"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27384,8 +27343,7 @@
         "name": "56",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -27711,8 +27669,7 @@
         "name": "57",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28282,8 +28239,7 @@
         "name": "58",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28468,8 +28424,7 @@
         "name": "59",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28634,8 +28589,7 @@
         "name": "60",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -28948,8 +28902,7 @@
         "name": "61",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -29534,8 +29487,7 @@
         "name": "62",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30405,8 +30357,7 @@
         "name": "63",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -30801,8 +30752,7 @@
         "name": "65",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32522,8 +32472,7 @@
         "name": "65A",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32688,8 +32637,7 @@
         "name": "65S",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -32949,8 +32897,7 @@
         "name": "7",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33290,8 +33237,7 @@
         "name": "70",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -33600,8 +33546,7 @@
         "name": "75",
         "desc": "Easy",
         "stroke": "#4ABD32",
-        "coordinateProperties": {},
-        "description": "Easy"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34170,8 +34115,7 @@
         "name": "75A",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34271,8 +34215,7 @@
         "name": "76",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -34777,8 +34720,7 @@
         "name": "8",
         "desc": "Difficult",
         "stroke": "#F42410",
-        "coordinateProperties": {},
-        "description": "Difficult"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -35145,8 +35087,7 @@
         "name": "9",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -36465,8 +36406,7 @@
         "name": "Wow Trail Overlook",
         "desc": "Moderate",
         "stroke": "#00B2FF",
-        "coordinateProperties": {},
-        "description": "Moderate"
+        "coordinateProperties": {}
       },
       "geometry": {
         "type": "LineString",
@@ -37495,6 +37435,20 @@
           36.6378546844306,
           510
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.92986527542509,
+          36.623789164645835
+        ]
+      },
+      "properties": {
+        "type": "file-label",
+        "label": "Pickett State Forest OHVTrail Map"
       }
     }
   ]
