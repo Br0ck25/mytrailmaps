@@ -6,6 +6,13 @@ const { DOMParser } = require("@xmldom/xmldom");
 const inputDir = "."; // GPX input directory
 const outputDir = "../geojson-files"; // GeoJSON output directory
 
+function titleCase(str) {
+  return str
+    .toLowerCase()
+    .replace(/(?:^|\s|-|_)\w/g, match => match.toUpperCase());
+}
+
+
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
@@ -19,12 +26,15 @@ fs.readdirSync(inputDir)
     const geojson = togeojson.gpx(dom);
 
     // Format filename label (e.g., "My Trail.gpx" => "My Trail")
-    const filenameLabel = file
-      .replace(/\.gpx$/i, "")
-      .replace(/([a-z])([A-Z])/g, "$1 $2")
-      .replace(/[-_]+/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
+  const filenameLabel = titleCase(
+  file
+    .replace(/\.gpx$/i, "")
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/[-_]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+);
+
 
     // Collect coordinates from all LineStrings
     const allCoords = geojson.features
