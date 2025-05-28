@@ -6,7 +6,7 @@ import length from "@turf/length";
 import { lineString } from "@turf/helpers";
 import lineOverlap from "@turf/line-overlap";
 
-function isDuplicateLine(lineFeature, mainLines, threshold = 0.001) {
+function isDuplicateLine(lineFeature, mainLines, threshold = 0.0001) {
   const coords = lineFeature.geometry?.coordinates;
   if (
     !Array.isArray(coords) ||
