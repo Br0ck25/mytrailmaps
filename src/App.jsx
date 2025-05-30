@@ -20,6 +20,7 @@ function App() {
   const [showNames, setShowNames] = useState(() => localStorage.getItem("showNames") !== "false");
   const [showWaypoints, setShowWaypoints] = useState(() => localStorage.getItem("showWaypoints") !== "false");
   const [showWaypointLabels, setShowWaypointLabels] = useState(() => localStorage.getItem("showWaypointLabels") !== "false");
+  const [showPublicTracks, setShowPublicTracks] = useState(() => localStorage.getItem("showPublicTracks") !== "false");
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
@@ -69,6 +70,7 @@ function App() {
   useEffect(() => localStorage.setItem("showNames", showNames), [showNames]);
   useEffect(() => localStorage.setItem("showWaypoints", showWaypoints), [showWaypoints]);
   useEffect(() => localStorage.setItem("showWaypointLabels", showWaypointLabels), [showWaypointLabels]);
+  useEffect(() => localStorage.setItem("showPublicTracks", showPublicTracks), [showPublicTracks]);
 
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
@@ -85,6 +87,7 @@ function App() {
               showWaypoints={showWaypoints}
               showWaypointLabels={showWaypointLabels}
               showTracks={showTracks}
+              showPublicTracks={showPublicTracks}
               onGeolocateControlReady={setTriggerGeolocate}
               tileJson={tileJson}
             />
@@ -151,10 +154,11 @@ function App() {
                   <span>Waypoint Labels</span>
                   <ToggleSwitch checked={showWaypointLabels} onChange={(e) => setShowWaypointLabels(e.target.checked)} />
                 </div>
-                <div className="flex justify-between items-center opacity-50">
-                  <span>Public Tracks</span>
-                  <ToggleSwitch checked={true} onChange={() => {}} />
-                </div>
+                <div className="flex justify-between items-center">
+  <span>Public Tracks</span>
+  <ToggleSwitch checked={showPublicTracks} onChange={(e) => setShowPublicTracks(e.target.checked)} />
+</div>
+
               </div>
             )}
           </div>
