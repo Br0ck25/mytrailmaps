@@ -67,16 +67,16 @@ export default function MapView({
   }, []);
 
   useEffect(() => {
-  let cancelled = false;
+    let cancelled = false;
 
-  if (!mapRef.current) return;
+    if (!mapRef.current) return;
 
-  const map = new maplibregl.Map({
-    container: mapRef.current,
-    style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
-    center: JSON.parse(localStorage.getItem("mapCenter") || "[-84.3, 36.5]"),
-    zoom: parseFloat(localStorage.getItem("mapZoom") || "9"),
-  });
+    const map = new maplibregl.Map({
+      container: mapRef.current,
+      style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+      center: JSON.parse(localStorage.getItem("mapCenter") || "[-84.3, 36.5]"),
+      zoom: parseFloat(localStorage.getItem("mapZoom") || "9"),
+    });
 
     currentMap.current = map;
     map.addControl(new maplibregl.NavigationControl(), "top-right");
@@ -279,18 +279,19 @@ export default function MapView({
     });
 
     return () => {
-  cancelled = true;
-  if (currentMap.current) {
-    try {
-      currentMap.current.remove();
-    } catch (e) {
-      console.warn("Map removal failed:", e.message);
-    }
-  }
-};
-
+      cancelled = true;
+      if (currentMap.current) {
+        try {
+          currentMap.current.remove();
+        } catch (e) {
+          console.warn("Map removal failed:", e.message);
+        }
+      }
+    };
   }, [mainGeojsonFiles, publicGeojsonFiles]);
-    useEffect(() => {
+
+  // 🔄 Watch for toggle changes and update layer visibility
+  useEffect(() => {
     const map = currentMap.current;
     if (!map) return;
 
@@ -312,5 +313,5 @@ export default function MapView({
     });
   }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
 
-  return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
+  return <div ref={mapRef} className="map-container" />;
 }

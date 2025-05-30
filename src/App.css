@@ -171,4 +171,8 @@ input:checked + .slider:before {
   color: #374151;                  /* gray-700 */
 }
 
+.map-container {
+  height: 100vh;
+  width: 100%;
+}
 
