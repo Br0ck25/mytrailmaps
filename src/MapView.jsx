@@ -293,9 +293,12 @@ export default function MapView({
   // 🔄 Watch for toggle changes and update layer visibility
   useEffect(() => {
   const map = currentMap.current;
-  if (!map || !map.getStyle || !map.getStyle().layers) return;
+  if (!map || !map.isStyleLoaded()) return;
 
-  map.getStyle().layers.forEach(layer => {
+  const layers = map.getStyle()?.layers;
+  if (!Array.isArray(layers)) return;
+
+  layers.forEach(layer => {
     const id = layer.id;
 
     if (id.endsWith("-line")) {
@@ -312,6 +315,7 @@ export default function MapView({
     }
   });
 }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
+
 
 
   return <div ref={mapRef} className="map-container" />;
