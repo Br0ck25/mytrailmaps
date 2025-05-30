@@ -54,21 +54,38 @@ export default function MapView({
   const [publicGeojsonFiles, setPublicGeojsonFiles] = useState([]);
 
   useEffect(() => {
-    fetch("/tracks/manifest.json")
-      .then(res => res.json())
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    fetch("/tracks/manifest.json", { signal })
+      .then((res) => res.json())
       .then(setMainGeojsonFiles)
-      .catch(err => console.error("❌ Failed to load main track manifest:", err));
+      .catch((err) => {
+        if (err.name !== "AbortError") {
+          console.error("❌ Failed to load main track manifest:", err);
+        }
+      });
+
+    return () => controller.abort();
   }, []);
 
   useEffect(() => {
-    fetch("/public-tracks/manifest.json")
-      .then(res => res.json())
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    fetch("/public-tracks/manifest.json", { signal })
+      .then((res) => res.json())
       .then(setPublicGeojsonFiles)
-      .catch(err => console.error("❌ Failed to load public track manifest:", err));
+      .catch((err) => {
+        if (err.name !== "AbortError") {
+          console.error("❌ Failed to load public track manifest:", err);
+        }
+      });
+
+    return () => controller.abort();
   }, []);
 
   useEffect(() => {
-    let cancelled = false;
     if (!mapRef.current) return;
 
     const map = new maplibregl.Map({
@@ -154,7 +171,11 @@ export default function MapView({
                 ],
                 "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
               },
-              layout: { "line-cap": "round", "line-join": "round" }
+              layout: {
+                "line-cap": "round",
+                "line-join": "round",
+                visibility: isPublic && !showPublicTracks ? "none" : "visible"
+              }
             });
 
             map.addLayer({
@@ -167,7 +188,7 @@ export default function MapView({
                 "text-field": ["get", "name"],
                 "text-font": ["Open Sans Bold"],
                 "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-                visibility: showNames ? "visible" : "none"
+                visibility: isPublic && !showPublicTracks ? "none" : (showNames ? "visible" : "none")
               },
               paint: {
                 "text-color": "#333",
@@ -182,7 +203,9 @@ export default function MapView({
               type: "circle",
               source: sourceId,
               filter: ["==", "$type", "Point"],
-              layout: { visibility: showWaypoints ? "visible" : "none" },
+              layout: {
+                visibility: isPublic && !showPublicTracks ? "none" : (showWaypoints ? "visible" : "none")
+              },
               paint: {
                 "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
                 "circle-color": "#ff6600",
@@ -202,7 +225,7 @@ export default function MapView({
                 "text-font": ["Open Sans Regular"],
                 "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
                 "text-offset": [0, 1.2],
-                visibility: showWaypointLabels ? "visible" : "none"
+                visibility: isPublic && !showPublicTracks ? "none" : (showWaypointLabels ? "visible" : "none")
               },
               paint: {
                 "text-color": "#333",
@@ -211,28 +234,6 @@ export default function MapView({
               },
               minzoom: 12
             });
-
-            map.addLayer({
-              id: `${sourceId}-file-label`,
-              type: "symbol",
-              source: sourceId,
-              filter: ["==", ["get", "type"], "file-label"],
-              layout: {
-                "text-field": ["get", "label"],
-                "text-font": ["Open Sans Bold"],
-                "text-size": ["interpolate", ["linear"], ["zoom"], 8, 10, 14, 16],
-                "text-anchor": "center"
-              },
-              paint: {
-                "text-color": "#000",
-                "text-halo-color": "#fff",
-                "text-halo-width": 2
-              },
-              minzoom: 9
-            });
-
-            map.on("mouseenter", `${sourceId}-line`, () => map.getCanvas().style.cursor = "pointer");
-            map.on("mouseleave", `${sourceId}-line`, () => map.getCanvas().style.cursor = "");
           })
           .catch(err => console.error(`❌ Error loading ${filename}:`, err));
       };
@@ -260,14 +261,15 @@ export default function MapView({
 
           const props = feature.properties;
           new maplibregl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML(`
-              <div class="track-popup">
-                <h3>${props.name || "Unnamed Track"}</h3>
-                <p>${props.description || "No description available."}</p>
-              </div>
-            `)
-            .addTo(map);
+  .setLngLat(e.lngLat)
+  .setHTML(`
+    <div class="track-popup">
+      <h3>${props.name || "Unnamed Track"}</h3>
+      <p>${props.desc || props.description || "No description available."}</p>
+    </div>
+  `)
+  .addTo(map);
+
         }
       });
     });
@@ -279,7 +281,6 @@ export default function MapView({
     });
 
     return () => {
-      cancelled = true;
       if (currentMap.current) {
         try {
           currentMap.current.remove();
@@ -298,7 +299,6 @@ export default function MapView({
       map.getStyle().layers?.forEach(layer => {
         const id = layer.id;
 
-        // Public layers
         if (id.startsWith("public-") && id.endsWith("-line")) {
           map.setLayoutProperty(id, "visibility", showPublicTracks ? "visible" : "none");
         }
@@ -312,7 +312,6 @@ export default function MapView({
           map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypointLabels ? "visible" : "none");
         }
 
-        // Main layers
         if (!id.startsWith("public-") && id.endsWith("-line")) {
           map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
         }
