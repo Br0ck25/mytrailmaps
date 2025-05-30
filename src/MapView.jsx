@@ -43,6 +43,7 @@ export default function MapView({
   showNames,
   showWaypoints,
   showWaypointLabels,
+  showPublicTracks,
   onGeolocateControlReady
 }) {
   const mapRef = useRef(null);
@@ -54,29 +55,28 @@ export default function MapView({
 
   useEffect(() => {
     fetch("/tracks/manifest.json")
-      .then((res) => res.json())
+      .then(res => res.json())
       .then(setMainGeojsonFiles)
-      .catch((err) => console.error("❌ Failed to load main track manifest:", err));
+      .catch(err => console.error("❌ Failed to load main track manifest:", err));
   }, []);
 
   useEffect(() => {
     fetch("/public-tracks/manifest.json")
-      .then((res) => res.json())
+      .then(res => res.json())
       .then(setPublicGeojsonFiles)
-      .catch((err) => console.error("❌ Failed to load public track manifest:", err));
+      .catch(err => console.error("❌ Failed to load public track manifest:", err));
   }, []);
 
   useEffect(() => {
-  let cancelled = false;
+    let cancelled = false;
+    if (!mapRef.current) return;
 
-  if (!mapRef.current) return;
-
-  const map = new maplibregl.Map({
-    container: mapRef.current,
-    style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
-    center: JSON.parse(localStorage.getItem("mapCenter") || "[-84.3, 36.5]"),
-    zoom: parseFloat(localStorage.getItem("mapZoom") || "9"),
-  });
+    const map = new maplibregl.Map({
+      container: mapRef.current,
+      style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+      center: JSON.parse(localStorage.getItem("mapCenter") || "[-84.3, 36.5]"),
+      zoom: parseFloat(localStorage.getItem("mapZoom") || "9")
+    });
 
     currentMap.current = map;
     map.addControl(new maplibregl.NavigationControl(), "top-right");
@@ -85,7 +85,7 @@ export default function MapView({
       positionOptions: { enableHighAccuracy: true },
       trackUserLocation: true,
       showUserHeading: true,
-      showAccuracyCircle: false,
+      showAccuracyCircle: false
     });
     map.addControl(geolocate);
 
@@ -279,45 +279,57 @@ export default function MapView({
     });
 
     return () => {
-  cancelled = true;
-  if (currentMap.current) {
-    try {
-      currentMap.current.remove();
-    } catch (e) {
-      console.warn("Map removal failed:", e.message);
-    }
-  }
-};
-
+      cancelled = true;
+      if (currentMap.current) {
+        try {
+          currentMap.current.remove();
+        } catch (e) {
+          console.warn("Map removal failed:", e.message);
+        }
+      }
+    };
   }, [mainGeojsonFiles, publicGeojsonFiles]);
 
   useEffect(() => {
-  const map = currentMap.current;
-  if (!map || !map.isStyleLoaded()) return;
+    const map = currentMap.current;
+    if (!map || !map.isStyleLoaded()) return;
 
-  try {
-    map.getStyle().layers?.forEach(layer => {
-      const id = layer.id;
-      if (id.endsWith("-line")) {
-        map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
-      }
-      if (id.endsWith("-label")) {
-        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
-      }
-      if (id.endsWith("-waypoints")) {
-        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
-      }
-      if (id.endsWith("-waypoint-labels")) {
-        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
-      }
-    });
-  } catch (err) {
-    console.warn("⚠️ Failed to update layer visibility:", err.message);
-  }
-}, [showTracks, showNames, showWaypoints, showWaypointLabels]);
+    try {
+      map.getStyle().layers?.forEach(layer => {
+        const id = layer.id;
 
+        // Public layers
+        if (id.startsWith("public-") && id.endsWith("-line")) {
+          map.setLayoutProperty(id, "visibility", showPublicTracks ? "visible" : "none");
+        }
+        if (id.startsWith("public-") && id.endsWith("-label")) {
+          map.setLayoutProperty(id, "visibility", showPublicTracks && showNames ? "visible" : "none");
+        }
+        if (id.startsWith("public-") && id.endsWith("-waypoints")) {
+          map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypoints ? "visible" : "none");
+        }
+        if (id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
+          map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypointLabels ? "visible" : "none");
+        }
 
-  
+        // Main layers
+        if (!id.startsWith("public-") && id.endsWith("-line")) {
+          map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
+        }
+        if (!id.startsWith("public-") && id.endsWith("-label")) {
+          map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+        }
+        if (!id.startsWith("public-") && id.endsWith("-waypoints")) {
+          map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+        }
+        if (!id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
+          map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+        }
+      });
+    } catch (err) {
+      console.warn("⚠️ Failed to update layer visibility:", err.message);
+    }
+  }, [showTracks, showNames, showWaypoints, showWaypointLabels, showPublicTracks]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
