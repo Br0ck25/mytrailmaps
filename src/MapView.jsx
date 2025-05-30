@@ -293,24 +293,29 @@ export default function MapView({
 
   useEffect(() => {
   const map = currentMap.current;
-  if (!map || !map.getStyle || !map.getStyle().layers) return;
+  if (!map || !map.isStyleLoaded()) return;
 
-  map.getStyle().layers.forEach(layer => {
-    const id = layer.id;
-    if (id.endsWith("-line")) {
-      map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
-    }
-    if (id.endsWith("-label")) {
-      map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
-    }
-    if (id.endsWith("-waypoints")) {
-      map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
-    }
-    if (id.endsWith("-waypoint-labels")) {
-      map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
-    }
-  });
+  try {
+    map.getStyle().layers?.forEach(layer => {
+      const id = layer.id;
+      if (id.endsWith("-line")) {
+        map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
+      }
+      if (id.endsWith("-label")) {
+        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+      }
+      if (id.endsWith("-waypoints")) {
+        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+      }
+      if (id.endsWith("-waypoint-labels")) {
+        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+      }
+    });
+  } catch (err) {
+    console.warn("⚠️ Failed to update layer visibility:", err.message);
+  }
 }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
+
 
   
 
