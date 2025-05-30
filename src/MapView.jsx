@@ -292,26 +292,27 @@ export default function MapView({
 
   // 🔄 Watch for toggle changes and update layer visibility
   useEffect(() => {
-    const map = currentMap.current;
-    if (!map) return;
+  const map = currentMap.current;
+  if (!map || !map.getStyle || !map.getStyle().layers) return;
 
-    map.getStyle().layers?.forEach(layer => {
-      const id = layer.id;
+  map.getStyle().layers.forEach(layer => {
+    const id = layer.id;
 
-      if (id.endsWith("-line")) {
-        map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
-      }
-      if (id.endsWith("-label")) {
-        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
-      }
-      if (id.endsWith("-waypoints")) {
-        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
-      }
-      if (id.endsWith("-waypoint-labels")) {
-        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
-      }
-    });
-  }, [showTracks, showNames, showWaypoints, showWaypointLabels]);
+    if (id.endsWith("-line")) {
+      map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
+    }
+    if (id.endsWith("-label")) {
+      map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+    }
+    if (id.endsWith("-waypoints")) {
+      map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+    }
+    if (id.endsWith("-waypoint-labels")) {
+      map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+    }
+  });
+}, [showTracks, showNames, showWaypoints, showWaypointLabels]);
+
 
   return <div ref={mapRef} className="map-container" />;
 }
