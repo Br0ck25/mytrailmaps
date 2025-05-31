@@ -105,24 +105,26 @@ function App() {
   }
 
   function saveTrip(name) {
-    if (!name.trim() || pendingTripCoords.length < 2) return;
-    const newTrack = {
-      type: "Feature",
-      geometry: { type: "LineString", coordinates: pendingTripCoords },
-      properties: {
-        name: name.trim(),
-        desc: "Custom recorded trip",
-        stroke: "#FF0000",
-        createdAt: Date.now()
-      }
-    };
-    const updatedTracks = [...userTracks, newTrack];
-    setUserTracks(updatedTracks);
-    localStorage.setItem("userTracks", JSON.stringify(updatedTracks));
-    setPendingTripCoords([]);
-    setShowTripNameModal(false);
-    setActiveTab("tracks");
-  }
+  if (!name.trim() || pendingTripCoords.length < 2) return;
+  const newTrack = {
+    type: "Feature",
+    geometry: { type: "LineString", coordinates: pendingTripCoords },
+    properties: {
+      name: name.trim(),
+      stroke: "#FF0000",
+      createdAt: Date.now(),
+      distance: distance.toFixed(2), // in miles
+      duration: elapsed              // in seconds
+    }
+  };
+  const updatedTracks = [...userTracks, newTrack];
+  setUserTracks(updatedTracks);
+  localStorage.setItem("userTracks", JSON.stringify(updatedTracks));
+  setPendingTripCoords([]);
+  setShowTripNameModal(false);
+  setActiveTab("tracks");
+}
+
 
   function deleteTrack(index) {
     const updated = [...userTracks];
@@ -164,11 +166,11 @@ function App() {
   }
 
   function formatTime(seconds) {
-    const h = Math.floor(seconds / 3600);
-    const m = Math.floor((seconds % 3600) / 60);
-    const s = seconds % 60;
-    return [h, m, s].map(n => String(n).padStart(2, '0')).join(':');
-  }
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = seconds % 60;
+  return [h, m, s].map(n => String(n).padStart(2, '0')).join(':');
+}
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
       <div className={`flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow ${activeTab === 'map' ? 'hidden' : ''}`}>
@@ -176,20 +178,18 @@ function App() {
       </div>
 
       <div className="flex-1 relative overflow-hidden">
-        {activeTab === "map" && (
-          <div className="absolute inset-0 z-0">
-            <MapView
-              showNames={showNames}
-              showWaypoints={showWaypoints}
-              showWaypointLabels={showWaypointLabels}
-              showTracks={showTracks}
-              showPublicTracks={showPublicTracks}
-              onGeolocateControlReady={setTriggerGeolocate}
-              liveTrack={tracking ? tripCoords : null}
-              userTracks={userTracks}
-            />
-          </div>
-        )}
+        <div className={activeTab === "map" ? "block" : "hidden"}>
+  <MapView
+    showNames={showNames}
+    showWaypoints={showWaypoints}
+    showWaypointLabels={showWaypointLabels}
+    showTracks={showTracks}
+    showPublicTracks={showPublicTracks}
+    onGeolocateControlReady={setTriggerGeolocate}
+    liveTrack={tracking ? tripCoords : null}
+    userTracks={userTracks}
+  />
+</div>
 
         {activeTab === "trip" && (
           <div className="p-4 space-y-4 flex flex-col items-center">
@@ -250,7 +250,10 @@ function App() {
                     <>
                       <div className="flex-1">
                         <h4 className="font-bold text-green-700">{track.properties.name}</h4>
-                        <p className="text-sm text-gray-600">{track.properties.desc}</p>
+                        <p className="text-sm text-gray-600">
+  {track.properties.distance ? `${track.properties.distance} mi` : ""}{" "}
+  {track.properties.duration ? `• ${formatTime(track.properties.duration)}` : ""}
+</p>
                         <p className="text-xs text-gray-400">{new Date(track.properties.createdAt || 0).toLocaleString()}</p>
                       </div>
                       <div className="flex items-center gap-4 pl-4">

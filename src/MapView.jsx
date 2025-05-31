@@ -44,6 +44,8 @@ export default function MapView({
   showWaypoints,
   showWaypointLabels,
   showPublicTracks,
+  liveTrack,
+  userTracks,
   onGeolocateControlReady
 }) {
   const mapRef = useRef(null);
@@ -261,15 +263,14 @@ export default function MapView({
 
           const props = feature.properties;
           new maplibregl.Popup()
-  .setLngLat(e.lngLat)
-  .setHTML(`
-    <div class="track-popup">
-      <h3>${props.name || "Unnamed Track"}</h3>
-      <p>${props.desc || props.description || "No description available."}</p>
-    </div>
-  `)
-  .addTo(map);
-
+            .setLngLat(e.lngLat)
+            .setHTML(`
+              <div class="track-popup">
+                <h3>${props.name || "Unnamed Track"}</h3>
+                <p>${props.desc || props.description || "No description available."}</p>
+              </div>
+            `)
+            .addTo(map);
         }
       });
     });
@@ -329,6 +330,44 @@ export default function MapView({
       console.warn("⚠️ Failed to update layer visibility:", err.message);
     }
   }, [showTracks, showNames, showWaypoints, showWaypointLabels, showPublicTracks]);
+
+  useEffect(() => {
+    const map = currentMap.current;
+    const id = "live-track";
+
+    if (!map || !map.isStyleLoaded()) return;
+
+    try {
+      if (map.getLayer(id)) map.removeLayer(id);
+      if (map.getSource(id)) map.removeSource(id);
+
+      if (liveTrack && liveTrack.length > 1) {
+        map.addSource(id, {
+          type: "geojson",
+          data: {
+            type: "Feature",
+            geometry: {
+              type: "LineString",
+              coordinates: liveTrack
+            }
+          }
+        });
+
+        map.addLayer({
+          id,
+          type: "line",
+          source: id,
+          paint: {
+            "line-color": "#FF0000",
+            "line-width": 4,
+            "line-opacity": 1
+          }
+        });
+      }
+    } catch (err) {
+      console.warn("⚠️ Failed to update live track:", err.message);
+    }
+  }, [liveTrack]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
