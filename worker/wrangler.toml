@@ -12,7 +12,3 @@ kv_namespaces = [
 r2_buckets = [
   { binding = "MYTRAILMAPS", bucket_name = "mytrailmaps" }
 ]
-
-routes = [
-  { pattern = "mytrailmaps.brocksville.com", custom_domain = true }
-]

@@ -5,7 +5,6 @@ import Dashboard from "./Dashboard";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import ProtectedRoute from "./ProtectedRoute";
-import Home from "./Home"; // optional: a landing page with screenshots
 
 export default function App() {
   // Keep the auth token in state so we can re-render on login/logout.
@@ -26,8 +25,11 @@ export default function App() {
         <Route path="/login" element={<LoginPage onLogin={setToken} />} />
         <Route path="/signup" element={<SignUpPage />} />
 
-        {/* Optional landing page at "/" */}
-        <Route path="/" element={<Home />} />
+        {/* Redirect “/” to either /dashboard (if logged in) or /login */}
+        <Route
+          path="/"
+          element={token ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />}
+        />
 
         {/* Protected dashboard route */}
         <Route
@@ -39,12 +41,10 @@ export default function App() {
           }
         />
 
-        {/* Catch-all: if logged in, go to /dashboard; else go to /login */}
+        {/* Catch-all: any other path also redirects based on auth */}
         <Route
           path="*"
-          element={
-            token ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />
-          }
+          element={token ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />}
         />
       </Routes>
     </Router>

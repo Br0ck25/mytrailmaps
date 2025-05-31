@@ -16,7 +16,6 @@ export default {
 
     try {
       const url = new URL(request.url);
-      // Strip any trailing slashes for consistent matching:
       const path = url.pathname.replace(/\/+$/, "");
       const method = request.method.toUpperCase();
 
@@ -28,7 +27,7 @@ export default {
 
       // -------------------------------------------------------
       // 1) SIGN UP: POST /api/signup
-      //    Body: { email, password, resetKey }
+      //    Body: { email, password }
       // -------------------------------------------------------
       if (method === "POST" && path === "/api/signup") {
         let body;
@@ -41,27 +40,17 @@ export default {
           );
         }
 
-        const { email, password, resetKey } = body || {};
+        // Now only email + password:
+        const { email, password } = body || {};
         if (
           !email ||
           !password ||
           typeof email !== "string" ||
-          typeof password !== "string" ||
-          typeof resetKey !== "string"
+          typeof password !== "string"
         ) {
           return new Response(
             JSON.stringify({ error: "Missing or invalid fields" }),
             { status: 400, headers: corsHeaders }
-          );
-        }
-
-        // === Example resetKey check ===
-        // Replace with your own logic (e.g., verify against a KV or DB of valid keys).
-        // Here, we simply require a hardcoded key "MYRESETKEY" for demonstration.
-        if (resetKey.trim() !== "MYRESETKEY") {
-          return new Response(
-            JSON.stringify({ error: "Invalid reset key" }),
-            { status: 403, headers: corsHeaders }
           );
         }
 
@@ -78,7 +67,6 @@ export default {
         }
 
         // Hash the password using SHA-256 (for demonstration only)
-        // In production, you might use bcrypt, Argon2, or similar.
         const encoder = new TextEncoder();
         const data = encoder.encode(password);
         const hashBuffer = await crypto.subtle.digest("SHA-256", data);
@@ -170,10 +158,9 @@ export default {
         }
 
         // At this point, credentials are valid. Issue a dummy token:
-        // In production, you’d sign a JWT or issue a secure session token.
         const dummyToken = crypto.randomUUID();
 
-        // (Optional) Store token → email mapping in KV if you want to verify later.
+        // (Optional) Store token → email mapping in KV if you want to verify later:
         // await env.USERS_KV.put(`token:${dummyToken}`, normalizedEmail, { expirationTtl: 3600 });
 
         return new Response(
@@ -376,13 +363,6 @@ export default {
 // In production, verify JWT or session token properly.
 // -------------------------------------------------------
 async function getUserIdFromToken(token) {
-  // If you want to allow the dummy token from login, return the email (or user ID).
-  // Example: if you stored “token:<uuid> → email” in KV, lookup here. 
-  // For now, we just check if it equals “testtoken” or any token you stored.
   if (token === "testtoken") return "testuser";
-  // If you decide to store tokens in KV, do:
-  // const email = await env.USERS_KV.get(`token:${token}`);
-  // return email || null;
-
   return null;
 }

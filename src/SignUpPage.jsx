@@ -5,7 +5,6 @@ import { useNavigate, Link } from "react-router-dom";
 export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [resetKey, setResetKey] = useState("");
   const [error, setError] = useState(null);
   const [successMsg, setSuccessMsg] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -21,17 +20,19 @@ export default function SignUpPage() {
       const res = await fetch("/api/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        // Only email + password now—no resetKey
         body: JSON.stringify({
           email: email.trim(),
           password,
-          resetKey: resetKey.trim(),
         }),
       });
+
       const json = await res.json();
       if (!res.ok) {
         throw new Error(json.error || "Sign up failed");
       }
-      // On success:
+
+      // On success, show a message and redirect to /login
       setSuccessMsg("Account created! Redirecting to login…");
       setTimeout(() => {
         navigate("/login", { replace: true });
@@ -44,7 +45,7 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4 text-center text-green-700">
           Sign Up
@@ -81,23 +82,6 @@ export default function SignUpPage() {
               onChange={(e) => setPassword(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
             />
-          </div>
-
-          <div>
-            <label htmlFor="resetKey" className="block text-sm font-medium text-gray-700">
-              Reset Key
-            </label>
-            <input
-              id="resetKey"
-              type="text"
-              required
-              value={resetKey}
-              onChange={(e) => setResetKey(e.target.value)}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
-            />
-            <p className="mt-1 text-xs text-gray-500">
-              Enter the reset key (e.g. given by admin).
-            </p>
           </div>
 
           <button
