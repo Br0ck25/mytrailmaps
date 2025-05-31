@@ -180,6 +180,7 @@ export default function MapView({
               }
             });
 
+
             map.addLayer({
               id: `${sourceId}-label`,
               type: "symbol",
@@ -236,9 +237,35 @@ export default function MapView({
               },
               minzoom: 12
             });
+             map.addLayer({
+    id: `${sourceId}-file-label`,
+    type: "symbol",
+    source: sourceId,
+    filter: ["==", ["get", "type"], "file-label"],
+    layout: {
+      "text-field": ["get", "label"],
+      "text-font": ["Open Sans Bold"],
+      "text-size": ["interpolate", ["linear"], ["zoom"], 6, 14, 14, 12],
+      "text-anchor": "center",
+      "text-allow-overlap": true,
+      "text-ignore-placement": true,
+      "symbol-placement": "point"
+    },
+    paint: {
+      "text-color": "#000",
+      "text-halo-color": "#fff",
+      "text-halo-width": 2
+    },
+    minzoom: 6
+  });
+
+  // ✅ Move to top
+  map.moveLayer(`${sourceId}-file-label`);
+
           })
           .catch(err => console.error(`❌ Error loading ${filename}:`, err));
       };
+      
 
       mainGeojsonFiles.forEach(f => addTrackLayers(f, "track"));
       publicGeojsonFiles.forEach(f => addTrackLayers(f, "public", true));
@@ -332,42 +359,38 @@ export default function MapView({
   }, [showTracks, showNames, showWaypoints, showWaypointLabels, showPublicTracks]);
 
   useEffect(() => {
-    const map = currentMap.current;
-    const id = "live-track";
+  const map = currentMap.current;
+  if (!map || !map.isStyleLoaded()) return;
 
-    if (!map || !map.isStyleLoaded()) return;
+  const sourceId = "user-tracks";
+  const layerId = "user-tracks-line";
 
-    try {
-      if (map.getLayer(id)) map.removeLayer(id);
-      if (map.getSource(id)) map.removeSource(id);
+  // Remove existing layer and source if they exist
+  if (map.getLayer(layerId)) map.removeLayer(layerId);
+  if (map.getSource(sourceId)) map.removeSource(sourceId);
 
-      if (liveTrack && liveTrack.length > 1) {
-        map.addSource(id, {
-          type: "geojson",
-          data: {
-            type: "Feature",
-            geometry: {
-              type: "LineString",
-              coordinates: liveTrack
-            }
-          }
-        });
-
-        map.addLayer({
-          id,
-          type: "line",
-          source: id,
-          paint: {
-            "line-color": "#FF0000",
-            "line-width": 4,
-            "line-opacity": 1
-          }
-        });
+  if (userTracks && userTracks.length > 0) {
+    map.addSource(sourceId, {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: userTracks
       }
-    } catch (err) {
-      console.warn("⚠️ Failed to update live track:", err.message);
-    }
-  }, [liveTrack]);
+    });
+
+    map.addLayer({
+      id: layerId,
+      type: "line",
+      source: sourceId,
+      paint: {
+        "line-color": "#FF0000",
+        "line-width": 4,
+        "line-opacity": 0.9
+      }
+    });
+  }
+}, [userTracks]);
+
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }

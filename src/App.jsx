@@ -4,6 +4,16 @@ import ToggleSwitch from "./components/ToggleSwitch";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog, FaDownload } from "react-icons/fa";
 import { FiLayers, FiCrosshair } from "react-icons/fi";
 
+const tileJson = {
+  tilejson: "2.2.0",
+  name: "Track Tiles",
+  tiles: [
+    `https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf?nocache=${Date.now()}`
+  ],
+  minzoom: 5,
+  maxzoom: 15
+};
+
 function App() {
   const [startTime, setStartTime] = useState(null);
   const [elapsed, setElapsed] = useState(0);
@@ -35,8 +45,24 @@ function App() {
   useEffect(() => localStorage.setItem("showWaypointLabels", showWaypointLabels), [showWaypointLabels]);
   useEffect(() => localStorage.setItem("showPublicTracks", showPublicTracks), [showPublicTracks]);
 
+   function deleteTrack(index) {
+    const updated = [...userTracks];
+    updated.splice(index, 1);
+    setUserTracks(updated);
+    localStorage.setItem("userTracks", JSON.stringify(updated));
+  }
 
-    function startTrip() {
+  function exportTrack(track) {
+    const blob = new Blob([JSON.stringify(track, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${track.properties?.name || "trip"}.geojson`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function startTrip() {
     setTracking(true);
     setPaused(false);
     setTripCoords([]);
@@ -105,50 +131,24 @@ function App() {
   }
 
   function saveTrip(name) {
-  if (!name.trim() || pendingTripCoords.length < 2) return;
-  const newTrack = {
-    type: "Feature",
-    geometry: { type: "LineString", coordinates: pendingTripCoords },
-    properties: {
-      name: name.trim(),
-      stroke: "#FF0000",
-      createdAt: Date.now(),
-      distance: distance.toFixed(2), // in miles
-      duration: elapsed              // in seconds
-    }
-  };
-  const updatedTracks = [...userTracks, newTrack];
-  setUserTracks(updatedTracks);
-  localStorage.setItem("userTracks", JSON.stringify(updatedTracks));
-  setPendingTripCoords([]);
-  setShowTripNameModal(false);
-  setActiveTab("tracks");
-}
-
-
-  function deleteTrack(index) {
-    const updated = [...userTracks];
-    updated.splice(index, 1);
-    setUserTracks(updated);
-    localStorage.setItem("userTracks", JSON.stringify(updated));
-  }
-
-  function exportTrack(track) {
-    const blob = new Blob([JSON.stringify(track, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `${track.properties.name || "trip"}.geojson`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-
-  function updateTrackName(index, name) {
-    const updated = [...userTracks];
-    updated[index].properties.name = name.trim();
-    setUserTracks(updated);
-    localStorage.setItem("userTracks", JSON.stringify(updated));
-    setEditingIndex(null);
+    if (!name.trim() || pendingTripCoords.length < 2) return;
+    const newTrack = {
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: pendingTripCoords },
+      properties: {
+        name: name.trim(),
+        stroke: "#FF0000",
+        createdAt: Date.now(),
+        distance: distance.toFixed(2),
+        duration: elapsed
+      }
+    };
+    const updatedTracks = [...userTracks, newTrack];
+    setUserTracks(updatedTracks);
+    localStorage.setItem("userTracks", JSON.stringify(updatedTracks));
+    setPendingTripCoords([]);
+    setShowTripNameModal(false);
+    setActiveTab("tracks");
   }
 
   function getDistanceFromCoords(coord1, coord2) {
@@ -166,11 +166,11 @@ function App() {
   }
 
   function formatTime(seconds) {
-  const h = Math.floor(seconds / 3600);
-  const m = Math.floor((seconds % 3600) / 60);
-  const s = seconds % 60;
-  return [h, m, s].map(n => String(n).padStart(2, '0')).join(':');
-}
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = seconds % 60;
+    return [h, m, s].map(n => String(n).padStart(2, '0')).join(':');
+  }
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
       <div className={`flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow ${activeTab === 'map' ? 'hidden' : ''}`}>
@@ -179,35 +179,39 @@ function App() {
 
       <div className="flex-1 relative overflow-hidden">
         <div className={activeTab === "map" ? "block" : "hidden"}>
-  <MapView
-    showNames={showNames}
-    showWaypoints={showWaypoints}
-    showWaypointLabels={showWaypointLabels}
-    showTracks={showTracks}
-    showPublicTracks={showPublicTracks}
-    onGeolocateControlReady={setTriggerGeolocate}
-    liveTrack={tracking ? tripCoords : null}
-    userTracks={userTracks}
-  />
-</div>
+          <MapView
+            showNames={showNames}
+            showWaypoints={showWaypoints}
+            showWaypointLabels={showWaypointLabels}
+            showTracks={showTracks}
+            showPublicTracks={showPublicTracks}
+            onGeolocateControlReady={setTriggerGeolocate}
+            liveTrack={tracking ? tripCoords : null}
+            userTracks={userTracks}
+            tileJson={tileJson}
+          />
+        </div>
 
-        {activeTab === "trip" && (
-          <div className="p-4 space-y-4 flex flex-col items-center">
-            <button
-              onClick={startTrip}
-              disabled={tracking}
-              className={`w-64 p-3 rounded-lg font-semibold text-left ${
-                tracking ? "bg-gray-200 text-gray-400 cursor-not-allowed" : "bg-gray-100 text-green-700"
-              }`}
-            >
-              Start Trip
-            </button>
-            <button
-              onClick={stopTrip}
-              className="w-64 p-3 bg-red-100 rounded-lg font-semibold text-left text-red-700"
-            >
-              Stop Trip
-            </button>
+        {/* Trip Tab */}
+  {activeTab === "trip" && (
+  <div className="p-4 space-y-4 flex flex-col items-center">
+    <button
+      onClick={startTrip}
+      disabled={tracking}
+      className={`w-64 p-3 rounded-lg font-semibold text-center ${
+        tracking ? "bg-gray-200 text-gray-400 cursor-not-allowed" : "bg-gray-100 text-green-700"
+      }`}
+    >
+      Start Trip
+    </button>
+    <button
+      onClick={stopTrip}
+      className="w-64 p-3 bg-red-100 rounded-lg font-semibold text-center text-red-700"
+    >
+      Stop Trip
+    </button>
+
+
 
             {tracking && (
               <div className="text-center mt-2 text-sm text-gray-700 space-y-2">
@@ -227,6 +231,7 @@ function App() {
           </div>
         )}
 
+        {/* Tracks Tab */}
         {activeTab === "tracks" && (
           <div className="p-4 space-y-4 overflow-y-auto flex flex-col items-center">
             {userTracks.length === 0 ? (
@@ -251,9 +256,9 @@ function App() {
                       <div className="flex-1">
                         <h4 className="font-bold text-green-700">{track.properties.name}</h4>
                         <p className="text-sm text-gray-600">
-  {track.properties.distance ? `${track.properties.distance} mi` : ""}{" "}
-  {track.properties.duration ? `• ${formatTime(track.properties.duration)}` : ""}
-</p>
+                          {track.properties.distance ? `${track.properties.distance} mi` : ""}{" "}
+                          {track.properties.duration ? `• ${formatTime(track.properties.duration)}` : ""}
+                        </p>
                         <p className="text-xs text-gray-400">{new Date(track.properties.createdAt || 0).toLocaleString()}</p>
                       </div>
                       <div className="flex items-center gap-4 pl-4">
@@ -269,47 +274,95 @@ function App() {
           </div>
         )}
 
-        {/* Trip Save Modal */}
-        {showTripNameModal && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4">
-      <h2 className="text-lg font-semibold text-green-700">Name Your Trip</h2>
-      <input
-        type="text"
-        value={editedName}
-        onChange={(e) => setEditedName(e.target.value)}
-        placeholder="e.g. Weekend Ride"
-        className="w-full p-2 border border-gray-300 rounded-lg"
-        autoFocus
-      />
-      <div className="flex justify-end space-x-2">
-        <button
-          onClick={() => {
-            setEditedName("");
-            setShowTripNameModal(false);
-          }}
-          className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
-        >
-          Cancel
+        {/* Map Overlay Button */}
+        <button onClick={() => { setShowOverlaysPanel(true); setOverlayPage("main"); }} className="absolute z-50 bottom-20 left-4 p-3 bg-white text-black rounded-full shadow-lg">
+          <FiLayers className="text-xl" />
         </button>
-        <button
-          onClick={() => {
-            if (editedName.trim()) {
-              saveTrip(editedName);
-              setEditedName("");
-            }
-          }}
-          className="px-4 py-2 bg-green-600 text-white rounded-lg font-semibold"
-        >
-          Save
+
+        {/* Geolocate Button */}
+        <button onClick={() => { if (typeof triggerGeolocate === "function") triggerGeolocate(); }} className="absolute z-50 bottom-32 left-4 p-3 bg-white text-black rounded-full shadow-lg" aria-label="Locate Me">
+          <FiCrosshair className="text-xl" />
         </button>
-      </div>
+
+        {/* Overlay Panel */}
+        {showOverlaysPanel && (
+          <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
+            <div className="flex items-center justify-between p-4 border-b">
+              {overlayPage !== "main" && (
+                <button onClick={() => setOverlayPage("main")} className="text-green-700 text-3xl leading-none px-2" aria-label="Back">←</button>
+              )}
+              <h3 className="text-lg font-semibold">{overlayPage === "main" ? "Maps" : "Map Overlays"}</h3>
+              <button onClick={() => setShowOverlaysPanel(false)} className="text-gray-600 text-3xl leading-none px-2" aria-label="Close">×</button>
+            </div>
+
+            {overlayPage === "main" && (
+  <div className="p-4">
+    <div className="space-y-4 flex flex-col items-center">
+      <button
+        onClick={() => setOverlayPage("overlays")}
+        className="w-64 p-3 bg-gray-100 rounded-lg font-semibold text-center text-green-700"
+      >
+        Map Overlays
+      </button>
+      <button
+        className="w-64 p-3 bg-gray-100 rounded-lg font-semibold text-center text-green-700"
+      >
+        Save Offline Maps
+      </button>
     </div>
   </div>
 )}
 
 
-        {/* Confirm Delete Modal */}
+            {overlayPage === "overlays" && (
+              <div className="p-4 space-y-4">
+                <div className="flex justify-between items-center">
+                  <span>Tracks</span>
+                  <ToggleSwitch checked={showTracks} onChange={(e) => setShowTracks(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Track Names</span>
+                  <ToggleSwitch checked={showNames} onChange={(e) => setShowNames(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Waypoints</span>
+                  <ToggleSwitch checked={showWaypoints} onChange={(e) => setShowWaypoints(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Waypoint Labels</span>
+                  <ToggleSwitch checked={showWaypointLabels} onChange={(e) => setShowWaypointLabels(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Public Tracks</span>
+                  <ToggleSwitch checked={showPublicTracks} onChange={(e) => setShowPublicTracks(e.target.checked)} />
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Save Trip Modal */}
+        {showTripNameModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4">
+              <h2 className="text-lg font-semibold text-green-700">Name Your Trip</h2>
+              <input
+                type="text"
+                value={editedName}
+                onChange={(e) => setEditedName(e.target.value)}
+                placeholder="e.g. Weekend Ride"
+                className="w-full p-2 border border-gray-300 rounded-lg"
+                autoFocus
+              />
+              <div className="flex justify-end space-x-2">
+                <button onClick={() => { setEditedName(""); setShowTripNameModal(false); }} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">Cancel</button>
+                <button onClick={() => { if (editedName.trim()) { saveTrip(editedName); setEditedName(""); } }} className="px-4 py-2 bg-green-600 text-white rounded-lg font-semibold">Save</button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Delete Trip Confirm */}
         {confirmDeleteIndex !== null && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
@@ -322,16 +375,6 @@ function App() {
             </div>
           </div>
         )}
-
-        {/* Overlay Button */}
-        <button onClick={() => { setShowOverlaysPanel(true); setOverlayPage("main"); }} className="absolute z-50 bottom-20 left-4 p-3 bg-white text-black rounded-full shadow-lg">
-          <FiLayers className="text-xl" />
-        </button>
-
-        {/* Geolocate Button */}
-        <button onClick={() => { if (typeof triggerGeolocate === "function") triggerGeolocate(); }} className="absolute z-50 bottom-32 left-4 p-3 bg-white text-black rounded-full shadow-lg" aria-label="Locate Me">
-          <FiCrosshair className="text-xl" />
-        </button>
       </div>
 
       {/* Bottom Navigation */}
