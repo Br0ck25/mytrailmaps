@@ -274,15 +274,17 @@ function App() {
           </div>
         )}
 
-        {/* Map Overlay Button */}
-        <button onClick={() => { setShowOverlaysPanel(true); setOverlayPage("main"); }} className="absolute z-50 bottom-20 left-4 p-3 bg-white text-black rounded-full shadow-lg">
-          <FiLayers className="text-xl" />
-        </button>
+        {/* Map Overlay Button - Only show on Map tab */}
+{activeTab === "map" && (
+  <button
+    onClick={() => { setShowOverlaysPanel(true); setOverlayPage("main"); }}
+    className="absolute z-50 bottom-20 left-4 p-3 bg-white text-black rounded-full shadow-lg"
+  >
+    <FiLayers className="text-xl" />
+  </button>
+)}
 
-        {/* Geolocate Button */}
-        <button onClick={() => { if (typeof triggerGeolocate === "function") triggerGeolocate(); }} className="absolute z-50 bottom-32 left-4 p-3 bg-white text-black rounded-full shadow-lg" aria-label="Locate Me">
-          <FiCrosshair className="text-xl" />
-        </button>
+
 
         {/* Overlay Panel */}
         {showOverlaysPanel && (
