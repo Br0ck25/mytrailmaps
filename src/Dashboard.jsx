@@ -1,3 +1,4 @@
+// src/Dashboard.jsx
 import { useState, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 import MapView from "./MapView";
@@ -7,7 +8,6 @@ import { FiLayers, FiCrosshair } from "react-icons/fi";
 import * as toGeoJSON from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
 import maplibregl from "maplibre-gl";
-
 
 const tileJson = {
   tilejson: "2.2.0",
@@ -19,7 +19,7 @@ const tileJson = {
   maxzoom: 15
 };
 
-function App() {
+export default function Dashboard({ onLogout }) {
   // --- Trip & Timing States ---
   const [startTime, setStartTime] = useState(null);
   const [elapsed, setElapsed] = useState(0);
@@ -263,78 +263,77 @@ function App() {
   }
 
   // --- Watch Position & accumulate distance, update speed & elevation ---
- function startGeolocationWatcher() {
-  if (!navigator.geolocation) {
-    console.error("Geolocation is not supported by this browser.");
-    return;
-  }
+  function startGeolocationWatcher() {
+    if (!navigator.geolocation) {
+      console.error("Geolocation is not supported by this browser.");
+      return;
+    }
 
-  // If there’s already a watcher running, clear it first
-  if (watchIdRef.current !== null) {
-    navigator.geolocation.clearWatch(watchIdRef.current);
-    watchIdRef.current = null;
-  }
+    // If there’s already a watcher running, clear it first
+    if (watchIdRef.current !== null) {
+      navigator.geolocation.clearWatch(watchIdRef.current);
+      watchIdRef.current = null;
+    }
 
-  // Helper to start watching position
-  const beginWatch = () => {
-    watchIdRef.current = navigator.geolocation.watchPosition(
-      (pos) => {
-        // — SUCCESS callback: update elevation, speed, distance, etc. —
-        const altMeters = pos.coords.altitude;
-        const elevationFeet = altMeters != null ? altMeters * 3.28084 : null;
-        setCurrentElevation(elevationFeet);
+    // Helper to start watching position
+    const beginWatch = () => {
+      watchIdRef.current = navigator.geolocation.watchPosition(
+        (pos) => {
+          // — SUCCESS callback: update elevation, speed, distance, etc. —
+          const altMeters = pos.coords.altitude;
+          const elevationFeet = altMeters != null ? altMeters * 3.28084 : null;
+          setCurrentElevation(elevationFeet);
 
-        const speedMps = pos.coords.speed;
-        const speedMph = speedMps != null ? speedMps * 2.23694 : 0;
-        setCurrentSpeed(speedMph);
+          const speedMps = pos.coords.speed;
+          const speedMph = speedMps != null ? speedMps * 2.23694 : 0;
+          setCurrentSpeed(speedMph);
 
-        setTripCoords((prev) => {
-          const updated = [...prev, [pos.coords.longitude, pos.coords.latitude]];
-          if (updated.length > 1) {
-            const d = getDistanceFromCoords(
-              updated[updated.length - 2],
-              updated[updated.length - 1]
-            );
-            setDistance((prevDist) => prevDist + d);
+          setTripCoords((prev) => {
+            const updated = [...prev, [pos.coords.longitude, pos.coords.latitude]];
+            if (updated.length > 1) {
+              const d = getDistanceFromCoords(
+                updated[updated.length - 2],
+                updated[updated.length - 1]
+              );
+              setDistance((prevDist) => prevDist + d);
+            }
+            return updated;
+          });
+        },
+        (err) => {
+          // — ERROR callback: handle TIMEOUT by retrying, and log other errors —
+          if (err.code === err.TIMEOUT) {
+            console.warn("Geolocation timeout: retrying in 1s...");
+            if (watchIdRef.current !== null) {
+              navigator.geolocation.clearWatch(watchIdRef.current);
+              watchIdRef.current = null;
+            }
+            setTimeout(() => {
+              beginWatch();
+            }, 1000);
+            return;
           }
-          return updated;
-        });
-      },
-      (err) => {
-        // — ERROR callback: handle TIMEOUT by retrying, and log other errors —
-        if (err.code === err.TIMEOUT) {
-          console.warn("Geolocation timeout: retrying in 1s...");
-          if (watchIdRef.current !== null) {
-            navigator.geolocation.clearWatch(watchIdRef.current);
-            watchIdRef.current = null;
+
+          if (err.code === err.PERMISSION_DENIED) {
+            console.error("Geolocation permission denied.");
+          } else if (err.code === err.POSITION_UNAVAILABLE) {
+            console.error("Position unavailable.");
+          } else {
+            console.error("Geolocation error:", err.message);
           }
-          setTimeout(() => {
-            beginWatch();
-          }, 1000);
-          return;
+        },
+        {
+          enableHighAccuracy: true,
+          maximumAge: 0,
+          // Increased timeout to 30 seconds; remove or adjust as needed
+          timeout: 30000,
         }
+      );
+    };
 
-        if (err.code === err.PERMISSION_DENIED) {
-          console.error("Geolocation permission denied.");
-        } else if (err.code === err.POSITION_UNAVAILABLE) {
-          console.error("Position unavailable.");
-        } else {
-          console.error("Geolocation error:", err.message);
-        }
-      },
-      {
-        enableHighAccuracy: true,
-        maximumAge: 0,
-        // Increased timeout to 30 seconds; remove or adjust as needed
-        timeout: 30000,
-      }
-    );
-  };
-
-  // Kick off the first watch attempt
-  beginWatch();
-}
-
+    // Kick off the first watch attempt
+    beginWatch();
+  }
 
   // --- Start a new trip: reset timers & coords & begin geolocation watch ---
   function startTrip() {
@@ -537,55 +536,53 @@ function App() {
         )}
 
         {/* --- My Tracks Tab --- */}
-        {/* My Tracks Tab */}
-{activeTab === "tracks" && (
-  <div
-    className="p-4 space-y-4 flex flex-col items-center pb-24"
-    style={{ maxHeight: "calc(100vh - 3.5rem)", overflowY: "auto" }}
-  >
-    {/* Import Button: centered and styled like other buttons */}
-    <div className="w-full max-w-md flex justify-center mb-4">
-      <label
-        className="w-64 p-3 bg-gray-100 rounded-lg font-semibold text-center text-green-700 cursor-pointer"
-      >
-        Import Track
-        <input
-          type="file"
-          accept=".gpx,.kml,.geojson,.topojson,.json"
-          onChange={handleFileImport}
-          className="hidden"
-        />
-      </label>
-    </div>
-
-    {/* Select All / Delete Selected */}
-    {userTracks.length > 0 && (
-      <div className="w-full max-w-md flex justify-between items-center mb-2 text-sm">
-        <label className="flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={selectedTracks.length === userTracks.length}
-            onChange={(e) => {
-              setSelectedTracks(
-                e.target.checked
-                  ? userTracks.map((_, i) => i)
-                  : []
-              );
-            }}
-          />
-          <span>Select All</span>
-        </label>
-        {selectedTracks.length > 0 && (
-          <button
-            onClick={() => setConfirmDeleteMultiple(true)}
-            className="text-red-600 font-semibold"
+        {activeTab === "tracks" && (
+          <div
+            className="p-4 space-y-4 flex flex-col items-center pb-24"
+            style={{ maxHeight: "calc(100vh - 3.5rem)", overflowY: "auto" }}
           >
-            Delete Selected ({selectedTracks.length})
-          </button>
-        )}
-      </div>
-    )}
+            {/* Import Button: centered and styled like other buttons */}
+            <div className="w-full max-w-md flex justify-center mb-4">
+              <label
+                className="w-64 p-3 bg-gray-100 rounded-lg font-semibold text-center text-green-700 cursor-pointer"
+              >
+                Import Track
+                <input
+                  type="file"
+                  accept=".gpx,.kml,.geojson,.topojson,.json"
+                  onChange={handleFileImport}
+                  className="hidden"
+                />
+              </label>
+            </div>
 
+            {/* Select All / Delete Selected */}
+            {userTracks.length > 0 && (
+              <div className="w-full max-w-md flex justify-between items-center mb-2 text-sm">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={selectedTracks.length === userTracks.length}
+                    onChange={(e) => {
+                      setSelectedTracks(
+                        e.target.checked
+                          ? userTracks.map((_, i) => i)
+                          : []
+                      );
+                    }}
+                  />
+                  <span>Select All</span>
+                </label>
+                {selectedTracks.length > 0 && (
+                  <button
+                    onClick={() => setConfirmDeleteMultiple(true)}
+                    className="text-red-600 font-semibold"
+                  >
+                    Delete Selected ({selectedTracks.length})
+                  </button>
+                )}
+              </div>
+            )}
 
             {/* No Tracks Message */}
             {userTracks.length === 0 ? (
@@ -635,6 +632,18 @@ function App() {
                 });
               })()
             )}
+          </div>
+        )}
+
+        {/* --- Settings Tab (Log Out) --- */}
+        {activeTab === "settings" && (
+          <div className="p-4 flex flex-col items-center justify-center h-full">
+            <button
+              onClick={onLogout}
+              className="w-64 p-3 bg-red-600 rounded-lg font-semibold text-white"
+            >
+              Log Out
+            </button>
           </div>
         )}
 
@@ -1182,5 +1191,3 @@ function CollapsibleFolder({
     </div>
   );
 }
-
-export default App;
