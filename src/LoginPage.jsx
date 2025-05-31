@@ -1,3 +1,4 @@
+// src/LoginPage.jsx
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -14,23 +15,28 @@ export default function LoginPage({ onLogin }) {
     setError(null);
 
     try {
-      // ← fetch to the full Worker URL:
-      const res = await fetch("https://mytrailmaps.brocksville.com/api/login", {
+      // Use the relative /api/login path, since the Pages Function now handles it
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), password }),
+        body: JSON.stringify({
+          email: email.trim(),
+          password,
+        }),
       });
+
       const json = await res.json();
       if (!res.ok) {
-        // If the Worker returned an error payload, show it
+        // Show any error message returned by the API
         throw new Error(json.error || "Login failed");
       }
-      // Save token & notify parent (App.jsx) that we’re logged in
+
+      // On success: save the token and notify parent (App.jsx)
       const { token } = json;
       localStorage.setItem("authToken", token);
       if (onLogin) onLogin(token);
 
-      // Then route to the protected Dashboard
+      // Redirect to /dashboard in your React Router
       navigate("/dashboard", { replace: true });
     } catch (err) {
       setError(err.message);
@@ -40,15 +46,22 @@ export default function LoginPage({ onLogin }) {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4 text-center text-green-700">
           Sign In
         </h2>
-        {error && <div className="mb-4 text-center text-red-600">{error}</div>}
+
+        {error && (
+          <div className="mb-4 text-center text-red-600">{error}</div>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Email
             </label>
             <input
@@ -62,7 +75,10 @@ export default function LoginPage({ onLogin }) {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
               Password
             </label>
             <input
@@ -80,12 +96,15 @@ export default function LoginPage({ onLogin }) {
             type="submit"
             disabled={loading}
             className={`w-full py-2 rounded-lg text-white font-semibold ${
-              loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
+              loading
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-green-600 hover:bg-green-700"
             }`}
           >
             {loading ? "Signing in…" : "Sign In"}
           </button>
         </form>
+
         <p className="mt-4 text-center text-sm text-gray-600">
           Don’t have an account?{" "}
           <Link to="/signup" className="text-green-600 hover:underline">

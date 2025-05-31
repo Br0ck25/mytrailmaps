@@ -17,20 +17,21 @@ export default function SignUpPage() {
     setSuccessMsg(null);
 
     try {
-      // Point directly at your Worker’s signup endpoint
-      const res = await fetch("https://mytrailmaps.brocksville.com/api/signup", {
+      // Now using the relative /api/signup (Pages Function)
+      const res = await fetch("/api/signup", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email: email.trim(),
-          password
-        })
+          password,
+        }),
       });
 
       const json = await res.json();
       if (!res.ok) {
+        // e.g. { error: "User already exists" } or validation errors
         throw new Error(json.error || "Sign up failed");
       }
 
@@ -54,14 +55,10 @@ export default function SignUpPage() {
         </h2>
 
         {error && (
-          <div className="mb-4 text-center text-red-600">
-            {error}
-          </div>
+          <div className="mb-4 text-center text-red-600">{error}</div>
         )}
         {successMsg && (
-          <div className="mb-4 text-center text-green-600">
-            {successMsg}
-          </div>
+          <div className="mb-4 text-center text-green-600">{successMsg}</div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
