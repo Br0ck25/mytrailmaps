@@ -46,14 +46,15 @@ export default function MapView({
   showPublicTracks,
   liveTrack,
   userTracks,
-  onGeolocateControlReady
+  onGeolocateControlReady,
+  mapRef // ✅ passed from parent
 }) {
-  const mapRef = useRef(null);
-  const currentMap = useRef(null);
-  const lastHighlighted = useRef(null);
+  const currentMap = useRef(null);         // ✅ keep
+  const lastHighlighted = useRef(null);    // ✅ keep
 
   const [mainGeojsonFiles, setMainGeojsonFiles] = useState([]);
   const [publicGeojsonFiles, setPublicGeojsonFiles] = useState([]);
+
 
   useEffect(() => {
     const controller = new AbortController();
@@ -88,29 +89,36 @@ export default function MapView({
   }, []);
 
   useEffect(() => {
-    if (!mapRef.current) return;
+  if (!mapRef.current) return; // ✅ wait until <div ref={mapRef}> is mounted
 
-    const map = new maplibregl.Map({
-      container: mapRef.current,
-      style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
-      center: JSON.parse(localStorage.getItem("mapCenter") || "[-84.3, 36.5]"),
-      zoom: parseFloat(localStorage.getItem("mapZoom") || "9")
-    });
+  const map = new maplibregl.Map({
+    container: mapRef.current,
+    style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+    center: JSON.parse(localStorage.getItem("mapCenter") || "[-84.3, 36.5]"),
+    zoom: parseFloat(localStorage.getItem("mapZoom") || "9")
+  });
 
-    currentMap.current = map;
-    map.addControl(new maplibregl.NavigationControl(), "top-right");
+  currentMap.current = map;
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
 
-    const geolocate = new maplibregl.GeolocateControl({
-      positionOptions: { enableHighAccuracy: true },
-      trackUserLocation: true,
-      showUserHeading: true,
-      showAccuracyCircle: false
-    });
-    map.addControl(geolocate);
+  const geolocate = new maplibregl.GeolocateControl({
+    positionOptions: { enableHighAccuracy: true },
+    trackUserLocation: true,
+    showUserHeading: true,
+    showAccuracyCircle: false
+  });
+  map.addControl(geolocate);
+
+
+
 
     map.on("load", () => {
       const mainWaypointNames = new Set();
       const mainTrackLines = [];
+      if (mapRef && typeof mapRef === "object") {
+  mapRef.current = map;
+}
+
 
       map.once("idle", () => {
         if (typeof onGeolocateControlReady === "function") {
@@ -245,7 +253,7 @@ export default function MapView({
     layout: {
       "text-field": ["get", "label"],
       "text-font": ["Open Sans Bold"],
-      "text-size": ["interpolate", ["linear"], ["zoom"], 6, 14, 14, 12],
+      "text-size": ["interpolate", ["linear"], ["zoom"], 6, 8, 14, 14],
       "text-anchor": "center",
       "text-allow-overlap": true,
       "text-ignore-placement": true,
@@ -358,14 +366,13 @@ export default function MapView({
     }
   }, [showTracks, showNames, showWaypoints, showWaypointLabels, showPublicTracks]);
 
-  useEffect(() => {
+useEffect(() => {
   const map = currentMap.current;
   if (!map || !map.isStyleLoaded()) return;
 
   const sourceId = "user-tracks";
   const layerId = "user-tracks-line";
 
-  // Remove existing layer and source if they exist
   if (map.getLayer(layerId)) map.removeLayer(layerId);
   if (map.getSource(sourceId)) map.removeSource(sourceId);
 
@@ -389,8 +396,42 @@ export default function MapView({
       }
     });
   }
-}, [userTracks]);
+}, [userTracks]); // ✅ this ends the first effect
 
+useEffect(() => {
+  const map = currentMap.current;
+  if (!map || !map.isStyleLoaded()) return;
+
+  const sourceId = "live-track";
+  const layerId = "live-track-line";
+
+  if (map.getLayer(layerId)) map.removeLayer(layerId);
+  if (map.getSource(sourceId)) map.removeSource(sourceId);
+
+  if (liveTrack && liveTrack.length > 1) {
+    map.addSource(sourceId, {
+      type: "geojson",
+      data: {
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: liveTrack
+        }
+      }
+    });
+
+    map.addLayer({
+      id: layerId,
+      type: "line",
+      source: sourceId,
+      paint: {
+        "line-color": "#0074D9",
+        "line-width": 4,
+        "line-opacity": 0.8
+      }
+    });
+  }
+}, [liveTrack]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
