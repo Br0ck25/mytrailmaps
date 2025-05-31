@@ -17,14 +17,16 @@ export default function SignUpPage() {
     setSuccessMsg(null);
 
     try {
-      const res = await fetch("/api/signup", {
+      // Point directly at your Worker’s signup endpoint
+      const res = await fetch("https://mytrailmaps.brocksville.com/api/signup", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        // Only email + password now—no resetKey
+        headers: {
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify({
           email: email.trim(),
-          password,
-        }),
+          password
+        })
       });
 
       const json = await res.json();
@@ -32,7 +34,7 @@ export default function SignUpPage() {
         throw new Error(json.error || "Sign up failed");
       }
 
-      // On success, show a message and redirect to /login
+      // On success: show a message, then redirect to /login
       setSuccessMsg("Account created! Redirecting to login…");
       setTimeout(() => {
         navigate("/login", { replace: true });
@@ -50,13 +52,24 @@ export default function SignUpPage() {
         <h2 className="text-2xl font-semibold mb-4 text-center text-green-700">
           Sign Up
         </h2>
-        {error && <div className="mb-4 text-center text-red-600">{error}</div>}
-        {successMsg && (
-          <div className="mb-4 text-center text-green-600">{successMsg}</div>
+
+        {error && (
+          <div className="mb-4 text-center text-red-600">
+            {error}
+          </div>
         )}
+        {successMsg && (
+          <div className="mb-4 text-center text-green-600">
+            {successMsg}
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Email
             </label>
             <input
@@ -70,7 +83,10 @@ export default function SignUpPage() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
               Password
             </label>
             <input
@@ -88,12 +104,15 @@ export default function SignUpPage() {
             type="submit"
             disabled={loading}
             className={`w-full py-2 rounded-lg text-white font-semibold ${
-              loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
+              loading
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-green-600 hover:bg-green-700"
             }`}
           >
             {loading ? "Signing up…" : "Create Account"}
           </button>
         </form>
+
         <p className="mt-4 text-center text-sm text-gray-600">
           Already have an account?{" "}
           <Link to="/login" className="text-green-600 hover:underline">

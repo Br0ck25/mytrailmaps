@@ -1,4 +1,3 @@
-// src/LoginPage.jsx
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -15,22 +14,23 @@ export default function LoginPage({ onLogin }) {
     setError(null);
 
     try {
-      const res = await fetch("/api/login", {
+      // ← fetch to the full Worker URL:
+      const res = await fetch("https://mytrailmaps.brocksville.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email.trim(), password }),
       });
       const json = await res.json();
       if (!res.ok) {
-        // e.g. { error: "Invalid email or password" }
+        // If the Worker returned an error payload, show it
         throw new Error(json.error || "Login failed");
       }
-      // On success: store token & call onLogin
+      // Save token & notify parent (App.jsx) that we’re logged in
       const { token } = json;
       localStorage.setItem("authToken", token);
       if (onLogin) onLogin(token);
 
-      // Redirect to /dashboard
+      // Then route to the protected Dashboard
       navigate("/dashboard", { replace: true });
     } catch (err) {
       setError(err.message);
@@ -45,9 +45,7 @@ export default function LoginPage({ onLogin }) {
         <h2 className="text-2xl font-semibold mb-4 text-center text-green-700">
           Sign In
         </h2>
-        {error && (
-          <div className="mb-4 text-center text-red-600">{error}</div>
-        )}
+        {error && <div className="mb-4 text-center text-red-600">{error}</div>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
