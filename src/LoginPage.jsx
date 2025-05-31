@@ -15,7 +15,7 @@ export default function LoginPage({ onLogin }) {
     setError(null);
 
     try {
-      // Use the relative /api/login path, since the Pages Function now handles it
+      // Send credentials to the new Pages Function at /api/login
       const res = await fetch("/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -27,16 +27,16 @@ export default function LoginPage({ onLogin }) {
 
       const json = await res.json();
       if (!res.ok) {
-        // Show any error message returned by the API
+        // If the Pages Function returned a 4xx/5xx error, display its message
         throw new Error(json.error || "Login failed");
       }
 
-      // On success: save the token and notify parent (App.jsx)
+      // On success: store the returned token and notify App.jsx
       const { token } = json;
       localStorage.setItem("authToken", token);
       if (onLogin) onLogin(token);
 
-      // Redirect to /dashboard in your React Router
+      // Redirect into the protected Dashboard route
       navigate("/dashboard", { replace: true });
     } catch (err) {
       setError(err.message);
