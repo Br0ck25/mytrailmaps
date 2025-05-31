@@ -5,7 +5,8 @@ account_id = "472fe4d7673807cf0d44847c19f31e57"
 workers_dev = true
 
 kv_namespaces = [
-  { binding = "TRACKS_KV", id = "b65d1ca3fddf46f585584b70b3c4582f" }
+  { binding = "TRACKS_KV", id = "b65d1ca3fddf46f585584b70b3c4582f" },
+  { binding = "USERS_KV",  id = "542e382692db4edc89efd63ea165e7b7" }
 ]
 
 r2_buckets = [
@@ -15,4 +16,3 @@ r2_buckets = [
 routes = [
   { pattern = "mytrailmaps.brocksville.com", custom_domain = true }
 ]
-

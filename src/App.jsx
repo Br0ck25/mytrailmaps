@@ -537,47 +537,55 @@ function App() {
         )}
 
         {/* --- My Tracks Tab --- */}
-        {activeTab === "tracks" && (
-          <div
-            className="p-4 space-y-4 flex flex-col items-center pb-24"
-            style={{ maxHeight: "calc(100vh - 3.5rem)", overflowY: "auto" }}
-          >
-            {/* Import Button */}
-            <div className="w-full max-w-md flex justify-end">
-              <label className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg cursor-pointer font-semibold text-sm">
-                Import Track
-                <input
-                  type="file"
-                  accept=".gpx,.kml,.geojson,.topojson,.json"
-                  onChange={handleFileImport}
-                  className="hidden"
-                />
-              </label>
-            </div>
+        {/* My Tracks Tab */}
+{activeTab === "tracks" && (
+  <div
+    className="p-4 space-y-4 flex flex-col items-center pb-24"
+    style={{ maxHeight: "calc(100vh - 3.5rem)", overflowY: "auto" }}
+  >
+    {/* Import Button: centered and styled like other buttons */}
+    <div className="w-full max-w-md flex justify-center mb-4">
+      <label
+        className="w-64 p-3 bg-gray-100 rounded-lg font-semibold text-center text-green-700 cursor-pointer"
+      >
+        Import Track
+        <input
+          type="file"
+          accept=".gpx,.kml,.geojson,.topojson,.json"
+          onChange={handleFileImport}
+          className="hidden"
+        />
+      </label>
+    </div>
 
-            {/* Select All / Delete Selected */}
-            {userTracks.length > 0 && (
-              <div className="w-full max-w-md flex justify-between items-center mb-2 text-sm">
-                <label className="flex items-center space-x-2">
-                  <input
-                    type="checkbox"
-                    checked={selectedTracks.length === userTracks.length}
-                    onChange={(e) => {
-                      setSelectedTracks(e.target.checked ? userTracks.map((_, i) => i) : []);
-                    }}
-                  />
-                  <span>Select All</span>
-                </label>
-                {selectedTracks.length > 0 && (
-                  <button
-                    onClick={() => setConfirmDeleteMultiple(true)}
-                    className="text-red-600 font-semibold"
-                  >
-                    Delete Selected ({selectedTracks.length})
-                  </button>
-                )}
-              </div>
-            )}
+    {/* Select All / Delete Selected */}
+    {userTracks.length > 0 && (
+      <div className="w-full max-w-md flex justify-between items-center mb-2 text-sm">
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={selectedTracks.length === userTracks.length}
+            onChange={(e) => {
+              setSelectedTracks(
+                e.target.checked
+                  ? userTracks.map((_, i) => i)
+                  : []
+              );
+            }}
+          />
+          <span>Select All</span>
+        </label>
+        {selectedTracks.length > 0 && (
+          <button
+            onClick={() => setConfirmDeleteMultiple(true)}
+            className="text-red-600 font-semibold"
+          >
+            Delete Selected ({selectedTracks.length})
+          </button>
+        )}
+      </div>
+    )}
+
 
             {/* No Tracks Message */}
             {userTracks.length === 0 ? (
