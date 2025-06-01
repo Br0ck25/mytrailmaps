@@ -1,52 +1,77 @@
 // src/App.jsx
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Dashboard from "./Dashboard";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
+import ResetPasswordPage from "./ResetPasswordPage";
+import Dashboard from "./Dashboard";
 import ProtectedRoute from "./ProtectedRoute";
+import AuthLanding from "./AuthLanding";
 
-export default function App() {
-  // Keep the auth token in state so we can re-render on login/logout.
-  const [token, setToken] = useState(() => localStorage.getItem("authToken"));
+function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  // On mount, check localStorage for an existing token
   useEffect(() => {
+    const token = localStorage.getItem("authToken");
     if (token) {
-      localStorage.setItem("authToken", token);
-    } else {
-      localStorage.removeItem("authToken");
+      setIsAuthenticated(true);
     }
-  }, [token]);
+  }, []);
+
+  // Handler to mark as logged in (called by LoginPage/SignUpPage)
+  function handleLogin() {
+    setIsAuthenticated(true);
+  }
+
+  // Handler to log out
+  function handleLogout() {
+    localStorage.removeItem("authToken");
+    setIsAuthenticated(false);
+  }
 
   return (
     <Router>
       <Routes>
-        {/* Public routes */}
-        <Route path="/login" element={<LoginPage onLogin={setToken} />} />
-        <Route path="/signup" element={<SignUpPage />} />
-
-        {/* Redirect “/” to either /dashboard (if logged in) or /login */}
         <Route
           path="/"
-          element={token ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />}
-        />
-
-        {/* Protected dashboard route */}
-        <Route
-          path="/dashboard/*"
           element={
-            <ProtectedRoute token={token}>
-              <Dashboard onLogout={() => setToken(null)} />
+            isAuthenticated ? <Navigate to="/dashboard" replace /> : <AuthLanding />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <LoginPage onLogin={handleLogin} />
+            )
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <SignUpPage onSignUp={handleLogin} />
+            )
+          }
+        />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <Dashboard onLogout={handleLogout} />
             </ProtectedRoute>
           }
         />
-
-        {/* Catch-all: any other path also redirects based on auth */}
-        <Route
-          path="*"
-          element={token ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />}
-        />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
 }
+
+export default App;

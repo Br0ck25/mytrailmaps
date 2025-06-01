@@ -1,11 +1,13 @@
-// src/LoginPage.jsx
+// src/ResetPasswordPage.jsx
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-export default function LoginPage({ onLogin }) {
+export default function ResetPasswordPage() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [resetKey, setResetKey] = useState("");
+  const [newPassword, setNewPassword] = useState("");
   const [error, setError] = useState(null);
+  const [successMsg, setSuccessMsg] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -13,30 +15,35 @@ export default function LoginPage({ onLogin }) {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setSuccessMsg(null);
 
     try {
-      const res = await fetch("/api/login", {
+      const res = await fetch("/api/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: email.trim(),
-          password,
+          resetKey: resetKey.trim(),
+          newPassword,
         }),
       });
 
       const json = await res.json();
       if (!res.ok) {
-        throw new Error(json.error || "Login failed");
+        throw new Error(json.error || "Reset failed");
       }
 
-      const { token } = json;
-      localStorage.setItem("authToken", token);
-      if (onLogin) onLogin(token);
+      // Show success (you can also choose to navigate back to /login directly)
+      setSuccessMsg("Password changed successfully! Your new reset key is:\n\n" + json.newResetKey);
+      setLoading(false);
 
-      navigate("/dashboard", { replace: true });
+      // Optionally, navigate back to /login after a short delay:
+      setTimeout(() => {
+        navigate("/login", { replace: true });
+      }, 3000);
+
     } catch (err) {
       setError(err.message);
-    } finally {
       setLoading(false);
     }
   }
@@ -45,11 +52,18 @@ export default function LoginPage({ onLogin }) {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4 text-center text-green-700">
-          Sign In
+          Reset Password
         </h2>
 
         {error && (
-          <div className="mb-4 text-center text-red-600">{error}</div>
+          <div className="mb-4 text-center text-red-600">
+            {error}
+          </div>
+        )}
+        {successMsg && (
+          <div className="mb-4 whitespace-pre-wrap text-center text-green-600">
+            {successMsg}
+          </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -72,29 +86,37 @@ export default function LoginPage({ onLogin }) {
 
           <div>
             <label
-              htmlFor="password"
+              htmlFor="resetKey"
               className="block text-sm font-medium text-gray-700"
             >
-              Password
+              Reset Key
             </label>
             <input
-              id="password"
-              type="password"
+              id="resetKey"
+              type="text"
               required
-              minLength={6}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={resetKey}
+              onChange={(e) => setResetKey(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
             />
           </div>
 
-          <div className="text-right">
-            <Link
-              to="/reset-password"
-              className="text-sm text-green-600 hover:underline"
+          <div>
+            <label
+              htmlFor="newPassword"
+              className="block text-sm font-medium text-gray-700"
             >
-              Forgot password?
-            </Link>
+              New Password
+            </label>
+            <input
+              id="newPassword"
+              type="password"
+              required
+              minLength={6}
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
+            />
           </div>
 
           <button
@@ -106,14 +128,14 @@ export default function LoginPage({ onLogin }) {
                 : "bg-green-600 hover:bg-green-700"
             }`}
           >
-            {loading ? "Signing in…" : "Sign In"}
+            {loading ? "Resetting…" : "Reset Password"}
           </button>
         </form>
 
         <p className="mt-4 text-center text-sm text-gray-600">
-          Don’t have an account?{" "}
-          <Link to="/signup" className="text-green-600 hover:underline">
-            Sign Up
+          Remembered your password?{" "}
+          <Link to="/login" className="text-green-600 hover:underline">
+            Sign In
           </Link>
         </p>
       </div>

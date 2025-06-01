@@ -20,92 +20,77 @@ const tileJson = {
 };
 
 export default function Dashboard({ onLogout }) {
-  // --- Trip & Timing States ---
+  // --- Trip & Timing States (unchanged) ---
   const [startTime, setStartTime] = useState(null);
   const [elapsed, setElapsed] = useState(0);
   const [distance, setDistance] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [currentSpeed, setCurrentSpeed] = useState(0); // mph
-  const [currentElevation, setCurrentElevation] = useState(null); // feet
+  const [currentSpeed, setCurrentSpeed] = useState(0);
+  const [currentElevation, setCurrentElevation] = useState(null);
 
-  // --- Delete Confirm States ---
+  // --- Delete Confirm States (unchanged) ---
   const [confirmDeleteIndex, setConfirmDeleteIndex] = useState(null);
   const [confirmDeleteFolder, setConfirmDeleteFolder] = useState(null);
 
-  // --- Folder Rename States ---
+  // --- Folder Rename States (unchanged) ---
   const [folderRenameTarget, setFolderRenameTarget] = useState(null);
   const [newFolderName, setNewFolderName] = useState("");
 
-  // --- Tab & Overlay States ---
+  // --- Tab & Overlay States (initialize to defaults) ---
   const [activeTab, setActiveTab] = useState("map");
-  const [showTracks, setShowTracks] = useState(() => localStorage.getItem("showTracks") !== "false");
-  const [showNames, setShowNames] = useState(() => localStorage.getItem("showNames") !== "false");
-  const [showWaypoints, setShowWaypoints] = useState(() => localStorage.getItem("showWaypoints") !== "false");
-  const [showWaypointLabels, setShowWaypointLabels] = useState(() => localStorage.getItem("showWaypointLabels") !== "false");
-  const [showPublicTracks, setShowPublicTracks] = useState(() => localStorage.getItem("showPublicTracks") !== "false");
+  const [showTracks, setShowTracks] = useState(true);
+  const [showNames, setShowNames] = useState(true);
+  const [showWaypoints, setShowWaypoints] = useState(true);
+  const [showWaypointLabels, setShowWaypointLabels] = useState(true);
+  const [showPublicTracks, setShowPublicTracks] = useState(true);
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
 
-  // --- Tracking & Trip States ---
+  // --- Tracking & Trip States (initialize to defaults) ---
   const [tracking, setTracking] = useState(false);
   const [tripCoords, setTripCoords] = useState([]);
-  const [userTracks, setUserTracks] = useState(() => JSON.parse(localStorage.getItem("userTracks") || "[]"));
+  const [userTracks, setUserTracks] = useState([]);
   const [showTripNameModal, setShowTripNameModal] = useState(false);
   const [pendingTripCoords, setPendingTripCoords] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedName, setEditedName] = useState("");
 
-  // --- Import Preview & Selection States ---
+  // --- Import Preview & Selection States (unchanged) ---
   const [importedPreview, setImportedPreview] = useState(null);
   const [showImportPreview, setShowImportPreview] = useState(false);
   const [selectedTracks, setSelectedTracks] = useState([]);
   const [toastMessage, setToastMessage] = useState(null);
   const [confirmDeleteMultiple, setConfirmDeleteMultiple] = useState(false);
 
-  // --- Folder Ordering State ---
-  const [folderOrder, setFolderOrder] = useState(() => JSON.parse(localStorage.getItem("folderOrder") || "[]"));
+  // --- Folder Ordering State (initialize to empty) ---
+  const [folderOrder, setFolderOrder] = useState([]);
 
-  // --- Refs ---
+  // --- Refs (unchanged) ---
   const watchIdRef = useRef(null);
   const timerRef = useRef(null);
   const mapRef = useRef(null);
 
-  // --- Persist toggles and folderOrder to localStorage ---
-  useEffect(() => localStorage.setItem("showTracks", showTracks), [showTracks]);
-  useEffect(() => localStorage.setItem("showNames", showNames), [showNames]);
-  useEffect(() => localStorage.setItem("showWaypoints", showWaypoints), [showWaypoints]);
-  useEffect(() => localStorage.setItem("showWaypointLabels", showWaypointLabels), [showWaypointLabels]);
-  useEffect(() => localStorage.setItem("showPublicTracks", showPublicTracks), [showPublicTracks]);
-  useEffect(() => localStorage.setItem("folderOrder", JSON.stringify(folderOrder)), [folderOrder]);
-
-  // --- Utility: normalize folder name for comparisons ---
+  // --- Utility: normalize folder name for comparisons (unchanged) ---
   function normalize(str) {
     return (str || "Ungrouped").trim().toLowerCase();
   }
 
-  // --- Delete a folder by name: removes all tracks in that folder + updates folderOrder ---
+  // --- Handlers for folder/track edits, now only update state ---
   function deleteFolder(name) {
     const norm = normalize(name);
     const updated = userTracks.filter(t => normalize(t.properties?.folderName) !== norm);
     setUserTracks(updated);
-    localStorage.setItem("userTracks", JSON.stringify(updated));
 
-    setFolderOrder(prev => {
-      const filtered = prev.filter(f => normalize(f) !== norm);
-      return filtered;
-    });
-
+    setFolderOrder(prev => prev.filter(f => normalize(f) !== norm));
     setConfirmDeleteFolder(null);
   }
 
-  // --- Rename a folder (all tracks with oldName get newName) + update folderOrder ---
   function renameFolder(oldName, newName) {
     const normOld = normalize(oldName);
     const trimmedNew = newName.trim();
     if (!trimmedNew) return;
 
-    // Update track properties
     const updatedTracks = userTracks.map(t => {
       if (normalize(t.properties?.folderName) === normOld) {
         return {
@@ -119,35 +104,26 @@ export default function Dashboard({ onLogout }) {
       return t;
     });
     setUserTracks(updatedTracks);
-    localStorage.setItem("userTracks", JSON.stringify(updatedTracks));
 
-    // Update folderOrder list
-    setFolderOrder(prev => {
-      return prev.map(f => (normalize(f) === normOld ? trimmedNew : f));
-    });
+    setFolderOrder(prev => prev.map(f => (normalize(f) === normOld ? trimmedNew : f)));
 
     setFolderRenameTarget(null);
     setNewFolderName("");
   }
 
-  // --- Update a track's name ---
   function updateTrackName(index, newName) {
     const updated = [...userTracks];
     updated[index].properties.name = newName.trim();
     setUserTracks(updated);
-    localStorage.setItem("userTracks", JSON.stringify(updated));
     setEditingIndex(null);
   }
 
-  // --- Delete a single track by index ---
   function deleteTrack(index) {
     const updated = [...userTracks];
     updated.splice(index, 1);
     setUserTracks(updated);
-    localStorage.setItem("userTracks", JSON.stringify(updated));
   }
 
-  // --- Export a single track as GeoJSON file ---
   function exportTrack(track) {
     const blob = new Blob([JSON.stringify(track, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -158,7 +134,6 @@ export default function Dashboard({ onLogout }) {
     URL.revokeObjectURL(url);
   }
 
-  // --- Export all tracks in a folder as a single GeoJSON FeatureCollection ---
   function exportFolder(folderName) {
     const featuresInFolder = userTracks.filter(
       (t) => t.properties?.folderName === folderName
@@ -185,7 +160,6 @@ export default function Dashboard({ onLogout }) {
     URL.revokeObjectURL(url);
   }
 
-  // --- Handle file import (GPX, KML, GeoJSON, TopoJSON) and prepare preview ---
   function handleFileImport(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -239,7 +213,6 @@ export default function Dashboard({ onLogout }) {
     reader.readAsText(file);
   }
 
-  // --- Format seconds into HH:MM:SS ---
   function formatTime(seconds) {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
@@ -247,39 +220,34 @@ export default function Dashboard({ onLogout }) {
     return [h, m, s].map(n => String(n).padStart(2, '0')).join(':');
   }
 
-  // --- Haversine distance calculation between two coordinates (lon/lat) ---
   function getDistanceFromCoords(coord1, coord2) {
     const toRad = (val) => (val * Math.PI) / 180;
     const [lon1, lat1] = coord1;
     const [lon2, lat2] = coord2;
-    const R = 6371e3; // meters
+    const R = 6371e3;
     const φ1 = toRad(lat1);
     const φ2 = toRad(lat2);
     const Δφ = toRad(lat2 - lat1);
     const Δλ = toRad(lon2 - lon1);
     const a = Math.sin(Δφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2;
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return (R * c) / 1609.34; // convert meters to miles
+    return (R * c) / 1609.34;
   }
 
-  // --- Watch Position & accumulate distance, update speed & elevation ---
   function startGeolocationWatcher() {
     if (!navigator.geolocation) {
       console.error("Geolocation is not supported by this browser.");
       return;
     }
 
-    // If there’s already a watcher running, clear it first
     if (watchIdRef.current !== null) {
       navigator.geolocation.clearWatch(watchIdRef.current);
       watchIdRef.current = null;
     }
 
-    // Helper to start watching position
     const beginWatch = () => {
       watchIdRef.current = navigator.geolocation.watchPosition(
         (pos) => {
-          // — SUCCESS callback: update elevation, speed, distance, etc. —
           const altMeters = pos.coords.altitude;
           const elevationFeet = altMeters != null ? altMeters * 3.28084 : null;
           setCurrentElevation(elevationFeet);
@@ -301,16 +269,13 @@ export default function Dashboard({ onLogout }) {
           });
         },
         (err) => {
-          // — ERROR callback: handle TIMEOUT by retrying, and log other errors —
           if (err.code === err.TIMEOUT) {
             console.warn("Geolocation timeout: retrying in 1s...");
             if (watchIdRef.current !== null) {
               navigator.geolocation.clearWatch(watchIdRef.current);
               watchIdRef.current = null;
             }
-            setTimeout(() => {
-              beginWatch();
-            }, 1000);
+            setTimeout(() => beginWatch(), 1000);
             return;
           }
 
@@ -325,17 +290,14 @@ export default function Dashboard({ onLogout }) {
         {
           enableHighAccuracy: true,
           maximumAge: 0,
-          // Increased timeout to 30 seconds; remove or adjust as needed
           timeout: 30000,
         }
       );
     };
 
-    // Kick off the first watch attempt
     beginWatch();
   }
 
-  // --- Start a new trip: reset timers & coords & begin geolocation watch ---
   function startTrip() {
     setTracking(true);
     setPaused(false);
@@ -355,14 +317,12 @@ export default function Dashboard({ onLogout }) {
     startGeolocationWatcher();
   }
 
-  // --- Pause the trip ---
   function pauseTrip() {
     setPaused(true);
     if (watchIdRef.current) navigator.geolocation.clearWatch(watchIdRef.current);
     if (timerRef.current) clearInterval(timerRef.current);
   }
 
-  // --- Resume the trip ---
   function resumeTrip() {
     setPaused(false);
     const resumeStart = Date.now() - elapsed * 1000;
@@ -372,7 +332,6 @@ export default function Dashboard({ onLogout }) {
     startGeolocationWatcher();
   }
 
-  // --- Stop the trip and prompt to name it if valid ---
   function stopTrip() {
     if (watchIdRef.current !== null) {
       navigator.geolocation.clearWatch(watchIdRef.current);
@@ -391,7 +350,6 @@ export default function Dashboard({ onLogout }) {
     }
   }
 
-  // --- Save the trip with a given name (under 'Ungrouped' by default) ---
   function saveTrip(name) {
     if (!name.trim() || pendingTripCoords.length < 2) return;
     const newTrack = {
@@ -403,17 +361,15 @@ export default function Dashboard({ onLogout }) {
         createdAt: Date.now(),
         distance: distance.toFixed(2),
         duration: elapsed,
-        speed: currentSpeed.toFixed(2),       // store last known speed (mph)
-        elevation: currentElevation != null ? currentElevation.toFixed(0) : null, // store last known elevation (ft)
+        speed: currentSpeed.toFixed(2),
+        elevation: currentElevation != null ? currentElevation.toFixed(0) : null,
         folderName: "Ungrouped",
         folderId: null
       }
     };
     const updatedTracks = [...userTracks, newTrack];
     setUserTracks(updatedTracks);
-    localStorage.setItem("userTracks", JSON.stringify(updatedTracks));
 
-    // Ensure "Ungrouped" appears in folderOrder if not already present
     if (!folderOrder.includes("Ungrouped")) {
       setFolderOrder(prev => [...prev, "Ungrouped"]);
     }
@@ -423,7 +379,6 @@ export default function Dashboard({ onLogout }) {
     setActiveTab("tracks");
   }
 
-  // --- Zoom map to a specific track's bounds ---
   function zoomToTrack(track) {
     const coords = track.geometry?.coordinates;
     if (coords && coords.length) {
@@ -432,9 +387,8 @@ export default function Dashboard({ onLogout }) {
         new maplibregl.LngLatBounds(coords[0], coords[0])
       );
 
-      setActiveTab("map"); // Switch to map tab first
+      setActiveTab("map");
 
-      // Delay fitBounds so that the map can resize/become visible
       setTimeout(() => {
         const isMobile = window.innerWidth < 768;
         mapRef.current?.resize();
@@ -448,10 +402,92 @@ export default function Dashboard({ onLogout }) {
     }
   }
 
-  // --- Save userTracks whenever it changes ---
+  // --- ACCOUNT SYNC LOGIC ---
+
+  // Read token from localStorage
+  const token = localStorage.getItem("authToken") || "";
+
+  // On mount: fetch account data from KV
   useEffect(() => {
-    localStorage.setItem("userTracks", JSON.stringify(userTracks));
-  }, [userTracks]);
+    async function loadAccount() {
+      if (!token) {
+        onLogout();
+        return;
+      }
+      try {
+        const res = await fetch("/api/get-account", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        const json = await res.json();
+        if (!res.ok) {
+          console.error("Failed to load account:", json.error);
+          if (res.status === 401) onLogout();
+          return;
+        }
+        const { account } = json;
+        setUserTracks(account.tracks || []);
+        setFolderOrder(account.folderOrder || []);
+        if (account.preferences) {
+          setShowTracks(account.preferences.showTracks ?? true);
+          setShowNames(account.preferences.showNames ?? true);
+          setShowWaypoints(account.preferences.showWaypoints ?? true);
+          setShowWaypointLabels(account.preferences.showWaypointLabels ?? true);
+          setShowPublicTracks(account.preferences.showPublicTracks ?? true);
+        }
+      } catch (err) {
+        console.error("Error fetching account:", err);
+      }
+    }
+    loadAccount();
+  }, [token, onLogout]);
+
+  // Whenever account data changes, save entire account to KV
+  useEffect(() => {
+    async function saveAccount() {
+      if (!token) return;
+      const account = {
+        tracks: userTracks,
+        folderOrder,
+        preferences: {
+          showTracks,
+          showNames,
+          showWaypoints,
+          showWaypointLabels,
+          showPublicTracks,
+        },
+      };
+      try {
+        await fetch("/api/save-account", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ account }),
+        });
+      } catch (err) {
+        console.error("Error saving account:", err);
+      }
+    }
+    if (token) {
+      saveAccount();
+    }
+  }, [
+    token,
+    userTracks,
+    folderOrder,
+    showTracks,
+    showNames,
+    showWaypoints,
+    showWaypointLabels,
+    showPublicTracks,
+  ]);
+
+  // --- END ACCOUNT SYNC LOGIC ---
 
   // --- Begin rendering UI ---
   return (
@@ -541,11 +577,9 @@ export default function Dashboard({ onLogout }) {
             className="p-4 space-y-4 flex flex-col items-center pb-24"
             style={{ maxHeight: "calc(100vh - 3.5rem)", overflowY: "auto" }}
           >
-            {/* Import Button: centered and styled like other buttons */}
+            {/* Import Button */}
             <div className="w-full max-w-md flex justify-center mb-4">
-              <label
-                className="w-64 p-3 bg-gray-100 rounded-lg font-semibold text-center text-green-700 cursor-pointer"
-              >
+              <label className="w-64 p-3 bg-gray-100 rounded-lg font-semibold text-center text-green-700 cursor-pointer">
                 Import Track
                 <input
                   type="file"
@@ -588,9 +622,7 @@ export default function Dashboard({ onLogout }) {
             {userTracks.length === 0 ? (
               <p className="text-gray-600">No saved trips yet.</p>
             ) : (
-              // --- Group tracks by folderName, then render in folderOrder sequence ---
               (() => {
-                // Build a map: { folderName: [ { track, idx } ] }
                 const grouped = userTracks.reduce((acc, track, idx) => {
                   const folder = track.properties?.folderName || "Ungrouped";
                   if (!acc[folder]) acc[folder] = [];
@@ -598,7 +630,6 @@ export default function Dashboard({ onLogout }) {
                   return acc;
                 }, {});
 
-                // Ensure any new folders (not in folderOrder) are appended
                 const allFolders = Object.keys(grouped);
                 const missing = allFolders.filter(f => !folderOrder.includes(f));
                 if (missing.length) {
@@ -861,7 +892,6 @@ export default function Dashboard({ onLogout }) {
           <div className="bg-white rounded-xl shadow-lg w-full max-w-xl p-6 space-y-4">
             <h2 className="text-lg font-semibold text-green-700">Import Preview</h2>
 
-            {/* Folder name input */}
             <input
               type="text"
               value={importedPreview.folderName || ""}
@@ -872,7 +902,6 @@ export default function Dashboard({ onLogout }) {
               placeholder="Folder name (optional)"
             />
 
-            {/* Select All / Clear All */}
             {importedPreview.tracks.length > 0 && (
               <div className="flex justify-between items-center text-sm text-gray-600">
                 <span>{importedPreview.tracks.length} tracks found</span>
@@ -893,7 +922,6 @@ export default function Dashboard({ onLogout }) {
               </div>
             )}
 
-            {/* Track list */}
             <div className="max-h-64 overflow-y-auto border rounded p-3 bg-gray-50 text-sm space-y-2">
               {importedPreview.tracks.map((track, i) => (
                 <label key={i} className="flex items-center space-x-2">
@@ -920,7 +948,6 @@ export default function Dashboard({ onLogout }) {
               )}
             </div>
 
-            {/* Buttons */}
             <div className="flex justify-end space-x-2">
               <button
                 onClick={() => setShowImportPreview(false)}
@@ -944,7 +971,6 @@ export default function Dashboard({ onLogout }) {
                     }))
                     .filter((_, i) => selectedIndexes.has(i));
 
-                  // Append new folder to folderOrder if missing
                   if (folderName && !folderOrder.includes(folderName)) {
                     setFolderOrder(prev => [...prev, folderName]);
                   }
@@ -1012,7 +1038,7 @@ export default function Dashboard({ onLogout }) {
   );
 }
 
-// --- CollapsibleFolder Component ---
+// --- CollapsibleFolder Component (unchanged) ---
 function CollapsibleFolder({
   folderName,
   items,
@@ -1037,7 +1063,6 @@ function CollapsibleFolder({
   return (
     <div className="w-full max-w-md">
       <div className="w-full bg-gray-200 rounded-t flex items-center justify-between px-2 py-2">
-        {/* Left side: checkbox + folder name */}
         <div className="flex items-center gap-2">
           <input
             type="checkbox"
@@ -1059,7 +1084,6 @@ function CollapsibleFolder({
           </button>
         </div>
 
-        {/* Right side: rename, export, delete, collapse toggle */}
         <div className="flex items-center gap-2">
           {folderName !== "Ungrouped" && (
             <>
@@ -1154,7 +1178,6 @@ function CollapsibleFolder({
                     </p>
                   </div>
                   <div className="flex items-center gap-4 pl-4">
-                    {/* 📝 Rename Track */}
                     <button
                       onClick={() => {
                         setEditingIndex(idx);
@@ -1165,7 +1188,6 @@ function CollapsibleFolder({
                     >
                       📝
                     </button>
-                    {/* 📥 Export Track */}
                     <button
                       onClick={() => exportTrack(track)}
                       className="text-green-700"
@@ -1173,7 +1195,6 @@ function CollapsibleFolder({
                     >
                       <FaDownload className="text-xl" />
                     </button>
-                    {/* 🗑 Delete Track */}
                     <button
                       onClick={() => setConfirmDeleteIndex(idx)}
                       className="text-red-600 font-bold text-lg"

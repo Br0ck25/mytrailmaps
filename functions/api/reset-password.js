@@ -1,15 +1,15 @@
-// functions/api/login.js
+// functions/api/reset-password.js
 
 /**
- * Handles POST https://<your-pages-domain>/api/login
- * Expects a JSON body { email, password }.
- * Uses USERS_KV to look up and verify the user.
- * Returns 200 + { success: true, token } if valid,
- * or an appropriate 4xx/5xx + { error: "…" } otherwise.
+ * Handles POST https://<your‐pages‐domain>/api/reset-password
+ * Expects a JSON body: { email: string, resetKey: string, newPassword: string }
+ * - Verifies that resetKey matches the stored one in USERS_KV
+ * - If valid, hashes newPassword and writes a NEW resetKey back into KV
+ * - Returns { success: true } on success, or { error: "…"} on failure
  */
 
 export async function onRequestOptions(context) {
-  // CORS preflight handler: allow POST from any origin
+  // CORS preflight
   return new Response(null, {
     status: 204,
     headers: {
@@ -23,7 +23,7 @@ export async function onRequestOptions(context) {
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  // 1) Attempt to parse JSON body
+  // 1) Parse JSON body
   let body;
   try {
     body = await request.json();
@@ -40,12 +40,14 @@ export async function onRequestPost(context) {
     );
   }
 
-  const { email, password } = body || {};
+  const { email, resetKey, newPassword } = body || {};
   if (
     !email ||
-    !password ||
+    !resetKey ||
+    !newPassword ||
     typeof email !== "string" ||
-    typeof password !== "string"
+    typeof resetKey !== "string" ||
+    typeof newPassword !== "string"
   ) {
     return new Response(
       JSON.stringify({ error: "Missing or invalid fields" }),
@@ -59,15 +61,14 @@ export async function onRequestPost(context) {
     );
   }
 
-  // 2) Normalize email and look up in KV
+  // 2) Fetch user record by normalized email
   const normalizedEmail = email.trim().toLowerCase();
   const storedValue = await env.USERS_KV.get(normalizedEmail);
   if (!storedValue) {
-    // No user record found
     return new Response(
-      JSON.stringify({ error: "Invalid email or password" }),
+      JSON.stringify({ error: "User not found" }),
       {
-        status: 401,
+        status: 404,
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
@@ -76,7 +77,6 @@ export async function onRequestPost(context) {
     );
   }
 
-  // Parse the stored JSON (should contain at least { passwordHash: "..." })
   let userObj;
   try {
     userObj = JSON.parse(storedValue);
@@ -93,33 +93,10 @@ export async function onRequestPost(context) {
     );
   }
 
-  // 3) Re‐hash the incoming password (SHA‐256) and compare against stored hash
-  const encoder = new TextEncoder();
-  const pwData = encoder.encode(password);
-  let hashBuffer;
-  try {
-    hashBuffer = await crypto.subtle.digest("SHA-256", pwData);
-  } catch {
+  // 3) Verify that the provided resetKey matches the stored one
+  if (resetKey !== userObj.resetKey) {
     return new Response(
-      JSON.stringify({ error: "Hashing error" }),
-      {
-        status: 500,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
-    );
-  }
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const computedHash = hashArray
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
-
-  if (computedHash !== userObj.passwordHash) {
-    // Password mismatch
-    return new Response(
-      JSON.stringify({ error: "Invalid email or password" }),
+      JSON.stringify({ error: "Invalid reset key" }),
       {
         status: 401,
         headers: {
@@ -130,13 +107,43 @@ export async function onRequestPost(context) {
     );
   }
 
-  // 4) Credentials valid → issue (and optionally store) a token
-  const dummyToken = crypto.randomUUID();
-  // Optionally, store token in KV for later validation:
-  // await env.USERS_KV.put(`token:${dummyToken}`, normalizedEmail, { expirationTtl: 3600 });
+  // 4) Hash the new password with SHA-256
+  const encoder = new TextEncoder();
+  const pwData = encoder.encode(newPassword);
+  let hashBuffer;
+  try {
+    hashBuffer = await crypto.subtle.digest("SHA-256", pwData);
+  } catch {
+    return new Response(
+      JSON.stringify({ error: "Error hashing new password" }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
+    );
+  }
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const newPasswordHash = hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
 
+  // 5) Generate a brand‐new resetKey so the old one cannot be reused
+  const newResetKey = crypto.randomUUID();
+
+  // 6) Write the updated record back into KV
+  const updatedUser = {
+    ...userObj,
+    passwordHash: newPasswordHash,
+    resetKey: newResetKey,
+    // You may want to keep createdAt or other fields unchanged
+  };
+  await env.USERS_KV.put(normalizedEmail, JSON.stringify(updatedUser));
+
+  // 7) Return success + (optionally) the new resetKey
+  // In a real setup you might email the new key; here we return it so the client can show it or store it
   return new Response(
-    JSON.stringify({ success: true, token: dummyToken }),
+    JSON.stringify({ success: true, newResetKey }),
     {
       status: 200,
       headers: {
@@ -147,36 +154,28 @@ export async function onRequestPost(context) {
   );
 }
 
-// Explicitly reject any other HTTP methods with 405
+// Reject other HTTP methods
 export async function onRequestGet(context) {
   return new Response(null, {
     status: 405,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+    headers: { "Access-Control-Allow-Origin": "*" },
   });
 }
 export async function onRequestPut(context) {
   return new Response(null, {
     status: 405,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+    headers: { "Access-Control-Allow-Origin": "*" },
   });
 }
 export async function onRequestDelete(context) {
   return new Response(null, {
     status: 405,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+    headers: { "Access-Control-Allow-Origin": "*" },
   });
 }
 export async function onRequestPatch(context) {
   return new Response(null, {
     status: 405,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+    headers: { "Access-Control-Allow-Origin": "*" },
   });
 }
