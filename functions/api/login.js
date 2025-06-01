@@ -130,11 +130,15 @@ export async function onRequestPost(context) {
     );
   }
 
-  // 4) Credentials valid → issue (and optionally store) a token
+  // 4) Credentials valid → issue (and now store) a token
   const dummyToken = crypto.randomUUID();
-  // Optionally, store token in KV for later validation:
-  // await env.USERS_KV.put(`token:${dummyToken}`, normalizedEmail, { expirationTtl: 3600 });
+  await env.USERS_KV.put(
+    `token:${dummyToken}`,
+    normalizedEmail,
+    { expirationTtl: 3600 } // expires in 1 hour (adjust if needed)
+  );
 
+  // 5) Return the token back to the front-end
   return new Response(
     JSON.stringify({ success: true, token: dummyToken }),
     {
