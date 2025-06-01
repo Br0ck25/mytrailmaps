@@ -1,17 +1,14 @@
-// src/index.js
-
 export default {
   async fetch(request, env) {
-    // ---- Handle CORS preflight ----
+    const corsHeaders = {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    };
+
     if (request.method === "OPTIONS") {
-      return new Response(null, {
-        status: 204,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-          "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-      });
+      return new Response(null, { status: 204, headers: corsHeaders });
     }
 
     try {
@@ -19,154 +16,41 @@ export default {
       const path = url.pathname.replace(/\/+$/, "");
       const method = request.method.toUpperCase();
 
-      // ---- Helper: Always return these CORS headers on JSON responses ----
-      const corsHeaders = {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      };
-
-      // -------------------------------------------------------
-      // 1) SIGN UP: POST /api/signup
-      //    Body: { email, password }
-      // -------------------------------------------------------
-      if (method === "POST" && path === "/api/signup") {
-        let body;
-        try {
-          body = await request.json();
-        } catch {
-          return new Response(
-            JSON.stringify({ error: "Invalid JSON" }),
-            { status: 400, headers: corsHeaders }
-          );
-        }
-
-        // Now only email + password:
-        const { email, password } = body || {};
-        if (
-          !email ||
-          !password ||
-          typeof email !== "string" ||
-          typeof password !== "string"
-        ) {
-          return new Response(
-            JSON.stringify({ error: "Missing or invalid fields" }),
-            { status: 400, headers: corsHeaders }
-          );
-        }
-
-        // Normalize email to lowercase
-        const normalizedEmail = email.trim().toLowerCase();
-
-        // Check if user already exists
-        const existing = await env.USERS_KV.get(normalizedEmail);
-        if (existing) {
-          return new Response(
-            JSON.stringify({ error: "User already exists" }),
-            { status: 409, headers: corsHeaders }
-          );
-        }
-
-        // Hash the password using SHA-256 (for demonstration only)
-        const encoder = new TextEncoder();
-        const data = encoder.encode(password);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashedPassword = hashArray
-          .map((b) => b.toString(16).padStart(2, "0"))
-          .join("");
-
-        // Create a user object
-        const userObj = {
-          email: normalizedEmail,
-          passwordHash: hashedPassword,
-          createdAt: Date.now(),
-        };
-
-        // Store user in KV under key = normalizedEmail
-        await env.USERS_KV.put(
-          normalizedEmail,
-          JSON.stringify(userObj)
-        );
-
-        return new Response(
-          JSON.stringify({ success: true, message: "User created" }),
-          { status: 201, headers: corsHeaders }
-        );
+      async function getUserIdFromToken(token, env) {
+        const email = await env.USERS_KV.get(`token:${token}`);
+        return email || null;
       }
 
-      // -------------------------------------------------------
-      // 2) SIGN IN: POST /api/login
-      //    Body: { email, password }
-      // -------------------------------------------------------
-      if (method === "POST" && path === "/api/login") {
-        let body;
-        try {
-          body = await request.json();
-        } catch {
-          return new Response(
-            JSON.stringify({ error: "Invalid JSON" }),
-            { status: 400, headers: corsHeaders }
-          );
+      // SIGN UP
+      if (method === "POST" && path === "/api/signup") {
+        const { email, password } = await request.json().catch(() => ({}));
+        if (!email || !password || typeof email !== "string" || typeof password !== "string" || password.length < 8) {
+          return new Response(JSON.stringify({ error: "Invalid fields or password too short" }), { status: 400, headers: corsHeaders });
         }
-
-        const { email, password } = body || {};
-        if (
-          !email ||
-          !password ||
-          typeof email !== "string" ||
-          typeof password !== "string"
-        ) {
-          return new Response(
-            JSON.stringify({ error: "Missing or invalid fields" }),
-            { status: 400, headers: corsHeaders }
-          );
-        }
-
         const normalizedEmail = email.trim().toLowerCase();
-        const storedValue = await env.USERS_KV.get(normalizedEmail);
-        if (!storedValue) {
-          return new Response(
-            JSON.stringify({ error: "Invalid email or password" }),
-            { status: 401, headers: corsHeaders }
-          );
+        if (await env.USERS_KV.get(normalizedEmail)) {
+          return new Response(JSON.stringify({ error: "User already exists" }), { status: 409, headers: corsHeaders });
         }
+        const hashedPassword = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(password)))).map(b => b.toString(16).padStart(2, "0")).join("");
+        await env.USERS_KV.put(normalizedEmail, JSON.stringify({ email: normalizedEmail, passwordHash: hashedPassword, createdAt: Date.now(), lastLogin: null, preferences: {} }));
+        return new Response(JSON.stringify({ success: true }), { status: 201, headers: corsHeaders });
+      }
 
-        let userObj;
-        try {
-          userObj = JSON.parse(storedValue);
-        } catch {
-          return new Response(
-            JSON.stringify({ error: "Corrupted user data" }),
-            { status: 500, headers: corsHeaders }
-          );
+      // SIGN IN
+      if (method === "POST" && path === "/api/login") {
+        const { email, password } = await request.json().catch(() => ({}));
+        if (!email || !password || typeof email !== "string" || typeof password !== "string") {
+          return new Response(JSON.stringify({ error: "Invalid fields" }), { status: 400, headers: corsHeaders });
         }
-
-        // Recompute hash of provided password
-        const encoder = new TextEncoder();
-        const data = encoder.encode(password);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashedPassword = hashArray
-          .map((b) => b.toString(16).padStart(2, "0"))
-          .join("");
-
-        if (hashedPassword !== userObj.passwordHash) {
-          return new Response(
-            JSON.stringify({ error: "Invalid email or password" }),
-            { status: 401, headers: corsHeaders }
-          );
+        const normalizedEmail = email.trim().toLowerCase();
+        const user = JSON.parse(await env.USERS_KV.get(normalizedEmail) || "{}");
+        const hashedPassword = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(password)))).map(b => b.toString(16).padStart(2, "0")).join("");
+        if (hashedPassword !== user.passwordHash) {
+          return new Response(JSON.stringify({ error: "Invalid credentials" }), { status: 401, headers: corsHeaders });
         }
-
-        // At this point, credentials are valid. Issue a dummy token:
-        const dummyToken = crypto.randomUUID();
-
-        // (Optional) Store token → email mapping in KV if you want to verify later:
-        // await env.USERS_KV.put(`token:${dummyToken}`, normalizedEmail, { expirationTtl: 3600 });
-
-        return new Response(
-          JSON.stringify({ success: true, token: dummyToken }),
-          { status: 200, headers: corsHeaders }
-        );
+        const token = crypto.randomUUID();
+        await env.USERS_KV.put(`token:${token}`, normalizedEmail, { expirationTtl: 86400 });
+        return new Response(JSON.stringify({ success: true, token }), { status: 200, headers: corsHeaders });
       }
 
       // -------------------------------------------------------
@@ -182,7 +66,7 @@ export default {
           });
         }
         // For demonstration, we’ll accept “testtoken” or any dummyToken above.
-        const userId = await getUserIdFromToken(token);
+        const userId = await getUserIdFromToken(token, env);
         if (!userId) {
           return new Response("Forbidden", {
             status: 403,
@@ -340,29 +224,22 @@ export default {
           });
         }
       }
-
-      // -------------------------------------------------------
-      // FALLBACK: Not Found
-      // -------------------------------------------------------
-      return new Response("Not Found", {
-        status: 404,
-        headers: { "Access-Control-Allow-Origin": "*" },
-      });
+// Fallback
+      return new Response(JSON.stringify({ error: "Not Found" }), { status: 404, headers: corsHeaders });
     } catch (err) {
-      console.error("💥 Unexpected error:", err.stack || err);
-      return new Response("Internal Error", {
-        status: 500,
-        headers: { "Access-Control-Allow-Origin": "*" },
-      });
+      console.error("💥 Unexpected error:", err.stack || err.message);
+      return new Response(JSON.stringify({ error: "Internal Error" }), { status: 500, headers: corsHeaders });
     }
   },
 };
+
 
 // -------------------------------------------------------
 // Helper to resolve userId from token (demo only). 
 // In production, verify JWT or session token properly.
 // -------------------------------------------------------
-async function getUserIdFromToken(token) {
-  if (token === "testtoken") return "testuser";
-  return null;
+async function getUserIdFromToken(token, env) {
+  const email = await env.USERS_KV.get(`token:${token}`);
+  return email || null;
 }
+

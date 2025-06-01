@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png', 'icons/*.png'],
       manifest: {
         name: 'MyTrailMaps',
         short_name: 'TrailMaps',
@@ -21,17 +21,17 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: '/icons/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: 'pwa-512x512.png',
+            src: '/icons/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: 'pwa-512x512.png',
+            src: '/icons/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable',
@@ -39,14 +39,23 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],
         runtimeCaching: [
+          {
+            urlPattern: /^\/index\.html$/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'html-root-cache',
+              expiration: {
+                maxEntries: 1,
+                maxAgeSeconds: 86400, // 1 day
+              },
+            },
+          },
           {
             urlPattern: ({ request }) => request.destination === 'document',
             handler: 'NetworkFirst',
-            options: {
-              cacheName: 'html-cache',
-            },
+            options: { cacheName: 'html-cache' },
           },
           {
             urlPattern: ({ request }) => request.destination === 'image',
@@ -54,8 +63,8 @@ export default defineConfig({
             options: {
               cacheName: 'image-cache',
               expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 30 * 24 * 60 * 60,
+                maxEntries: 100,
+                maxAgeSeconds: 2592000, // 30 days
               },
             },
           },
@@ -67,33 +76,29 @@ export default defineConfig({
               cacheName: 'static-resources',
             },
           },
-            {
-    urlPattern: /\/tracks\/.*\.geojson$/,
-    handler: 'CacheFirst',
-    options: {
-      cacheName: 'track-files',
-      expiration: {
-        maxEntries: 100,
-        maxAgeSeconds: 30 * 24 * 60 * 60,
-      },
-    },
-  },
-          
-            // Cache GPX files
-            {
-  urlPattern: /\/admin-gpx\/.+/,
-  handler: 'CacheFirst',
-  options: {
-    cacheName: 'gpx-cache',
-    expiration: {
-      maxEntries: 100,
-      maxAgeSeconds: 30 * 24 * 60 * 60,
-    },
-  },
-},
-
           {
-            // Cache GPX list API
+            urlPattern: /\/tracks\/.*\.geojson$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'track-files',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 2592000,
+              },
+            },
+          },
+          {
+            urlPattern: /\/admin-gpx\/.+/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'gpx-cache',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 2592000,
+              },
+            },
+          },
+          {
             urlPattern: /\/admin-gpx-list$/,
             handler: 'NetworkFirst',
             options: {
@@ -101,19 +106,30 @@ export default defineConfig({
               networkTimeoutSeconds: 3,
               expiration: {
                 maxEntries: 20,
-                maxAgeSeconds: 7 * 24 * 60 * 60,
+                maxAgeSeconds: 604800, // 7 days
               },
             },
           },
           {
-            // Cache OpenStreetMap tiles
             urlPattern: /^https:\/\/.*tile\.openstreetmap\.org\//,
             handler: 'CacheFirst',
             options: {
               cacheName: 'osm-tiles',
               expiration: {
                 maxEntries: 1000,
-                maxAgeSeconds: 60 * 60 * 24 * 30,
+                maxAgeSeconds: 2592000, // 30 days
+              },
+            },
+          },
+          {
+            urlPattern: /\/api\/.+/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'api-data',
+              networkTimeoutSeconds: 5,
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 86400, // 1 day
               },
             },
           },
@@ -134,4 +150,3 @@ export default defineConfig({
       }
     : undefined,
 });
-

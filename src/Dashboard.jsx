@@ -8,6 +8,12 @@ import { FiLayers, FiCrosshair } from "react-icons/fi";
 import * as toGeoJSON from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
 import maplibregl from "maplibre-gl";
+import localforage from "localforage";
+
+localforage.config({
+  name: 'MyTrailMaps',
+  storeName: 'trail_data'
+});
 
 const tileJson = {
   tilejson: "2.2.0",
@@ -408,12 +414,15 @@ export default function Dashboard({ onLogout }) {
   const token = localStorage.getItem("authToken") || "";
 
   // On mount: fetch account data from KV
-  useEffect(() => {
-    async function loadAccount() {
-      if (!token) {
-        onLogout();
-        return;
-      }
+  // On mount: fetch account data from KV or IndexedDB if offline
+useEffect(() => {
+  async function loadAccount() {
+    if (!token) {
+      onLogout();
+      return;
+    }
+
+    if (navigator.onLine) {
       try {
         const res = await fetch("/api/get-account", {
           method: "GET",
@@ -422,12 +431,14 @@ export default function Dashboard({ onLogout }) {
             Authorization: `Bearer ${token}`,
           },
         });
+
         const json = await res.json();
         if (!res.ok) {
           console.error("Failed to load account:", json.error);
           if (res.status === 401) onLogout();
           return;
         }
+
         const { account } = json;
         setUserTracks(account.tracks || []);
         setFolderOrder(account.folderOrder || []);
@@ -438,28 +449,56 @@ export default function Dashboard({ onLogout }) {
           setShowWaypointLabels(account.preferences.showWaypointLabels ?? true);
           setShowPublicTracks(account.preferences.showPublicTracks ?? true);
         }
+
+        // Save the fetched account data into localforage
+        await localforage.setItem('userAccount', account);
+
       } catch (err) {
         console.error("Error fetching account:", err);
+        // Try loading from localforage if fetch fails
+        const localAccount = await localforage.getItem('userAccount');
+        if (localAccount) {
+          setUserTracks(localAccount.tracks || []);
+          setFolderOrder(localAccount.folderOrder || []);
+        }
+      }
+    } else {
+      // Offline: load data from localforage
+      const localAccount = await localforage.getItem('userAccount');
+      if (localAccount) {
+        setUserTracks(localAccount.tracks || []);
+        setFolderOrder(localAccount.folderOrder || []);
       }
     }
-    loadAccount();
-  }, [token, onLogout]);
+  }
+
+  loadAccount();
+}, [token, onLogout]);
+
 
   // Whenever account data changes, save entire account to KV
-  useEffect(() => {
-    async function saveAccount() {
-      if (!token) return;
-      const account = {
-        tracks: userTracks,
-        folderOrder,
-        preferences: {
-          showTracks,
-          showNames,
-          showWaypoints,
-          showWaypointLabels,
-          showPublicTracks,
-        },
-      };
+  // Whenever account data changes, save entire account to KV and IndexedDB
+useEffect(() => {
+  async function saveAccount() {
+    if (!token) return;
+
+    const account = {
+      tracks: userTracks,
+      folderOrder,
+      preferences: {
+        showTracks,
+        showNames,
+        showWaypoints,
+        showWaypointLabels,
+        showPublicTracks,
+      },
+    };
+
+    // Save locally immediately
+    await localforage.setItem('userAccount', account);
+
+    // Save to API when online
+    if (navigator.onLine) {
       try {
         await fetch("/api/save-account", {
           method: "POST",
@@ -470,22 +509,23 @@ export default function Dashboard({ onLogout }) {
           body: JSON.stringify({ account }),
         });
       } catch (err) {
-        console.error("Error saving account:", err);
+        console.error("Error saving account remotely:", err);
       }
     }
-    if (token) {
-      saveAccount();
-    }
-  }, [
-    token,
-    userTracks,
-    folderOrder,
-    showTracks,
-    showNames,
-    showWaypoints,
-    showWaypointLabels,
-    showPublicTracks,
-  ]);
+  }
+
+  saveAccount();
+}, [
+  token,
+  userTracks,
+  folderOrder,
+  showTracks,
+  showNames,
+  showWaypoints,
+  showWaypointLabels,
+  showPublicTracks,
+]);
+
 
   // --- END ACCOUNT SYNC LOGIC ---
 

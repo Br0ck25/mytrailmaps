@@ -8,6 +8,7 @@ export default function LoginPage({ onLogin }) {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -119,6 +120,7 @@ export default function LoginPage({ onLogin }) {
           </Link>
         </p>
       </div>
+      
     </div>
   );
 }
