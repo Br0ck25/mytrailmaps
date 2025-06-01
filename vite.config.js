@@ -79,6 +79,18 @@ export default defineConfig({
             },
           },
           {
+  urlPattern: /\/tiles\//,
+  handler: 'CacheFirst',
+  options: {
+    cacheName: 'vector-tiles',
+    expiration: {
+      maxEntries: 1000,
+      maxAgeSeconds: 2592000, // 30 days
+    },
+  },
+},
+
+          {
             urlPattern: /\/tracks\/.*\.geojson$/,
             handler: 'CacheFirst',
             options: {

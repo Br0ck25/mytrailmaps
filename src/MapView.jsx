@@ -5,6 +5,8 @@ import { feature } from "topojson-client";
 import length from "@turf/length";
 import { lineString } from "@turf/helpers";
 import lineOverlap from "@turf/line-overlap";
+import localforage from "localforage";
+
 
 function isDuplicateLine(lineFeature, mainLines, threshold = 0.0001) {
   const coords = lineFeature.geometry?.coordinates;
@@ -112,12 +114,18 @@ export default function MapView({
 
 
 
-    map.on("load", () => {
-      const mainWaypointNames = new Set();
-      const mainTrackLines = [];
-      if (mapRef && typeof mapRef === "object") {
-  mapRef.current = map;
-}
+    map.on("load", async () => {
+  const mainWaypointNames = new Set();
+  const mainTrackLines = [];
+
+  await Promise.all([
+    ...mainGeojsonFiles.map(f => addTrackLayers(f, "track", false)),
+    ...publicGeojsonFiles.map(f => addTrackLayers(f, "public", true))
+  ]);
+
+  if (mapRef && typeof mapRef === "object") {
+    mapRef.current = map;
+  }
 
 
       map.once("idle", () => {
@@ -128,151 +136,78 @@ export default function MapView({
         }
       });
 
-      const addTrackLayers = (filename, sourcePrefix, isPublic = false) => {
-        const slug = filename.replace(/\.(geojson|topojson)$/i, "").toLowerCase();
-        const sourceId = `${sourcePrefix}-${slug}`;
+      const addTrackLayers = async (filename, sourcePrefix, isPublic = false) => {
+  const slug = filename.replace(/\.(geojson|topojson)$/i, "").toLowerCase();
+  const sourceId = `${sourcePrefix}-${slug}`;
+  const url = isPublic ? `/public-tracks/${filename}` : `/tracks/${filename}`;
+  const cacheKey = `${isPublic ? "public" : "main"}-track:${filename}`;
 
-        fetch(isPublic ? `/public-tracks/${filename}` : `/tracks/${filename}`)
-          .then(res => {
-            if (!res.ok) throw new Error(`Failed to fetch ${filename}: ${res.statusText}`);
-            return res.json();
-          })
-          .then(rawData => {
-            let data = filename.endsWith(".topojson")
-              ? feature(rawData, rawData.objects[Object.keys(rawData.objects)[0]])
-              : rawData;
+  let rawData;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    rawData = await res.json();
+    await localforage.setItem(cacheKey, rawData);
+  } catch (err) {
+    console.warn(`⚠️ Fetch failed for ${filename}, loading from cache...`, err);
+    rawData = await localforage.getItem(cacheKey);
+    if (!rawData) {
+      console.error(`❌ No cached copy for ${filename}`);
+      return;
+    }
+  }
 
-            data.features = data.features.map((f, i) => ({ ...f, id: i }));
+  let data = filename.endsWith(".topojson")
+    ? feature(rawData, rawData.objects[Object.keys(rawData.objects)[0]])
+    : rawData;
 
-            if (!isPublic) {
-              data.features.forEach(f => {
-                if (f.geometry?.type === "Point" && f.properties?.name) {
-                  mainWaypointNames.add(f.properties.name.trim());
-                } else if (f.geometry?.type === "LineString") {
-                  mainTrackLines.push(f);
-                }
-              });
-            } else {
-              data.features = data.features.filter(f => {
-                if (f.geometry?.type === "LineString") {
-                  return !isDuplicateLine(f, mainTrackLines);
-                }
-                if (f.geometry?.type === "Point") {
-                  const name = f.properties?.name?.trim();
-                  return !mainWaypointNames.has(name);
-                }
-                return true;
-              });
-            }
+  data.features = data.features.map((f, i) => ({ ...f, id: i }));
 
-            map.addSource(sourceId, { type: "geojson", data });
+  if (!isPublic) {
+    data.features.forEach(f => {
+      if (f.geometry?.type === "Point" && f.properties?.name) {
+        mainWaypointNames.add(f.properties.name.trim());
+      } else if (f.geometry?.type === "LineString") {
+        mainTrackLines.push(f);
+      }
+    });
+  } else {
+    data.features = data.features.filter(f => {
+      if (f.geometry?.type === "LineString") {
+        return !isDuplicateLine(f, mainTrackLines);
+      }
+      if (f.geometry?.type === "Point") {
+        const name = f.properties?.name?.trim();
+        return !mainWaypointNames.has(name);
+      }
+      return true;
+    });
+  }
 
-            map.addLayer({
-              id: `${sourceId}-line`,
-              type: "line",
-              source: sourceId,
-              filter: ["==", "$type", "LineString"],
-              paint: {
-                "line-color": ["coalesce", ["get", "stroke"], "#666"],
-                "line-opacity": [
-                  "case",
-                  ["boolean", ["feature-state", "highlighted"], false],
-                  1, isPublic ? 0.2 : 1
-                ],
-                "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
-              },
-              layout: {
-                "line-cap": "round",
-                "line-join": "round",
-                visibility: isPublic && !showPublicTracks ? "none" : "visible"
-              }
-            });
+  map.addSource(sourceId, { type: "geojson", data });
 
-
-            map.addLayer({
-              id: `${sourceId}-label`,
-              type: "symbol",
-              source: sourceId,
-              filter: ["==", "$type", "LineString"],
-              layout: {
-                "symbol-placement": "line",
-                "text-field": ["get", "name"],
-                "text-font": ["Open Sans Bold"],
-                "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-                visibility: isPublic && !showPublicTracks ? "none" : (showNames ? "visible" : "none")
-              },
-              paint: {
-                "text-color": "#333",
-                "text-halo-color": "#fff",
-                "text-halo-width": 2
-              },
-              minzoom: 10
-            });
-
-            map.addLayer({
-              id: `${sourceId}-waypoints`,
-              type: "circle",
-              source: sourceId,
-              filter: ["==", "$type", "Point"],
-              layout: {
-                visibility: isPublic && !showPublicTracks ? "none" : (showWaypoints ? "visible" : "none")
-              },
-              paint: {
-                "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
-                "circle-color": "#ff6600",
-                "circle-stroke-width": 1,
-                "circle-stroke-color": "#fff"
-              },
-              minzoom: 9
-            });
-
-            map.addLayer({
-              id: `${sourceId}-waypoint-labels`,
-              type: "symbol",
-              source: sourceId,
-              filter: ["==", "$type", "Point"],
-              layout: {
-                "text-field": ["get", "name"],
-                "text-font": ["Open Sans Regular"],
-                "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
-                "text-offset": [0, 1.2],
-                visibility: isPublic && !showPublicTracks ? "none" : (showWaypointLabels ? "visible" : "none")
-              },
-              paint: {
-                "text-color": "#333",
-                "text-halo-color": "#fff",
-                "text-halo-width": 1.5
-              },
-              minzoom: 12
-            });
-             map.addLayer({
-    id: `${sourceId}-file-label`,
-    type: "symbol",
+  map.addLayer({
+    id: `${sourceId}-line`,
+    type: "line",
     source: sourceId,
-    filter: ["==", ["get", "type"], "file-label"],
-    layout: {
-      "text-field": ["get", "label"],
-      "text-font": ["Open Sans Bold"],
-      "text-size": ["interpolate", ["linear"], ["zoom"], 6, 8, 14, 14],
-      "text-anchor": "center",
-      "text-allow-overlap": true,
-      "text-ignore-placement": true,
-      "symbol-placement": "point"
-    },
+    filter: ["==", "$type", "LineString"],
     paint: {
-      "text-color": "#000",
-      "text-halo-color": "#fff",
-      "text-halo-width": 2
+      "line-color": ["coalesce", ["get", "stroke"], "#666"],
+      "line-opacity": [
+        "case",
+        ["boolean", ["feature-state", "highlighted"], false],
+        1, isPublic ? 0.2 : 1
+      ],
+      "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1, 10, 2, 15, 3]
     },
-    minzoom: 6
+    layout: {
+      "line-cap": "round",
+      "line-join": "round",
+      visibility: isPublic && !showPublicTracks ? "none" : "visible"
+    }
   });
+};
 
-  // ✅ Move to top
-  map.moveLayer(`${sourceId}-file-label`);
-
-          })
-          .catch(err => console.error(`❌ Error loading ${filename}:`, err));
-      };
       
 
       mainGeojsonFiles.forEach(f => addTrackLayers(f, "track"));

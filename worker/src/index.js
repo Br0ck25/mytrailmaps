@@ -264,4 +264,14 @@ async function getUserIdFromToken(token, env) {
   const email = await env.USERS_KV.get(`token:${token}`);
   return email || null;
 }
+// ✅ Register PWA service worker for offline support
+import { registerSW } from 'virtual:pwa-register';
+registerSW({ immediate: true });
+
+// ✅ Force page reload when a new service worker takes control
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    window.location.reload();
+  });
+}
 

@@ -450,61 +450,59 @@ const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
   // On mount: fetch account data from KV
   // On mount: fetch account data from KV or IndexedDB if offline
 useEffect(() => {
-  async function loadAccount() {
-    if (!token) {
-      onLogout();
-      return;
-    }
-
-    if (navigator.onLine) {
-      try {
-        const res = await fetch("/api/get-account", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
-        const json = await res.json();
-        if (!res.ok) {
-          console.error("Failed to load account:", json.error);
-          if (res.status === 401) onLogout();
-          return;
-        }
-
-        const { account } = json;
-        setUserTracks(account.tracks || []);
-        setFolderOrder(account.folderOrder || []);
-        if (account.preferences) {
-          setShowTracks(account.preferences.showTracks ?? true);
-          setShowNames(account.preferences.showNames ?? true);
-          setShowWaypoints(account.preferences.showWaypoints ?? true);
-          setShowWaypointLabels(account.preferences.showWaypointLabels ?? true);
-          setShowPublicTracks(account.preferences.showPublicTracks ?? true);
-        }
-
-        // Save the fetched account data into localforage
-        await localforage.setItem('userAccount', account);
-
-      } catch (err) {
-        console.error("Error fetching account:", err);
-        // Try loading from localforage if fetch fails
-        const localAccount = await localforage.getItem('userAccount');
-        if (localAccount) {
-          setUserTracks(localAccount.tracks || []);
-          setFolderOrder(localAccount.folderOrder || []);
-        }
-      }
-    } else {
-      // Offline: load data from localforage
-      const localAccount = await localforage.getItem('userAccount');
-      if (localAccount) {
-        setUserTracks(localAccount.tracks || []);
-        setFolderOrder(localAccount.folderOrder || []);
-      }
+    async function loadAccount() {
+  const localAccount = await localforage.getItem('userAccount');
+  if (localAccount) {
+    setUserTracks(localAccount.tracks || []);
+    setFolderOrder(localAccount.folderOrder || []);
+    if (localAccount.preferences) {
+      setShowTracks(localAccount.preferences.showTracks ?? true);
+      setShowNames(localAccount.preferences.showNames ?? true);
+      setShowWaypoints(localAccount.preferences.showWaypoints ?? true);
+      setShowWaypointLabels(localAccount.preferences.showWaypointLabels ?? true);
+      setShowPublicTracks(localAccount.preferences.showPublicTracks ?? true);
     }
   }
+
+  if (!token) {
+    onLogout();
+    return;
+  }
+
+  if (navigator.onLine) {
+    try {
+      const res = await fetch("/api/get-account", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const json = await res.json();
+      if (!res.ok) {
+        if (res.status === 401) onLogout();
+        return;
+      }
+
+      const { account } = json;
+      setUserTracks(account.tracks || []);
+      setFolderOrder(account.folderOrder || []);
+      if (account.preferences) {
+        setShowTracks(account.preferences.showTracks ?? true);
+        setShowNames(account.preferences.showNames ?? true);
+        setShowWaypoints(account.preferences.showWaypoints ?? true);
+        setShowWaypointLabels(account.preferences.showWaypointLabels ?? true);
+        setShowPublicTracks(account.preferences.showPublicTracks ?? true);
+      }
+
+      await localforage.setItem('userAccount', account);
+    } catch (err) {
+      console.warn("Failed to fetch from server:", err);
+    }
+  }
+}
+
 
   loadAccount();
 }, [token, onLogout]);
