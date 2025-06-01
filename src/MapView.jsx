@@ -110,33 +110,11 @@ export default function MapView({
     showAccuracyCircle: false
   });
   map.addControl(geolocate);
-
-
-
-
-    map.on("load", async () => {
-  const mainWaypointNames = new Set();
+    const mainWaypointNames = new Set();
   const mainTrackLines = [];
 
-  await Promise.all([
-    ...mainGeojsonFiles.map(f => addTrackLayers(f, "track", false)),
-    ...publicGeojsonFiles.map(f => addTrackLayers(f, "public", true))
-  ]);
 
-  if (mapRef && typeof mapRef === "object") {
-    mapRef.current = map;
-  }
-
-
-      map.once("idle", () => {
-        if (typeof onGeolocateControlReady === "function") {
-          onGeolocateControlReady(() => {
-            if (geolocate?.trigger) geolocate.trigger();
-          });
-        }
-      });
-
-      const addTrackLayers = async (filename, sourcePrefix, isPublic = false) => {
+const addTrackLayers = async (filename, sourcePrefix, isPublic = false) => {
   const slug = filename.replace(/\.(geojson|topojson)$/i, "").toLowerCase();
   const sourceId = `${sourcePrefix}-${slug}`;
   const url = isPublic ? `/public-tracks/${filename}` : `/tracks/${filename}`;
@@ -161,7 +139,12 @@ export default function MapView({
     ? feature(rawData, rawData.objects[Object.keys(rawData.objects)[0]])
     : rawData;
 
-  data.features = data.features.map((f, i) => ({ ...f, id: i }));
+  data.features = data.features.map((f, i) => {
+    if (!f.properties) f.properties = {};
+    return { ...f, id: i, properties: { ...f.properties } };
+  });
+
+
 
   if (!isPublic) {
     data.features.forEach(f => {
@@ -186,6 +169,90 @@ export default function MapView({
 
   map.addSource(sourceId, { type: "geojson", data });
 
+  // Track name labels
+map.addLayer({
+  id: `${sourceId}-label`,
+  type: "symbol",
+  source: sourceId,
+  filter: ["==", "$type", "LineString"],
+  layout: {
+    "symbol-placement": "line",
+    "text-field": ["get", "name"],
+    "text-font": ["Open Sans Bold"],
+    "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+    visibility: isPublic && !showPublicTracks ? "none" : (showNames ? "visible" : "none")
+  },
+  paint: {
+    "text-color": "#333",
+    "text-halo-color": "#fff",
+    "text-halo-width": 2
+  },
+  minzoom: 10
+});
+
+// Waypoint circles
+map.addLayer({
+  id: `${sourceId}-waypoints`,
+  type: "circle",
+  source: sourceId,
+  filter: ["==", "$type", "Point"],
+  layout: {
+    visibility: isPublic && !showPublicTracks ? "none" : (showWaypoints ? "visible" : "none")
+  },
+  paint: {
+    "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 4, 14, 6],
+    "circle-color": "#ff6600",
+    "circle-stroke-width": 1,
+    "circle-stroke-color": "#fff"
+  },
+  minzoom: 9
+});
+
+// Waypoint name labels
+map.addLayer({
+  id: `${sourceId}-waypoint-labels`,
+  type: "symbol",
+  source: sourceId,
+  filter: ["==", "$type", "Point"],
+  layout: {
+    "text-field": ["get", "name"],
+    "text-font": ["Open Sans Regular"],
+    "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 14, 14],
+    "text-offset": [0, 1.2],
+    visibility: isPublic && !showPublicTracks ? "none" : (showWaypointLabels ? "visible" : "none")
+  },
+  paint: {
+    "text-color": "#333",
+    "text-halo-color": "#fff",
+    "text-halo-width": 1.5
+  },
+  minzoom: 12
+});
+
+// File-level centered park label (type = "file-label")
+map.addLayer({
+  id: `${sourceId}-file-label`,
+  type: "symbol",
+  source: sourceId,
+  filter: ["==", ["get", "type"], "file-label"],
+  layout: {
+    "text-field": ["get", "label"],
+    "text-font": ["Open Sans Bold"],
+    "text-size": ["interpolate", ["linear"], ["zoom"], 6, 8, 14, 14],
+    "text-anchor": "center",
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "symbol-placement": "point"
+  },
+  paint: {
+    "text-color": "#000",
+    "text-halo-color": "#fff",
+    "text-halo-width": 2
+  },
+  minzoom: 6
+});
+
+
   map.addLayer({
     id: `${sourceId}-line`,
     type: "line",
@@ -206,44 +273,69 @@ export default function MapView({
       visibility: isPublic && !showPublicTracks ? "none" : "visible"
     }
   });
+  // Ensure file-labels are on top
+map.moveLayer(`${sourceId}-file-label`);
 };
 
-      
 
-      mainGeojsonFiles.forEach(f => addTrackLayers(f, "track"));
-      publicGeojsonFiles.forEach(f => addTrackLayers(f, "public", true));
 
-      map.on("click", (e) => {
-        const layersToCheck = map.getStyle().layers.filter(l => l.id.endsWith("-line")).map(l => l.id);
-        const features = map.queryRenderedFeatures(e.point, { layers: layersToCheck });
 
-        if (features.length > 0) {
-          const feature = features[0];
-          const source = feature.layer.source;
-          const id = feature.id;
 
-          if (lastHighlighted.current) {
-            map.setFeatureState(lastHighlighted.current, { highlighted: false });
-          }
+    map.on("load", async () => {
 
-          if (id !== undefined) {
-            lastHighlighted.current = { source, id };
-            map.setFeatureState({ source, id }, { highlighted: true });
-          }
+  // ✅ Set the mapRef first
+  if (mapRef && typeof mapRef === "object") {
+    mapRef.current = map;
+  }
 
-          const props = feature.properties;
-          new maplibregl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML(`
-              <div class="track-popup">
-                <h3>${props.name || "Unnamed Track"}</h3>
-                <p>${props.desc || props.description || "No description available."}</p>
-              </div>
-            `)
-            .addTo(map);
-        }
+  // ✅ Load tracks with fallback to cache
+  await Promise.all([
+    ...mainGeojsonFiles.map(f => addTrackLayers(f, "track", false)),
+    ...publicGeojsonFiles.map(f => addTrackLayers(f, "public", true))
+  ]);
+
+  // ✅ Trigger geolocate once map is idle
+  map.once("idle", () => {
+    if (typeof onGeolocateControlReady === "function") {
+      onGeolocateControlReady(() => {
+        if (geolocate?.trigger) geolocate.trigger();
       });
-    });
+    }
+  });
+
+  // ✅ Map click interaction logic (keep this part as-is)
+  map.on("click", (e) => {
+    const layersToCheck = map.getStyle().layers.filter(l => l.id.endsWith("-line")).map(l => l.id);
+    const features = map.queryRenderedFeatures(e.point, { layers: layersToCheck });
+
+    if (features.length > 0) {
+      const feature = features[0];
+      const source = feature.layer.source;
+      const id = feature.id;
+
+      if (lastHighlighted.current) {
+        map.setFeatureState(lastHighlighted.current, { highlighted: false });
+      }
+
+      if (id !== undefined) {
+        lastHighlighted.current = { source, id };
+        map.setFeatureState({ source, id }, { highlighted: true });
+      }
+
+      const props = feature.properties;
+      new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(`
+          <div class="track-popup">
+            <h3>${props.name || "Unnamed Track"}</h3>
+            <p>${props.desc || props.description || "No description available."}</p>
+          </div>
+        `)
+        .addTo(map);
+    }
+  });
+});
+
 
     map.on("moveend", () => {
       const center = map.getCenter();
