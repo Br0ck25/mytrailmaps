@@ -294,14 +294,50 @@ map.moveLayer(`${sourceId}-file-label`);
     ...publicGeojsonFiles.map(f => addTrackLayers(f, "public", true))
   ]);
 
-  // ✅ Trigger geolocate once map is idle
-  map.once("idle", () => {
-    if (typeof onGeolocateControlReady === "function") {
-      onGeolocateControlReady(() => {
-        if (geolocate?.trigger) geolocate.trigger();
-      });
-    }
-  });
+// ✅ Trigger geolocate once map is idle
+map.once("idle", () => {
+  if (typeof onGeolocateControlReady === "function") {
+    onGeolocateControlReady(() => {
+      if (geolocate?.trigger) geolocate.trigger();
+    });
+  }
+
+  // ✅ Apply toggle visibility after layers are added
+  try {
+    map.getStyle().layers?.forEach(layer => {
+      const id = layer.id;
+
+      if (id.startsWith("public-") && id.endsWith("-line")) {
+        map.setLayoutProperty(id, "visibility", showPublicTracks ? "visible" : "none");
+      }
+      if (id.startsWith("public-") && id.endsWith("-label")) {
+        map.setLayoutProperty(id, "visibility", showPublicTracks && showNames ? "visible" : "none");
+      }
+      if (id.startsWith("public-") && id.endsWith("-waypoints")) {
+        map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypoints ? "visible" : "none");
+      }
+      if (id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
+        map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypointLabels ? "visible" : "none");
+      }
+
+      if (!id.startsWith("public-") && id.endsWith("-line")) {
+        map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
+      }
+      if (!id.startsWith("public-") && id.endsWith("-label")) {
+        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+      }
+      if (!id.startsWith("public-") && id.endsWith("-waypoints")) {
+        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+      }
+      if (!id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
+        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+      }
+    });
+  } catch (err) {
+    console.warn("⚠️ Failed to apply initial layer visibility:", err.message);
+  }
+});
+
 
   // ✅ Map click interaction logic (keep this part as-is)
   map.on("click", (e) => {
@@ -361,6 +397,7 @@ map.moveLayer(`${sourceId}-file-label`);
     try {
       map.getStyle().layers?.forEach(layer => {
         const id = layer.id;
+        
 
         if (id.startsWith("public-") && id.endsWith("-line")) {
           map.setLayoutProperty(id, "visibility", showPublicTracks ? "visible" : "none");
