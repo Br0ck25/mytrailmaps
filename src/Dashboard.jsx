@@ -560,6 +560,25 @@ useEffect(() => {
   showPublicTracks,
 ]);
 
+useEffect(() => {
+  const forceLayoutUpdate = () => {
+    // Access height to trigger layout, force refresh of 100vh-based styles
+    document.body.style.height = `${window.innerHeight}px`;
+  };
+
+  forceLayoutUpdate();
+
+  // Sometimes needed after orientation change too
+  window.addEventListener("orientationchange", forceLayoutUpdate);
+  window.addEventListener("resize", forceLayoutUpdate);
+
+  return () => {
+    window.removeEventListener("orientationchange", forceLayoutUpdate);
+    window.removeEventListener("resize", forceLayoutUpdate);
+  };
+}, []);
+
+
 
   // --- END ACCOUNT SYNC LOGIC ---
 
