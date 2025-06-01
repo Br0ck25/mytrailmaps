@@ -78,22 +78,43 @@ export default function AuthLanding() {
       {/* ===== Hero / Explanation Section ===== */}
       <header className="bg-white shadow">
         <div className="max-w-4xl mx-auto py-8 px-4 text-center">
-          <h1 className="text-3xl font-bold text-green-700">My Trail Maps</h1>
+          <div className="flex items-center justify-center space-x-3">
+  <img src="/pwa-512x512.png" alt="Logo" className="w-10 h-10 rounded-md" />
+  <h1 className="text-3xl font-bold text-green-700">My Trail Maps</h1>
+</div>
+
           <p className="mt-2 text-gray-600">
             Build, track, and save your trips—view live speed, elevation, and distance.
           </p>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="/screenshots/mapview.png" alt="Map view" className="rounded-lg shadow-lg object-cover w-full h-48" />
-            <img src="/screenshots/triptracking.png" alt="Trip tracking" className="rounded-lg shadow-lg object-cover w-full h-48" />
-            <img src="/screenshots/mytracks.png" alt="My Tracks" className="rounded-lg shadow-lg object-cover w-full h-48" />
-            <img src="/screenshots/settings.png" alt="Settings" className="rounded-lg shadow-lg object-cover w-full h-48" />
-          </div>
+  <img
+    src="/screenshots/mapview.png"
+    alt="Map view"
+    className="rounded-lg shadow-lg object-contain w-full max-w-xs mx-auto"
+  />
+  <img
+    src="/screenshots/triptracking.png"
+    alt="Trip tracking"
+    className="rounded-lg shadow-lg object-contain w-full max-w-xs mx-auto"
+  />
+  <img
+    src="/screenshots/mytracks.png"
+    alt="My Tracks"
+    className="rounded-lg shadow-lg object-contain w-full max-w-xs mx-auto"
+  />
+  <img
+    src="/screenshots/settings.png"
+    alt="Settings"
+    className="rounded-lg shadow-lg object-contain w-full max-w-xs mx-auto"
+  />
+</div>
+
         </div>
       </header>
 
       {/* ===== Auth Section ===== */}
-      <main className="flex-1 flex flex-col justify-center items-center px-4">
+      <main className="flex-1 flex flex-col justify-center items-center px-4 mt-16">
         <div className="w-full max-w-md bg-white rounded-xl shadow-md overflow-hidden">
           <div className="flex">
             <button
