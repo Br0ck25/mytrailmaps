@@ -31,8 +31,10 @@ export default function LoginPage({ onLogin }) {
 
       const { token } = json;
       localStorage.setItem("authToken", token);
-      if (onLogin) onLogin(token);
+      localStorage.setItem("userEmail", email.trim());
 
+      // 4) Notify parent (App.jsx) that we logged in
+      if (onLogin) onLogin(token);
       navigate("/dashboard", { replace: true });
     } catch (err) {
       setError(err.message);
