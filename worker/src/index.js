@@ -173,6 +173,28 @@ export default {
         return new Response(tile, { headers });
       }
 
+      if (method === "POST" && path === "/api/delete-account") {
+  const authHeader = request.headers.get("Authorization");
+  const token = authHeader?.split("Bearer ")[1];
+  const email = await env.USERS_KV.get(`token:${token}`);
+  if (!email) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: corsHeaders,
+    });
+  }
+
+  // Delete account + token + any linked data
+  await env.USERS_KV.delete(email);
+  await env.USERS_KV.delete(`token:${token}`);
+
+  return new Response(JSON.stringify({ success: true }), {
+    status: 200,
+    headers: corsHeaders,
+  });
+}
+
+
       // POST /upload-public-track — allow public GPX uploads and convert to GeoJSON
       if (method === "POST" && path === "/upload-public-track") {
         const contentType = request.headers.get("content-type") || "";

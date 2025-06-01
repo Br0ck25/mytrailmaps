@@ -9,6 +9,8 @@ import * as toGeoJSON from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
 import maplibregl from "maplibre-gl";
 import localforage from "localforage";
+import { useNavigate } from "react-router-dom";
+
 
 localforage.config({
   name: 'MyTrailMaps',
@@ -24,6 +26,34 @@ const tileJson = {
   minzoom: 5,
   maxzoom: 15
 };
+
+async function confirmAndDeleteAccount() {
+  try {
+    const res = await fetch("/api/delete-account", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+      },
+    });
+
+    if (!res.ok) {
+      const json = await res.json();
+      alert("❌ Failed to delete account: " + (json.error || res.statusText));
+      return;
+    }
+
+    localStorage.removeItem("authToken");
+    onLogout(); // optional: clear app state
+    navigate("/signup"); // 👈 redirect to sign up
+  } catch (err) {
+    console.error("Error deleting account:", err);
+    alert("❌ An error occurred while deleting your account.");
+  }
+}
+
+
+
 
 export default function Dashboard({ onLogout }) {
   // --- Trip & Timing States (unchanged) ---
@@ -72,10 +102,14 @@ export default function Dashboard({ onLogout }) {
   // --- Folder Ordering State (initialize to empty) ---
   const [folderOrder, setFolderOrder] = useState([]);
 
+const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
+
   // --- Refs (unchanged) ---
   const watchIdRef = useRef(null);
   const timerRef = useRef(null);
   const mapRef = useRef(null);
+  const navigate = useNavigate();
+
 
   // --- Utility: normalize folder name for comparisons (unchanged) ---
   function normalize(str) {
@@ -541,19 +575,36 @@ useEffect(() => {
       <div className="flex-1 relative overflow-hidden">
         {/* --- Map View (only when activeTab === "map") --- */}
         <div className={activeTab === "map" ? "block" : "hidden"}>
-          <MapView
-            showNames={showNames}
-            showWaypoints={showWaypoints}
-            showWaypointLabels={showWaypointLabels}
-            showTracks={showTracks}
-            showPublicTracks={showPublicTracks}
-            onGeolocateControlReady={setTriggerGeolocate}
-            liveTrack={tracking ? tripCoords : null}
-            userTracks={userTracks}
-            tileJson={tileJson}
-            mapRef={mapRef}
-          />
-        </div>
+  <MapView
+    showNames={showNames}
+    showWaypoints={showWaypoints}
+    showWaypointLabels={showWaypointLabels}
+    showTracks={showTracks}
+    showPublicTracks={showPublicTracks}
+    onGeolocateControlReady={setTriggerGeolocate}
+    liveTrack={tracking ? tripCoords : null}
+    userTracks={userTracks}
+    tileJson={tileJson}
+    mapRef={mapRef}
+  />
+
+  {/* --- Map Key Legend --- */}
+  <div className="absolute top-4 left-4 z-40 bg-white rounded-xl shadow-md p-3 space-y-2 text-sm text-gray-800">
+    <div className="flex items-center space-x-2">
+      <span className="inline-block w-6 h-1 rounded-full bg-green-600" />
+      <span>Easy</span>
+    </div>
+    <div className="flex items-center space-x-2">
+      <span className="inline-block w-6 h-1 rounded-full bg-blue-600" />
+      <span>Moderate</span>
+    </div>
+    <div className="flex items-center space-x-2">
+      <span className="inline-block w-6 h-1 rounded-full bg-red-600" />
+      <span>Hard</span>
+    </div>
+  </div>
+</div>
+
 
         {/* --- Trip Tab --- */}
         {activeTab === "trip" && (
@@ -710,11 +761,21 @@ useEffect(() => {
         {activeTab === "settings" && (
           <div className="p-4 flex flex-col items-center justify-center h-full">
             <button
-              onClick={onLogout}
-              className="w-64 p-3 bg-red-600 rounded-lg font-semibold text-white"
-            >
-              Log Out
-            </button>
+  onClick={onLogout}
+  className="w-64 p-3 bg-gray-100 text-red-700 rounded-lg font-semibold text-center"
+>
+  Log Out
+</button>
+
+<button
+  onClick={() => setShowConfirmDeleteAccount(true)}
+  className="w-64 p-3 bg-gray-100 text-red-700 rounded-lg font-semibold text-center mt-4"
+>
+  Delete Account
+</button>
+
+
+
           </div>
         )}
 
@@ -926,6 +987,33 @@ useEffect(() => {
         )}
       </div>
 
+      {showConfirmDeleteAccount && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
+      <h2 className="text-lg font-semibold text-red-600">Delete Account</h2>
+      <p className="text-gray-700">
+        Are you sure you want to permanently delete your account?
+        <br />
+        This cannot be undone.
+      </p>
+      <div className="flex justify-center gap-4 mt-4">
+        <button
+          onClick={() => setShowConfirmDeleteAccount(false)}
+          className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
+        >
+          Cancel
+        </button>
+        <button
+          onClick={confirmAndDeleteAccount}
+          className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
       {/* --- Import Preview Modal --- */}
       {showImportPreview && importedPreview && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -987,6 +1075,8 @@ useEffect(() => {
                 </p>
               )}
             </div>
+
+            
 
             <div className="flex justify-end space-x-2">
               <button
