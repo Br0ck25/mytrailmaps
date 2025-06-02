@@ -96,10 +96,11 @@ export default function MapView({
 
   const map = new maplibregl.Map({
   container: mapRef.current,
-  style: "https://mytrailmapspages.pages.dev/styles/voyager-with-glyphs.json", // ✅ fixed style
+  style: "/styles/voyager-with-glyphs.json", // ✅ LOCAL relative path
   center: JSON.parse(localStorage.getItem("mapCenter") || "[-84.3, 36.5]"),
   zoom: parseFloat(localStorage.getItem("mapZoom") || "9")
 });
+
 
 
   currentMap.current = map;
