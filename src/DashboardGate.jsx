@@ -8,21 +8,20 @@ function useSubscriptionStatus(userEmail) {
 
   useEffect(() => {
     if (!userEmail) {
-      // If userEmail is missing, treat as free immediately
+      // If no email in localStorage, treat as free immediately:
       setStatus("free");
       return;
     }
 
-    // Otherwise, show loading state while we fetch
-    setStatus(null);
+    setStatus(null); // show loading while we fetch
     fetch(`/api/subscription-status?email=${encodeURIComponent(userEmail)}`)
       .then((r) => r.json())
       .then((json) => {
-        // Expecting something like { status: "paid" } or { status: "free" }
+        // Expect { status: "paid" } or { status: "free" }
         setStatus(json.status || "free");
       })
       .catch(() => {
-        // On error, default to free
+        // On any error, default to “free”
         setStatus("free");
       });
   }, [userEmail]);
@@ -31,20 +30,31 @@ function useSubscriptionStatus(userEmail) {
 }
 
 export default function DashboardGate({ onLogout }) {
-  // 1) Grab the logged-in userEmail from localStorage
+  // 1) Grab the logged‐in userEmail from localStorage:
   const userEmail = localStorage.getItem("userEmail") || "";
 
-  // 2) Ask our Worker if this user is "free" or "paid"
+  // 2) Ask our Worker: is this user “free” or “paid”?
   const subscriptionStatus = useSubscriptionStatus(userEmail);
 
-  // 3) Allow free users to bypass the paywall if they choose:
-  const [bypassFree, setBypassFree] = useState(false);
+  // 3) Persist “Continue as Free” choice in localStorage:
+  const [bypassFree, setBypassFree] = useState(() => {
+    return localStorage.getItem("bypassFree") === "true";
+  });
 
-  // ────────────────────────────────────────────────────────────────────────────
-  // Now that all hooks are declared, we can early-return based on state:
-  // ────────────────────────────────────────────────────────────────────────────
+  // If they later become “paid” (e.g. after a successful checkout),
+  // we can clear the bypassFree flag so that we always trust the backend.
+  useEffect(() => {
+    if (subscriptionStatus === "paid") {
+      localStorage.removeItem("bypassFree");
+      setBypassFree(false);
+    }
+  }, [subscriptionStatus]);
 
-  // A) While subscriptionStatus is still null, show a loading message:
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Early‐returns (with stable hook order above):
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  // A) While subscriptionStatus === null, show a loading spinner:
   if (subscriptionStatus === null) {
     return (
       <div className="w-full h-full flex items-center justify-center bg-gray-50">
@@ -53,22 +63,25 @@ export default function DashboardGate({ onLogout }) {
     );
   }
 
-  // B) If the user is free and has not clicked "Continue as Free User", show the paywall:
-  if (subscriptionStatus === "free" && bypassFree === false) {
+  const isPaid = subscriptionStatus === "paid";
+  const isFree = subscriptionStatus === "free";
+
+  // B) If user is free AND has not clicked “Continue as Free User,” show paywall:
+  if (isFree && !bypassFree) {
     return (
       <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50 p-4">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           Upgrade to Premium
         </h2>
         <p className="text-center text-gray-600 mb-6 max-w-md">
-          Free accounts can create and import their own tracks, but paid
-          subscribers get access to all official Tracks & Parks, plus offline
-          maps and other premium features.
+          Free accounts can create and import their own tracks, but paid subscribers
+          get access to all official Tracks & Parks, plus offline maps and other
+          premium features.
         </p>
         <div className="flex flex-col space-y-4">
           <button
             onClick={async () => {
-              // Replace with your actual monthly Price ID
+              // Replace with your real monthly Price ID:
               const priceId = "price_1HxYYY_monthly";
               const res = await fetch("/api/create-checkout-session", {
                 method: "POST",
@@ -85,7 +98,7 @@ export default function DashboardGate({ onLogout }) {
 
           <button
             onClick={async () => {
-              // Replace with your actual yearly Price ID
+              // Replace with your real yearly Price ID:
               const priceId = "price_1HxYYY_yearly";
               const res = await fetch("/api/create-checkout-session", {
                 method: "POST",
@@ -102,7 +115,10 @@ export default function DashboardGate({ onLogout }) {
 
           {/* ─── “Continue as Free User” BUTTON ─────────────────────────────────── */}
           <button
-            onClick={() => setBypassFree(true)}
+            onClick={() => {
+              localStorage.setItem("bypassFree", "true");
+              setBypassFree(true);
+            }}
             className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300"
           >
             Continue as Free User
@@ -112,7 +128,6 @@ export default function DashboardGate({ onLogout }) {
     );
   }
 
-  // C) Otherwise (either subscriptionStatus === "paid", or free user clicked “Continue…”),
-  //    show the core dashboard. All hooks inside DashboardCore run in a stable order.
-  return <DashboardCore onLogout={onLogout} />;
+  // C) Otherwise (either paid, or free+clicked “Continue”), render the core dashboard:
+  return <DashboardCore isPaid={isPaid} onLogout={onLogout} />;
 }
