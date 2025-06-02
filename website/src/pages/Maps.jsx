@@ -219,10 +219,10 @@ const maps = [
     id: "1687713",
   },
   {
-    name: "Stoney Lonesome OHV Park Map",
+    name: "Stony Lonesome OHV Park Map",
     slug: "stony-lonesome-ohv-park-map",
     price: "$10.00",
-    image: "/assets/maps/stoney-lonesome-ohv-park-map.jpg",
+    image: "/assets/maps/stony-lonesome-ohv-park-map.jpg",
     id: "1684271",
   },
   {
