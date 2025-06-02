@@ -110,7 +110,7 @@ export default function DashboardGate({ onLogout }) {
             }}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700"
           >
-            Subscribe $60 / year
+            Subscribe $59.99 / year
           </button>
 
           {/* ─── “Continue as Free User” BUTTON ─────────────────────────────────── */}
