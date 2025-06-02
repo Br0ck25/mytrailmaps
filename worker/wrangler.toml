@@ -1,0 +1,19 @@
+name = "mytrailmapsworker"
+main = "src/index.js"
+compatibility_date = "2024-05-21"
+account_id = "472fe4d7673807cf0d44847c19f31e57"
+workers_dev = true
+
+kv_namespaces = [
+  { binding = "TRACKS_KV",        id = "b65d1ca3fddf46f585584b70b3c4582f" },
+  { binding = "USERS_KV",         id = "542e382692db4edc89efd63ea165e7b7" },
+  { binding = "SUBSCRIPTIONS_KV", id = "f5b9617ddc394cf88ce977a9541f15b9" }
+]
+
+r2_buckets = [
+  { binding = "MYTRAILMAPS", bucket_name = "mytrailmaps" }
+]
+
+[vars]
+STRIPE_SECRET_KEY       = "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"
+STRIPE_WEBHOOK_SECRET   = "whsec_reLlb9mgZIbC29kG1jRIvgsOUnaaMfhT"
