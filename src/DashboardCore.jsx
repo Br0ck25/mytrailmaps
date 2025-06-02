@@ -28,7 +28,7 @@ const tileJson = {
   maxzoom: 15,
 };
 
-export default function DashboardCore({ onLogout }) {
+export default function DashboardCore({ isPaid, onLogout }) {
   // ─────────────────────────────────────────────────────────────────────────────
   // A) ACCOUNT SYNC LOGIC: read authToken & userEmail from localStorage
   // ─────────────────────────────────────────────────────────────────────────────
@@ -71,6 +71,17 @@ export default function DashboardCore({ onLogout }) {
     const stored = localStorage.getItem("showPublicTracks");
     return stored !== null ? JSON.parse(stored) : true;
   });
+
+  useEffect(() => {
+  if (!isPaid) {
+    setShowTracks(false);
+    setShowNames(false);
+    setShowWaypoints(false);
+    setShowWaypointLabels(false);
+    setShowPublicTracks(false);
+  }
+}, [isPaid]);
+
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
@@ -478,138 +489,126 @@ export default function DashboardCore({ onLogout }) {
   // ─────────────────────────────────────────────────────────────────────────────
   // ACCOUNT SYNC LOGIC: LOAD from KV/IDB, then SAVE back when userTracks change
   // ─────────────────────────────────────────────────────────────────────────────
+  
+  
   useEffect(() => {
-    async function loadAccount() {
-      const localAccount = await localforage.getItem("userAccount");
-      if (localAccount) {
-        setUserTracks(localAccount.tracks || []);
-        setFolderOrder(localAccount.folderOrder || []);
-        if (localAccount.preferences) {
-          setShowTracks(
-            localAccount.preferences.showTracks ?? showTracks
-          );
-          setShowNames(
-            localAccount.preferences.showNames ?? showNames
-          );
-          setShowWaypoints(
-            localAccount.preferences.showWaypoints ?? showWaypoints
-          );
-          setShowWaypointLabels(
-            localAccount.preferences.showWaypointLabels ??
-              showWaypointLabels
-          );
-          setShowPublicTracks(
-            localAccount.preferences.showPublicTracks ??
-              showPublicTracks
-          );
+  async function loadAccount() {
+    const localAccount = await localforage.getItem("userAccount");
+    if (localAccount) {
+      setUserTracks(localAccount.tracks || []);
+      setFolderOrder(localAccount.folderOrder || []);
+      if (localAccount.preferences) {
+        if (isPaid) {
+          setShowTracks(localAccount.preferences.showTracks ?? showTracks);
+          setShowNames(localAccount.preferences.showNames ?? showNames);
+          setShowWaypoints(localAccount.preferences.showWaypoints ?? showWaypoints);
+          setShowWaypointLabels(localAccount.preferences.showWaypointLabels ?? showWaypointLabels);
+          setShowPublicTracks(localAccount.preferences.showPublicTracks ?? showPublicTracks);
+        } else {
+          setShowTracks(false);
+          setShowNames(false);
+          setShowWaypoints(false);
+          setShowWaypointLabels(false);
+          setShowPublicTracks(false);
         }
       }
+    }
 
-      if (!token) {
-        onLogout();
+    // ✅ Avoid trying to fetch from server if not paid
+    if (!isPaid || !navigator.onLine || !token) return;
+
+    try {
+      const res = await fetch("/api/get-account", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const json = await res.json();
+      if (!res.ok) {
+        if (res.status === 401) onLogout();
         return;
       }
 
-      if (navigator.onLine) {
-        try {
-          const res = await fetch("/api/get-account", {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          });
-          const json = await res.json();
-          if (!res.ok) {
-            if (res.status === 401) onLogout();
-            return;
-          }
-          const { account } = json;
-          setUserTracks(account.tracks || []);
-          setFolderOrder(account.folderOrder || []);
-          if (account.preferences) {
-            setShowTracks(
-              account.preferences.showTracks ?? showTracks
-            );
-            setShowNames(
-              account.preferences.showNames ?? showNames
-            );
-            setShowWaypoints(
-              account.preferences.showWaypoints ?? showWaypoints
-            );
-            setShowWaypointLabels(
-              account.preferences.showWaypointLabels ??
-                showWaypointLabels
-            );
-            setShowPublicTracks(
-              account.preferences.showPublicTracks ??
-                showPublicTracks
-            );
-          }
-          await localforage.setItem("userAccount", account);
-        } catch (err) {
-          console.warn("Failed to fetch from server:", err);
-        }
+      const { account } = json;
+      setUserTracks(account.tracks || []);
+      setFolderOrder(account.folderOrder || []);
+      if (account.preferences) {
+        setShowTracks(account.preferences.showTracks ?? showTracks);
+        setShowNames(account.preferences.showNames ?? showNames);
+        setShowWaypoints(account.preferences.showWaypoints ?? showWaypoints);
+        setShowWaypointLabels(account.preferences.showWaypointLabels ?? showWaypointLabels);
+        setShowPublicTracks(account.preferences.showPublicTracks ?? showPublicTracks);
       }
+
+      await localforage.setItem("userAccount", account);
+    } catch (err) {
+      console.warn("Failed to fetch from server:", err);
     }
-    loadAccount();
-  }, [
-    token,
-    onLogout,
-    showTracks,
-    showNames,
-    showWaypoints,
-    showWaypointLabels,
-    showPublicTracks,
-  ]);
+  }
+
+  loadAccount();
+}, [
+  token,
+  onLogout,
+  showTracks,
+  showNames,
+  showWaypoints,
+  showWaypointLabels,
+  showPublicTracks,
+  isPaid, // ✅ required
+]);
+
 
   useEffect(() => {
-    async function saveAccount() {
-      if (!token) return;
+  async function saveAccount() {
+    if (!isPaid || !token) return; // ✅ skip saving for free users
 
-      const account = {
-        tracks: userTracks,
-        folderOrder,
-        preferences: {
-          showTracks,
-          showNames,
-          showWaypoints,
-          showWaypointLabels,
-          showPublicTracks,
-        },
-      };
+    const account = {
+      tracks: userTracks,
+      folderOrder,
+      preferences: {
+        showTracks,
+        showNames,
+        showWaypoints,
+        showWaypointLabels,
+        showPublicTracks,
+      },
+    };
 
-      // Save locally immediately
-      await localforage.setItem("userAccount", account);
+    await localforage.setItem("userAccount", account);
 
-      // Save to KV when online
-      if (navigator.onLine) {
-        try {
-          await fetch("/api/save-account", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify({ account }),
-          });
-        } catch (err) {
-          console.error("Error saving account remotely:", err);
-        }
+    if (navigator.onLine) {
+      try {
+        await fetch("/api/save-account", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ account }),
+        });
+      } catch (err) {
+        console.error("Error saving account remotely:", err);
       }
     }
+  }
 
-    saveAccount();
-  }, [
-    token,
-    userTracks,
-    folderOrder,
-    showTracks,
-    showNames,
-    showWaypoints,
-    showWaypointLabels,
-    showPublicTracks,
-  ]);
+  saveAccount();
+}, [
+  token,
+  userTracks,
+  folderOrder,
+  showTracks,
+  showNames,
+  showWaypoints,
+  showWaypointLabels,
+  showPublicTracks,
+  isPaid, // ✅ include here too
+]);
+
 
   // ─────────────────────────────────────────────────────────────────────────────
   // Force layout update on resize/orientationchange (unchanged)
@@ -714,6 +713,7 @@ export default function DashboardCore({ onLogout }) {
             userTracks={userTracks}
             tileJson={tileJson}
             mapRef={mapRef}
+            isPaid={isPaid}
           />
 
           {/* ─── Map Key Legend ──────────────────────────────────────────────── */}
@@ -1024,9 +1024,14 @@ export default function DashboardCore({ onLogout }) {
                 <div className="flex justify-between items-center">
                   <span>Tracks</span>
                   <ToggleSwitch
-                    checked={showTracks}
-                    onChange={(e) => setShowTracks(e.target.checked)}
-                  />
+  checked={showTracks}
+  onChange={(e) => {
+  if (!isPaid) return;
+  setShowTracks(e.target.checked);
+}}
+  disabled={!isPaid}
+/>
+
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Track Names</span>
