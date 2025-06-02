@@ -11,7 +11,6 @@ import maplibregl from "maplibre-gl";
 import localforage from "localforage";
 import { useNavigate } from "react-router-dom";
 
-
 localforage.config({
   name: 'MyTrailMaps',
   storeName: 'trail_data'
@@ -52,9 +51,6 @@ async function confirmAndDeleteAccount() {
   }
 }
 
-
-
-
 export default function Dashboard({ onLogout }) {
   // --- Trip & Timing States (unchanged) ---
   const [startTime, setStartTime] = useState(null);
@@ -72,18 +68,33 @@ export default function Dashboard({ onLogout }) {
   const [folderRenameTarget, setFolderRenameTarget] = useState(null);
   const [newFolderName, setNewFolderName] = useState("");
 
-  // --- Tab & Overlay States (initialize to defaults) ---
+  // --- Tab & Overlay States (initialize from localStorage) ---
   const [activeTab, setActiveTab] = useState("map");
-  const [showTracks, setShowTracks] = useState(true);
-  const [showNames, setShowNames] = useState(true);
-  const [showWaypoints, setShowWaypoints] = useState(true);
-  const [showWaypointLabels, setShowWaypointLabels] = useState(true);
-  const [showPublicTracks, setShowPublicTracks] = useState(true);
+  const [showTracks, setShowTracks] = useState(() => {
+    const stored = localStorage.getItem("showTracks");
+    return stored !== null ? JSON.parse(stored) : true;
+  });
+  const [showNames, setShowNames] = useState(() => {
+    const stored = localStorage.getItem("showNames");
+    return stored !== null ? JSON.parse(stored) : true;
+  });
+  const [showWaypoints, setShowWaypoints] = useState(() => {
+    const stored = localStorage.getItem("showWaypoints");
+    return stored !== null ? JSON.parse(stored) : true;
+  });
+  const [showWaypointLabels, setShowWaypointLabels] = useState(() => {
+    const stored = localStorage.getItem("showWaypointLabels");
+    return stored !== null ? JSON.parse(stored) : true;
+  });
+  const [showPublicTracks, setShowPublicTracks] = useState(() => {
+    const stored = localStorage.getItem("showPublicTracks");
+    return stored !== null ? JSON.parse(stored) : true;
+  });
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
 
-  // --- Tracking & Trip States (initialize to defaults) ---
+  // --- Tracking & Trip States (unchanged) ---
   const [tracking, setTracking] = useState(false);
   const [tripCoords, setTripCoords] = useState([]);
   const [userTracks, setUserTracks] = useState([]);
@@ -102,7 +113,7 @@ export default function Dashboard({ onLogout }) {
   // --- Folder Ordering State (initialize to empty) ---
   const [folderOrder, setFolderOrder] = useState([]);
 
-const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
+  const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
 
   // --- Refs (unchanged) ---
   const watchIdRef = useRef(null);
@@ -110,13 +121,12 @@ const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
   const mapRef = useRef(null);
   const navigate = useNavigate();
 
-
   // --- Utility: normalize folder name for comparisons (unchanged) ---
   function normalize(str) {
     return (str || "Ungrouped").trim().toLowerCase();
   }
 
-  // --- Handlers for folder/track edits, now only update state ---
+  // --- Handlers for folder/track edits, now only update state (unchanged) ---
   function deleteFolder(name) {
     const norm = normalize(name);
     const updated = userTracks.filter(t => normalize(t.properties?.folderName) !== norm);
@@ -447,136 +457,149 @@ const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
   // Read token from localStorage
   const token = localStorage.getItem("authToken") || "";
 
-  // On mount: fetch account data from KV
   // On mount: fetch account data from KV or IndexedDB if offline
-useEffect(() => {
+  useEffect(() => {
     async function loadAccount() {
-  const localAccount = await localforage.getItem('userAccount');
-  if (localAccount) {
-    setUserTracks(localAccount.tracks || []);
-    setFolderOrder(localAccount.folderOrder || []);
-    if (localAccount.preferences) {
-      setShowTracks(localAccount.preferences.showTracks ?? true);
-      setShowNames(localAccount.preferences.showNames ?? true);
-      setShowWaypoints(localAccount.preferences.showWaypoints ?? true);
-      setShowWaypointLabels(localAccount.preferences.showWaypointLabels ?? true);
-      setShowPublicTracks(localAccount.preferences.showPublicTracks ?? true);
-    }
-  }
+      const localAccount = await localforage.getItem('userAccount');
+      if (localAccount) {
+        setUserTracks(localAccount.tracks || []);
+        setFolderOrder(localAccount.folderOrder || []);
+        if (localAccount.preferences) {
+          setShowTracks(localAccount.preferences.showTracks ?? showTracks);
+          setShowNames(localAccount.preferences.showNames ?? showNames);
+          setShowWaypoints(localAccount.preferences.showWaypoints ?? showWaypoints);
+          setShowWaypointLabels(localAccount.preferences.showWaypointLabels ?? showWaypointLabels);
+          setShowPublicTracks(localAccount.preferences.showPublicTracks ?? showPublicTracks);
+        }
+      }
 
-  if (!token) {
-    onLogout();
-    return;
-  }
-
-  if (navigator.onLine) {
-    try {
-      const res = await fetch("/api/get-account", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      const json = await res.json();
-      if (!res.ok) {
-        if (res.status === 401) onLogout();
+      if (!token) {
+        onLogout();
         return;
       }
 
-      const { account } = json;
-      setUserTracks(account.tracks || []);
-      setFolderOrder(account.folderOrder || []);
-      if (account.preferences) {
-        setShowTracks(account.preferences.showTracks ?? true);
-        setShowNames(account.preferences.showNames ?? true);
-        setShowWaypoints(account.preferences.showWaypoints ?? true);
-        setShowWaypointLabels(account.preferences.showWaypointLabels ?? true);
-        setShowPublicTracks(account.preferences.showPublicTracks ?? true);
+      if (navigator.onLine) {
+        try {
+          const res = await fetch("/api/get-account", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          });
+
+          const json = await res.json();
+          if (!res.ok) {
+            if (res.status === 401) onLogout();
+            return;
+          }
+
+          const { account } = json;
+          setUserTracks(account.tracks || []);
+          setFolderOrder(account.folderOrder || []);
+          if (account.preferences) {
+            setShowTracks(account.preferences.showTracks ?? showTracks);
+            setShowNames(account.preferences.showNames ?? showNames);
+            setShowWaypoints(account.preferences.showWaypoints ?? showWaypoints);
+            setShowWaypointLabels(account.preferences.showWaypointLabels ?? showWaypointLabels);
+            setShowPublicTracks(account.preferences.showPublicTracks ?? showPublicTracks);
+          }
+
+          await localforage.setItem('userAccount', account);
+        } catch (err) {
+          console.warn("Failed to fetch from server:", err);
+        }
       }
-
-      await localforage.setItem('userAccount', account);
-    } catch (err) {
-      console.warn("Failed to fetch from server:", err);
     }
-  }
-}
 
+    loadAccount();
+  }, [token, onLogout]);
 
-  loadAccount();
-}, [token, onLogout]);
-
-
-  // Whenever account data changes, save entire account to KV
   // Whenever account data changes, save entire account to KV and IndexedDB
-useEffect(() => {
-  async function saveAccount() {
-    if (!token) return;
+  useEffect(() => {
+    async function saveAccount() {
+      if (!token) return;
 
-    const account = {
-      tracks: userTracks,
-      folderOrder,
-      preferences: {
-        showTracks,
-        showNames,
-        showWaypoints,
-        showWaypointLabels,
-        showPublicTracks,
-      },
+      const account = {
+        tracks: userTracks,
+        folderOrder,
+        preferences: {
+          showTracks,
+          showNames,
+          showWaypoints,
+          showWaypointLabels,
+          showPublicTracks,
+        },
+      };
+
+      // Save locally immediately
+      await localforage.setItem('userAccount', account);
+
+      // Save to API when online
+      if (navigator.onLine) {
+        try {
+          await fetch("/api/save-account", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({ account }),
+          });
+        } catch (err) {
+          console.error("Error saving account remotely:", err);
+        }
+      }
+    }
+
+    saveAccount();
+  }, [
+    token,
+    userTracks,
+    folderOrder,
+    showTracks,
+    showNames,
+    showWaypoints,
+    showWaypointLabels,
+    showPublicTracks,
+  ]);
+
+  useEffect(() => {
+    const forceLayoutUpdate = () => {
+      // Access height to trigger layout, force refresh of 100vh-based styles
+      document.body.style.height = `${window.innerHeight}px`;
     };
 
-    // Save locally immediately
-    await localforage.setItem('userAccount', account);
+    forceLayoutUpdate();
 
-    // Save to API when online
-    if (navigator.onLine) {
-      try {
-        await fetch("/api/save-account", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({ account }),
-        });
-      } catch (err) {
-        console.error("Error saving account remotely:", err);
-      }
-    }
-  }
+    // Sometimes needed after orientation change too
+    window.addEventListener("orientationchange", forceLayoutUpdate);
+    window.addEventListener("resize", forceLayoutUpdate);
 
-  saveAccount();
-}, [
-  token,
-  userTracks,
-  folderOrder,
-  showTracks,
-  showNames,
-  showWaypoints,
-  showWaypointLabels,
-  showPublicTracks,
-]);
+    return () => {
+      window.removeEventListener("orientationchange", forceLayoutUpdate);
+      window.removeEventListener("resize", forceLayoutUpdate);
+    };
+  }, []);
 
-useEffect(() => {
-  const forceLayoutUpdate = () => {
-    // Access height to trigger layout, force refresh of 100vh-based styles
-    document.body.style.height = `${window.innerHeight}px`;
-  };
-
-  forceLayoutUpdate();
-
-  // Sometimes needed after orientation change too
-  window.addEventListener("orientationchange", forceLayoutUpdate);
-  window.addEventListener("resize", forceLayoutUpdate);
-
-  return () => {
-    window.removeEventListener("orientationchange", forceLayoutUpdate);
-    window.removeEventListener("resize", forceLayoutUpdate);
-  };
-}, []);
-
-
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Persist each toggle to localStorage so that on refresh the initial state already reflects user choice
+  useEffect(() => {
+    localStorage.setItem("showTracks", JSON.stringify(showTracks));
+  }, [showTracks]);
+  useEffect(() => {
+    localStorage.setItem("showNames", JSON.stringify(showNames));
+  }, [showNames]);
+  useEffect(() => {
+    localStorage.setItem("showWaypoints", JSON.stringify(showWaypoints));
+  }, [showWaypoints]);
+  useEffect(() => {
+    localStorage.setItem("showWaypointLabels", JSON.stringify(showWaypointLabels));
+  }, [showWaypointLabels]);
+  useEffect(() => {
+    localStorage.setItem("showPublicTracks", JSON.stringify(showPublicTracks));
+  }, [showPublicTracks]);
+  // ─────────────────────────────────────────────────────────────────────────────
 
   // --- END ACCOUNT SYNC LOGIC ---
 
@@ -592,36 +615,35 @@ useEffect(() => {
       <div className="flex-1 relative overflow-hidden">
         {/* --- Map View (only when activeTab === "map") --- */}
         <div className={activeTab === "map" ? "block" : "hidden"}>
-  <MapView
-    showNames={showNames}
-    showWaypoints={showWaypoints}
-    showWaypointLabels={showWaypointLabels}
-    showTracks={showTracks}
-    showPublicTracks={showPublicTracks}
-    onGeolocateControlReady={setTriggerGeolocate}
-    liveTrack={tracking ? tripCoords : null}
-    userTracks={userTracks}
-    tileJson={tileJson}
-    mapRef={mapRef}
-  />
+          <MapView
+            showNames={showNames}
+            showWaypoints={showWaypoints}
+            showWaypointLabels={showWaypointLabels}
+            showTracks={showTracks}
+            showPublicTracks={showPublicTracks}
+            onGeolocateControlReady={setTriggerGeolocate}
+            liveTrack={tracking ? tripCoords : null}
+            userTracks={userTracks}
+            tileJson={tileJson}
+            mapRef={mapRef}
+          />
 
-  {/* --- Map Key Legend --- */}
-  <div className="absolute top-4 left-4 z-40 bg-white rounded-xl shadow-md p-3 space-y-2 text-sm text-gray-800">
-    <div className="flex items-center space-x-2">
-      <span className="inline-block w-6 h-1 rounded-full bg-green-600" />
-      <span>Easy</span>
-    </div>
-    <div className="flex items-center space-x-2">
-      <span className="inline-block w-6 h-1 rounded-full bg-blue-600" />
-      <span>Moderate</span>
-    </div>
-    <div className="flex items-center space-x-2">
-      <span className="inline-block w-6 h-1 rounded-full bg-red-600" />
-      <span>Hard</span>
-    </div>
-  </div>
-</div>
-
+          {/* --- Map Key Legend --- */}
+          <div className="absolute top-4 left-4 z-40 bg-white rounded-xl shadow-md p-3 space-y-2 text-sm text-gray-800">
+            <div className="flex items-center space-x-2">
+              <span className="inline-block w-6 h-1 rounded-full bg-green-600" />
+              <span>Easy</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="inline-block w-6 h-1 rounded-full bg-blue-600" />
+              <span>Moderate</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="inline-block w-6 h-1 rounded-full bg-red-600" />
+              <span>Hard</span>
+            </div>
+          </div>
+        </div>
 
         {/* --- Trip Tab --- */}
         {activeTab === "trip" && (
@@ -774,25 +796,22 @@ useEffect(() => {
           </div>
         )}
 
-        {/* --- Settings Tab (Log Out) --- */}
+        {/* --- Settings Tab (Log Out & Delete Account) --- */}
         {activeTab === "settings" && (
           <div className="p-4 flex flex-col items-center justify-center h-full">
             <button
-  onClick={onLogout}
-  className="w-64 p-3 bg-gray-100 text-red-700 rounded-lg font-semibold text-center"
->
-  Log Out
-</button>
+              onClick={onLogout}
+              className="w-64 p-3 bg-gray-100 text-red-700 rounded-lg font-semibold text-center"
+            >
+              Log Out
+            </button>
 
-<button
-  onClick={() => setShowConfirmDeleteAccount(true)}
-  className="w-64 p-3 bg-gray-100 text-red-700 rounded-lg font-semibold text-center mt-4"
->
-  Delete Account
-</button>
-
-
-
+            <button
+              onClick={() => setShowConfirmDeleteAccount(true)}
+              className="w-64 p-3 bg-gray-100 text-red-700 rounded-lg font-semibold text-center mt-4"
+            >
+              Delete Account
+            </button>
           </div>
         )}
 
@@ -1005,31 +1024,31 @@ useEffect(() => {
       </div>
 
       {showConfirmDeleteAccount && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-      <h2 className="text-lg font-semibold text-red-600">Delete Account</h2>
-      <p className="text-gray-700">
-        Are you sure you want to permanently delete your account?
-        <br />
-        This cannot be undone.
-      </p>
-      <div className="flex justify-center gap-4 mt-4">
-        <button
-          onClick={() => setShowConfirmDeleteAccount(false)}
-          className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
-        >
-          Cancel
-        </button>
-        <button
-          onClick={confirmAndDeleteAccount}
-          className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold"
-        >
-          Delete
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
+            <h2 className="text-lg font-semibold text-red-600">Delete Account</h2>
+            <p className="text-gray-700">
+              Are you sure you want to permanently delete your account?
+              <br />
+              This cannot be undone.
+            </p>
+            <div className="flex justify-center gap-4 mt-4">
+              <button
+                onClick={() => setShowConfirmDeleteAccount(false)}
+                className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={confirmAndDeleteAccount}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* --- Import Preview Modal --- */}
       {showImportPreview && importedPreview && (
@@ -1092,8 +1111,6 @@ useEffect(() => {
                 </p>
               )}
             </div>
-
-            
 
             <div className="flex justify-end space-x-2">
               <button
