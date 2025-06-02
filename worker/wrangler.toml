@@ -14,6 +14,4 @@ r2_buckets = [
   { binding = "MYTRAILMAPS", bucket_name = "mytrailmaps" }
 ]
 
-[vars]
-STRIPE_SECRET_KEY       = "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"
-STRIPE_WEBHOOK_SECRET   = "whsec_reLlb9mgZIbC29kG1jRIvgsOUnaaMfhT"
+
