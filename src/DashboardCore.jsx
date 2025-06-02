@@ -71,6 +71,11 @@ export default function DashboardCore({ isPaid, onLogout }) {
     const stored = localStorage.getItem("showPublicTracks");
     return stored !== null ? JSON.parse(stored) : true;
   });
+  const [showUserTracks, setShowUserTracks] = useState(() => {
+  const stored = localStorage.getItem("showUserTracks");
+  return stored !== null ? JSON.parse(stored) : true;
+});
+
 
   useEffect(() => {
   if (!isPaid) {
@@ -515,7 +520,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
     }
 
     // ✅ Avoid trying to fetch from server if not paid
-    if (!isPaid || !navigator.onLine || !token) return;
+    if (!navigator.onLine || !token) return;
 
     try {
       const res = await fetch("/api/get-account", {
@@ -564,7 +569,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
 
   useEffect(() => {
   async function saveAccount() {
-    if (!isPaid || !token) return; // ✅ skip saving for free users
+    if (!token) return;
 
     const account = {
       tracks: userTracks,
@@ -575,11 +580,14 @@ export default function DashboardCore({ isPaid, onLogout }) {
         showWaypoints,
         showWaypointLabels,
         showPublicTracks,
+        showUserTracks,
       },
     };
 
+    // ✅ Always save locally
     await localforage.setItem("userAccount", account);
 
+    // ✅ Also save remotely if online
     if (navigator.onLine) {
       try {
         await fetch("/api/save-account", {
@@ -606,8 +614,9 @@ export default function DashboardCore({ isPaid, onLogout }) {
   showWaypoints,
   showWaypointLabels,
   showPublicTracks,
-  isPaid, // ✅ include here too
+  showUserTracks,
 ]);
+
 
 
   // ─────────────────────────────────────────────────────────────────────────────
@@ -632,27 +641,39 @@ export default function DashboardCore({ isPaid, onLogout }) {
   // ─────────────────────────────────────────────────────────────────────────────
   // Persist toggles into localStorage (unchanged)
   // ─────────────────────────────────────────────────────────────────────────────
-  useEffect(() => {
+    useEffect(() => {
     localStorage.setItem("showTracks", JSON.stringify(showTracks));
   }, [showTracks]);
+
   useEffect(() => {
     localStorage.setItem("showNames", JSON.stringify(showNames));
   }, [showNames]);
+
   useEffect(() => {
     localStorage.setItem("showWaypoints", JSON.stringify(showWaypoints));
   }, [showWaypoints]);
+
   useEffect(() => {
     localStorage.setItem(
       "showWaypointLabels",
       JSON.stringify(showWaypointLabels)
     );
   }, [showWaypointLabels]);
+
   useEffect(() => {
     localStorage.setItem(
       "showPublicTracks",
       JSON.stringify(showPublicTracks)
     );
   }, [showPublicTracks]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "showUserTracks",
+      JSON.stringify(showUserTracks)
+    );
+  }, [showUserTracks]);
+
 
   // ─────────────────────────────────────────────────────────────────────────────
   // Confirm & delete account (unchanged, but also remove userEmail)
@@ -714,6 +735,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
             tileJson={tileJson}
             mapRef={mapRef}
             isPaid={isPaid}
+            showUserTracks={showUserTracks}
           />
 
           {/* ─── Map Key Legend ──────────────────────────────────────────────── */}
@@ -1033,40 +1055,58 @@ export default function DashboardCore({ isPaid, onLogout }) {
 />
 
                 </div>
-                <div className="flex justify-between items-center">
-                  <span>Track Names</span>
-                  <ToggleSwitch
-                    checked={showNames}
-                    onChange={(e) => setShowNames(e.target.checked)}
-                  />
-                </div>
-                <div className="flex justify-between items-center">
-                  <span>Waypoints</span>
-                  <ToggleSwitch
-                    checked={showWaypoints}
-                    onChange={(e) =>
-                      setShowWaypoints(e.target.checked)
-                    }
-                  />
-                </div>
-                <div className="flex justify-between items-center">
-                  <span>Waypoint Labels</span>
-                  <ToggleSwitch
-                    checked={showWaypointLabels}
-                    onChange={(e) =>
-                      setShowWaypointLabels(e.target.checked)
-                    }
-                  />
-                </div>
-                <div className="flex justify-between items-center">
-                  <span>Public Tracks</span>
-                  <ToggleSwitch
-                    checked={showPublicTracks}
-                    onChange={(e) =>
-                      setShowPublicTracks(e.target.checked)
-                    }
-                  />
-                </div>
+               <div className="flex justify-between items-center">
+  <span>Park Track Names</span>
+  <ToggleSwitch
+    checked={showNames}
+    onChange={(e) => {
+      if (!isPaid) return;
+      setShowNames(e.target.checked);
+    }}
+    disabled={!isPaid}
+  />
+</div>
+<div className="flex justify-between items-center">
+  <span>Park Waypoints</span>
+  <ToggleSwitch
+    checked={showWaypoints}
+    onChange={(e) => {
+      if (!isPaid) return;
+      setShowWaypoints(e.target.checked);
+    }}
+    disabled={!isPaid}
+  />
+</div>
+<div className="flex justify-between items-center">
+  <span>Park Waypoint Labels</span>
+  <ToggleSwitch
+    checked={showWaypointLabels}
+    onChange={(e) => {
+      if (!isPaid) return;
+      setShowWaypointLabels(e.target.checked);
+    }}
+    disabled={!isPaid}
+  />
+</div>
+<div className="flex justify-between items-center">
+  <span>Park Tracks</span>
+  <ToggleSwitch
+    checked={showPublicTracks}
+    onChange={(e) => {
+      if (!isPaid) return;
+      setShowPublicTracks(e.target.checked);
+    }}
+    disabled={!isPaid}
+  />
+</div>
+<div className="flex justify-between items-center">
+  <span>My Tracks</span>
+  <ToggleSwitch
+    checked={showUserTracks}
+    onChange={(e) => setShowUserTracks(e.target.checked)}
+  />
+</div>
+
               </div>
             )}
           </div>

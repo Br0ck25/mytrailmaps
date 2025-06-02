@@ -446,7 +446,7 @@ useEffect(() => {
   if (map.getLayer(layerId)) map.removeLayer(layerId);
   if (map.getSource(sourceId)) map.removeSource(sourceId);
 
-  if (userTracks && userTracks.length > 0) {
+  if (showUserTracks && userTracks && userTracks.length > 0) {
     map.addSource(sourceId, {
       type: "geojson",
       data: {
