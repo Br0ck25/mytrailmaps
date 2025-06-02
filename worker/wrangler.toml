@@ -13,6 +13,3 @@ kv_namespaces = [
 r2_buckets = [
   { binding = "MYTRAILMAPS", bucket_name = "mytrailmaps" }
 ]
-
-[vars]
-

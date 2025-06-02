@@ -4,7 +4,11 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import ResetPasswordPage from "./ResetPasswordPage";
-import Dashboard from "./Dashboard";
+// ↓ Replace this line:
+ // import Dashboard from "./Dashboard";
+// ↑ With this line:
+import DashboardGate from "./DashboardGate";
+
 import ProtectedRoute from "./ProtectedRoute";
 import AuthLanding from "./AuthLanding";
 
@@ -19,7 +23,7 @@ function App() {
     }
   }, []);
 
-  // Handler to mark as logged in (called by LoginPage/SignUpPage)
+  // Handler to mark as “logged in” (called by LoginPage/SignUpPage)
   function handleLogin() {
     setIsAuthenticated(true);
   }
@@ -27,6 +31,7 @@ function App() {
   // Handler to log out
   function handleLogout() {
     localStorage.removeItem("authToken");
+    localStorage.removeItem("userEmail"); // be sure to clear userEmail too
     setIsAuthenticated(false);
   }
 
@@ -36,7 +41,11 @@ function App() {
         <Route
           path="/"
           element={
-            isAuthenticated ? <Navigate to="/dashboard" replace /> : <AuthLanding />
+            isAuthenticated ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <AuthLanding />
+            )
           }
         />
         <Route
@@ -60,14 +69,17 @@ function App() {
           }
         />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
+
         <Route
           path="/dashboard"
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <Dashboard onLogout={handleLogout} />
+              {/* ↓ Render the “gate” instead of the old Dashboard */}
+              <DashboardGate onLogout={handleLogout} />
             </ProtectedRoute>
           }
         />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

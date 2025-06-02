@@ -1,146 +1,41 @@
-// src/Dashboard.jsx
+// src/DashboardCore.jsx
 import { useState, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 import MapView from "./MapView";
 import ToggleSwitch from "./components/ToggleSwitch";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog, FaDownload } from "react-icons/fa";
-import { FiLayers, FiCrosshair } from "react-icons/fi";
+import { FiLayers } from "react-icons/fi";
 import * as toGeoJSON from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
 import maplibregl from "maplibre-gl";
 import localforage from "localforage";
 import { useNavigate } from "react-router-dom";
 
+// Configure localForage once:
 localforage.config({
-  name: 'MyTrailMaps',
-  storeName: 'trail_data'
+  name: "MyTrailMaps",
+  storeName: "trail_data",
 });
 
+// Example tileJson (replace with your actual tile source):
 const tileJson = {
   tilejson: "2.2.0",
   name: "Track Tiles",
   tiles: [
-    `https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf?nocache=${Date.now()}`
+    `https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf?nocache=${Date.now()}`,
   ],
   minzoom: 5,
-  maxzoom: 15
+  maxzoom: 15,
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Hook: call /api/subscription-status once at mount and whenever `userEmail`
-// changes. Returns "free" or "paid", or null while loading.
-// ─────────────────────────────────────────────────────────────────────────────
-function useSubscriptionStatus(userEmail) {
-  const [status, setStatus] = useState(null); // null = checking…; "free" or "paid"
-  useEffect(() => {
-    if (!userEmail) {
-      setStatus("free");
-      return;
-    }
-    setStatus(null);
-    fetch(`/api/subscription-status?email=${encodeURIComponent(userEmail)}`)
-      .then((r) => r.json())
-      .then((json) => {
-        setStatus(json.status || "free");
-      })
-      .catch(() => {
-        setStatus("free");
-      });
-  }, [userEmail]);
-  return status;
-}
-
-export default function Dashboard({ onLogout }) {
+export default function DashboardCore({ onLogout }) {
   // ─────────────────────────────────────────────────────────────────────────────
-  // 1) Grab logged‐in userEmail from localStorage
-  //    (Ensure you set this at login or signup: localStorage.setItem("userEmail", userEmail))
+  // A) ACCOUNT SYNC LOGIC: read authToken & userEmail from localStorage
   // ─────────────────────────────────────────────────────────────────────────────
+  const token = localStorage.getItem("authToken") || "";
   const userEmail = localStorage.getItem("userEmail") || "";
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // 2) Call our hook to ask the Worker: “free” or “paid”?
-  // ─────────────────────────────────────────────────────────────────────────────
-  const subscriptionStatus = useSubscriptionStatus(userEmail);
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // 3) Allow free users to “bypass” the pay screen:
-  //    once they click “Continue as Free User”, we set bypassFree = true
-  // ─────────────────────────────────────────────────────────────────────────────
-  const [bypassFree, setBypassFree] = useState(false);
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // 4) While checking subscription status, show a loading state
-  // ─────────────────────────────────────────────────────────────────────────────
-  if (subscriptionStatus === null) {
-    return (
-      <div className="w-full h-full flex items-center justify-center">
-        <p className="text-gray-600">Checking subscription status…</p>
-      </div>
-    );
-  }
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // 5) If user is free AND has not clicked “Continue as Free User”, show pay screen
-  // ─────────────────────────────────────────────────────────────────────────────
-  if (subscriptionStatus === "free" && !bypassFree) {
-    return (
-      <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50 p-4">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Upgrade to Premium</h2>
-        <p className="text-gray-600 text-center mb-6 max-w-md">
-          Free accounts can create and import their own tracks, but paid subscribers get
-          access to all official Tracks & Parks, plus offline maps and other premium features.
-        </p>
-        <div className="flex flex-col space-y-4">
-          <button
-            onClick={async () => {
-              const priceId = "price_1HxYYY_monthly"; // ← replace with your real monthly price ID
-              const res = await fetch("/api/create-checkout-session", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ priceId, userEmail }),
-              });
-              const { checkoutUrl } = await res.json();
-              window.location.href = checkoutUrl;
-            }}
-            className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700"
-          >
-            Subscribe $5.99 / month
-          </button>
-          <button
-            onClick={async () => {
-              const priceId = "price_1HxYYY_yearly"; // ← replace with your real yearly price ID
-              const res = await fetch("/api/create-checkout-session", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ priceId, userEmail }),
-              });
-              const { checkoutUrl } = await res.json();
-              window.location.href = checkoutUrl;
-            }}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700"
-          >
-            Subscribe $60 / year
-          </button>
-          <button
-            onClick={() => {
-              // → Free user chooses to continue using the app
-              setBypassFree(true);
-            }}
-            className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100"
-          >
-            Continue as Free User
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // 6) Now either (subscriptionStatus==="paid") OR (subscriptionStatus==="free" && bypassFree===true)
-  //    → Render the rest of the Dashboard (map, trip, tracks, settings)
-  // ─────────────────────────────────────────────────────────────────────────────
-
-  // --- Trip & Timing States ---
+  // B) TRACKING & FOLDERS
   const [startTime, setStartTime] = useState(null);
   const [elapsed, setElapsed] = useState(0);
   const [distance, setDistance] = useState(0);
@@ -148,15 +43,13 @@ export default function Dashboard({ onLogout }) {
   const [currentSpeed, setCurrentSpeed] = useState(0);
   const [currentElevation, setCurrentElevation] = useState(null);
 
-  // --- Delete Confirm States ---
   const [confirmDeleteIndex, setConfirmDeleteIndex] = useState(null);
   const [confirmDeleteFolder, setConfirmDeleteFolder] = useState(null);
 
-  // --- Folder Rename States ---
   const [folderRenameTarget, setFolderRenameTarget] = useState(null);
   const [newFolderName, setNewFolderName] = useState("");
 
-  // --- Tab & Overlay States (initialize from localStorage) ---
+  // C) MAP OVERLAYS (persisted to localStorage)
   const [activeTab, setActiveTab] = useState("map");
   const [showTracks, setShowTracks] = useState(() => {
     const stored = localStorage.getItem("showTracks");
@@ -182,7 +75,7 @@ export default function Dashboard({ onLogout }) {
   const [overlayPage, setOverlayPage] = useState("main");
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
 
-  // --- Tracking & Trip States ---
+  // D) USER‐TRACKS & IMPORT
   const [tracking, setTracking] = useState(false);
   const [tripCoords, setTripCoords] = useState([]);
   const [userTracks, setUserTracks] = useState([]);
@@ -191,35 +84,46 @@ export default function Dashboard({ onLogout }) {
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedName, setEditedName] = useState("");
 
-  // --- Import Preview & Selection States ---
   const [importedPreview, setImportedPreview] = useState(null);
   const [showImportPreview, setShowImportPreview] = useState(false);
   const [selectedTracks, setSelectedTracks] = useState([]);
   const [toastMessage, setToastMessage] = useState(null);
   const [confirmDeleteMultiple, setConfirmDeleteMultiple] = useState(false);
 
-  // --- Folder Ordering State (initialize to empty) ---
+  // E) FOLDER ORDER
   const [folderOrder, setFolderOrder] = useState([]);
 
+  // F) DELETE ACCOUNT CONFIRMATION
   const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
 
-  // --- Refs ---
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Refs for Geolocation & Timer
+  // ─────────────────────────────────────────────────────────────────────────────
   const watchIdRef = useRef(null);
   const timerRef = useRef(null);
   const mapRef = useRef(null);
   const navigate = useNavigate();
 
-  // --- Utility: normalize folder name for comparisons ---
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Utility: normalize folder name (unchanged)
+  // ─────────────────────────────────────────────────────────────────────────────
   function normalize(str) {
     return (str || "Ungrouped").trim().toLowerCase();
   }
 
-  // --- Handlers for folder/track edits, now only update state ---
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Handlers for folder/track edits (unchanged)
+  // ─────────────────────────────────────────────────────────────────────────────
   function deleteFolder(name) {
     const norm = normalize(name);
-    const updated = userTracks.filter(t => normalize(t.properties?.folderName) !== norm);
+    const updated = userTracks.filter(
+      (t) => normalize(t.properties?.folderName) !== norm
+    );
     setUserTracks(updated);
-    setFolderOrder(prev => prev.filter(f => normalize(f) !== norm));
+
+    setFolderOrder((prev) =>
+      prev.filter((f) => normalize(f) !== norm)
+    );
     setConfirmDeleteFolder(null);
   }
 
@@ -227,20 +131,27 @@ export default function Dashboard({ onLogout }) {
     const normOld = normalize(oldName);
     const trimmedNew = newName.trim();
     if (!trimmedNew) return;
-    const updatedTracks = userTracks.map(t => {
+
+    const updatedTracks = userTracks.map((t) => {
       if (normalize(t.properties?.folderName) === normOld) {
         return {
           ...t,
           properties: {
             ...t.properties,
-            folderName: trimmedNew
-          }
+            folderName: trimmedNew,
+          },
         };
       }
       return t;
     });
     setUserTracks(updatedTracks);
-    setFolderOrder(prev => prev.map(f => (normalize(f) === normOld ? trimmedNew : f)));
+
+    setFolderOrder((prev) =>
+      prev.map((f) =>
+        normalize(f) === normOld ? trimmedNew : f
+      )
+    );
+
     setFolderRenameTarget(null);
     setNewFolderName("");
   }
@@ -259,7 +170,9 @@ export default function Dashboard({ onLogout }) {
   }
 
   function exportTrack(track) {
-    const blob = new Blob([JSON.stringify(track, null, 2)], { type: "application/json" });
+    const blob = new Blob([JSON.stringify(track, null, 2)], {
+      type: "application/json",
+    });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -278,10 +191,10 @@ export default function Dashboard({ onLogout }) {
     }
     const collection = {
       type: "FeatureCollection",
-      features: featuresInFolder
+      features: featuresInFolder,
     };
     const blob = new Blob([JSON.stringify(collection, null, 2)], {
-      type: "application/json"
+      type: "application/json",
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -294,41 +207,60 @@ export default function Dashboard({ onLogout }) {
   function handleFileImport(e) {
     const file = e.target.files[0];
     if (!file) return;
+
     const reader = new FileReader();
     reader.onload = async (event) => {
       const text = event.target.result;
       const ext = file.name.split(".").pop().toLowerCase();
       const filenameBase = file.name.replace(/\.[^/.]+$/, "");
+
       let geojson = null;
       try {
         if (ext === "gpx" || ext === "kml") {
-          const dom = new DOMParser().parseFromString(text, "application/xml");
-          geojson = ext === "gpx" ? toGeoJSON.gpx(dom) : toGeoJSON.kml(dom);
+          const dom = new DOMParser().parseFromString(
+            text,
+            "application/xml"
+          );
+          geojson =
+            ext === "gpx"
+              ? toGeoJSON.gpx(dom)
+              : toGeoJSON.kml(dom);
         } else {
           geojson = JSON.parse(text);
         }
-        if (!geojson || !geojson.features) throw new Error("Invalid format");
-        const tracks = geojson.features.filter(f => f.geometry?.type === "LineString");
-        const waypoints = geojson.features.filter(f => f.geometry?.type === "Point");
+
+        if (!geojson || !geojson.features)
+          throw new Error("Invalid format");
+
+        const tracks = geojson.features.filter(
+          (f) => f.geometry?.type === "LineString"
+        );
+        const waypoints = geojson.features.filter(
+          (f) => f.geometry?.type === "Point"
+        );
+
         const newFolderNameForImport = filenameBase;
         const newFolderId = nanoid();
         const withMeta = tracks.map((t, i) => ({
           ...t,
           properties: {
             ...t.properties,
-            name: t.properties?.name || `${filenameBase} Track ${i + 1}`,
+            name:
+              t.properties?.name ||
+              `${filenameBase} Track ${i + 1}`,
             stroke: t.properties?.stroke || "#FF0000",
             createdAt: Date.now(),
             folderName: newFolderNameForImport,
-            folderId: newFolderId
-          }
+            folderId: newFolderId,
+          },
         }));
+
         setImportedPreview({
           folderName: newFolderNameForImport,
           folderId: newFolderId,
           tracks: withMeta,
           waypoints,
-          selectedTrackIndexes: withMeta.map((_, i) => i)
+          selectedTrackIndexes: withMeta.map((_, i) => i),
         });
         setShowImportPreview(true);
       } catch (err) {
@@ -342,7 +274,7 @@ export default function Dashboard({ onLogout }) {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
     const s = seconds % 60;
-    return [h, m, s].map(n => String(n).padStart(2, '0')).join(':');
+    return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
   }
 
   function getDistanceFromCoords(coord1, coord2) {
@@ -354,9 +286,13 @@ export default function Dashboard({ onLogout }) {
     const φ2 = toRad(lat2);
     const Δφ = toRad(lat2 - lat1);
     const Δλ = toRad(lon2 - lon1);
-    const a = Math.sin(Δφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2;
+    const a =
+      Math.sin(Δφ / 2) ** 2 +
+      Math.cos(φ1) *
+        Math.cos(φ2) *
+        Math.sin(Δλ / 2) ** 2;
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return (R * c) / 1609.34; // return miles
+    return (R * c) / 1609.34;
   }
 
   function startGeolocationWatcher() {
@@ -364,56 +300,70 @@ export default function Dashboard({ onLogout }) {
       console.error("Geolocation is not supported by this browser.");
       return;
     }
+
     if (watchIdRef.current !== null) {
       navigator.geolocation.clearWatch(watchIdRef.current);
       watchIdRef.current = null;
     }
+
     const beginWatch = () => {
-      watchIdRef.current = navigator.geolocation.watchPosition(
-        (pos) => {
-          const altMeters = pos.coords.altitude;
-          const elevationFeet = altMeters != null ? altMeters * 3.28084 : null;
-          setCurrentElevation(elevationFeet);
-          const speedMps = pos.coords.speed;
-          const speedMph = speedMps != null ? speedMps * 2.23694 : 0;
-          setCurrentSpeed(speedMph);
-          setTripCoords((prev) => {
-            const updated = [...prev, [pos.coords.longitude, pos.coords.latitude]];
-            if (updated.length > 1) {
-              const d = getDistanceFromCoords(
-                updated[updated.length - 2],
-                updated[updated.length - 1]
-              );
-              setDistance((prevDist) => prevDist + d);
+      watchIdRef.current =
+        navigator.geolocation.watchPosition(
+          (pos) => {
+            const altMeters = pos.coords.altitude;
+            const elevationFeet =
+              altMeters != null ? altMeters * 3.28084 : null;
+            setCurrentElevation(elevationFeet);
+
+            const speedMps = pos.coords.speed;
+            const speedMph =
+              speedMps != null ? speedMps * 2.23694 : 0;
+            setCurrentSpeed(speedMph);
+
+            setTripCoords((prev) => {
+              const updated = [
+                ...prev,
+                [pos.coords.longitude, pos.coords.latitude],
+              ];
+              if (updated.length > 1) {
+                const d = getDistanceFromCoords(
+                  updated[updated.length - 2],
+                  updated[updated.length - 1]
+                );
+                setDistance((prevDist) => prevDist + d);
+              }
+              return updated;
+            });
+          },
+          (err) => {
+            if (err.code === err.TIMEOUT) {
+              console.warn("Geolocation timeout: retrying in 1s...");
+              if (watchIdRef.current !== null) {
+                navigator.geolocation.clearWatch(
+                  watchIdRef.current
+                );
+                watchIdRef.current = null;
+              }
+              setTimeout(() => beginWatch(), 1000);
+              return;
             }
-            return updated;
-          });
-        },
-        (err) => {
-          if (err.code === err.TIMEOUT) {
-            console.warn("Geolocation timeout: retrying in 1s...");
-            if (watchIdRef.current !== null) {
-              navigator.geolocation.clearWatch(watchIdRef.current);
-              watchIdRef.current = null;
+
+            if (err.code === err.PERMISSION_DENIED) {
+              console.error("Geolocation permission denied.");
+            } else if (err.code === err.POSITION_UNAVAILABLE) {
+              console.error("Position unavailable.");
+            } else {
+              console.error("Geolocation error:", err.message);
             }
-            setTimeout(() => beginWatch(), 1000);
-            return;
+          },
+          {
+            enableHighAccuracy: true,
+            maximumAge: 0,
+            timeout: 30000,
           }
-          if (err.code === err.PERMISSION_DENIED) {
-            console.error("Geolocation permission denied.");
-          } else if (err.code === err.POSITION_UNAVAILABLE) {
-            console.error("Position unavailable.");
-          } else {
-            console.error("Geolocation error:", err.message);
-          }
-        },
-        {
-          enableHighAccuracy: true,
-          maximumAge: 0,
-          timeout: 30000,
-        }
-      );
+        );
     };
+
     beginWatch();
   }
 
@@ -423,19 +373,23 @@ export default function Dashboard({ onLogout }) {
     setTripCoords([]);
     setCurrentSpeed(0);
     setCurrentElevation(null);
+
     const now = Date.now();
     setStartTime(now);
     setElapsed(0);
     setDistance(0);
+
     timerRef.current = setInterval(() => {
       setElapsed(Math.floor((Date.now() - now) / 1000));
     }, 1000);
+
     startGeolocationWatcher();
   }
 
   function pauseTrip() {
     setPaused(true);
-    if (watchIdRef.current) navigator.geolocation.clearWatch(watchIdRef.current);
+    if (watchIdRef.current)
+      navigator.geolocation.clearWatch(watchIdRef.current);
     if (timerRef.current) clearInterval(timerRef.current);
   }
 
@@ -478,16 +432,21 @@ export default function Dashboard({ onLogout }) {
         distance: distance.toFixed(2),
         duration: elapsed,
         speed: currentSpeed.toFixed(2),
-        elevation: currentElevation != null ? currentElevation.toFixed(0) : null,
+        elevation:
+          currentElevation != null
+            ? currentElevation.toFixed(0)
+            : null,
         folderName: "Ungrouped",
-        folderId: null
-      }
+        folderId: null,
+      },
     };
     const updatedTracks = [...userTracks, newTrack];
     setUserTracks(updatedTracks);
+
     if (!folderOrder.includes("Ungrouped")) {
-      setFolderOrder(prev => [...prev, "Ungrouped"]);
+      setFolderOrder((prev) => [...prev, "Ungrouped"]);
     }
+
     setPendingTripCoords([]);
     setShowTripNameModal(false);
     setActiveTab("tracks");
@@ -500,7 +459,9 @@ export default function Dashboard({ onLogout }) {
         (b, coord) => b.extend(coord),
         new maplibregl.LngLatBounds(coords[0], coords[0])
       );
+
       setActiveTab("map");
+
       setTimeout(() => {
         const isMobile = window.innerWidth < 768;
         mapRef.current?.resize();
@@ -508,33 +469,47 @@ export default function Dashboard({ onLogout }) {
           padding: isMobile
             ? { top: 40, bottom: 40, left: 40, right: 40 }
             : { top: 40, bottom: 40, left: 100, right: 100 },
-          maxZoom: 15
+          maxZoom: 15,
         });
       }, 250);
     }
   }
 
-  // --- ACCOUNT SYNC LOGIC ---
-  const token = localStorage.getItem("authToken") || "";
-
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ACCOUNT SYNC LOGIC: LOAD from KV/IDB, then SAVE back when userTracks change
+  // ─────────────────────────────────────────────────────────────────────────────
   useEffect(() => {
     async function loadAccount() {
-      const localAccount = await localforage.getItem('userAccount');
+      const localAccount = await localforage.getItem("userAccount");
       if (localAccount) {
         setUserTracks(localAccount.tracks || []);
         setFolderOrder(localAccount.folderOrder || []);
         if (localAccount.preferences) {
-          setShowTracks(localAccount.preferences.showTracks ?? showTracks);
-          setShowNames(localAccount.preferences.showNames ?? showNames);
-          setShowWaypoints(localAccount.preferences.showWaypoints ?? showWaypoints);
-          setShowWaypointLabels(localAccount.preferences.showWaypointLabels ?? showWaypointLabels);
-          setShowPublicTracks(localAccount.preferences.showPublicTracks ?? showPublicTracks);
+          setShowTracks(
+            localAccount.preferences.showTracks ?? showTracks
+          );
+          setShowNames(
+            localAccount.preferences.showNames ?? showNames
+          );
+          setShowWaypoints(
+            localAccount.preferences.showWaypoints ?? showWaypoints
+          );
+          setShowWaypointLabels(
+            localAccount.preferences.showWaypointLabels ??
+              showWaypointLabels
+          );
+          setShowPublicTracks(
+            localAccount.preferences.showPublicTracks ??
+              showPublicTracks
+          );
         }
       }
+
       if (!token) {
         onLogout();
         return;
       }
+
       if (navigator.onLine) {
         try {
           const res = await fetch("/api/get-account", {
@@ -553,24 +528,45 @@ export default function Dashboard({ onLogout }) {
           setUserTracks(account.tracks || []);
           setFolderOrder(account.folderOrder || []);
           if (account.preferences) {
-            setShowTracks(account.preferences.showTracks ?? showTracks);
-            setShowNames(account.preferences.showNames ?? showNames);
-            setShowWaypoints(account.preferences.showWaypoints ?? showWaypoints);
-            setShowWaypointLabels(account.preferences.showWaypointLabels ?? showWaypointLabels);
-            setShowPublicTracks(account.preferences.showPublicTracks ?? showPublicTracks);
+            setShowTracks(
+              account.preferences.showTracks ?? showTracks
+            );
+            setShowNames(
+              account.preferences.showNames ?? showNames
+            );
+            setShowWaypoints(
+              account.preferences.showWaypoints ?? showWaypoints
+            );
+            setShowWaypointLabels(
+              account.preferences.showWaypointLabels ??
+                showWaypointLabels
+            );
+            setShowPublicTracks(
+              account.preferences.showPublicTracks ??
+                showPublicTracks
+            );
           }
-          await localforage.setItem('userAccount', account);
+          await localforage.setItem("userAccount", account);
         } catch (err) {
           console.warn("Failed to fetch from server:", err);
         }
       }
     }
     loadAccount();
-  }, [token, onLogout]);
+  }, [
+    token,
+    onLogout,
+    showTracks,
+    showNames,
+    showWaypoints,
+    showWaypointLabels,
+    showPublicTracks,
+  ]);
 
   useEffect(() => {
     async function saveAccount() {
       if (!token) return;
+
       const account = {
         tracks: userTracks,
         folderOrder,
@@ -582,7 +578,11 @@ export default function Dashboard({ onLogout }) {
           showPublicTracks,
         },
       };
-      await localforage.setItem('userAccount', account);
+
+      // Save locally immediately
+      await localforage.setItem("userAccount", account);
+
+      // Save to KV when online
       if (navigator.onLine) {
         try {
           await fetch("/api/save-account", {
@@ -598,6 +598,7 @@ export default function Dashboard({ onLogout }) {
         }
       }
     }
+
     saveAccount();
   }, [
     token,
@@ -610,6 +611,9 @@ export default function Dashboard({ onLogout }) {
     showPublicTracks,
   ]);
 
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Force layout update on resize/orientationchange (unchanged)
+  // ─────────────────────────────────────────────────────────────────────────────
   useEffect(() => {
     const forceLayoutUpdate = () => {
       document.body.style.height = `${window.innerHeight}px`;
@@ -618,12 +622,17 @@ export default function Dashboard({ onLogout }) {
     window.addEventListener("orientationchange", forceLayoutUpdate);
     window.addEventListener("resize", forceLayoutUpdate);
     return () => {
-      window.removeEventListener("orientationchange", forceLayoutUpdate);
+      window.removeEventListener(
+        "orientationchange",
+        forceLayoutUpdate
+      );
       window.removeEventListener("resize", forceLayoutUpdate);
     };
   }, []);
 
-  // Persist each toggle to localStorage
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Persist toggles into localStorage (unchanged)
+  // ─────────────────────────────────────────────────────────────────────────────
   useEffect(() => {
     localStorage.setItem("showTracks", JSON.stringify(showTracks));
   }, [showTracks]);
@@ -634,13 +643,21 @@ export default function Dashboard({ onLogout }) {
     localStorage.setItem("showWaypoints", JSON.stringify(showWaypoints));
   }, [showWaypoints]);
   useEffect(() => {
-    localStorage.setItem("showWaypointLabels", JSON.stringify(showWaypointLabels));
+    localStorage.setItem(
+      "showWaypointLabels",
+      JSON.stringify(showWaypointLabels)
+    );
   }, [showWaypointLabels]);
   useEffect(() => {
-    localStorage.setItem("showPublicTracks", JSON.stringify(showPublicTracks));
+    localStorage.setItem(
+      "showPublicTracks",
+      JSON.stringify(showPublicTracks)
+    );
   }, [showPublicTracks]);
 
-  // Confirm & delete account
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Confirm & delete account (unchanged, but also remove userEmail)
+  // ─────────────────────────────────────────────────────────────────────────────
   async function confirmAndDeleteAccount() {
     try {
       const res = await fetch("/api/delete-account", {
@@ -652,7 +669,10 @@ export default function Dashboard({ onLogout }) {
       });
       if (!res.ok) {
         const json = await res.json();
-        alert("❌ Failed to delete account: " + (json.error || res.statusText));
+        alert(
+          "❌ Failed to delete account: " +
+            (json.error || res.statusText)
+        );
         return;
       }
       localStorage.removeItem("authToken");
@@ -665,6 +685,9 @@ export default function Dashboard({ onLogout }) {
     }
   }
 
+  // ─────────────────────────────────────────────────────────────────────────────
+  // BEGIN RENDER (all hooks have already been declared above)
+  // ─────────────────────────────────────────────────────────────────────────────
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
       {/* ─── Header (hidden on map tab) ─────────────────────────────────────────── */}
@@ -850,12 +873,14 @@ export default function Dashboard({ onLogout }) {
                 }, {});
 
                 const allFolders = Object.keys(grouped);
-                const missing = allFolders.filter(f => !folderOrder.includes(f));
+                const missing = allFolders.filter(
+                  (f) => !folderOrder.includes(f)
+                );
                 if (missing.length) {
-                  setFolderOrder(prev => [...prev, ...missing]);
+                  setFolderOrder((prev) => [...prev, ...missing]);
                 }
 
-                return folderOrder.map(folder => {
+                return folderOrder.map((folder) => {
                   if (!grouped[folder]) return null;
                   return (
                     <CollapsibleFolder
@@ -904,48 +929,29 @@ export default function Dashboard({ onLogout }) {
           </div>
         )}
 
-        {/* ─── Premium Content: “Official Tracks & Parks” (Gated) ───────────────── */}
-        {subscriptionStatus === "paid" && (
-          <div className="absolute bottom-0 right-0 m-4 p-4 bg-white rounded-xl shadow-lg max-w-sm w-full">
-            <h3 className="text-lg font-semibold text-green-700">Official Tracks & Parks</h3>
-            <p className="text-sm text-gray-600">
-              As a premium subscriber, you can access all official trails and offline maps.
-            </p>
-            <button
-              onClick={async () => {
-                // Fetch the official GPX/parks list from your Worker
-                try {
-                  const res = await fetch("/api/admin-gpx-list");
-                  const json = await res.json();
-                  // TODO: display official list in a modal or on the map
-                  console.log("Official list:", json);
-                } catch (err) {
-                  console.error("Failed to fetch official tracks:", err);
-                  alert("Could not load official tracks right now.");
-                }
-              }}
-              className="mt-2 w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
-            >
-              Load Official Parks
-            </button>
-          </div>
-        )}
-
         {/* ─── Delete Multiple Confirm Modal ──────────────────────────────────── */}
         {confirmDeleteMultiple && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-red-600">Delete Tracks</h2>
+              <h2 className="text-lg font-semibold text-red-600">
+                Delete Tracks
+              </h2>
               <p className="text-gray-700">
-                Are you sure you want to delete <strong>{selectedTracks.length}</strong> tracks?
+                Are you sure you want to delete{" "}
+                <strong>{selectedTracks.length}</strong> tracks?
               </p>
               <div className="flex justify-center gap-4 mt-4">
-                <button onClick={() => setConfirmDeleteMultiple(false)} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
+                <button
+                  onClick={() => setConfirmDeleteMultiple(false)}
+                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
+                >
                   Cancel
                 </button>
                 <button
                   onClick={() => {
-                    const updated = userTracks.filter((_, i) => !selectedTracks.includes(i));
+                    const updated = userTracks.filter(
+                      (_, i) => !selectedTracks.includes(i)
+                    );
                     setUserTracks(updated);
                     setSelectedTracks([]);
                     setConfirmDeleteMultiple(false);
@@ -959,10 +965,13 @@ export default function Dashboard({ onLogout }) {
           </div>
         )}
 
-        {/* ─── Map Overlay Button (only on map tab) ─────────────────────────────── */}
+        {/* ─── Map Overlay Button (only on map tab) ──────────────────────────────── */}
         {activeTab === "map" && (
           <button
-            onClick={() => { setShowOverlaysPanel(true); setOverlayPage("main"); }}
+            onClick={() => {
+              setShowOverlaysPanel(true);
+              setOverlayPage("main");
+            }}
             className="absolute z-50 bottom-20 left-4 p-3 bg-white text-black rounded-full shadow-lg"
           >
             <FiLayers className="text-xl" />
@@ -974,12 +983,22 @@ export default function Dashboard({ onLogout }) {
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
             <div className="flex items-center justify-between p-4 border-b">
               {overlayPage !== "main" && (
-                <button onClick={() => setOverlayPage("main")} className="text-green-700 text-3xl leading-none px-2" aria-label="Back">
+                <button
+                  onClick={() => setOverlayPage("main")}
+                  className="text-green-700 text-3xl leading-none px-2"
+                  aria-label="Back"
+                >
                   ←
                 </button>
               )}
-              <h3 className="text-lg font-semibold">{overlayPage === "main" ? "Maps" : "Map Overlays"}</h3>
-              <button onClick={() => setShowOverlaysPanel(false)} className="text-gray-600 text-3xl leading-none px-2" aria-label="Close">
+              <h3 className="text-lg font-semibold">
+                {overlayPage === "main" ? "Maps" : "Map Overlays"}
+              </h3>
+              <button
+                onClick={() => setShowOverlaysPanel(false)}
+                className="text-gray-600 text-3xl leading-none px-2"
+                aria-label="Close"
+              >
                 ×
               </button>
             </div>
@@ -1004,23 +1023,44 @@ export default function Dashboard({ onLogout }) {
               <div className="p-4 space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Tracks</span>
-                  <ToggleSwitch checked={showTracks} onChange={(e) => setShowTracks(e.target.checked)} />
+                  <ToggleSwitch
+                    checked={showTracks}
+                    onChange={(e) => setShowTracks(e.target.checked)}
+                  />
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Track Names</span>
-                  <ToggleSwitch checked={showNames} onChange={(e) => setShowNames(e.target.checked)} />
+                  <ToggleSwitch
+                    checked={showNames}
+                    onChange={(e) => setShowNames(e.target.checked)}
+                  />
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Waypoints</span>
-                  <ToggleSwitch checked={showWaypoints} onChange={(e) => setShowWaypoints(e.target.checked)} />
+                  <ToggleSwitch
+                    checked={showWaypoints}
+                    onChange={(e) =>
+                      setShowWaypoints(e.target.checked)
+                    }
+                  />
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Waypoint Labels</span>
-                  <ToggleSwitch checked={showWaypointLabels} onChange={(e) => setShowWaypointLabels(e.target.checked)} />
+                  <ToggleSwitch
+                    checked={showWaypointLabels}
+                    onChange={(e) =>
+                      setShowWaypointLabels(e.target.checked)
+                    }
+                  />
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Public Tracks</span>
-                  <ToggleSwitch checked={showPublicTracks} onChange={(e) => setShowPublicTracks(e.target.checked)} />
+                  <ToggleSwitch
+                    checked={showPublicTracks}
+                    onChange={(e) =>
+                      setShowPublicTracks(e.target.checked)
+                    }
+                  />
                 </div>
               </div>
             )}
@@ -1031,7 +1071,9 @@ export default function Dashboard({ onLogout }) {
         {showTripNameModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4">
-              <h2 className="text-lg font-semibold text-green-700">Name Your Trip</h2>
+              <h2 className="text-lg font-semibold text-green-700">
+                Name Your Trip
+              </h2>
               <input
                 type="text"
                 value={editedName}
@@ -1041,7 +1083,13 @@ export default function Dashboard({ onLogout }) {
                 autoFocus
               />
               <div className="flex justify-end space-x-2">
-                <button onClick={() => { setEditedName(""); setShowTripNameModal(false); }} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
+                <button
+                  onClick={() => {
+                    setEditedName("");
+                    setShowTripNameModal(false);
+                  }}
+                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
+                >
                   Cancel
                 </button>
                 <button
@@ -1064,17 +1112,28 @@ export default function Dashboard({ onLogout }) {
         {confirmDeleteIndex !== null && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-red-600">Delete Trip</h2>
+              <h2 className="text-lg font-semibold text-red-600">
+                Delete Trip
+              </h2>
               <p className="text-gray-700">
                 Are you sure you want to delete{" "}
-                <strong>{userTracks[confirmDeleteIndex].properties.name}</strong>?
+                <strong>
+                  {userTracks[confirmDeleteIndex].properties.name}
+                </strong>
+                ?
               </p>
               <div className="flex justify-center gap-4 mt-4">
-                <button onClick={() => setConfirmDeleteIndex(null)} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
+                <button
+                  onClick={() => setConfirmDeleteIndex(null)}
+                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
+                >
                   Cancel
                 </button>
                 <button
-                  onClick={() => { deleteTrack(confirmDeleteIndex); setConfirmDeleteIndex(null); }}
+                  onClick={() => {
+                    deleteTrack(confirmDeleteIndex);
+                    setConfirmDeleteIndex(null);
+                  }}
                   className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold"
                 >
                   Delete
@@ -1088,12 +1147,18 @@ export default function Dashboard({ onLogout }) {
         {confirmDeleteFolder !== null && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-red-600">Delete Folder</h2>
+              <h2 className="text-lg font-semibold text-red-600">
+                Delete Folder
+              </h2>
               <p className="text-gray-700">
-                Are you sure you want to delete <strong>{confirmDeleteFolder}</strong> and all its tracks?
+                Are you sure you want to delete{" "}
+                <strong>{confirmDeleteFolder}</strong> and all its tracks?
               </p>
               <div className="flex justify-center gap-4 mt-4">
-                <button onClick={() => setConfirmDeleteFolder(null)} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
+                <button
+                  onClick={() => setConfirmDeleteFolder(null)}
+                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
+                >
                   Cancel
                 </button>
                 <button
@@ -1101,7 +1166,7 @@ export default function Dashboard({ onLogout }) {
                   className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold"
                 >
                   Delete
-                </button>
+                </button>
               </div>
             </div>
           </div>
@@ -1111,7 +1176,9 @@ export default function Dashboard({ onLogout }) {
         {folderRenameTarget && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-blue-700">Rename Folder</h2>
+              <h2 className="text-lg font-semibold text-blue-700">
+                Rename Folder
+              </h2>
               <input
                 type="text"
                 value={newFolderName}
@@ -1122,13 +1189,18 @@ export default function Dashboard({ onLogout }) {
               />
               <div className="flex justify-center gap-4 mt-4">
                 <button
-                  onClick={() => { setFolderRenameTarget(null); setNewFolderName(""); }}
+                  onClick={() => {
+                    setFolderRenameTarget(null);
+                    setNewFolderName("");
+                  }}
                   className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
                 >
                   Cancel
                 </button>
                 <button
-                  onClick={() => renameFolder(folderRenameTarget, newFolderName)}
+                  onClick={() =>
+                    renameFolder(folderRenameTarget, newFolderName)
+                  }
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold"
                 >
                   Rename
@@ -1142,7 +1214,9 @@ export default function Dashboard({ onLogout }) {
       {showConfirmDeleteAccount && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-            <h2 className="text-lg font-semibold text-red-600">Delete Account</h2>
+            <h2 className="text-lg font-semibold text-red-600">
+              Delete Account
+            </h2>
             <p className="text-gray-700">
               Are you sure you want to permanently delete your account?
               <br />
@@ -1176,7 +1250,10 @@ export default function Dashboard({ onLogout }) {
               type="text"
               value={importedPreview.folderName || ""}
               onChange={(e) =>
-                setImportedPreview((prev) => ({ ...prev, folderName: e.target.value }))
+                setImportedPreview((prev) => ({
+                  ...prev,
+                  folderName: e.target.value,
+                }))
               }
               className="w-full p-2 border border-gray-300 rounded-lg"
               placeholder="Folder name (optional)"
@@ -1188,14 +1265,20 @@ export default function Dashboard({ onLogout }) {
                 <button
                   onClick={() => {
                     const allIndexes = importedPreview.tracks.map((_, i) => i);
-                    const selected = importedPreview.selectedTrackIndexes?.length === allIndexes.length
-                      ? []
-                      : allIndexes;
-                    setImportedPreview((prev) => ({ ...prev, selectedTrackIndexes: selected }));
+                    const selected =
+                      importedPreview.selectedTrackIndexes?.length ===
+                      allIndexes.length
+                        ? []
+                        : allIndexes;
+                    setImportedPreview((prev) => ({
+                      ...prev,
+                      selectedTrackIndexes: selected,
+                    }));
                   }}
                   className="text-blue-600 hover:underline"
                 >
-                  {importedPreview.selectedTrackIndexes?.length === importedPreview.tracks.length
+                  {importedPreview.selectedTrackIndexes?.length ===
+                  importedPreview.tracks.length
                     ? "Clear All"
                     : "Select All"}
                 </button>
@@ -1209,16 +1292,20 @@ export default function Dashboard({ onLogout }) {
                     type="checkbox"
                     checked={importedPreview.selectedTrackIndexes?.includes(i)}
                     onChange={(e) => {
-                      const selected = new Set(importedPreview.selectedTrackIndexes || []);
+                      const selected = new Set(
+                        importedPreview.selectedTrackIndexes || []
+                      );
                       if (e.target.checked) selected.add(i);
                       else selected.delete(i);
                       setImportedPreview((prev) => ({
                         ...prev,
-                        selectedTrackIndexes: [...selected]
+                        selectedTrackIndexes: [...selected],
                       }));
                     }}
                   />
-                  <span>{track.properties?.name || `Unnamed Track ${i + 1}`}</span>
+                  <span>
+                    {track.properties?.name || `Unnamed Track ${i + 1}`}
+                  </span>
                 </label>
               ))}
               {importedPreview.waypoints.length > 0 && (
@@ -1237,22 +1324,28 @@ export default function Dashboard({ onLogout }) {
               </button>
               <button
                 onClick={() => {
-                  const folderName = importedPreview.folderName?.trim() || importedPreview.folderName;
+                  const folderName =
+                    importedPreview.folderName?.trim() ||
+                    importedPreview.folderName;
                   const folderId = importedPreview.folderId;
-                  const selectedIndexes = new Set(importedPreview.selectedTrackIndexes || []);
+                  const selectedIndexes = new Set(
+                    importedPreview.selectedTrackIndexes || []
+                  );
                   const selectedTracksArr = importedPreview.tracks
                     .map((t, i) => ({
                       ...t,
                       properties: {
                         ...t.properties,
                         folderName,
-                        folderId
-                      }
+                        folderId,
+                      },
                     }))
                     .filter((_, i) => selectedIndexes.has(i));
+
                   if (folderName && !folderOrder.includes(folderName)) {
-                    setFolderOrder(prev => [...prev, folderName]);
+                    setFolderOrder((prev) => [...prev, folderName]);
                   }
+
                   const newTracks = [...userTracks, ...selectedTracksArr];
                   setUserTracks(newTracks);
                   setShowImportPreview(false);
@@ -1279,7 +1372,9 @@ export default function Dashboard({ onLogout }) {
         <button
           onClick={() => setActiveTab("map")}
           className={`flex flex-col items-center text-xs ${
-            activeTab === "map" ? "text-green-700 font-semibold" : "text-gray-600"
+            activeTab === "map"
+              ? "text-green-700 font-semibold"
+              : "text-gray-600"
           }`}
         >
           <FaMapMarkedAlt className="text-lg" />
@@ -1288,7 +1383,9 @@ export default function Dashboard({ onLogout }) {
         <button
           onClick={() => setActiveTab("trip")}
           className={`flex flex-col items-center text-xs ${
-            activeTab === "trip" ? "text-green-700 font-semibold" : "text-gray-600"
+            activeTab === "trip"
+              ? "text-green-700 font-semibold"
+              : "text-gray-600"
           }`}
         >
           <FaRoute className="text-lg" />
@@ -1297,7 +1394,9 @@ export default function Dashboard({ onLogout }) {
         <button
           onClick={() => setActiveTab("tracks")}
           className={`flex flex-col items-center text-xs ${
-            activeTab === "tracks" ? "text-green-700 font-semibold" : "text-gray-600"
+            activeTab === "tracks"
+              ? "text-green-700 font-semibold"
+              : "text-gray-600"
           }`}
         >
           <FaMap className="text-lg" />
@@ -1306,7 +1405,9 @@ export default function Dashboard({ onLogout }) {
         <button
           onClick={() => setActiveTab("settings")}
           className={`flex flex-col items-center text-xs ${
-            activeTab === "settings" ? "text-green-700 font-semibold" : "text-gray-600"
+            activeTab === "settings"
+              ? "text-green-700 font-semibold"
+              : "text-gray-600"
           }`}
         >
           <FaCog className="text-lg" />
@@ -1342,7 +1443,7 @@ function CollapsibleFolder({
   formatTime,
   setFolderRenameTarget,
   setNewFolderName,
-  exportFolder
+  exportFolder,
 }) {
   const [open, setOpen] = useState(true);
 
@@ -1412,14 +1513,19 @@ function CollapsibleFolder({
       {open && (
         <div className="space-y-2 p-2 bg-gray-50 rounded-b">
           {items.map(({ track, idx }) => (
-            <div key={idx} className="bg-white p-3 rounded-lg flex items-start justify-between gap-2">
+            <div
+              key={idx}
+              className="bg-white p-3 rounded-lg flex items-start justify-between gap-2"
+            >
               <input
                 type="checkbox"
                 className="mt-2"
                 checked={selectedTracks.includes(idx)}
                 onChange={(e) => {
                   setSelectedTracks((prev) =>
-                    e.target.checked ? [...prev, idx] : prev.filter((i) => i !== idx)
+                    e.target.checked
+                      ? [...prev, idx]
+                      : prev.filter((i) => i !== idx)
                   );
                 }}
               />
@@ -1432,10 +1538,16 @@ function CollapsibleFolder({
                     className="flex-1 mr-3 p-2 border border-gray-300 rounded"
                   />
                   <div className="flex gap-2">
-                    <button onClick={() => updateTrackName(idx, editedName)} className="text-green-600 font-semibold">
+                    <button
+                      onClick={() => updateTrackName(idx, editedName)}
+                      className="text-green-600 font-semibold"
+                    >
                       Save
                     </button>
-                    <button onClick={() => setEditingIndex(null)} className="text-gray-600">
+                    <button
+                      onClick={() => setEditingIndex(null)}
+                      className="text-gray-600"
+                    >
                       Cancel
                     </button>
                   </div>
@@ -1449,18 +1561,36 @@ function CollapsibleFolder({
                     >
                       <span
                         className="inline-block w-3 h-3 mr-2 rounded-full"
-                        style={{ backgroundColor: track.properties.stroke || "#FF0000" }}
+                        style={{
+                          backgroundColor:
+                            track.properties.stroke || "#FF0000",
+                        }}
                       />
                       {track.properties.name}
                     </h4>
                     <p className="text-sm text-gray-600">
-                      {track.properties.distance ? `${track.properties.distance} mi` : ""}{" "}
-                      {track.properties.duration ? `• ${formatTime(track.properties.duration)}` : ""}{" "}
-                      {track.properties.speed ? `• ${track.properties.speed} mph` : ""}{" "}
-                      {track.properties.elevation ? `• ${track.properties.elevation} ft` : ""}
+                      {track.properties.distance
+                        ? `${track.properties.distance} mi`
+                        : ""}
+                      {" "}
+                      {track.properties.duration
+                        ? `• ${formatTime(
+                            track.properties.duration
+                          )}`
+                        : ""}
+                      {" "}
+                      {track.properties.speed
+                        ? `• ${track.properties.speed} mph`
+                        : ""}
+                      {" "}
+                      {track.properties.elevation
+                        ? `• ${track.properties.elevation} ft`
+                        : ""}
                     </p>
                     <p className="text-xs text-gray-400">
-                      {new Date(track.properties.createdAt || 0).toLocaleString()}
+                      {new Date(
+                        track.properties.createdAt || 0
+                      ).toLocaleString()}
                     </p>
                   </div>
                   <div className="flex items-center gap-4 pl-4">
