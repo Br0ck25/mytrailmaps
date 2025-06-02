@@ -668,11 +668,8 @@ export default function DashboardCore({ isPaid, onLogout }) {
   }, [showPublicTracks]);
 
   useEffect(() => {
-    localStorage.setItem(
-      "showUserTracks",
-      JSON.stringify(showUserTracks)
-    );
-  }, [showUserTracks]);
+  localStorage.setItem("showUserTracks", JSON.stringify(showUserTracks));
+}, [showUserTracks]);
 
 
   // ─────────────────────────────────────────────────────────────────────────────
