@@ -51,6 +51,8 @@ export default function MapView({
   onGeolocateControlReady,
   mapRef,
   isPaid,
+  showUserTracks,
+  userTracksVersion,
 }) {
   const currentMap = useRef(null);         // ✅ keep
   const lastHighlighted = useRef(null);    // ✅ keep
@@ -443,32 +445,83 @@ useEffect(() => {
   if (!map || !map.isStyleLoaded()) return;
 
   const sourceId = "user-tracks";
-  const layerId = "user-tracks-line";
 
-  if (map.getLayer(layerId)) map.removeLayer(layerId);
-  if (map.getSource(sourceId)) map.removeSource(sourceId);
-
-  if (showUserTracks && userTracks && userTracks.length > 0) {
-    map.addSource(sourceId, {
-      type: "geojson",
-      data: {
-        type: "FeatureCollection",
-        features: userTracks
-      }
-    });
-
-    map.addLayer({
-      id: layerId,
-      type: "line",
-      source: sourceId,
-      paint: {
-        "line-color": "#FF0000",
-        "line-width": 4,
-        "line-opacity": 0.9
-      }
-    });
+  // 🧼 Remove old layers first
+  const layersToRemove = [
+    "user-tracks-waypoints",
+    "user-tracks-labels",
+    "user-tracks-line",
+  ];
+  layersToRemove.forEach((layerId) => {
+    if (map.getLayer(layerId)) map.removeLayer(layerId);
+  });
+  if (map.getSource(sourceId)) {
+    try {
+      map.removeSource(sourceId);
+    } catch (err) {
+      console.warn("Couldn't remove user-tracks source:", err.message);
+    }
   }
-}, [userTracks]); // ✅ this ends the first effect
+
+  // ⛔ Wait until userTracks is populated
+  if (!showUserTracks || !userTracks || userTracks.length === 0) return;
+
+  // ✅ Add new source and layers
+  map.addSource(sourceId, {
+    type: "geojson",
+    data: {
+      type: "FeatureCollection",
+      features: userTracks,
+    },
+  });
+
+  map.addLayer({
+    id: "user-tracks-line",
+    type: "line",
+    source: sourceId,
+    paint: {
+      "line-color": "#FF0000",
+      "line-width": 4,
+      "line-opacity": 0.9,
+    },
+  });
+
+  map.addLayer({
+    id: "user-tracks-waypoints",
+    type: "circle",
+    source: sourceId,
+    filter: ["==", "$type", "Point"],
+    paint: {
+      "circle-radius": 5,
+      "circle-color": "#FF0000",
+    },
+  });
+
+  map.addLayer({
+    id: "user-tracks-labels",
+    type: "symbol",
+    source: sourceId,
+    filter: ["==", "$type", "Point"],
+    layout: {
+      "text-field": ["get", "name"],
+      "text-font": ["Noto Sans Regular"],
+      "text-size": 12,
+      "text-offset": [0, 1.2],
+      "text-anchor": "top",
+    },
+    paint: {
+      "text-halo-color": "#fff",
+      "text-halo-width": 1,
+      "text-color": "#FF0000",
+    },
+  });
+}, [userTracks, showUserTracks, userTracksVersion]);
+
+
+
+
+
+
 
 useEffect(() => {
   const map = currentMap.current;

@@ -48,6 +48,8 @@ export default function DashboardCore({ isPaid, onLogout }) {
 
   const [folderRenameTarget, setFolderRenameTarget] = useState(null);
   const [newFolderName, setNewFolderName] = useState("");
+  const [userTracksVersion, setUserTracksVersion] = useState(0);
+
 
   // C) MAP OVERLAYS (persisted to localStorage)
   const [activeTab, setActiveTab] = useState("map");
@@ -74,8 +76,8 @@ export default function DashboardCore({ isPaid, onLogout }) {
   const [showUserTracks, setShowUserTracks] = useState(() => {
   const stored = localStorage.getItem("showUserTracks");
   return stored !== null ? JSON.parse(stored) : true;
+  
 });
-
 
   useEffect(() => {
   if (!isPaid) {
@@ -516,8 +518,11 @@ export default function DashboardCore({ isPaid, onLogout }) {
           setShowWaypointLabels(false);
           setShowPublicTracks(false);
         }
-      }
+
+        setShowUserTracks(localAccount.preferences.showUserTracks ?? showUserTracks);
+}
     }
+    
 
     // ✅ Avoid trying to fetch from server if not paid
     if (!navigator.onLine || !token) return;
@@ -539,6 +544,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
 
       const { account } = json;
       setUserTracks(account.tracks || []);
+      setUserTracksVersion((v) => v + 1);
       setFolderOrder(account.folderOrder || []);
       if (account.preferences) {
         setShowTracks(account.preferences.showTracks ?? showTracks);
@@ -546,6 +552,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
         setShowWaypoints(account.preferences.showWaypoints ?? showWaypoints);
         setShowWaypointLabels(account.preferences.showWaypointLabels ?? showWaypointLabels);
         setShowPublicTracks(account.preferences.showPublicTracks ?? showPublicTracks);
+        setShowUserTracks(account.preferences.showUserTracks ?? showUserTracks);
       }
 
       await localforage.setItem("userAccount", account);
@@ -733,6 +740,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
             mapRef={mapRef}
             isPaid={isPaid}
             showUserTracks={showUserTracks}
+            userTracksVersion={userTracksVersion}
           />
 
           {/* ─── Map Key Legend ──────────────────────────────────────────────── */}
