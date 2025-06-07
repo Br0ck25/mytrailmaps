@@ -1125,7 +1125,7 @@ useEffect(() => {
   if (!isPaid) return;
   setShowTracks(e.target.checked);
 }}
-  disabled={!isPaid}
+  //disabled={!isPaid}
 />
 
                 </div>
@@ -1137,7 +1137,7 @@ useEffect(() => {
       if (!isPaid) return;
       setShowNames(e.target.checked);
     }}
-    disabled={!isPaid}
+    //disabled={!isPaid}
   />
 </div>
 <div className="flex justify-between items-center">
@@ -1148,7 +1148,7 @@ useEffect(() => {
       if (!isPaid) return;
       setShowWaypoints(e.target.checked);
     }}
-    disabled={!isPaid}
+    //disabled={!isPaid}
   />
 </div>
 <div className="flex justify-between items-center">
@@ -1159,7 +1159,7 @@ useEffect(() => {
       if (!isPaid) return;
       setShowWaypointLabels(e.target.checked);
     }}
-    disabled={!isPaid}
+    //disabled={!isPaid}
   />
 </div>
 <div className="flex justify-between items-center">
@@ -1170,7 +1170,7 @@ useEffect(() => {
       if (!isPaid) return;
       setShowPublicTracks(e.target.checked);
     }}
-    disabled={!isPaid}
+    //disabled={!isPaid}
   />
 </div>
 <div className="flex justify-between items-center">
