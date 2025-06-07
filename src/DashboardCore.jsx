@@ -79,15 +79,15 @@ export default function DashboardCore({ isPaid, onLogout }) {
   
 });
 
-  useEffect(() => {
-  if (!isPaid) {
-    setShowTracks(false);
-    setShowNames(false);
-    setShowWaypoints(false);
-    setShowWaypointLabels(false);
-    setShowPublicTracks(false);
-  }
-}, [isPaid]);
+  //useEffect(() => {
+  //if (!isPaid) {
+   // setShowTracks(false);
+   // setShowNames(false);
+   // setShowWaypoints(false);
+   // setShowWaypointLabels(false);
+   // setShowPublicTracks(false);
+  //}
+//}, //[isPaid]);
 
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
@@ -124,68 +124,80 @@ export default function DashboardCore({ isPaid, onLogout }) {
   const navigate = useNavigate();
 
 // ─── Hydrate userTracks from local cache and backend ───
+
+// 1) Initial load & backend‐only override
 useEffect(() => {
   let cancelled = false;
 
-  // 1) Load from local cache immediately
-  localforage.getItem("userTracks").then(local => {
-    if (cancelled) return;
-    if (Array.isArray(local) && local.length) {
-      setUserTracks(local);
-    }
-  });
-
-  // 2) Fetch from backend _only override_ if backend has data
+  // Fetch whatever’s on the server
   fetch("/api/user/tracks", { credentials: "include" })
-    .then(r => r.json())
+    .then(async res => {
+      if (!res.ok) {
+        console.error(`GET /api/user/tracks failed (${res.status})`);
+        return [];
+      }
+      return res.json();
+    })
     .then(remote => {
       if (cancelled || !Array.isArray(remote)) return;
 
       if (remote.length > 0) {
-        // backend has tracks → use them
+        // Server has data → use it
         setUserTracks(remote);
         localforage.setItem("userTracks", remote).catch(console.error);
       } else {
-        // backend empty → push your local tracks up instead of clearing
+        // Server empty → push local up
         localforage.getItem("userTracks").then(local => {
-          if (cancelled || !Array.isArray(local) || !local.length) return;
+          if (cancelled || !Array.isArray(local) || local.length === 0) return;
+
           fetch("/api/user/tracks", {
-            method: "POST",
+            method: "PUT",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(local),
-          }).catch(console.error);
+          })
+            .then(res => {
+              if (!res.ok) {
+                console.error(`PUT /api/user/tracks failed (${res.status})`);
+              }
+            })
+            .catch(err => console.error("PUT /api/user/tracks error:", err));
         });
       }
     })
-    .catch(err => console.error("Track fetch failed:", err))
+    .catch(err => console.error("Initial GET /api/user/tracks error:", err))
     .finally(() => {
       if (!cancelled) setLoadingTracks(false);
     });
 
-  return () => { cancelled = true; };
+  return () => {
+    cancelled = true;
+  };
 }, []);
 
+// 2) Persist any userTracks updates
+useEffect(() => {
+  if (loadingTracks) return;
 
+  // save locally first
+  localforage.setItem("userTracks", userTracks).catch(err =>
+    console.error("Local save failed:", err)
+  );
 
-    // ─── Persist any userTracks updates ───
-  useEffect(() => {
-    // don’t overwrite during initial load
-    if (loadingTracks) return;
-
-    // save locally
-    localforage.setItem("userTracks", userTracks)
-      .catch(err => console.error("Local save failed:", err));
-
-    // sync to backend
-    fetch("/api/user/tracks", {
-      method: "POST",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(userTracks),
-    }).catch(err => console.error("Track sync failed:", err));
-  }, [userTracks, loadingTracks]);
-
+  // then push to backend
+  fetch("/api/user/tracks", {
+    method: "PUT",
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(userTracks),
+  })
+    .then(res => {
+      if (!res.ok) {
+        console.error(`PUT /api/user/tracks failed (${res.status})`);
+      }
+    })
+    .catch(err => console.error("PUT /api/user/tracks error:", err));
+}, [userTracks, loadingTracks]);
 
   // ─────────────────────────────────────────────────────────────────────────────
   // Utility: normalize folder name (unchanged)
@@ -226,8 +238,8 @@ useEffect(() => {
         };
       }
       return t;
-    });
-    setUserTracks(updatedTracks);
+     });
+     setUserTracks(updatedTracks);
 
     setFolderOrder((prev) =>
       prev.map((f) =>
@@ -240,7 +252,7 @@ useEffect(() => {
   }
 
   function updateTrackName(index, newName) {
-    const updated = [...userTracks];
+   const updated = [...userTracks];
     updated[index].properties.name = newName.trim();
     setUserTracks(updated);
     setEditingIndex(null);

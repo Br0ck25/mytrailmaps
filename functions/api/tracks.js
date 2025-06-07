@@ -1,11 +1,10 @@
-// functions/api/user/tracks.js
-export async function onRequestPut(ctx) {
+export async function onRequestPost(context) {
   try {
-    const tracks = await ctx.request.json();
-    // …save to KV…
+    const tracks = await context.request.json();
+    // …save tracks to KV…
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (err) {
-    console.error("PUT /api/user/tracks error:", err);
+    console.error("POST /api/user/tracks error:", err);
     return new Response(JSON.stringify({ error: err.message }), { status: 500 });
   }
 }
