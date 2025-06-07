@@ -94,9 +94,10 @@ export default function DashboardCore({ isPaid, onLogout }) {
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
 
   // D) USER‐TRACKS & IMPORT
-  const [tracking, setTracking] = useState(false);
-  const [tripCoords, setTripCoords] = useState([]);
-  const [userTracks, setUserTracks] = useState(null);
+  const [loadingTracks, setLoadingTracks] = useState(true);
+  const [userTracks,  setUserTracks]  = useState([]);   // ← initialize as empty array
+  const [tracking,    setTracking]    = useState(false);
+  const [tripCoords,  setTripCoords]  = useState([]);
   const [showTripNameModal, setShowTripNameModal] = useState(false);
   const [pendingTripCoords, setPendingTripCoords] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
@@ -121,6 +122,69 @@ export default function DashboardCore({ isPaid, onLogout }) {
   const timerRef = useRef(null);
   const mapRef = useRef(null);
   const navigate = useNavigate();
+
+// ─── Hydrate userTracks from local cache and backend ───
+useEffect(() => {
+  let cancelled = false;
+
+  // 1) Load local cache first
+  localforage.getItem("userTracks").then(local => {
+    if (!cancelled && Array.isArray(local) && local.length) {
+      setUserTracks(local);
+    }
+  });
+
+  // 2) Then fetch remote
+  fetch("/api/user/tracks", { credentials: "include" })
+    .then(r => r.json())
+    .then(remote => {
+      if (cancelled || !Array.isArray(remote)) return;
+
+      if (remote.length > 0) {
+        // only override if server actually has tracks
+        setUserTracks(remote);
+        localforage.setItem("userTracks", remote).catch(console.error);
+      } else {
+        // no server tracks yet → push your local cache up
+        localforage.getItem("userTracks").then(local => {
+          if (!cancelled && Array.isArray(local) && local.length) {
+            fetch("/api/user/tracks", {
+              method: "PUT",
+              credentials: "include",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(local),
+            }).catch(console.error);
+          }
+        });
+      }
+    })
+    .catch(err => console.error("Track fetch failed:", err))
+    .finally(() => {
+      if (!cancelled) setLoadingTracks(false);
+    });
+
+  return () => { cancelled = true; };
+}, []);
+
+
+    // ─── Persist any userTracks updates ───
+  useEffect(() => {
+    // don’t overwrite during initial load
+    if (loadingTracks) return;
+
+    // save locally
+    localforage.setItem("userTracks", userTracks)
+      .catch(err => console.error("Local save failed:", err));
+
+    // sync to backend
+    fetch("/api/user/tracks", {
+      method: "PUT",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userTracks),
+    }).catch(err => console.error("Track sync failed:", err));
+  }, [userTracks, loadingTracks]);
+
 
   // ─────────────────────────────────────────────────────────────────────────────
   // Utility: normalize folder name (unchanged)
