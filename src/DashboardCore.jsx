@@ -95,9 +95,9 @@ export default function DashboardCore({ isPaid, onLogout }) {
 
   // D) USER‐TRACKS & IMPORT
   const [loadingTracks, setLoadingTracks] = useState(true);
-  const [userTracks,  setUserTracks]  = useState([]);   // ← initialize as empty array
-  const [tracking,    setTracking]    = useState(false);
-  const [tripCoords,  setTripCoords]  = useState([]);
+  const [userTracks,   setUserTracks]   = useState([]);  // ← initialize as an empty array!
+  const [tracking,     setTracking]     = useState(false);
+  const [tripCoords,   setTripCoords]   = useState([]);
   const [showTripNameModal, setShowTripNameModal] = useState(false);
   const [pendingTripCoords, setPendingTripCoords] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
@@ -127,34 +127,34 @@ export default function DashboardCore({ isPaid, onLogout }) {
 useEffect(() => {
   let cancelled = false;
 
-  // 1) Load local cache first
+  // 1) Load from local cache immediately
   localforage.getItem("userTracks").then(local => {
-    if (!cancelled && Array.isArray(local) && local.length) {
+    if (cancelled) return;
+    if (Array.isArray(local) && local.length) {
       setUserTracks(local);
     }
   });
 
-  // 2) Then fetch remote
+  // 2) Fetch from backend _only override_ if backend has data
   fetch("/api/user/tracks", { credentials: "include" })
     .then(r => r.json())
     .then(remote => {
       if (cancelled || !Array.isArray(remote)) return;
 
       if (remote.length > 0) {
-        // only override if server actually has tracks
+        // backend has tracks → use them
         setUserTracks(remote);
         localforage.setItem("userTracks", remote).catch(console.error);
       } else {
-        // no server tracks yet → push your local cache up
+        // backend empty → push your local tracks up instead of clearing
         localforage.getItem("userTracks").then(local => {
-          if (!cancelled && Array.isArray(local) && local.length) {
-            fetch("/api/user/tracks", {
-              method: "PUT",
-              credentials: "include",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(local),
-            }).catch(console.error);
-          }
+          if (cancelled || !Array.isArray(local) || !local.length) return;
+          fetch("/api/user/tracks", {
+            method: "PUT",
+            credentials: "include",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(local),
+          }).catch(console.error);
         });
       }
     })
@@ -165,6 +165,7 @@ useEffect(() => {
 
   return () => { cancelled = true; };
 }, []);
+
 
 
     // ─── Persist any userTracks updates ───

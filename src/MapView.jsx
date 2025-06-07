@@ -402,42 +402,81 @@ map.once("idle", () => {
  useEffect(() => {
   const map = currentMap.current;
   if (!map || !map.isStyleLoaded()) return;
-  if (!isPaid) return; // ✅ Move this AFTER confirming map is ready
+  //if (!isPaid) return;
 
   try {
-    map.getStyle().layers?.forEach((layer) => {
-      const id = layer.id;
+    map.getStyle().layers.forEach(({ id }) => {
+      // 1) User’s personal tracks: handle these first, then skip
+      if (
+        id === "user-tracks-line" ||
+        id === "user-tracks-waypoints" ||
+        id === "user-tracks-labels"
+      ) {
+        map.setLayoutProperty(id, "visibility", showUserTracks ? "visible" : "none");
+        return;
+      }
 
+      // 2) Public park tracks
       if (id.startsWith("public-") && id.endsWith("-line")) {
         map.setLayoutProperty(id, "visibility", showPublicTracks ? "visible" : "none");
+        return;
       }
       if (id.startsWith("public-") && id.endsWith("-label")) {
-        map.setLayoutProperty(id, "visibility", showPublicTracks && showNames ? "visible" : "none");
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showPublicTracks && showNames ? "visible" : "none"
+        );
+        return;
       }
       if (id.startsWith("public-") && id.endsWith("-waypoints")) {
-        map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypoints ? "visible" : "none");
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showPublicTracks && showWaypoints ? "visible" : "none"
+        );
+        return;
       }
       if (id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
-        map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypointLabels ? "visible" : "none");
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showPublicTracks && showWaypointLabels ? "visible" : "none"
+        );
+        return;
       }
 
+      // 3) All other overlays (imported GPX / live tracks, etc.)
       if (!id.startsWith("public-") && id.endsWith("-line")) {
         map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
+        return;
       }
       if (!id.startsWith("public-") && id.endsWith("-label")) {
         map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+        return;
       }
       if (!id.startsWith("public-") && id.endsWith("-waypoints")) {
         map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+        return;
       }
       if (!id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
         map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+        return;
       }
     });
   } catch (err) {
     console.warn("⚠️ Failed to update layer visibility:", err.message);
   }
-}, [showTracks, showNames, showWaypoints, showWaypointLabels, showPublicTracks, isPaid]);
+}, [
+  showUserTracks,
+  showPublicTracks,
+  showNames,
+  showWaypoints,
+  showWaypointLabels,
+  showTracks,
+  isPaid,
+]);
+
 
 
 useEffect(() => {
