@@ -96,7 +96,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
   // D) USER‐TRACKS & IMPORT
   const [tracking, setTracking] = useState(false);
   const [tripCoords, setTripCoords] = useState([]);
-  const [userTracks, setUserTracks] = useState([]);
+  const [userTracks, setUserTracks] = useState(null);
   const [showTripNameModal, setShowTripNameModal] = useState(false);
   const [pendingTripCoords, setPendingTripCoords] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
@@ -503,6 +503,7 @@ export default function DashboardCore({ isPaid, onLogout }) {
     const localAccount = await localforage.getItem("userAccount");
     if (localAccount) {
       setUserTracks(localAccount.tracks || []);
+      setUserTracksVersion(v => v + 1);
       setFolderOrder(localAccount.folderOrder || []);
       if (localAccount.preferences) {
         if (isPaid) {
@@ -727,21 +728,24 @@ export default function DashboardCore({ isPaid, onLogout }) {
       <div className="flex-1 relative overflow-hidden">
         {/* ─── Map View (only when activeTab === "map") ─────────────────────────── */}
         <div className={activeTab === "map" ? "block" : "hidden"}>
-          <MapView
-            showNames={showNames}
-            showWaypoints={showWaypoints}
-            showWaypointLabels={showWaypointLabels}
-            showTracks={showTracks}
-            showPublicTracks={showPublicTracks}
-            onGeolocateControlReady={setTriggerGeolocate}
-            liveTrack={tracking ? tripCoords : null}
-            userTracks={userTracks}
-            tileJson={tileJson}
-            mapRef={mapRef}
-            isPaid={isPaid}
-            showUserTracks={showUserTracks}
-            userTracksVersion={userTracksVersion}
-          />
+          {userTracks !== null && (
+  <MapView
+    showNames={showNames}
+    showWaypoints={showWaypoints}
+    showWaypointLabels={showWaypointLabels}
+    showTracks={showTracks}
+    showPublicTracks={showPublicTracks}
+    onGeolocateControlReady={setTriggerGeolocate}
+    liveTrack={tracking ? tripCoords : null}
+    userTracks={userTracks}
+    tileJson={tileJson}
+    mapRef={mapRef}
+    isPaid={isPaid}
+    showUserTracks={showUserTracks}
+    userTracksVersion={userTracksVersion}
+  />
+)}
+
 
           {/* ─── Map Key Legend ──────────────────────────────────────────────── */}
           <div className="absolute top-4 left-4 z-40 bg-white rounded-xl shadow-md p-3 space-y-2 text-sm text-gray-800">

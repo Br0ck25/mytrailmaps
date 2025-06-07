@@ -442,83 +442,86 @@ map.once("idle", () => {
 
 useEffect(() => {
   const map = currentMap.current;
-  if (!map || !map.isStyleLoaded()) return;
+  if (!map) return;
 
-  const sourceId = "user-tracks";
+  // your add/remove logic extracted into a function
+  const updateUserTracks = () => {
+    // don’t run until style is fully loaded
+    if (!map.isStyleLoaded()) return;
 
-  // 🧼 Remove old layers first
-  const layersToRemove = [
-    "user-tracks-waypoints",
-    "user-tracks-labels",
-    "user-tracks-line",
-  ];
-  layersToRemove.forEach((layerId) => {
-    if (map.getLayer(layerId)) map.removeLayer(layerId);
-  });
-  if (map.getSource(sourceId)) {
-    try {
-      map.removeSource(sourceId);
-    } catch (err) {
-      console.warn("Couldn't remove user-tracks source:", err.message);
+    // only when toggled on and data exists
+    if (!showUserTracks || !Array.isArray(userTracks)) return;
+    if (!userTracks.some(f => f?.geometry?.type === "LineString")) return;
+
+    // clean out any old layers & source
+    ["user-tracks-line","user-tracks-waypoints","user-tracks-labels"].forEach(id => {
+      if (map.getLayer(id)) map.removeLayer(id);
+    });
+    if (map.getSource("user-tracks")) {
+      try { map.removeSource("user-tracks"); }
+      catch (e) { console.warn(e.message); }
     }
+
+    // re-add your GeoJSON source
+    map.addSource("user-tracks", {
+      type: "geojson",
+      data: { type: "FeatureCollection", features: userTracks }
+    });
+
+    // line layer
+    map.addLayer({
+      id: "user-tracks-line",
+      type: "line",
+      source: "user-tracks",
+      paint: { "line-color":"#FF0000", "line-width":4, "line-opacity":0.9 },
+    });
+
+    // waypoint circles
+    map.addLayer({
+      id: "user-tracks-waypoints",
+      type: "circle",
+      source: "user-tracks",
+      filter: ["==","$type","Point"],
+      paint: { "circle-radius":5, "circle-color":"#FF0000" },
+    });
+
+    // labels
+    map.addLayer({
+      id: "user-tracks-labels",
+      type: "symbol",
+      source: "user-tracks",
+      filter: ["==","$type","Point"],
+      layout: {
+        "text-field": ["get","name"],
+        "text-font": ["Noto Sans Regular"],
+        "text-size": 12,
+        "text-offset": [0,1.2],
+        "text-anchor": "top",
+      },
+      paint: {
+        "text-halo-color": "#fff",
+        "text-halo-width": 1,
+        "text-color": "#FF0000",
+      },
+    });
+  };
+
+  // 1) always run after the map’s initial style load
+  map.on("load", updateUserTracks);
+
+  // 2) in case the style was already loaded by the time this effect runs
+  if (map.isStyleLoaded()) {
+    updateUserTracks();
   }
 
-  // ⛔ Wait until userTracks is populated
-  if (!showUserTracks || !userTracks || userTracks.length === 0) return;
+  // 3) re-run whenever your data or toggle changes
+  //    (this calls updateUserTracks immediately; the 'load' handler won't fire again)
+  updateUserTracks();
 
-  // ✅ Add new source and layers
-  map.addSource(sourceId, {
-    type: "geojson",
-    data: {
-      type: "FeatureCollection",
-      features: userTracks,
-    },
-  });
-
-  map.addLayer({
-    id: "user-tracks-line",
-    type: "line",
-    source: sourceId,
-    paint: {
-      "line-color": "#FF0000",
-      "line-width": 4,
-      "line-opacity": 0.9,
-    },
-  });
-
-  map.addLayer({
-    id: "user-tracks-waypoints",
-    type: "circle",
-    source: sourceId,
-    filter: ["==", "$type", "Point"],
-    paint: {
-      "circle-radius": 5,
-      "circle-color": "#FF0000",
-    },
-  });
-
-  map.addLayer({
-    id: "user-tracks-labels",
-    type: "symbol",
-    source: sourceId,
-    filter: ["==", "$type", "Point"],
-    layout: {
-      "text-field": ["get", "name"],
-      "text-font": ["Noto Sans Regular"],
-      "text-size": 12,
-      "text-offset": [0, 1.2],
-      "text-anchor": "top",
-    },
-    paint: {
-      "text-halo-color": "#fff",
-      "text-halo-width": 1,
-      "text-color": "#FF0000",
-    },
-  });
+  return () => {
+    map.off("load", updateUserTracks);
+  };
 }, [userTracks, showUserTracks, userTracksVersion]);
-
-
-
 
 
 
