@@ -1,41 +1,58 @@
-// src/DashboardCore.jsx
+// src/Dashboard.jsx
 import { useState, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 import MapView from "./MapView";
 import ToggleSwitch from "./components/ToggleSwitch";
 import { FaMapMarkedAlt, FaRoute, FaMap, FaCog, FaDownload } from "react-icons/fa";
-import { FiLayers } from "react-icons/fi";
+import { FiLayers, FiCrosshair } from "react-icons/fi";
 import * as toGeoJSON from "@tmcw/togeojson";
 import { DOMParser } from "@xmldom/xmldom";
 import maplibregl from "maplibre-gl";
 import localforage from "localforage";
 import { useNavigate } from "react-router-dom";
 
-// Configure localForage once:
 localforage.config({
-  name: "MyTrailMaps",
-  storeName: "trail_data",
+  name: 'MyTrailMaps',
+  storeName: 'trail_data'
 });
 
-// Example tileJson (replace with your actual tile source):
 const tileJson = {
   tilejson: "2.2.0",
   name: "Track Tiles",
   tiles: [
-    `https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf?nocache=${Date.now()}`,
+    `https://mytrailmaps.brocksville.com/tiles/trackdata/{z}/{x}/{y}.pbf?nocache=${Date.now()}`
   ],
   minzoom: 5,
-  maxzoom: 15,
+  maxzoom: 15
 };
 
-export default function DashboardCore({ isPaid, onLogout }) {
-  // ─────────────────────────────────────────────────────────────────────────────
-  // A) ACCOUNT SYNC LOGIC: read authToken & userEmail from localStorage
-  // ─────────────────────────────────────────────────────────────────────────────
-  const token = localStorage.getItem("authToken") || "";
-  const userEmail = localStorage.getItem("userEmail") || "";
+async function confirmAndDeleteAccount() {
+  try {
+    const res = await fetch("/api/delete-account", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+      },
+    });
 
-  // B) TRACKING & FOLDERS
+    if (!res.ok) {
+      const json = await res.json();
+      alert("❌ Failed to delete account: " + (json.error || res.statusText));
+      return;
+    }
+
+    localStorage.removeItem("authToken");
+    onLogout(); // optional: clear app state
+    navigate("/signup"); // 👈 redirect to sign up
+  } catch (err) {
+    console.error("Error deleting account:", err);
+    alert("❌ An error occurred while deleting your account.");
+  }
+}
+
+export default function Dashboard({ onLogout }) {
+  // --- Trip & Timing States (unchanged) ---
   const [startTime, setStartTime] = useState(null);
   const [elapsed, setElapsed] = useState(0);
   const [distance, setDistance] = useState(0);
@@ -43,15 +60,15 @@ export default function DashboardCore({ isPaid, onLogout }) {
   const [currentSpeed, setCurrentSpeed] = useState(0);
   const [currentElevation, setCurrentElevation] = useState(null);
 
+  // --- Delete Confirm States (unchanged) ---
   const [confirmDeleteIndex, setConfirmDeleteIndex] = useState(null);
   const [confirmDeleteFolder, setConfirmDeleteFolder] = useState(null);
 
+  // --- Folder Rename States (unchanged) ---
   const [folderRenameTarget, setFolderRenameTarget] = useState(null);
   const [newFolderName, setNewFolderName] = useState("");
-  const [userTracksVersion, setUserTracksVersion] = useState(0);
 
-
-  // C) MAP OVERLAYS (persisted to localStorage)
+  // --- Tab & Overlay States (initialize from localStorage) ---
   const [activeTab, setActiveTab] = useState("map");
   const [showTracks, setShowTracks] = useState(() => {
     const stored = localStorage.getItem("showTracks");
@@ -73,152 +90,58 @@ export default function DashboardCore({ isPaid, onLogout }) {
     const stored = localStorage.getItem("showPublicTracks");
     return stored !== null ? JSON.parse(stored) : true;
   });
-  const [showUserTracks, setShowUserTracks] = useState(() => {
+// AFTER – initialize from localStorage
+const [showUserTracks, setShowUserTracks] = useState(() => {
   const stored = localStorage.getItem("showUserTracks");
-  return stored !== null ? JSON.parse(stored) : true;
-  
+  return stored !== null 
+    ? JSON.parse(stored)     // use the saved true/false
+    : true;                  // default to ON if never set
 });
 
-  //useEffect(() => {
-  //if (!isPaid) {
-   // setShowTracks(false);
-   // setShowNames(false);
-   // setShowWaypoints(false);
-   // setShowWaypointLabels(false);
-   // setShowPublicTracks(false);
-  //}
-//}, //[isPaid]);
 
   const [showOverlaysPanel, setShowOverlaysPanel] = useState(false);
   const [overlayPage, setOverlayPage] = useState("main");
   const [triggerGeolocate, setTriggerGeolocate] = useState(null);
 
-  // D) USER‐TRACKS & IMPORT
-  const [loadingTracks, setLoadingTracks] = useState(true);
-  const [userTracks,   setUserTracks]   = useState([]);  // ← initialize as an empty array!
-  const [tracking,     setTracking]     = useState(false);
-  const [tripCoords,   setTripCoords]   = useState([]);
+  // --- Tracking & Trip States (unchanged) ---
+  const [tracking, setTracking] = useState(false);
+  const [tripCoords, setTripCoords] = useState([]);
+  const [userTracks, setUserTracks] = useState([]);
   const [showTripNameModal, setShowTripNameModal] = useState(false);
   const [pendingTripCoords, setPendingTripCoords] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedName, setEditedName] = useState("");
 
+  // --- Import Preview & Selection States (unchanged) ---
   const [importedPreview, setImportedPreview] = useState(null);
   const [showImportPreview, setShowImportPreview] = useState(false);
   const [selectedTracks, setSelectedTracks] = useState([]);
   const [toastMessage, setToastMessage] = useState(null);
   const [confirmDeleteMultiple, setConfirmDeleteMultiple] = useState(false);
 
-  // E) FOLDER ORDER
+  // --- Folder Ordering State (initialize to empty) ---
   const [folderOrder, setFolderOrder] = useState([]);
 
-  // F) DELETE ACCOUNT CONFIRMATION
   const [showConfirmDeleteAccount, setShowConfirmDeleteAccount] = useState(false);
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // Refs for Geolocation & Timer
-  // ─────────────────────────────────────────────────────────────────────────────
+  // --- Refs (unchanged) ---
   const watchIdRef = useRef(null);
   const timerRef = useRef(null);
   const mapRef = useRef(null);
   const navigate = useNavigate();
 
-// ─── Hydrate userTracks from local cache and backend ───
-
-// 1) Initial load & backend‐only override
-useEffect(() => {
-  let cancelled = false;
-
-  // Fetch whatever’s on the server
-  fetch("/api/user/tracks", { credentials: "include" })
-    .then(async res => {
-      if (!res.ok) {
-        console.error(`GET /api/user/tracks failed (${res.status})`);
-        return [];
-      }
-      return res.json();
-    })
-    .then(remote => {
-      if (cancelled || !Array.isArray(remote)) return;
-
-      if (remote.length > 0) {
-        // Server has data → use it
-        setUserTracks(remote);
-        localforage.setItem("userTracks", remote).catch(console.error);
-      } else {
-        // Server empty → push local up
-        localforage.getItem("userTracks").then(local => {
-          if (cancelled || !Array.isArray(local) || local.length === 0) return;
-
-          fetch("/api/user/tracks", {
-            method: "PUT",
-            credentials: "include",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(local),
-          })
-            .then(res => {
-              if (!res.ok) {
-                console.error(`PUT /api/user/tracks failed (${res.status})`);
-              }
-            })
-            .catch(err => console.error("PUT /api/user/tracks error:", err));
-        });
-      }
-    })
-    .catch(err => console.error("Initial GET /api/user/tracks error:", err))
-    .finally(() => {
-      if (!cancelled) setLoadingTracks(false);
-    });
-
-  return () => {
-    cancelled = true;
-  };
-}, []);
-
-// 2) Persist any userTracks updates
-useEffect(() => {
-  if (loadingTracks) return;
-
-  // save locally first
-  localforage.setItem("userTracks", userTracks).catch(err =>
-    console.error("Local save failed:", err)
-  );
-
-  // then push to backend
-  fetch("/api/user/tracks", {
-    method: "PUT",
-    credentials: "include",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(userTracks),
-  })
-    .then(res => {
-      if (!res.ok) {
-        console.error(`PUT /api/user/tracks failed (${res.status})`);
-      }
-    })
-    .catch(err => console.error("PUT /api/user/tracks error:", err));
-}, [userTracks, loadingTracks]);
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // Utility: normalize folder name (unchanged)
-  // ─────────────────────────────────────────────────────────────────────────────
+  // --- Utility: normalize folder name for comparisons (unchanged) ---
   function normalize(str) {
     return (str || "Ungrouped").trim().toLowerCase();
   }
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // Handlers for folder/track edits (unchanged)
-  // ─────────────────────────────────────────────────────────────────────────────
+  // --- Handlers for folder/track edits, now only update state (unchanged) ---
   function deleteFolder(name) {
     const norm = normalize(name);
-    const updated = userTracks.filter(
-      (t) => normalize(t.properties?.folderName) !== norm
-    );
+    const updated = userTracks.filter(t => normalize(t.properties?.folderName) !== norm);
     setUserTracks(updated);
 
-    setFolderOrder((prev) =>
-      prev.filter((f) => normalize(f) !== norm)
-    );
+    setFolderOrder(prev => prev.filter(f => normalize(f) !== norm));
     setConfirmDeleteFolder(null);
   }
 
@@ -227,32 +150,28 @@ useEffect(() => {
     const trimmedNew = newName.trim();
     if (!trimmedNew) return;
 
-    const updatedTracks = userTracks.map((t) => {
+    const updatedTracks = userTracks.map(t => {
       if (normalize(t.properties?.folderName) === normOld) {
         return {
           ...t,
           properties: {
             ...t.properties,
-            folderName: trimmedNew,
-          },
+            folderName: trimmedNew
+          }
         };
       }
       return t;
-     });
-     setUserTracks(updatedTracks);
+    });
+    setUserTracks(updatedTracks);
 
-    setFolderOrder((prev) =>
-      prev.map((f) =>
-        normalize(f) === normOld ? trimmedNew : f
-      )
-    );
+    setFolderOrder(prev => prev.map(f => (normalize(f) === normOld ? trimmedNew : f)));
 
     setFolderRenameTarget(null);
     setNewFolderName("");
   }
 
   function updateTrackName(index, newName) {
-   const updated = [...userTracks];
+    const updated = [...userTracks];
     updated[index].properties.name = newName.trim();
     setUserTracks(updated);
     setEditingIndex(null);
@@ -265,9 +184,7 @@ useEffect(() => {
   }
 
   function exportTrack(track) {
-    const blob = new Blob([JSON.stringify(track, null, 2)], {
-      type: "application/json",
-    });
+    const blob = new Blob([JSON.stringify(track, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -280,16 +197,19 @@ useEffect(() => {
     const featuresInFolder = userTracks.filter(
       (t) => t.properties?.folderName === folderName
     );
+
     if (!featuresInFolder.length) {
       alert(`No tracks found in folder "${folderName}".`);
       return;
     }
+
     const collection = {
       type: "FeatureCollection",
-      features: featuresInFolder,
+      features: featuresInFolder
     };
+
     const blob = new Blob([JSON.stringify(collection, null, 2)], {
-      type: "application/json",
+      type: "application/json"
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -312,27 +232,16 @@ useEffect(() => {
       let geojson = null;
       try {
         if (ext === "gpx" || ext === "kml") {
-          const dom = new DOMParser().parseFromString(
-            text,
-            "application/xml"
-          );
-          geojson =
-            ext === "gpx"
-              ? toGeoJSON.gpx(dom)
-              : toGeoJSON.kml(dom);
+          const dom = new DOMParser().parseFromString(text, "application/xml");
+          geojson = ext === "gpx" ? toGeoJSON.gpx(dom) : toGeoJSON.kml(dom);
         } else {
           geojson = JSON.parse(text);
         }
 
-        if (!geojson || !geojson.features)
-          throw new Error("Invalid format");
+        if (!geojson || !geojson.features) throw new Error("Invalid format");
 
-        const tracks = geojson.features.filter(
-          (f) => f.geometry?.type === "LineString"
-        );
-        const waypoints = geojson.features.filter(
-          (f) => f.geometry?.type === "Point"
-        );
+        const tracks = geojson.features.filter(f => f.geometry?.type === "LineString");
+        const waypoints = geojson.features.filter(f => f.geometry?.type === "Point");
 
         const newFolderNameForImport = filenameBase;
         const newFolderId = nanoid();
@@ -340,14 +249,12 @@ useEffect(() => {
           ...t,
           properties: {
             ...t.properties,
-            name:
-              t.properties?.name ||
-              `${filenameBase} Track ${i + 1}`,
+            name: t.properties?.name || `${filenameBase} Track ${i + 1}`,
             stroke: t.properties?.stroke || "#FF0000",
             createdAt: Date.now(),
             folderName: newFolderNameForImport,
-            folderId: newFolderId,
-          },
+            folderId: newFolderId
+          }
         }));
 
         setImportedPreview({
@@ -355,7 +262,7 @@ useEffect(() => {
           folderId: newFolderId,
           tracks: withMeta,
           waypoints,
-          selectedTrackIndexes: withMeta.map((_, i) => i),
+          selectedTrackIndexes: withMeta.map((_, i) => i)
         });
         setShowImportPreview(true);
       } catch (err) {
@@ -369,7 +276,7 @@ useEffect(() => {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
     const s = seconds % 60;
-    return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
+    return [h, m, s].map(n => String(n).padStart(2, '0')).join(':');
   }
 
   function getDistanceFromCoords(coord1, coord2) {
@@ -381,11 +288,7 @@ useEffect(() => {
     const φ2 = toRad(lat2);
     const Δφ = toRad(lat2 - lat1);
     const Δλ = toRad(lon2 - lon1);
-    const a =
-      Math.sin(Δφ / 2) ** 2 +
-      Math.cos(φ1) *
-        Math.cos(φ2) *
-        Math.sin(Δλ / 2) ** 2;
+    const a = Math.sin(Δφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2;
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return (R * c) / 1609.34;
   }
@@ -402,61 +305,53 @@ useEffect(() => {
     }
 
     const beginWatch = () => {
-      watchIdRef.current =
-        navigator.geolocation.watchPosition(
-          (pos) => {
-            const altMeters = pos.coords.altitude;
-            const elevationFeet =
-              altMeters != null ? altMeters * 3.28084 : null;
-            setCurrentElevation(elevationFeet);
+      watchIdRef.current = navigator.geolocation.watchPosition(
+        (pos) => {
+          const altMeters = pos.coords.altitude;
+          const elevationFeet = altMeters != null ? altMeters * 3.28084 : null;
+          setCurrentElevation(elevationFeet);
 
-            const speedMps = pos.coords.speed;
-            const speedMph =
-              speedMps != null ? speedMps * 2.23694 : 0;
-            setCurrentSpeed(speedMph);
+          const speedMps = pos.coords.speed;
+          const speedMph = speedMps != null ? speedMps * 2.23694 : 0;
+          setCurrentSpeed(speedMph);
 
-            setTripCoords((prev) => {
-              const updated = [
-                ...prev,
-                [pos.coords.longitude, pos.coords.latitude],
-              ];
-              if (updated.length > 1) {
-                const d = getDistanceFromCoords(
-                  updated[updated.length - 2],
-                  updated[updated.length - 1]
-                );
-                setDistance((prevDist) => prevDist + d);
-              }
-              return updated;
-            });
-          },
-          (err) => {
-            if (err.code === err.TIMEOUT) {
-              console.warn("Geolocation timeout: retrying in 1s...");
-              if (watchIdRef.current !== null) {
-                navigator.geolocation.clearWatch(
-                  watchIdRef.current
-                );
-                watchIdRef.current = null;
-              }
-              setTimeout(() => beginWatch(), 1000);
-              return;
+          setTripCoords((prev) => {
+            const updated = [...prev, [pos.coords.longitude, pos.coords.latitude]];
+            if (updated.length > 1) {
+              const d = getDistanceFromCoords(
+                updated[updated.length - 2],
+                updated[updated.length - 1]
+              );
+              setDistance((prevDist) => prevDist + d);
             }
-
-            if (err.code === err.PERMISSION_DENIED) {
-              console.error("Geolocation permission denied.");
-            } else if (err.code === err.POSITION_UNAVAILABLE) {
-              console.error("Position unavailable.");
-            } else {
-              console.error("Geolocation error:", err.message);
+            return updated;
+          });
+        },
+        (err) => {
+          if (err.code === err.TIMEOUT) {
+            console.warn("Geolocation timeout: retrying in 1s...");
+            if (watchIdRef.current !== null) {
+              navigator.geolocation.clearWatch(watchIdRef.current);
+              watchIdRef.current = null;
             }
-          },
-          {
-            enableHighAccuracy: true,
-            maximumAge: 0,
-            timeout: 30000,
+            setTimeout(() => beginWatch(), 1000);
+            return;
           }
-        );
+
+          if (err.code === err.PERMISSION_DENIED) {
+            console.error("Geolocation permission denied.");
+          } else if (err.code === err.POSITION_UNAVAILABLE) {
+            console.error("Position unavailable.");
+          } else {
+            console.error("Geolocation error:", err.message);
+          }
+        },
+        {
+          enableHighAccuracy: true,
+          maximumAge: 0,
+          timeout: 30000,
+        }
+      );
     };
 
     beginWatch();
@@ -483,8 +378,7 @@ useEffect(() => {
 
   function pauseTrip() {
     setPaused(true);
-    if (watchIdRef.current)
-      navigator.geolocation.clearWatch(watchIdRef.current);
+    if (watchIdRef.current) navigator.geolocation.clearWatch(watchIdRef.current);
     if (timerRef.current) clearInterval(timerRef.current);
   }
 
@@ -527,19 +421,16 @@ useEffect(() => {
         distance: distance.toFixed(2),
         duration: elapsed,
         speed: currentSpeed.toFixed(2),
-        elevation:
-          currentElevation != null
-            ? currentElevation.toFixed(0)
-            : null,
+        elevation: currentElevation != null ? currentElevation.toFixed(0) : null,
         folderName: "Ungrouped",
-        folderId: null,
-      },
+        folderId: null
+      }
     };
     const updatedTracks = [...userTracks, newTrack];
     setUserTracks(updatedTracks);
 
     if (!folderOrder.includes("Ungrouped")) {
-      setFolderOrder((prev) => [...prev, "Ungrouped"]);
+      setFolderOrder(prev => [...prev, "Ungrouped"]);
     }
 
     setPendingTripCoords([]);
@@ -564,122 +455,140 @@ useEffect(() => {
           padding: isMobile
             ? { top: 40, bottom: 40, left: 40, right: 40 }
             : { top: 40, bottom: 40, left: 100, right: 100 },
-          maxZoom: 15,
+          maxZoom: 15
         });
       }, 250);
     }
   }
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // ACCOUNT SYNC LOGIC: LOAD from KV/IDB, then SAVE back when userTracks change
-  // ─────────────────────────────────────────────────────────────────────────────
-  
-  
-  useEffect(() => {
+  // --- ACCOUNT SYNC LOGIC ---
+
+  // Read token from localStorage
+  const token = localStorage.getItem("authToken") || "";
+
+  // On mount: fetch account data from KV or IndexedDB if offline
+ // ─────────────────────────────────────────────────────────────────────────────
+// 1) Load & merge account (local ↔ server)
+useEffect(() => {
   async function loadAccount() {
-    const localAccount = await localforage.getItem("userAccount");
-    if (localAccount) {
-      setUserTracks(localAccount.tracks || []);
-      setUserTracksVersion(v => v + 1);
-      setFolderOrder(localAccount.folderOrder || []);
-      if (localAccount.preferences) {
-        if (isPaid) {
-          setShowTracks(localAccount.preferences.showTracks ?? showTracks);
-          setShowNames(localAccount.preferences.showNames ?? showNames);
-          setShowWaypoints(localAccount.preferences.showWaypoints ?? showWaypoints);
-          setShowWaypointLabels(localAccount.preferences.showWaypointLabels ?? showWaypointLabels);
-          setShowPublicTracks(localAccount.preferences.showPublicTracks ?? showPublicTracks);
-        } else {
-          setShowTracks(false);
-          setShowNames(false);
-          setShowWaypoints(false);
-          setShowWaypointLabels(false);
-          setShowPublicTracks(false);
+    // 1a) Read local cache
+    const localAccount = await localforage.getItem('userAccount');
+    const localTracks  = Array.isArray(localAccount?.tracks)      ? localAccount.tracks      : [];
+    const localFolders = Array.isArray(localAccount?.folderOrder) ? localAccount.folderOrder : [];
+
+    console.log('Loading account - localTracks:', localTracks.length, 'tracks found');
+
+    if (localAccount.preferences) {
+  setShowTracks        (localAccount.preferences.showTracks        ?? showTracks);
+  setShowNames         (localAccount.preferences.showNames         ?? showNames);
+  setShowWaypoints     (localAccount.preferences.showWaypoints     ?? showWaypoints);
+  setShowWaypointLabels(localAccount.preferences.showWaypointLabels ?? showWaypointLabels);
+  setShowPublicTracks  (localAccount.preferences.showPublicTracks  ?? showPublicTracks);
+  setShowUserTracks    (localAccount.preferences.showUserTracks    ?? showUserTracks); // ADD THIS LINE
+}
+
+    // 1b) Bail out if not authenticated
+    if (!token) {
+      console.log('No auth token, keeping local data only');
+      // Don't call onLogout() here - just use local data
+      return;
+    }
+
+    // 1c) Fetch server copy and MERGE
+    if (navigator.onLine) {
+      try {
+        const res  = await fetch("/api/get-account", {
+          method: "GET",
+          headers: {
+            "Content-Type":  "application/json",
+            Authorization:   `Bearer ${token}`,
+          },
+        });
+        const { account } = await res.json();
+
+        if (!res.ok) {
+          if (res.status === 401) onLogout();
+          return;
         }
 
-        setShowUserTracks(localAccount.preferences.showUserTracks ?? showUserTracks);
+        // dedupe by createdAt (or swap for your unique ID prop)
+        const serverTracks = Array.isArray(account.tracks) ? account.tracks : [];
+        const mergedTracks = [
+          ...localTracks,
+          ...serverTracks.filter(st => 
+            !localTracks.some(lt => lt.properties.createdAt === st.properties.createdAt)
+          )
+        ];
+
+        // decide which folderOrder to use
+        const mergedFolders = Array.isArray(account.folderOrder) && account.folderOrder.length
+          ? account.folderOrder
+          : localFolders;
+
+        // apply merged data
+        setUserTracks(mergedTracks);
+        setFolderOrder(mergedFolders);
+        if (account.preferences) {
+  setShowTracks        (account.preferences.showTracks        ?? showTracks);
+  setShowNames         (account.preferences.showNames         ?? showNames);
+  setShowWaypoints     (account.preferences.showWaypoints     ?? showWaypoints);
+  setShowWaypointLabels(account.preferences.showWaypointLabels ?? showWaypointLabels);
+  setShowPublicTracks  (account.preferences.showPublicTracks  ?? showPublicTracks);
+  setShowUserTracks    (account.preferences.showUserTracks    ?? showUserTracks); // ADD THIS LINE
 }
-    }
-    
 
-    // ✅ Avoid trying to fetch from server if not paid
-    if (!navigator.onLine || !token) return;
-
-    try {
-      const res = await fetch("/api/get-account", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      const json = await res.json();
-      if (!res.ok) {
-        if (res.status === 401) onLogout();
-        return;
+        // persist merged back into IndexedDB
+        await localforage.setItem('userAccount', {
+          ...account,
+          tracks:      mergedTracks,
+          folderOrder: mergedFolders,
+          preferences: account.preferences || localAccount.preferences
+        });
+      } catch (err) {
+        console.warn("Failed to fetch from server:", err);
       }
-
-      const { account } = json;
-      setUserTracks(account.tracks || []);
-      setUserTracksVersion((v) => v + 1);
-      setFolderOrder(account.folderOrder || []);
-      if (account.preferences) {
-        setShowTracks(account.preferences.showTracks ?? showTracks);
-        setShowNames(account.preferences.showNames ?? showNames);
-        setShowWaypoints(account.preferences.showWaypoints ?? showWaypoints);
-        setShowWaypointLabels(account.preferences.showWaypointLabels ?? showWaypointLabels);
-        setShowPublicTracks(account.preferences.showPublicTracks ?? showPublicTracks);
-        setShowUserTracks(account.preferences.showUserTracks ?? showUserTracks);
-      }
-
-      await localforage.setItem("userAccount", account);
-    } catch (err) {
-      console.warn("Failed to fetch from server:", err);
     }
   }
 
   loadAccount();
-}, [
-  token,
-  onLogout,
-  showTracks,
-  showNames,
-  showWaypoints,
-  showWaypointLabels,
-  showPublicTracks,
-  isPaid, // ✅ required
-]);
+}, [token, onLogout]);
 
-
-  useEffect(() => {
+// ─────────────────────────────────────────────────────────────────────────────
+// 2) Save any changes (tracks, folders, prefs) locally & remotely
+useEffect(() => {
   async function saveAccount() {
-    if (!token) return;
+    // Always save to local storage, regardless of auth status
+const account = {
+  tracks:      userTracks,
+  folderOrder: folderOrder,
+  preferences: {
+    showTracks,
+    showNames,
+    showWaypoints,
+    showWaypointLabels,
+    showPublicTracks,
+    showUserTracks,  // ADD THIS LINE
+  },
+};
 
-    const account = {
-      tracks: userTracks,
-      folderOrder,
-      preferences: {
-        showTracks,
-        showNames,
-        showWaypoints,
-        showWaypointLabels,
-        showPublicTracks,
-        showUserTracks,
-      },
-    };
+    // 2a) Save locally without delay
+    await localforage.setItem('userAccount', account);
+    console.log('Saved account locally - tracks:', userTracks.length);
 
-    // ✅ Always save locally
-    await localforage.setItem("userAccount", account);
+    // 2b) Only sync to server if authenticated
+    if (!token) {
+      console.log('No auth token, skipping remote save');
+      return;
+    }
 
-    // ✅ Also save remotely if online
+    // 2b) Persist back to your API
     if (navigator.onLine) {
       try {
         await fetch("/api/save-account", {
-          method: "POST",
+          method:  "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
+            Authorization:  `Bearer ${token}`,
           },
           body: JSON.stringify({ account }),
         });
@@ -699,132 +608,80 @@ useEffect(() => {
   showWaypoints,
   showWaypointLabels,
   showPublicTracks,
-  showUserTracks,
+  showUserTracks,  // ADD THIS LINE
 ]);
 
 
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // Force layout update on resize/orientationchange (unchanged)
-  // ─────────────────────────────────────────────────────────────────────────────
   useEffect(() => {
     const forceLayoutUpdate = () => {
+      // Access height to trigger layout, force refresh of 100vh-based styles
       document.body.style.height = `${window.innerHeight}px`;
     };
+
     forceLayoutUpdate();
+
+    // Sometimes needed after orientation change too
     window.addEventListener("orientationchange", forceLayoutUpdate);
     window.addEventListener("resize", forceLayoutUpdate);
+
     return () => {
-      window.removeEventListener(
-        "orientationchange",
-        forceLayoutUpdate
-      );
+      window.removeEventListener("orientationchange", forceLayoutUpdate);
       window.removeEventListener("resize", forceLayoutUpdate);
     };
   }, []);
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // Persist toggles into localStorage (unchanged)
-  // ─────────────────────────────────────────────────────────────────────────────
-    useEffect(() => {
+  // Persist each toggle to localStorage so that on refresh the initial state already reflects user choice
+  useEffect(() => {
     localStorage.setItem("showTracks", JSON.stringify(showTracks));
   }, [showTracks]);
-
   useEffect(() => {
     localStorage.setItem("showNames", JSON.stringify(showNames));
   }, [showNames]);
-
   useEffect(() => {
     localStorage.setItem("showWaypoints", JSON.stringify(showWaypoints));
   }, [showWaypoints]);
-
   useEffect(() => {
-    localStorage.setItem(
-      "showWaypointLabels",
-      JSON.stringify(showWaypointLabels)
-    );
+    localStorage.setItem("showWaypointLabels", JSON.stringify(showWaypointLabels));
   }, [showWaypointLabels]);
-
   useEffect(() => {
-    localStorage.setItem(
-      "showPublicTracks",
-      JSON.stringify(showPublicTracks)
-    );
+    localStorage.setItem("showPublicTracks", JSON.stringify(showPublicTracks));
   }, [showPublicTracks]);
-
-  useEffect(() => {
+useEffect(() => {
   localStorage.setItem("showUserTracks", JSON.stringify(showUserTracks));
 }, [showUserTracks]);
 
+  // ─────────────────────────────────────────────────────────────────────────────
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // Confirm & delete account (unchanged, but also remove userEmail)
-  // ─────────────────────────────────────────────────────────────────────────────
-  async function confirmAndDeleteAccount() {
-    try {
-      const res = await fetch("/api/delete-account", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
-        },
-      });
-      if (!res.ok) {
-        const json = await res.json();
-        alert(
-          "❌ Failed to delete account: " +
-            (json.error || res.statusText)
-        );
-        return;
-      }
-      localStorage.removeItem("authToken");
-      localStorage.removeItem("userEmail");
-      onLogout();
-      navigate("/signup");
-    } catch (err) {
-      console.error("Error deleting account:", err);
-      alert("❌ An error occurred while deleting your account.");
-    }
-  }
+  // --- END ACCOUNT SYNC LOGIC ---
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // BEGIN RENDER (all hooks have already been declared above)
-  // ─────────────────────────────────────────────────────────────────────────────
+  // --- Begin rendering UI ---
   return (
     <div className="relative w-full h-full overflow-hidden flex flex-col">
-      {/* ─── Header (hidden on map tab) ─────────────────────────────────────────── */}
-      <div
-        className={`flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow ${
-          activeTab === "map" ? "hidden" : ""
-        }`}
-      >
+      {/* --- Header (hidden on map tab) --- */}
+      <div className={`flex justify-between items-center p-4 border-b border-gray-300 bg-white shadow ${activeTab === 'map' ? 'hidden' : ''}`}>
         <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
       </div>
 
-      {/* ─── Main Content Area ─────────────────────────────────────────────────── */}
+      {/* --- Main Content Area --- */}
       <div className="flex-1 relative overflow-hidden">
-        {/* ─── Map View (only when activeTab === "map") ─────────────────────────── */}
+        {/* --- Map View (only when activeTab === "map") --- */}
         <div className={activeTab === "map" ? "block" : "hidden"}>
-          {userTracks !== null && (
-  <MapView
-    showNames={showNames}
-    showWaypoints={showWaypoints}
-    showWaypointLabels={showWaypointLabels}
-    showTracks={showTracks}
-    showPublicTracks={showPublicTracks}
-    onGeolocateControlReady={setTriggerGeolocate}
-    liveTrack={tracking ? tripCoords : null}
-    userTracks={userTracks}
-    tileJson={tileJson}
-    mapRef={mapRef}
-    isPaid={isPaid}
-    showUserTracks={showUserTracks}
-    userTracksVersion={userTracksVersion}
-  />
-)}
+          <MapView
+            showNames={showNames}
+            showWaypoints={showWaypoints}
+            showWaypointLabels={showWaypointLabels}
+            showTracks={showTracks}
+            showPublicTracks={showPublicTracks}
+            onGeolocateControlReady={setTriggerGeolocate}
+            liveTrack={tracking ? tripCoords : null}
+            userTracks={userTracks}
+            showUserTracks={showUserTracks}
+            tileJson={tileJson}
+            mapRef={mapRef}
+          />
 
-
-          {/* ─── Map Key Legend ──────────────────────────────────────────────── */}
+          {/* --- Map Key Legend --- */}
           <div className="absolute top-4 left-4 z-40 bg-white rounded-xl shadow-md p-3 space-y-2 text-sm text-gray-800">
             <div className="flex items-center space-x-2">
               <span className="inline-block w-6 h-1 rounded-full bg-green-600" />
@@ -841,66 +698,42 @@ useEffect(() => {
           </div>
         </div>
 
-        {/* ─── Trip Tab ─────────────────────────────────────────────────────────── */}
+        {/* --- Trip Tab --- */}
         {activeTab === "trip" && (
           <div className="p-4 space-y-4 flex flex-col items-center">
-            {/* Start / Stop Buttons */}
             <button
               onClick={startTrip}
               disabled={tracking}
               className={`w-64 p-3 rounded-lg font-semibold text-center ${
-                tracking
-                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                  : "bg-gray-100 text-green-700"
+                tracking ? "bg-gray-200 text-gray-400 cursor-not-allowed" : "bg-gray-100 text-green-700"
               }`}
             >
               Start Trip
             </button>
             <button
               onClick={stopTrip}
-              className={`w-64 p-3 rounded-lg font-semibold text-center ${
-                tracking
-                  ? "bg-red-200 text-red-400 cursor-not-allowed"
-                  : "bg-red-100 text-red-700"
-              }`}
-              disabled={!tracking}
+              className="w-64 p-3 bg-red-100 rounded-lg font-semibold text-center text-red-700"
             >
               Stop Trip
             </button>
 
-            {/* Always show current speed & elevation */}
-            <div className="text-center mt-2 text-sm text-gray-700 space-y-2">
-              <p>
-                Current Speed:{" "}
-                <span className="font-semibold">
-                  {currentSpeed.toFixed(2)} mph
-                </span>
-              </p>
-              <p>
-                Current Elevation:{" "}
-                <span className="font-semibold">
-                  {currentElevation != null
-                    ? `${currentElevation.toFixed(0)} ft`
-                    : "N/A"}
-                </span>
-              </p>
-            </div>
-
-            {/* Only while tracking, show elapsed time & distance + pause/resume */}
             {tracking && (
               <div className="text-center mt-2 text-sm text-gray-700 space-y-2">
                 <p>
-                  Tracking for:{" "}
-                  <span className="font-semibold">{formatTime(elapsed)}</span>
+                  Tracking for: <span className="font-semibold">{formatTime(elapsed)}</span>
                 </p>
                 <p>
-                  Distance:{" "}
+                  Distance: <span className="font-semibold">{distance.toFixed(2)} mi</span>
+                </p>
+                <p>
+                  Speed: <span className="font-semibold">{currentSpeed.toFixed(2)} mph</span>
+                </p>
+                <p>
+                  Elevation:{" "}
                   <span className="font-semibold">
-                    {distance.toFixed(2)} mi
+                    {currentElevation != null ? `${currentElevation.toFixed(0)} ft` : "N/A"}
                   </span>
                 </p>
-
-                {/* Pause / Resume Buttons */}
                 {!paused ? (
                   <button
                     onClick={pauseTrip}
@@ -921,7 +754,7 @@ useEffect(() => {
           </div>
         )}
 
-        {/* ─── My Tracks Tab ───────────────────────────────────────────────────── */}
+        {/* --- My Tracks Tab --- */}
         {activeTab === "tracks" && (
           <div
             className="p-4 space-y-4 flex flex-col items-center pb-24"
@@ -981,14 +814,12 @@ useEffect(() => {
                 }, {});
 
                 const allFolders = Object.keys(grouped);
-                const missing = allFolders.filter(
-                  (f) => !folderOrder.includes(f)
-                );
+                const missing = allFolders.filter(f => !folderOrder.includes(f));
                 if (missing.length) {
-                  setFolderOrder((prev) => [...prev, ...missing]);
+                  setFolderOrder(prev => [...prev, ...missing]);
                 }
 
-                return folderOrder.map((folder) => {
+                return folderOrder.map(folder => {
                   if (!grouped[folder]) return null;
                   return (
                     <CollapsibleFolder
@@ -1018,7 +849,7 @@ useEffect(() => {
           </div>
         )}
 
-        {/* ─── Settings Tab ─────────────────────────────────────────────────────── */}
+        {/* --- Settings Tab (Log Out & Delete Account) --- */}
         {activeTab === "settings" && (
           <div className="p-4 flex flex-col items-center justify-center h-full">
             <button
@@ -1037,29 +868,21 @@ useEffect(() => {
           </div>
         )}
 
-        {/* ─── Delete Multiple Confirm Modal ──────────────────────────────────── */}
+        {/* --- Delete Multiple Confirm Modal --- */}
         {confirmDeleteMultiple && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-red-600">
-                Delete Tracks
-              </h2>
+              <h2 className="text-lg font-semibold text-red-600">Delete Tracks</h2>
               <p className="text-gray-700">
-                Are you sure you want to delete{" "}
-                <strong>{selectedTracks.length}</strong> tracks?
+                Are you sure you want to delete <strong>{selectedTracks.length}</strong> tracks?
               </p>
               <div className="flex justify-center gap-4 mt-4">
-                <button
-                  onClick={() => setConfirmDeleteMultiple(false)}
-                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
-                >
+                <button onClick={() => setConfirmDeleteMultiple(false)} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
                   Cancel
                 </button>
                 <button
                   onClick={() => {
-                    const updated = userTracks.filter(
-                      (_, i) => !selectedTracks.includes(i)
-                    );
+                    const updated = userTracks.filter((_, i) => !selectedTracks.includes(i));
                     setUserTracks(updated);
                     setSelectedTracks([]);
                     setConfirmDeleteMultiple(false);
@@ -1073,40 +896,27 @@ useEffect(() => {
           </div>
         )}
 
-        {/* ─── Map Overlay Button (only on map tab) ──────────────────────────────── */}
+        {/* --- Map Overlay Button (only on map tab) --- */}
         {activeTab === "map" && (
           <button
-            onClick={() => {
-              setShowOverlaysPanel(true);
-              setOverlayPage("main");
-            }}
+            onClick={() => { setShowOverlaysPanel(true); setOverlayPage("main"); }}
             className="absolute z-50 bottom-20 left-4 p-3 bg-white text-black rounded-full shadow-lg"
           >
             <FiLayers className="text-xl" />
           </button>
         )}
 
-        {/* ─── Overlay Panel ─────────────────────────────────────────────────────── */}
+        {/* --- Overlay Panel --- */}
         {showOverlaysPanel && (
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t z-50 rounded-t-2xl shadow-xl max-h-[70%]">
             <div className="flex items-center justify-between p-4 border-b">
               {overlayPage !== "main" && (
-                <button
-                  onClick={() => setOverlayPage("main")}
-                  className="text-green-700 text-3xl leading-none px-2"
-                  aria-label="Back"
-                >
+                <button onClick={() => setOverlayPage("main")} className="text-green-700 text-3xl leading-none px-2" aria-label="Back">
                   ←
                 </button>
               )}
-              <h3 className="text-lg font-semibold">
-                {overlayPage === "main" ? "Maps" : "Map Overlays"}
-              </h3>
-              <button
-                onClick={() => setShowOverlaysPanel(false)}
-                className="text-gray-600 text-3xl leading-none px-2"
-                aria-label="Close"
-              >
+              <h3 className="text-lg font-semibold">{overlayPage === "main" ? "Maps" : "Map Overlays"}</h3>
+              <button onClick={() => setShowOverlaysPanel(false)} className="text-gray-600 text-3xl leading-none px-2" aria-label="Close">
                 ×
               </button>
             </div>
@@ -1130,81 +940,39 @@ useEffect(() => {
             {overlayPage === "overlays" && (
               <div className="p-4 space-y-4">
                 <div className="flex justify-between items-center">
-                  <span>Tracks</span>
-                  <ToggleSwitch
-  checked={showTracks}
-  onChange={(e) => {
-  if (!isPaid) return;
-  setShowTracks(e.target.checked);
-}}
-  //disabled={!isPaid}
-/>
-
+                  <span>Park Tracks</span>
+                  <ToggleSwitch checked={showTracks} onChange={(e) => setShowTracks(e.target.checked)} />
                 </div>
-               <div className="flex justify-between items-center">
-  <span>Park Track Names</span>
-  <ToggleSwitch
-    checked={showNames}
-    onChange={(e) => {
-      if (!isPaid) return;
-      setShowNames(e.target.checked);
-    }}
-    //disabled={!isPaid}
-  />
-</div>
-<div className="flex justify-between items-center">
-  <span>Park Waypoints</span>
-  <ToggleSwitch
-    checked={showWaypoints}
-    onChange={(e) => {
-      if (!isPaid) return;
-      setShowWaypoints(e.target.checked);
-    }}
-    //disabled={!isPaid}
-  />
-</div>
-<div className="flex justify-between items-center">
-  <span>Park Waypoint Labels</span>
-  <ToggleSwitch
-    checked={showWaypointLabels}
-    onChange={(e) => {
-      if (!isPaid) return;
-      setShowWaypointLabels(e.target.checked);
-    }}
-    //disabled={!isPaid}
-  />
-</div>
-<div className="flex justify-between items-center">
-  <span>Park Tracks</span>
-  <ToggleSwitch
-    checked={showPublicTracks}
-    onChange={(e) => {
-      if (!isPaid) return;
-      setShowPublicTracks(e.target.checked);
-    }}
-    //disabled={!isPaid}
-  />
-</div>
-<div className="flex justify-between items-center">
-  <span>My Tracks</span>
-  <ToggleSwitch
-    checked={showUserTracks}
-    onChange={(e) => setShowUserTracks(e.target.checked)}
-  />
-</div>
-
+                <div className="flex justify-between items-center">
+                  <span>Park Track Names</span>
+                  <ToggleSwitch checked={showNames} onChange={(e) => setShowNames(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Park Waypoints</span>
+                  <ToggleSwitch checked={showWaypoints} onChange={(e) => setShowWaypoints(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Park Waypoint Labels</span>
+                  <ToggleSwitch checked={showWaypointLabels} onChange={(e) => setShowWaypointLabels(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Public Tracks</span>
+                  <ToggleSwitch checked={showPublicTracks} onChange={(e) => setShowPublicTracks(e.target.checked)} />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>My Tracks</span>
+                  <ToggleSwitch checked={showUserTracks} onChange={e => setShowUserTracks(e.target.checked)} />
+                </div>
               </div>
             )}
           </div>
         )}
 
-        {/* ─── Save Trip Modal ───────────────────────────────────────────────────── */}
+        {/* --- Save Trip Modal --- */}
         {showTripNameModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4">
-              <h2 className="text-lg font-semibold text-green-700">
-                Name Your Trip
-              </h2>
+              <h2 className="text-lg font-semibold text-green-700">Name Your Trip</h2>
               <input
                 type="text"
                 value={editedName}
@@ -1214,13 +982,7 @@ useEffect(() => {
                 autoFocus
               />
               <div className="flex justify-end space-x-2">
-                <button
-                  onClick={() => {
-                    setEditedName("");
-                    setShowTripNameModal(false);
-                  }}
-                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
-                >
+                <button onClick={() => { setEditedName(""); setShowTripNameModal(false); }} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
                   Cancel
                 </button>
                 <button
@@ -1239,32 +1001,21 @@ useEffect(() => {
           </div>
         )}
 
-        {/* ─── Delete Trip Confirm Modal ──────────────────────────────────────────── */}
+        {/* --- Delete Trip Confirm Modal --- */}
         {confirmDeleteIndex !== null && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-red-600">
-                Delete Trip
-              </h2>
+              <h2 className="text-lg font-semibold text-red-600">Delete Trip</h2>
               <p className="text-gray-700">
                 Are you sure you want to delete{" "}
-                <strong>
-                  {userTracks[confirmDeleteIndex].properties.name}
-                </strong>
-                ?
+                <strong>{userTracks[confirmDeleteIndex].properties.name}</strong>?
               </p>
               <div className="flex justify-center gap-4 mt-4">
-                <button
-                  onClick={() => setConfirmDeleteIndex(null)}
-                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
-                >
+                <button onClick={() => setConfirmDeleteIndex(null)} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
                   Cancel
                 </button>
                 <button
-                  onClick={() => {
-                    deleteTrack(confirmDeleteIndex);
-                    setConfirmDeleteIndex(null);
-                  }}
+                  onClick={() => { deleteTrack(confirmDeleteIndex); setConfirmDeleteIndex(null); }}
                   className="px-4 py-2 bg-red-600 text-white rounded-lg font-semibold"
                 >
                   Delete
@@ -1274,22 +1025,16 @@ useEffect(() => {
           </div>
         )}
 
-        {/* ─── Delete Folder Confirm Modal ───────────────────────────────────────── */}
+        {/* --- Delete Folder Confirm Modal --- */}
         {confirmDeleteFolder !== null && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-red-600">
-                Delete Folder
-              </h2>
+              <h2 className="text-lg font-semibold text-red-600">Delete Folder</h2>
               <p className="text-gray-700">
-                Are you sure you want to delete{" "}
-                <strong>{confirmDeleteFolder}</strong> and all its tracks?
+                Are you sure you want to delete <strong>{confirmDeleteFolder}</strong> and all its tracks?
               </p>
               <div className="flex justify-center gap-4 mt-4">
-                <button
-                  onClick={() => setConfirmDeleteFolder(null)}
-                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
-                >
+                <button onClick={() => setConfirmDeleteFolder(null)} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg">
                   Cancel
                 </button>
                 <button
@@ -1303,13 +1048,11 @@ useEffect(() => {
           </div>
         )}
 
-        {/* ─── Rename Folder Modal ───────────────────────────────────────────────── */}
+        {/* --- Rename Folder Modal --- */}
         {folderRenameTarget && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-              <h2 className="text-lg font-semibold text-blue-700">
-                Rename Folder
-              </h2>
+              <h2 className="text-lg font-semibold text-blue-700">Rename Folder</h2>
               <input
                 type="text"
                 value={newFolderName}
@@ -1320,18 +1063,13 @@ useEffect(() => {
               />
               <div className="flex justify-center gap-4 mt-4">
                 <button
-                  onClick={() => {
-                    setFolderRenameTarget(null);
-                    setNewFolderName("");
-                  }}
+                  onClick={() => { setFolderRenameTarget(null); setNewFolderName(""); }}
                   className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg"
                 >
                   Cancel
                 </button>
                 <button
-                  onClick={() =>
-                    renameFolder(folderRenameTarget, newFolderName)
-                  }
+                  onClick={() => renameFolder(folderRenameTarget, newFolderName)}
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold"
                 >
                   Rename
@@ -1345,9 +1083,7 @@ useEffect(() => {
       {showConfirmDeleteAccount && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-lg w-80 p-6 space-y-4 text-center">
-            <h2 className="text-lg font-semibold text-red-600">
-              Delete Account
-            </h2>
+            <h2 className="text-lg font-semibold text-red-600">Delete Account</h2>
             <p className="text-gray-700">
               Are you sure you want to permanently delete your account?
               <br />
@@ -1371,7 +1107,7 @@ useEffect(() => {
         </div>
       )}
 
-      {/* ─── Import Preview Modal ───────────────────────────────────────────────── */}
+      {/* --- Import Preview Modal --- */}
       {showImportPreview && importedPreview && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl shadow-lg w-full max-w-xl p-6 space-y-4">
@@ -1381,10 +1117,7 @@ useEffect(() => {
               type="text"
               value={importedPreview.folderName || ""}
               onChange={(e) =>
-                setImportedPreview((prev) => ({
-                  ...prev,
-                  folderName: e.target.value,
-                }))
+                setImportedPreview((prev) => ({ ...prev, folderName: e.target.value }))
               }
               className="w-full p-2 border border-gray-300 rounded-lg"
               placeholder="Folder name (optional)"
@@ -1396,20 +1129,14 @@ useEffect(() => {
                 <button
                   onClick={() => {
                     const allIndexes = importedPreview.tracks.map((_, i) => i);
-                    const selected =
-                      importedPreview.selectedTrackIndexes?.length ===
-                      allIndexes.length
-                        ? []
-                        : allIndexes;
-                    setImportedPreview((prev) => ({
-                      ...prev,
-                      selectedTrackIndexes: selected,
-                    }));
+                    const selected = importedPreview.selectedTrackIndexes?.length === allIndexes.length
+                      ? []
+                      : allIndexes;
+                    setImportedPreview((prev) => ({ ...prev, selectedTrackIndexes: selected }));
                   }}
                   className="text-blue-600 hover:underline"
                 >
-                  {importedPreview.selectedTrackIndexes?.length ===
-                  importedPreview.tracks.length
+                  {importedPreview.selectedTrackIndexes?.length === importedPreview.tracks.length
                     ? "Clear All"
                     : "Select All"}
                 </button>
@@ -1423,20 +1150,16 @@ useEffect(() => {
                     type="checkbox"
                     checked={importedPreview.selectedTrackIndexes?.includes(i)}
                     onChange={(e) => {
-                      const selected = new Set(
-                        importedPreview.selectedTrackIndexes || []
-                      );
+                      const selected = new Set(importedPreview.selectedTrackIndexes || []);
                       if (e.target.checked) selected.add(i);
                       else selected.delete(i);
                       setImportedPreview((prev) => ({
                         ...prev,
-                        selectedTrackIndexes: [...selected],
+                        selectedTrackIndexes: [...selected]
                       }));
                     }}
                   />
-                  <span>
-                    {track.properties?.name || `Unnamed Track ${i + 1}`}
-                  </span>
+                  <span>{track.properties?.name || `Unnamed Track ${i + 1}`}</span>
                 </label>
               ))}
               {importedPreview.waypoints.length > 0 && (
@@ -1455,26 +1178,22 @@ useEffect(() => {
               </button>
               <button
                 onClick={() => {
-                  const folderName =
-                    importedPreview.folderName?.trim() ||
-                    importedPreview.folderName;
+                  const folderName = importedPreview.folderName?.trim() || importedPreview.folderName;
                   const folderId = importedPreview.folderId;
-                  const selectedIndexes = new Set(
-                    importedPreview.selectedTrackIndexes || []
-                  );
+                  const selectedIndexes = new Set(importedPreview.selectedTrackIndexes || []);
                   const selectedTracksArr = importedPreview.tracks
                     .map((t, i) => ({
                       ...t,
                       properties: {
                         ...t.properties,
                         folderName,
-                        folderId,
-                      },
+                        folderId
+                      }
                     }))
                     .filter((_, i) => selectedIndexes.has(i));
 
                   if (folderName && !folderOrder.includes(folderName)) {
-                    setFolderOrder((prev) => [...prev, folderName]);
+                    setFolderOrder(prev => [...prev, folderName]);
                   }
 
                   const newTracks = [...userTracks, ...selectedTracksArr];
@@ -1498,55 +1217,39 @@ useEffect(() => {
         </div>
       )}
 
-      {/* ─── Bottom Navigation ──────────────────────────────────────────────────── */}
+      {/* --- Bottom Navigation --- */}
       <div className="fixed bottom-0 left-0 right-0 z-40 flex justify-around items-center border-t border-gray-300 bg-white h-14">
         <button
           onClick={() => setActiveTab("map")}
-          className={`flex flex-col items-center text-xs ${
-            activeTab === "map"
-              ? "text-green-700 font-semibold"
-              : "text-gray-600"
-          }`}
+          className={`flex flex-col items-center text-xs ${activeTab === "map" ? "text-green-700 font-semibold" : "text-gray-600"}`}
         >
           <FaMapMarkedAlt className="text-lg" />
           <span>Map</span>
         </button>
         <button
           onClick={() => setActiveTab("trip")}
-          className={`flex flex-col items-center text-xs ${
-            activeTab === "trip"
-              ? "text-green-700 font-semibold"
-              : "text-gray-600"
-          }`}
+          className={`flex flex-col items-center text-xs ${activeTab === "trip" ? "text-green-700 font-semibold" : "text-gray-600"}`}
         >
           <FaRoute className="text-lg" />
           <span>Trip</span>
         </button>
         <button
           onClick={() => setActiveTab("tracks")}
-          className={`flex flex-col items-center text-xs ${
-            activeTab === "tracks"
-              ? "text-green-700 font-semibold"
-              : "text-gray-600"
-          }`}
+          className={`flex flex-col items-center text-xs ${activeTab === "tracks" ? "text-green-700 font-semibold" : "text-gray-600"}`}
         >
           <FaMap className="text-lg" />
           <span>My Tracks</span>
         </button>
         <button
           onClick={() => setActiveTab("settings")}
-          className={`flex flex-col items-center text-xs ${
-            activeTab === "settings"
-              ? "text-green-700 font-semibold"
-              : "text-gray-600"
-          }`}
+          className={`flex flex-col items-center text-xs ${activeTab === "settings" ? "text-green-700 font-semibold" : "text-gray-600"}`}
         >
           <FaCog className="text-lg" />
           <span>Settings</span>
         </button>
       </div>
 
-      {/* ─── Toast Message ─────────────────────────────────────────────────────── */}
+      {/* --- Toast Message --- */}
       {toastMessage && (
         <div className="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
           {toastMessage}
@@ -1574,7 +1277,7 @@ function CollapsibleFolder({
   formatTime,
   setFolderRenameTarget,
   setNewFolderName,
-  exportFolder,
+  exportFolder
 }) {
   const [open, setOpen] = useState(true);
 
@@ -1644,19 +1347,14 @@ function CollapsibleFolder({
       {open && (
         <div className="space-y-2 p-2 bg-gray-50 rounded-b">
           {items.map(({ track, idx }) => (
-            <div
-              key={idx}
-              className="bg-white p-3 rounded-lg flex items-start justify-between gap-2"
-            >
+            <div key={idx} className="bg-white p-3 rounded-lg flex items-start justify-between gap-2">
               <input
                 type="checkbox"
                 className="mt-2"
                 checked={selectedTracks.includes(idx)}
                 onChange={(e) => {
                   setSelectedTracks((prev) =>
-                    e.target.checked
-                      ? [...prev, idx]
-                      : prev.filter((i) => i !== idx)
+                    e.target.checked ? [...prev, idx] : prev.filter((i) => i !== idx)
                   );
                 }}
               />
@@ -1669,16 +1367,10 @@ function CollapsibleFolder({
                     className="flex-1 mr-3 p-2 border border-gray-300 rounded"
                   />
                   <div className="flex gap-2">
-                    <button
-                      onClick={() => updateTrackName(idx, editedName)}
-                      className="text-green-600 font-semibold"
-                    >
+                    <button onClick={() => updateTrackName(idx, editedName)} className="text-green-600 font-semibold">
                       Save
                     </button>
-                    <button
-                      onClick={() => setEditingIndex(null)}
-                      className="text-gray-600"
-                    >
+                    <button onClick={() => setEditingIndex(null)} className="text-gray-600">
                       Cancel
                     </button>
                   </div>
@@ -1692,36 +1384,18 @@ function CollapsibleFolder({
                     >
                       <span
                         className="inline-block w-3 h-3 mr-2 rounded-full"
-                        style={{
-                          backgroundColor:
-                            track.properties.stroke || "#FF0000",
-                        }}
+                        style={{ backgroundColor: track.properties.stroke || "#FF0000" }}
                       />
                       {track.properties.name}
                     </h4>
                     <p className="text-sm text-gray-600">
-                      {track.properties.distance
-                        ? `${track.properties.distance} mi`
-                        : ""}
-                      {" "}
-                      {track.properties.duration
-                        ? `• ${formatTime(
-                            track.properties.duration
-                          )}`
-                        : ""}
-                      {" "}
-                      {track.properties.speed
-                        ? `• ${track.properties.speed} mph`
-                        : ""}
-                      {" "}
-                      {track.properties.elevation
-                        ? `• ${track.properties.elevation} ft`
-                        : ""}
+                      {track.properties.distance ? `${track.properties.distance} mi` : ""}{" "}
+                      {track.properties.duration ? `• ${formatTime(track.properties.duration)}` : ""}{" "}
+                      {track.properties.speed ? `• ${track.properties.speed} mph` : ""}{" "}
+                      {track.properties.elevation ? `• ${track.properties.elevation} ft` : ""}
                     </p>
                     <p className="text-xs text-gray-400">
-                      {new Date(
-                        track.properties.createdAt || 0
-                      ).toLocaleString()}
+                      {new Date(track.properties.createdAt || 0).toLocaleString()}
                     </p>
                   </div>
                   <div className="flex items-center gap-4 pl-4">

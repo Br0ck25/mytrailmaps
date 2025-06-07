@@ -7,7 +7,6 @@ import { lineString } from "@turf/helpers";
 import lineOverlap from "@turf/line-overlap";
 import localforage from "localforage";
 
-
 function isDuplicateLine(lineFeature, mainLines, threshold = 0.0001) {
   const coords = lineFeature.geometry?.coordinates;
   if (
@@ -47,6 +46,7 @@ export default function MapView({
   showWaypointLabels,
   showPublicTracks,
   liveTrack,
+  showUserTracks,
   userTracks,
   onGeolocateControlReady,
   mapRef // ✅ passed from parent
@@ -56,7 +56,6 @@ export default function MapView({
 
   const [mainGeojsonFiles, setMainGeojsonFiles] = useState([]);
   const [publicGeojsonFiles, setPublicGeojsonFiles] = useState([]);
-
 
   useEffect(() => {
     const controller = new AbortController();
@@ -89,6 +88,62 @@ export default function MapView({
 
     return () => controller.abort();
   }, []);
+
+  // User tracks layer management
+  useEffect(() => {
+    const map = currentMap.current;
+    if (!map || !map.isStyleLoaded()) return;
+
+    const sourceId = "user-tracks";
+    const layerId = "user-tracks-line";
+
+    const updateUserTracksLayer = () => {
+      const source = map.getSource(sourceId);
+
+      // If the layer should be visible and tracks exist...
+      if (showUserTracks && Array.isArray(userTracks) && userTracks.length > 0) {
+        const geojsonData = { type: "FeatureCollection", features: userTracks };
+
+        // If the source already exists, just update its data.
+        if (source) {
+          source.setData(geojsonData);
+        } else {
+          // Otherwise, add the new source and layer.
+          map.addSource(sourceId, {
+            type: "geojson",
+            data: geojsonData,
+          });
+
+          map.addLayer({
+            id: layerId,
+            type: "line",
+            source: sourceId,
+            paint: {
+              "line-color": [
+                "coalesce",
+                ["get", "stroke"], // Allow individual tracks to have their own color
+                "#FF0000",         // Default color for user tracks (red)
+              ],
+              "line-width": 4,
+              "line-opacity": 0.9,
+            },
+          });
+        }
+        // Ensure the layer is visible
+        if (map.getLayer(layerId)) {
+          map.setLayoutProperty(layerId, "visibility", "visible");
+        }
+      } else {
+        // If the layer should be hidden, just hide it.
+        if (map.getLayer(layerId)) {
+          map.setLayoutProperty(layerId, "visibility", "none");
+        }
+      }
+    };
+
+    updateUserTracksLayer();
+    
+  }, [userTracks, showUserTracks]);
 
   useEffect(() => {
   if (!mapRef.current) return; // ✅ wait until <div ref={mapRef}> is mounted
@@ -277,10 +332,6 @@ map.addLayer({
 map.moveLayer(`${sourceId}-file-label`);
 };
 
-
-
-
-
     map.on("load", async () => {
 
   // ✅ Set the mapRef first
@@ -307,30 +358,74 @@ map.once("idle", () => {
     map.getStyle().layers?.forEach(layer => {
       const id = layer.id;
 
-      if (id.startsWith("public-") && id.endsWith("-line")) {
-        map.setLayoutProperty(id, "visibility", showPublicTracks ? "visible" : "none");
-      }
-      if (id.startsWith("public-") && id.endsWith("-label")) {
-        map.setLayoutProperty(id, "visibility", showPublicTracks && showNames ? "visible" : "none");
-      }
-      if (id.startsWith("public-") && id.endsWith("-waypoints")) {
-        map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypoints ? "visible" : "none");
-      }
-      if (id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
-        map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypointLabels ? "visible" : "none");
+      // 1) My Tracks (handled first so it's never caught by other rules)
+      if (id === "user-tracks-line") {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showUserTracks ? "visible" : "none"
+        );
+        return; // skip further checks for this layer
       }
 
-      if (!id.startsWith("public-") && id.endsWith("-line")) {
-        map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
+      // 2) Public (park) tracks
+      if (id.startsWith("public-") && id.endsWith("-line")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showPublicTracks ? "visible" : "none"
+        );
       }
-      if (!id.startsWith("public-") && id.endsWith("-label")) {
-        map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
+      if (id.startsWith("public-") && id.endsWith("-label")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showPublicTracks && showNames ? "visible" : "none"
+        );
       }
-      if (!id.startsWith("public-") && id.endsWith("-waypoints")) {
-        map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
+      if (id.startsWith("public-") && id.endsWith("-waypoints")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showPublicTracks && showWaypoints ? "visible" : "none"
+        );
       }
-      if (!id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
-        map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+      if (id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showPublicTracks && showWaypointLabels ? "visible" : "none"
+        );
+      }
+
+      // 3) Park/Main tracks (only those with the "track-" prefix)
+      if (id.startsWith("track-") && id.endsWith("-line")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showTracks ? "visible" : "none"
+        );
+      }
+      if (id.startsWith("track-") && id.endsWith("-label")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showNames ? "visible" : "none"
+        );
+      }
+      if (id.startsWith("track-") && id.endsWith("-waypoints")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showWaypoints ? "visible" : "none"
+        );
+      }
+      if (id.startsWith("track-") && id.endsWith("-waypoint-labels")) {
+        map.setLayoutProperty(
+          id,
+          "visibility",
+          showWaypointLabels ? "visible" : "none"
+        );
       }
     });
   } catch (err) {
@@ -390,112 +485,110 @@ map.once("idle", () => {
     };
   }, [mainGeojsonFiles, publicGeojsonFiles]);
 
+  // Layer visibility management
   useEffect(() => {
     const map = currentMap.current;
     if (!map || !map.isStyleLoaded()) return;
 
-    try {
-      map.getStyle().layers?.forEach(layer => {
-        const id = layer.id;
-        
+    map.getStyle().layers?.forEach(layer => {
+      const id = layer.id;
 
-        if (id.startsWith("public-") && id.endsWith("-line")) {
-          map.setLayoutProperty(id, "visibility", showPublicTracks ? "visible" : "none");
-        }
-        if (id.startsWith("public-") && id.endsWith("-label")) {
-          map.setLayoutProperty(id, "visibility", showPublicTracks && showNames ? "visible" : "none");
-        }
-        if (id.startsWith("public-") && id.endsWith("-waypoints")) {
-          map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypoints ? "visible" : "none");
-        }
-        if (id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
-          map.setLayoutProperty(id, "visibility", showPublicTracks && showWaypointLabels ? "visible" : "none");
-        }
+      // 1) My Tracks
+      if (id === "user-tracks-line") {
+        map.setLayoutProperty(id, "visibility",
+          showUserTracks ? "visible" : "none"
+        );
+        return;
+      }
 
-        if (!id.startsWith("public-") && id.endsWith("-line")) {
-          map.setLayoutProperty(id, "visibility", showTracks ? "visible" : "none");
-        }
-        if (!id.startsWith("public-") && id.endsWith("-label")) {
-          map.setLayoutProperty(id, "visibility", showNames ? "visible" : "none");
-        }
-        if (!id.startsWith("public-") && id.endsWith("-waypoints")) {
-          map.setLayoutProperty(id, "visibility", showWaypoints ? "visible" : "none");
-        }
-        if (!id.startsWith("public-") && id.endsWith("-waypoint-labels")) {
-          map.setLayoutProperty(id, "visibility", showWaypointLabels ? "visible" : "none");
+      // 2) Park (main) Tracks
+      if (/^track-.*-line$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showTracks ? "visible" : "none"
+        );
+      }
+      if (/^track-.*-label$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showNames ? "visible" : "none"
+        );
+      }
+      if (/^track-.*-waypoints$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showWaypoints ? "visible" : "none"
+        );
+      }
+      if (/^track-.*-waypoint-labels$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showWaypointLabels ? "visible" : "none"
+        );
+      }
+
+      // 3) Public Tracks
+      if (/^public-.*-line$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showPublicTracks ? "visible" : "none"
+        );
+      }
+      if (/^public-.*-label$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showPublicTracks && showNames ? "visible" : "none"
+        );
+      }
+      if (/^public-.*-waypoints$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showPublicTracks && showWaypoints ? "visible" : "none"
+        );
+      }
+      if (/^public-.*-waypoint-labels$/.test(id)) {
+        map.setLayoutProperty(id, "visibility",
+          showPublicTracks && showWaypointLabels ? "visible" : "none"
+        );
+      }
+    });
+  }, [
+    showUserTracks,
+    showTracks,
+    showNames,
+    showWaypoints,
+    showWaypointLabels,
+    showPublicTracks
+  ]);
+
+  // Live track management
+  useEffect(() => {
+    const map = currentMap.current;
+    if (!map || !map.isStyleLoaded()) return;
+
+    const sourceId = "live-track";
+    const layerId = "live-track-line";
+
+    if (map.getLayer(layerId)) map.removeLayer(layerId);
+    if (map.getSource(sourceId)) map.removeSource(sourceId);
+
+    if (liveTrack && liveTrack.length > 1) {
+      map.addSource(sourceId, {
+        type: "geojson",
+        data: {
+          type: "Feature",
+          geometry: {
+            type: "LineString",
+            coordinates: liveTrack
+          }
         }
       });
-    } catch (err) {
-      console.warn("⚠️ Failed to update layer visibility:", err.message);
-    }
-  }, [showTracks, showNames, showWaypoints, showWaypointLabels, showPublicTracks]);
 
-useEffect(() => {
-  const map = currentMap.current;
-  if (!map || !map.isStyleLoaded()) return;
-
-  const sourceId = "user-tracks";
-  const layerId = "user-tracks-line";
-
-  if (map.getLayer(layerId)) map.removeLayer(layerId);
-  if (map.getSource(sourceId)) map.removeSource(sourceId);
-
-  if (userTracks && userTracks.length > 0) {
-    map.addSource(sourceId, {
-      type: "geojson",
-      data: {
-        type: "FeatureCollection",
-        features: userTracks
-      }
-    });
-
-    map.addLayer({
-      id: layerId,
-      type: "line",
-      source: sourceId,
-      paint: {
-        "line-color": "#FF0000",
-        "line-width": 4,
-        "line-opacity": 0.9
-      }
-    });
-  }
-}, [userTracks]); // ✅ this ends the first effect
-
-useEffect(() => {
-  const map = currentMap.current;
-  if (!map || !map.isStyleLoaded()) return;
-
-  const sourceId = "live-track";
-  const layerId = "live-track-line";
-
-  if (map.getLayer(layerId)) map.removeLayer(layerId);
-  if (map.getSource(sourceId)) map.removeSource(sourceId);
-
-  if (liveTrack && liveTrack.length > 1) {
-    map.addSource(sourceId, {
-      type: "geojson",
-      data: {
-        type: "Feature",
-        geometry: {
-          type: "LineString",
-          coordinates: liveTrack
+      map.addLayer({
+        id: layerId,
+        type: "line",
+        source: sourceId,
+        paint: {
+          "line-color": "#0074D9",
+          "line-width": 4,
+          "line-opacity": 0.8
         }
-      }
-    });
-
-    map.addLayer({
-      id: layerId,
-      type: "line",
-      source: sourceId,
-      paint: {
-        "line-color": "#0074D9",
-        "line-width": 4,
-        "line-opacity": 0.8
-      }
-    });
-  }
-}, [liveTrack]);
+      });
+    }
+  }, [liveTrack]);
 
   return <div ref={mapRef} style={{ height: "100vh", width: "100%" }} />;
 }
