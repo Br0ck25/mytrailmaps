@@ -150,7 +150,7 @@ useEffect(() => {
         localforage.getItem("userTracks").then(local => {
           if (cancelled || !Array.isArray(local) || !local.length) return;
           fetch("/api/user/tracks", {
-            method: "PUT",
+            method: "POST",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(local),
@@ -179,7 +179,7 @@ useEffect(() => {
 
     // sync to backend
     fetch("/api/user/tracks", {
-      method: "PUT",
+      method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userTracks),
